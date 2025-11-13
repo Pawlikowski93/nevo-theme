@@ -90,7 +90,7 @@ add_action( 'admin_enqueue_scripts', 'nevo_enqueue_google_fonts' );
  */
 function nevo_register_blocks() {
     // Sprawdź czy folder bloków istnieje
-    $blocks_dir = NEVO_DIR . '/build/blocks';
+    $blocks_dir = NEVO_DIR . '/blocks';
     
     if ( ! file_exists( $blocks_dir ) ) {
         return;
@@ -124,13 +124,3 @@ function nevo_block_categories( $categories ) {
     );
 }
 add_filter( 'block_categories_all', 'nevo_block_categories' );
-/**
- * Add loading="lazy" to images
- */
-function nevo_add_lazy_loading($attr) {
-    if (!isset($attr['loading'])) {
-        $attr['loading'] = 'lazy';
-    }
-    return $attr;
-}
-add_filter('wp_get_attachment_image_attributes', 'nevo_add_lazy_loading');

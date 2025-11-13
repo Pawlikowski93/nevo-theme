@@ -1,0 +1,39 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "nevo/hero",
+  "title": "NEVO Hero",
+  "category": "nevo-blocks",
+  "icon": "cover-image",
+  "description": "Hero section z gradienty i CTA",
+  "supports": {
+    "html": false,
+    "align": ["full"]
+  },
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "default": "Strategia. Technologia. Efekt."
+    },
+    "subheading": {
+      "type": "string",
+      "default": "Agencja premium dla MŚP i e-commerce"
+    },
+    "buttonText": {
+      "type": "string",
+      "default": "Sprawdź NEVO Score"
+    },
+    "buttonUrl": {
+      "type": "string",
+      "default": "#"
+    },
+    "backgroundImage": {
+      "type": "string",
+      "default": ""
+    }
+  },
+  "textdomain": "nevo",
+  "editorScript": "file:./index.js",
+  "editorStyle": "file:./editor.css",
+  "style": "file:./style.css"
+}

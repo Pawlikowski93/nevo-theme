@@ -1,0 +1,56 @@
+.nevo-cta {
+  padding: 4rem 2rem;
+  text-align: center;
+  border-radius: 1rem;
+  margin: 3rem 0;
+}
+
+.nevo-cta--primary {
+  background-color: #1c2e40;
+  color: white;
+}
+
+.nevo-cta--beige {
+  background-color: #f5f1ed;
+  color: #1c2e40;
+}
+
+.nevo-cta--accent {
+  background-color: #d4a574;
+  color: #1c2e40;
+}
+
+.nevo-cta__heading {
+  font-family: 'Montserrat', sans-serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  font-weight: 700;
+  margin-bottom: 1rem;
+}
+
+.nevo-cta__text {
+  font-size: 1.125rem;
+  line-height: 1.6;
+  max-width: 600px;
+  margin: 0 auto 2rem;
+}
+
+.nevo-cta__button {
+  display: inline-block;
+  padding: 1rem 2.5rem;
+  background-color: white;
+  color: #1c2e40;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  border-radius: 0.5rem;
+  text-decoration: none;
+  transition: all 0.2s ease;
+}
+
+.nevo-cta--primary .nevo-cta__button {
+  background-color: #d4a574;
+}
+
+.nevo-cta__button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}

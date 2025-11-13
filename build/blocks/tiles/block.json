@@ -1,0 +1,38 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "nevo/tiles",
+  "title": "NEVO Tiles",
+  "category": "nevo-blocks",
+  "icon": "grid-view",
+  "description": "Grid kafelków wyboru ścieżki",
+  "supports": {
+    "html": false,
+    "align": ["wide", "full"]
+  },
+  "attributes": {
+    "tiles": {
+      "type": "array",
+      "default": [
+        {
+          "title": "E-commerce",
+          "description": "Sklepy online, integracje, konwersja",
+          "icon": "cart"
+        },
+        {
+          "title": "Marketing",
+          "description": "Performance, content seeding, analityka",
+          "icon": "megaphone"
+        },
+        {
+          "title": "Technologia",
+          "description": "Custom rozwiązania, MVP, skalowanie",
+          "icon": "code"
+        }
+      ]
+    }
+  },
+  "textdomain": "nevo",
+  "editorScript": "file:./index.js",
+  "style": "file:./style.css"
+}

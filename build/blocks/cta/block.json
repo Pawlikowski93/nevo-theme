@@ -1,0 +1,38 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 2,
+  "name": "nevo/cta",
+  "title": "NEVO CTA",
+  "category": "nevo-blocks",
+  "icon": "megaphone",
+  "description": "Call-to-action box",
+  "supports": {
+    "html": false,
+    "align": ["wide", "full"]
+  },
+  "attributes": {
+    "heading": {
+      "type": "string",
+      "default": "Gotowy na następny krok?"
+    },
+    "text": {
+      "type": "string",
+      "default": "Umów bezpłatną konsultację i dowiedz się, jak NEVO może pomóc Twojemu biznesowi."
+    },
+    "buttonText": {
+      "type": "string",
+      "default": "Umów rozmowę"
+    },
+    "buttonUrl": {
+      "type": "string",
+      "default": "#kontakt"
+    },
+    "backgroundColor": {
+      "type": "string",
+      "default": "primary"
+    }
+  },
+  "textdomain": "nevo",
+  "editorScript": "file:./index.js",
+  "style": "file:./style.css"
+}

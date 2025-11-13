@@ -62,5 +62,28 @@ function nevo_enqueue_assets() {
             true
         );
     }
+        // Na front-page ładuj animacje
+    if (is_front_page()) {
+        wp_enqueue_script(
+            'nevo-animations',
+            NEVO_URI . '/assets/js/nevo-animations.js',
+            array(),
+            NEVO_VERSION,
+            true
+        );
+    }
 }
 add_action( 'wp_enqueue_scripts', 'nevo_enqueue_assets' );
+function nevo_defer_scripts($tag, $handle) {
+    if (is_admin()) {
+        return $tag;
+    }
+
+    $defer_handles = array('nevo-main', 'nevo-animations');
+    if (in_array($handle, $defer_handles)) {
+        return str_replace(' src', ' defer src', $tag);
+    }
+
+    return $tag;
+}
+add_filter('script_loader_tag', 'nevo_defer_scripts', 10, 2);

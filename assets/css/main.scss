@@ -39,3 +39,17 @@
     }
   }
 }
+.skip-link {
+  position: absolute;
+  top: -40px;
+  left: 0;
+  background: var(--wp--preset--color--primary);
+  color: white;
+  padding: 0.5rem 1rem;
+  z-index: 1000;
+  text-decoration: none;
+
+  &:focus {
+    top: 0;
+  }
+}

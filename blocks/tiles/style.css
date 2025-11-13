@@ -1,0 +1,39 @@
+.nevo-tiles {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  gap: 2rem;
+  padding: 3rem 0;
+}
+
+.nevo-tile {
+  background: #f5f1ed;
+  padding: 2rem;
+  border-radius: 1rem;
+  transition: all 0.3s ease;
+  border: 2px solid transparent;
+}
+
+.nevo-tile:hover {
+  transform: translateY(-4px);
+  border-color: #d4a574;
+  box-shadow: 0 10px 30px rgba(28, 46, 64, 0.1);
+}
+
+.nevo-tile__icon {
+  font-size: 2.5rem;
+  margin-bottom: 1rem;
+  color: #1c2e40;
+}
+
+.nevo-tile__title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #1c2e40;
+  margin-bottom: 0.75rem;
+}
+
+.nevo-tile__description {
+  color: #4b5563;
+  line-height: 1.6;
+}
