@@ -1,17 +1,12 @@
 <?php
 /**
  * NEVO Theme Functions
- *
- * @package NEVO
- * @since 0.1.0
  */
 
-// Zapobiegaj bezpośredniemu dostępowi
 if ( ! defined( 'ABSPATH' ) ) {
     exit;
 }
 
-// Wersja motywu
 define( 'NEVO_VERSION', '0.1.0' );
 define( 'NEVO_DIR', get_template_directory() );
 define( 'NEVO_URI', get_template_directory_uri() );
@@ -20,19 +15,10 @@ define( 'NEVO_URI', get_template_directory_uri() );
  * Setup motywu
  */
 function nevo_theme_setup() {
-    // Wsparcie dla tłumaczeń
     load_theme_textdomain( 'nevo', NEVO_DIR . '/languages' );
-
-    // Wsparcie dla RSS
     add_theme_support( 'automatic-feed-links' );
-
-    // Title tag
     add_theme_support( 'title-tag' );
-
-    // Featured images
     add_theme_support( 'post-thumbnails' );
-
-    // HTML5
     add_theme_support(
         'html5',
         array(
@@ -45,8 +31,6 @@ function nevo_theme_setup() {
             'script',
         )
     );
-
-    // Custom logo
     add_theme_support(
         'custom-logo',
         array(
@@ -56,17 +40,9 @@ function nevo_theme_setup() {
             'flex-width'  => true,
         )
     );
-
-    // Editor styles
     add_theme_support( 'editor-styles' );
-
-    // Responsive embeds
     add_theme_support( 'responsive-embeds' );
-
-    // Block styles
     add_theme_support( 'wp-block-styles' );
-
-    // Wide alignments
     add_theme_support( 'align-wide' );
 }
 add_action( 'after_setup_theme', 'nevo_theme_setup' );
@@ -89,20 +65,11 @@ add_action( 'admin_enqueue_scripts', 'nevo_enqueue_google_fonts' );
  * Register custom blocks
  */
 function nevo_register_blocks() {
-    // Sprawdź czy folder bloków istnieje
-    $blocks_dir = NEVO_DIR . '/build/blocks';
-    
-    if ( ! file_exists( $blocks_dir ) ) {
-        return;
-    }
-    
-    // Rejestruj wszystkie bloki
-    $blocks = array( 'hero', 'tiles', 'cta' );
-    
+    $blocks = [ 'hero', 'tiles', 'cta' ];
+
     foreach ( $blocks as $block ) {
-        $block_path = $blocks_dir . '/' . $block;
-        
-        if ( file_exists( $block_path ) ) {
+        $block_path = NEVO_DIR . '/build/blocks/' . $block;
+        if ( file_exists( $block_path . '/block.json' ) ) {
             register_block_type( $block_path );
         }
     }
@@ -114,23 +81,57 @@ add_action( 'init', 'nevo_register_blocks' );
  */
 function nevo_block_categories( $categories ) {
     return array_merge(
-        array(
-            array(
+        [
+            [
                 'slug'  => 'nevo-blocks',
                 'title' => __( 'NEVO Blocks', 'nevo' ),
-            ),
-        ),
+            ],
+        ],
         $categories
     );
 }
 add_filter( 'block_categories_all', 'nevo_block_categories' );
+
+/**
+ * Inline block styles (workaround for HTTP serving issues)
+ */
+function nevo_inline_hero_css() {
+    if ( has_block( 'nevo/hero' ) || is_front_page() ) {
+        $css_file = NEVO_DIR . '/build/blocks/hero/style-index.css';
+        if ( file_exists( $css_file ) ) {
+            echo '<style id="nevo-hero-inline">' . file_get_contents( $css_file ) . '</style>';
+        }
+    }
+}
+add_action( 'wp_head', 'nevo_inline_hero_css', 100 );
+
+function nevo_inline_tiles_css() {
+    if ( has_block( 'nevo/tiles' ) ) {
+        $css_file = NEVO_DIR . '/build/blocks/tiles/style-index.css';
+        if ( file_exists( $css_file ) ) {
+            echo '<style id="nevo-tiles-inline">' . file_get_contents( $css_file ) . '</style>';
+        }
+    }
+}
+add_action( 'wp_head', 'nevo_inline_tiles_css', 100 );
+
+function nevo_inline_cta_css() {
+    if ( has_block( 'nevo/cta' ) ) {
+        $css_file = NEVO_DIR . '/build/blocks/cta/style-index.css';
+        if ( file_exists( $css_file ) ) {
+            echo '<style id="nevo-cta-inline">' . file_get_contents( $css_file ) . '</style>';
+        }
+    }
+}
+add_action( 'wp_head', 'nevo_inline_cta_css', 100 );
+
 /**
  * Add loading="lazy" to images
  */
-function nevo_add_lazy_loading($attr) {
-    if (!isset($attr['loading'])) {
+function nevo_add_lazy_loading( $attr ) {
+    if ( ! isset( $attr['loading'] ) ) {
         $attr['loading'] = 'lazy';
     }
     return $attr;
 }
-add_filter('wp_get_attachment_image_attributes', 'nevo_add_lazy_loading');
+add_filter( 'wp_get_attachment_image_attributes', 'nevo_add_lazy_loading' );

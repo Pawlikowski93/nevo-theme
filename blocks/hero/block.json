@@ -5,27 +5,43 @@
   "title": "NEVO Hero",
   "category": "nevo-blocks",
   "icon": "cover-image",
-  "description": "Hero section z gradienty i CTA",
+  "description": "Hero section z trust badge, headline i CTA",
   "supports": {
     "html": false,
     "align": ["full"]
   },
   "attributes": {
-    "heading": {
+    "trustBadge": {
+      "type": "string",
+      "default": "🎓 Google Certified  |  6+ lat w e-commerce  |  Shoper Partner"
+    },
+    "headline": {
+      "type": "string",
+      "default": "Od chaotycznych działań marketingowych do systemowego wzrostu sprzedaży"
+    },
+    "tagline": {
       "type": "string",
       "default": "Strategia. Technologia. Efekt."
     },
     "subheading": {
       "type": "string",
-      "default": "Agencja premium dla MŚP i e-commerce"
+      "default": "Agencja premium dla e-commerce, MŚP i marek lokalnych. Od strategii przez technologię po mierzalny wynik."
+    },
+    "caseStat": {
+      "type": "string",
+      "default": "+250% wzrost przychodu w 4 miesiące"
+    },
+    "caseDetail": {
+      "type": "string",
+      "default": "Realny wynik jednego z klientów e-commerce"
     },
     "buttonText": {
       "type": "string",
-      "default": "Sprawdź NEVO Score"
+      "default": "Umów bezpłatną konsultację 30 min"
     },
     "buttonUrl": {
       "type": "string",
-      "default": "#"
+      "default": "/kontakt/"
     },
     "backgroundImage": {
       "type": "string",

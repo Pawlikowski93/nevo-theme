@@ -32,6 +32,16 @@
           "name": "Złoty akcent"
         },
         {
+          "slug": "coral",
+          "color": "#FF6B58",
+          "name": "Koral CTA"
+        },
+        {
+          "slug": "coral-hover",
+          "color": "#FF8573",
+          "name": "Koral hover"
+        },
+        {
           "slug": "accent-light",
           "color": "#e8c9a8",
           "name": "Złoty jasny"
@@ -391,7 +401,7 @@
       },
       "button": {
         "color": {
-          "background": "var(--wp--preset--color--primary)",
+          "background": "var(--wp--preset--color--coral)",
           "text": "var(--wp--preset--color--white)"
         },
         "typography": {
@@ -413,7 +423,7 @@
         },
         ":hover": {
           "color": {
-            "background": "var(--wp--preset--color--primary-light)"
+            "background": "var(--wp--preset--color--coral-hover)"
           }
         }
       }

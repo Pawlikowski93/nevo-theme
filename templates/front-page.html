@@ -1,57 +1,87 @@
 <!-- wp:template-part {"slug":"header","tagName":"header"} /-->
 
-<!-- wp:group {"tagName":"main","align":"full","layout":{"type":"default"}} -->
-<main class="wp-block-group alignfull">
+<!-- Hero Section -->
+<!-- wp:group {"tagName":"section","align":"full","backgroundColor":"primary","className":"hero-section","layout":{"type":"constrained"}} -->
+<section class="wp-block-group alignfull hero-section has-primary-background-color has-background">
     
-    <!-- Hero Section - placeholder, później zastąpisz custom blokiem -->
-    <!-- wp:cover {"url":"","dimRatio":50,"overlayColor":"primary","minHeight":600,"align":"full"} -->
-    <div class="wp-block-cover alignfull" style="min-height:600px">
-        <span aria-hidden="true" class="wp-block-cover__background has-primary-background-color has-background-dim"></span>
+    <!-- Trust Badge -->
+    <!-- wp:paragraph {"align":"center","className":"trust-badge","fontSize":"small"} -->
+    <p class="has-text-align-center trust-badge has-small-font-size">
+        🎓 Google Certified  |  6+ lat w e-commerce  |  Shoper Partner
+    </p>
+    <!-- /wp:paragraph -->
+
+    <!-- Main Hero Content -->
+    <!-- wp:group {"className":"hero-content","layout":{"type":"constrained","contentSize":"900px"}} -->
+    <div class="wp-block-group hero-content">
         
-        <div class="wp-block-cover__inner-container">
-            <!-- wp:group {"layout":{"type":"constrained","contentSize":"800px"}} -->
-            <div class="wp-block-group">
-                
-                <!-- wp:heading {"textAlign":"center","level":1,"textColor":"white","fontSize":"7-xl"} -->
-                <h1 class="wp-block-heading has-text-align-center has-white-color has-text-color has-7-xl-font-size">Strategia. Technologia. Efekt.</h1>
-                <!-- /wp:heading -->
-                
-                <!-- wp:paragraph {"align":"center","textColor":"white","fontSize":"xl"} -->
-                <p class="has-text-align-center has-white-color has-text-color has-xl-font-size">Agencja premium dla MŚP, e-commerce i marek lokalnych.</p>
-                <!-- /wp:paragraph -->
-                
-                <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
-                <div class="wp-block-buttons">
-                    <!-- wp:button {"backgroundColor":"accent","textColor":"primary"} -->
-                    <div class="wp-block-button">
-                        <a class="wp-block-button__link has-primary-color has-accent-background-color has-text-color has-background wp-element-button">Sprawdź NEVO Score</a>
-                    </div>
-                    <!-- /wp:button -->
-                </div>
-                <!-- /wp:buttons -->
-                
-            </div>
-            <!-- /wp:group -->
-        </div>
-    </div>
-    <!-- /wp:cover -->
-    
-    <!-- Content placeholder -->
-    <!-- wp:group {"align":"wide","style":{"spacing":{"padding":{"top":"var:preset|spacing|2-xl","bottom":"var:preset|spacing|2-xl"}}},"layout":{"type":"constrained"}} -->
-    <div class="wp-block-group alignwide" style="padding-top:var(--wp--preset--spacing--2-xl);padding-bottom:var(--wp--preset--spacing--2-xl)">
-        
-        <!-- wp:heading {"textAlign":"center","fontSize":"5-xl"} -->
-        <h2 class="wp-block-heading has-text-align-center has-5-xl-font-size">Jak możemy pomóc?</h2>
+        <!-- Headline -->
+        <!-- wp:heading {"textAlign":"center","level":1,"className":"hero-headline","fontSize":"display"} -->
+        <h1 class="wp-block-heading has-text-align-center hero-headline has-display-font-size">
+            Od chaotycznych działań marketingowych<br>do systemowego wzrostu sprzedaży
+        </h1>
         <!-- /wp:heading -->
-        
-        <!-- wp:paragraph {"align":"center"} -->
-        <p class="has-text-align-center">Tutaj będą Twoje custom bloki (Tiles, CTA, etc.)</p>
+
+        <!-- Tagline -->
+        <!-- wp:paragraph {"align":"center","className":"hero-tagline","fontSize":"2-xl"} -->
+        <p class="has-text-align-center hero-tagline has-2-xl-font-size">
+            Strategia. Technologia. Efekt.
+        </p>
         <!-- /wp:paragraph -->
-        
+
+        <!-- Subheadline -->
+        <!-- wp:paragraph {"align":"center","className":"hero-subheadline","fontSize":"lg"} -->
+        <p class="has-text-align-center hero-subheadline has-lg-font-size">
+            Agencja premium dla e-commerce, MŚP i marek lokalnych.<br>
+            Od strategii przez technologię po mierzalny wynik.
+        </p>
+        <!-- /wp:paragraph -->
+
+        <!-- Case Study Box -->
+        <!-- wp:group {"className":"case-study-box","backgroundColor":"white","layout":{"type":"constrained"}} -->
+        <div class="wp-block-group case-study-box has-white-background-color has-background">
+            <!-- wp:paragraph {"align":"center","className":"case-stat","fontSize":"xl"} -->
+            <p class="has-text-align-center case-stat has-xl-font-size">
+                📈 <strong>+250% wzrost przychodu w 4 miesiące</strong><br>
+                <span class="stat-detail">Realny wynik jednego z klientów e-commerce</span>
+            </p>
+            <!-- /wp:paragraph -->
+        </div>
+        <!-- /wp:group -->
+
+        <!-- CTA Primary -->
+        <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"},"className":"hero-cta"} -->
+        <div class="wp-block-buttons hero-cta">
+            <!-- wp:button {"backgroundColor":"accent","textColor":"primary","className":"cta-primary","fontSize":"lg"} -->
+            <div class="wp-block-button has-custom-font-size cta-primary has-lg-font-size">
+                <a class="wp-block-button__link has-primary-color has-accent-background-color has-text-color has-background wp-element-button" href="/kontakt/">
+                    Umów bezpłatną konsultację 30 min
+                </a>
+            </div>
+            <!-- /wp:button -->
+        </div>
+        <!-- /wp:buttons -->
+
+        <!-- Benefit Points -->
+        <!-- wp:list {"className":"hero-benefits"} -->
+        <ul class="hero-benefits">
+            <li>✓ Odpowiedź w ciągu 24 godzin</li>
+            <li>✓ Video call lub telefon – jak wolisz</li>
+            <li>✓ Bez zobowiązań</li>
+        </ul>
+        <!-- /wp:list -->
+
     </div>
     <!-- /wp:group -->
-    
-</main>
+
+    <!-- Hero Graphic (placeholder for AI-generated image) -->
+    <!-- wp:image {"align":"center","className":"hero-graphic"} -->
+    <figure class="wp-block-image aligncenter hero-graphic">
+        <img src="/wp-content/themes/nevo/assets/images/hero-graphic.png" alt="NEVO Analytics Dashboard"/>
+    </figure>
+    <!-- /wp:image -->
+
+</section>
 <!-- /wp:group -->
 
 <!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->

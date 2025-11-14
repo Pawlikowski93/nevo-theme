@@ -1,58 +1,217 @@
+/* ==============================================
+   NEVO HERO BLOCK
+   ============================================== */
+
 .nevo-hero {
   position: relative;
+  padding: 80px 20px 120px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1c2e40 0%, #2a4458 100%);
   min-height: 600px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  background-color: #1c2e40;
-  background-size: cover;
-  background-position: center;
 }
 
-.nevo-hero::before {
-  content: '';
-  position: absolute;
-  inset: 0;
-  background: linear-gradient(180deg, rgba(28,46,64,0.7) 0%, rgba(28,46,64,0.9) 100%);
+/* Trust Badge */
+.trust-badge {
+  color: #b8956a;
+  text-align: center;
+  margin-bottom: 2rem;
+  font-weight: 500;
+  font-size: 0.95rem;
+  opacity: 0;
+  animation: fadeInUp 0.6s ease-out 0.2s forwards;
 }
 
+/* Hero Content */
 .nevo-hero__content {
   position: relative;
-  z-index: 1;
+  z-index: 2;
+  max-width: 900px;
+  margin: 0 auto;
   text-align: center;
-  max-width: 800px;
-  padding: 2rem;
-  color: white;
 }
 
-.nevo-hero__heading {
+/* Headline */
+.hero-headline {
+  color: #ffffff;
   font-family: 'Montserrat', sans-serif;
-  font-size: clamp(2.5rem, 5vw, 4.5rem);
   font-weight: 700;
+  font-size: clamp(2rem, 5vw, 3.5rem);
   line-height: 1.2;
   margin-bottom: 1.5rem;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out 0.4s forwards;
 }
 
-.nevo-hero__subheading {
-  font-size: clamp(1.125rem, 2vw, 1.5rem);
+/* Tagline */
+.hero-tagline {
+  color: #FF6B58;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: clamp(1.25rem, 3vw, 2rem);
+  margin-bottom: 1.5rem;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out 0.6s forwards;
+}
+
+/* Subheadline */
+.hero-subheadline {
+  color: #e5dcc5;
+  font-size: clamp(1rem, 2vw, 1.25rem);
   line-height: 1.6;
-  margin-bottom: 2rem;
-  opacity: 0.95;
+  margin-bottom: 3rem;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out 0.8s forwards;
 }
 
-.nevo-hero__button {
+/* Case Study Box */
+.case-study-box {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 24px 32px;
+  margin: 0 auto 2.5rem;
+  max-width: 600px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15);
+  opacity: 0;
+  animation: fadeInScale 0.8s ease-out 1s forwards;
+}
+
+.case-stat {
+  color: #1c2e40;
+  font-size: 1.25rem;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.case-stat strong {
+  color: #FF6B58;
+  font-size: 1.5em;
+  font-weight: 700;
+}
+
+.stat-detail {
+  display: block;
+  font-size: 0.9em;
+  color: #666;
+  margin-top: 0.5rem;
+}
+
+/* CTA Primary */
+.hero-cta {
+  margin-bottom: 2rem;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out 1.2s forwards;
+}
+
+.cta-primary {
   display: inline-block;
-  padding: 0.75rem 2rem;
+  padding: 18px 40px;
   background-color: #d4a574;
   color: #1c2e40;
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
-  border-radius: 0.5rem;
+  font-size: 1.125rem;
+  border-radius: 8px;
   text-decoration: none;
-  transition: all 0.2s ease-in-out;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 12px rgba(212, 165, 116, 0.3);
 }
 
-.nevo-hero__button:hover {
+.cta-primary:hover {
   background-color: #e8c9a8;
   transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(212, 165, 116, 0.4);
+}
+
+/* Benefit Points */
+.hero-benefits {
+  list-style: none;
+  padding: 0;
+  text-align: center;
+  color: #e5dcc5;
+  font-size: 1rem;
+  opacity: 0;
+  animation: fadeInUp 0.8s ease-out 1.4s forwards;
+}
+
+.hero-benefits li {
+  display: inline-block;
+  margin: 0 1.5rem 0.5rem;
+  font-weight: 500;
+}
+
+/* Hero Graphic */
+.hero-graphic {
+  margin-top: 4rem;
+  opacity: 0;
+  animation: fadeInScale 1s ease-out 1.6s forwards;
+}
+
+.hero-graphic img {
+  border-radius: 16px;
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.3);
+  max-width: 100%;
+  height: auto;
+}
+
+/* ==============================================
+   ANIMATIONS
+   ============================================== */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ==============================================
+   RESPONSIVE
+   ============================================== */
+
+@media (max-width: 768px) {
+  .nevo-hero {
+    padding: 60px 20px 80px;
+  }
+
+  .hero-headline {
+    font-size: 2rem;
+    line-height: 1.3;
+  }
+
+  .hero-tagline {
+    font-size: 1.25rem;
+  }
+
+  .hero-subheadline {
+    font-size: 1rem;
+  }
+
+  .case-study-box {
+    padding: 20px 24px;
+  }
+
+  .hero-benefits li {
+    display: block;
+    margin: 0.5rem 0;
+  }
+
+  .cta-primary {
+    padding: 14px 28px;
+    font-size: 1rem;
+  }
 }

@@ -1,0 +1,44 @@
+/* ==============================================
+   HERO BLOCK - EDITOR STYLES
+   ============================================== */
+
+.nevo-hero {
+  /* Lekkie tło dla lepszej widoczności w edytorze */
+  background: linear-gradient(-135deg, #1c2e40 0%, #2a4458 100%) !important;
+  padding: 40px 20px;
+  border-radius: 8px;
+}
+
+/* Editable fields - wyraźniejsze w edytorze */
+.nevo-hero .trust-badge,
+.nevo-hero .hero-headline,
+.nevo-hero .hero-tagline,
+.nevo-hero .hero-subheadline,
+.nevo-hero .case-stat,
+.nevo-hero .stat-detail,
+.nevo-hero .cta-primary {
+  cursor: text;
+}
+
+/* Highlight na hover w edytorze */
+.nevo-hero .trust-badge:hover,
+.nevo-hero .hero-headline:hover,
+.nevo-hero .hero-tagline:hover,
+.nevo-hero .hero-subheadline:hover {
+  outline: 2px dashed rgba(255, 107, 88, 0.5);
+  outline-offset: 4px;
+}
+
+/* Case study box - bardziej widoczny w edytorze */
+.nevo-hero .case-study-box {
+  background: #ffffff;
+  padding: 20px;
+  border-radius: 8px;
+  margin: 20px 0;
+}
+
+/* Disable animations w edytorze */
+.nevo-hero * {
+  animation: none !important;
+  opacity: 1 !important;
+}
