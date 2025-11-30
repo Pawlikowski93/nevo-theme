@@ -5646,3 +5646,67 @@ a.nevo-footer__contact-item:focus svg {
   width: 18px;
   height: 18px;
 }
+
+/* ==============================================
+   ANALITYKA & GROWTH LANDING PAGE
+   ============================================== */
+
+.nevo-landing-analityka {
+  background-color: var(--wp--preset--color--white);
+}
+
+/* Shared section styles */
+.nevo-landing-analityka__section {
+  padding: 64px 20px;
+}
+
+@media (min-width: 768px) {
+  .nevo-landing-analityka__section {
+    padding: 96px 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nevo-landing-analityka__section {
+    padding: 120px 32px;
+  }
+}
+
+.nevo-landing-analityka__container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Section heading styles */
+.nevo-landing-analityka__heading {
+  font-family: var(--wp--preset--font-family--heading);
+  font-weight: 700;
+  color: var(--wp--preset--color--primary);
+  margin: 0 0 24px 0;
+}
+
+.nevo-landing-analityka__subheading {
+  font-size: 1.125rem;
+  line-height: 1.7;
+  color: var(--wp--preset--color--gray-600);
+  margin: 0;
+  max-width: 680px;
+}
+
+/* Alternate section backgrounds */
+.nevo-landing-analityka__section--beige {
+  background-color: var(--wp--preset--color--beige);
+}
+
+.nevo-landing-analityka__section--primary {
+  background-color: var(--wp--preset--color--primary);
+  color: var(--wp--preset--color--white);
+}
+
+.nevo-landing-analityka__section--primary .nevo-landing-analityka__heading {
+  color: var(--wp--preset--color--white);
+}
+
+.nevo-landing-analityka__section--primary .nevo-landing-analityka__subheading {
+  color: rgba(255, 255, 255, 0.8);
+}
