@@ -6060,3 +6060,165 @@ a.nevo-footer__contact-item:focus svg {
     font-size: 1.2rem;
   }
 }
+
+/* ==============================================
+   ANALITYKA SOLUTION SECTION
+   ============================================== */
+
+.nevo-solution-analityka {
+  background-color: var(--wp--preset--color--white);
+  padding: 72px 20px;
+}
+
+@media (min-width: 768px) {
+  .nevo-solution-analityka {
+    padding: 100px 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nevo-solution-analityka {
+    padding: 120px 32px;
+  }
+}
+
+.nevo-solution-analityka__container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Header */
+.nevo-solution-analityka__header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+@media (min-width: 768px) {
+  .nevo-solution-analityka__header {
+    margin-bottom: 64px;
+  }
+}
+
+.nevo-solution-analityka__title {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 700;
+  color: var(--wp--preset--color--primary);
+  margin: 0 0 16px 0;
+  line-height: 1.2;
+}
+
+.nevo-solution-analityka__lead {
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  line-height: 1.7;
+  color: var(--wp--preset--color--gray-600);
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+/* Solutions Grid */
+.nevo-solution-analityka__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 640px) {
+  .nevo-solution-analityka__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 28px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nevo-solution-analityka__grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+}
+
+/* Solution Card */
+.nevo-solution-card {
+  background: var(--wp--preset--color--white);
+  border: 1px solid var(--wp--preset--color--gray-200);
+  border-radius: 12px;
+  padding: 28px 24px;
+  transition: all 0.25s ease;
+}
+
+.nevo-solution-card:hover {
+  border-color: var(--wp--preset--color--coral);
+  box-shadow: 0 8px 24px rgba(255, 107, 88, 0.12);
+}
+
+.nevo-solution-card__icon {
+  width: 56px;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: linear-gradient(135deg, rgba(255, 107, 88, 0.1) 0%, rgba(255, 107, 88, 0.05) 100%);
+  border-radius: 12px;
+  margin-bottom: 20px;
+}
+
+.nevo-solution-card__icon svg {
+  color: var(--wp--preset--color--coral);
+}
+
+.nevo-solution-card__title {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--wp--preset--color--primary);
+  margin: 0 0 16px 0;
+  line-height: 1.3;
+}
+
+.nevo-solution-card__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.nevo-solution-card__list li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 0.875rem;
+  line-height: 1.5;
+  color: var(--wp--preset--color--gray-600);
+}
+
+.nevo-solution-card__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  background-color: var(--wp--preset--color--coral);
+  border-radius: 50%;
+}
+
+@media (min-width: 768px) {
+  .nevo-solution-card {
+    padding: 32px 28px;
+  }
+
+  .nevo-solution-card__title {
+    font-size: 1.2rem;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nevo-solution-card {
+    padding: 28px 24px;
+  }
+
+  .nevo-solution-card__list li {
+    font-size: 0.85rem;
+  }
+}
