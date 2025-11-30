@@ -81,14 +81,16 @@ registerBlockType('nevo/hero', {
             />
 
             {/* Case Study Box */}
+            <div className="hero-right">
             <div className="case-study-box">
-              <RichText
-                tagName="p"
-                className="case-stat"
-                value={`📈 ${caseStat}`}
-                onChange={(value) => setAttributes({ caseStat: value.replace('📈 ', '') })}
-                placeholder={__('Statystyka...', 'nevo')}
-              />
+            <RichText
+              tagName="p"
+              className="case-stat"
+              value={caseStat}
+              onChange={(value) => setAttributes({ caseStat: value })}
+              placeholder={__('Statystyka...', 'nevo')}
+            />
+
               <RichText
                 tagName="span"
                 className="stat-detail"
@@ -117,7 +119,7 @@ registerBlockType('nevo/hero', {
             </ul>
 
           </div>
-
+        </div>
           {/* Hero Graphic */}
           {backgroundImage && (
             <div className="hero-graphic">
@@ -153,13 +155,13 @@ registerBlockType('nevo/hero', {
           <p className="hero-tagline">{tagline}</p>
           
           <p className="hero-subheadline">{subheading}</p>
-          
-          <div className="case-study-box">
-            <p className="case-stat">
-              📈 <strong>{caseStat}</strong>
-              <span className="stat-detail">{caseDetail}</span>
-            </p>
-          </div>
+        <div className="hero-right">  
+        <div className="case-study-box">
+          <p className="case-stat">
+            <strong>{caseStat}</strong>
+            <span className="stat-detail">{caseDetail}</span>
+          </p>
+        </div>
           
           <div className="hero-cta">
             <a href={buttonUrl} className="cta-primary">
@@ -174,7 +176,7 @@ registerBlockType('nevo/hero', {
           </ul>
           
         </div>
-
+        </div>
         {backgroundImage && (
           <div className="hero-graphic">
             <img src={backgroundImage} alt="NEVO Hero" />

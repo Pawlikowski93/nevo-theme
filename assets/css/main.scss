@@ -53,3 +53,5390 @@
     top: 0;
   }
 }
+/* ==============================================
+   NEVO HERO BLOCK – GRID 2-KOLUMNOWY
+   ============================================== */
+
+.nevo-hero {
+  position: relative;
+  padding: 72px 20px 90px;
+  overflow: hidden;
+  background: linear-gradient(135deg, #1c2e40 0%, #182635 50%, #101824 100%);
+}
+
+/* Główne „pudełko” na treść */
+.nevo-hero__content {
+  position: relative;
+  max-width: 1920px;
+  margin: 0 auto;
+  z-index: 2;
+}
+
+/* ==============================================
+   TYPOGRAFIA – MOBILE FIRST (wszystko pod sobą)
+   ============================================== */
+
+.trust-badge {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 6px 18px;
+  border-radius: 999px;
+  background: rgba(12, 25, 40, 0.85);
+  color: #e5dcc5;
+  font-size: 0.75rem;
+  letter-spacing: 0.08em;
+  text-transform: uppercase;
+  border: 1px solid rgba(212, 165, 116, 0.35);
+  margin-bottom: 18px;
+  width: fit-content;
+}
+
+.hero-headline {
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: clamp(2.1rem, 6vw, 3.6rem);
+  line-height: 1.1;
+  margin: 0 0 14px;
+}
+
+.hero-tagline {
+  color: #ff6b58;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: clamp(1.2rem, 3.2vw, 1.6rem);
+  margin: 0 0 16px;
+}
+
+.hero-subheadline {
+  color: #e5dcc5;
+  font-size: 1rem;
+  line-height: 1.6;
+  max-width: 540px;
+  margin: 0 0 26px;
+}
+
+/* Prawa kolumna – statystyka + CTA + benefity */
+.hero-right {
+  display: flex;
+  flex-direction: column;
+  gap: 18px;
+  max-width: 380px;
+  margin-top: 16px;
+}
+
+/* Dymek z case study */
+.case-study-box {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 18px 22px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
+}
+
+.case-stat {
+  margin: 0;
+  color: #1c2e40;
+  font-size: 0.95rem;
+  line-height: 1.5;
+}
+
+.case-stat strong {
+  display: block;
+  color: #ff6b58;
+  font-size: 1.05rem;
+  font-weight: 700;
+}
+
+.stat-detail {
+  display: block;
+  font-size: 0.85rem;
+  color: #666;
+  margin-top: 4px;
+}
+
+/* CTA */
+.hero-cta {
+  margin: 0;
+}
+
+.cta-primary {
+  display: inline-block;
+  padding: 14px 32px;
+  background-color: #d4a574;
+  color: #1c2e40;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 18px rgba(212, 165, 116, 0.35);
+}
+
+.cta-primary:hover {
+  background-color: #e8c9a8;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 26px rgba(212, 165, 116, 0.45);
+}
+
+/* Lista benefitów */
+.hero-benefits {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  color: #e5dcc5;
+  font-size: 0.95rem;
+}
+
+.hero-benefits li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 4px;
+}
+
+/* Grafika hero – na mobile po prostu pod spodem */
+.hero-graphic {
+  margin-top: 40px;
+  text-align: center;
+  z-index: 1;
+}
+
+.hero-graphic img {
+  border-radius: 18px;
+  box-shadow: 0 22px 60px rgba(0, 0, 0, 0.4);
+  max-width: 100%;
+  height: auto;
+}
+
+/* ==============================================
+   ANIMACJE (delikatne)
+   ============================================== */
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.96);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+/* ==============================================
+   DESKTOP ≥ 1024px – układ jak na makiecie
+   ============================================== */
+
+@media (min-width: 1024px) {
+  .nevo-hero {
+    padding: 96px 40px 130px;
+  }
+
+  .nevo-hero__content {
+    display: grid;
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.80fr);
+    column-gap: 72px;
+    row-gap: 20px;
+    align-items: start;
+  }
+
+  .trust-badge,
+  .hero-headline,
+  .hero-tagline,
+  .hero-subheadline {
+    grid-column: 1 / 2;
+    text-align: left;
+  }
+
+  .trust-badge {
+    justify-content: flex-start;
+    margin-bottom: 20px;
+  }
+
+  .hero-subheadline {
+    margin-bottom: 10px; /* mniejsza przerwa, żeby prawa kolumna mogła „wejść” wyżej */
+  }
+
+  /* Cały blok (dymek + CTA + lista) idzie do prawej kolumny,
+     zaczyna się wysoko (grid-row: 1 / span 3) i jest lekko podciągnięty do góry */
+  .hero-right {
+    grid-column: 2 / 3;
+    grid-row: 1 / span 3;
+    align-self: center;
+    margin-top: 0;
+    transform: translateY(-30px); /* PODSUŃ / OPUŚĆ CAŁĄ PACZKĘ:
+                                     mniej ujemne = niżej, bardziej ujemne = wyżej */
+  }
+
+  /* Grafika w tle – większa, pod spodem prawej kolumny */
+  .hero-graphic {
+    position: absolute;
+    right: -80px;
+    bottom: -120px;
+    margin: 0;
+    z-index: 1;
+  }
+
+  .hero-graphic img {
+    max-width: 780px;
+    width: 52vw;
+  }
+}
+
+/* ==============================================
+   TABLET (768–1023) – lekko ściśnięty layout
+   ============================================== */
+
+@media (min-width: 768px) and (max-width: 1023px) {
+  .nevo-hero {
+    padding: 80px 28px 100px;
+  }
+
+  .hero-subheadline {
+    max-width: 620px;
+  }
+
+  .hero-right {
+    max-width: 420px;
+  }
+}
+/* ==============================================
+   NEVO – PROBLEM SECTION
+   ============================================== */
+
+.nevo-problems {
+  background: linear-gradient(
+    135deg,
+    #f5f1ed 0%,
+    #ffffff 100%
+  );
+  padding: 80px 20px 140px 20px;
+  color: #1c2e40;
+  position: relative;
+  overflow: hidden;
+  z-index: 0; /* tworzymy stacking context */
+  margin-top: 0!important;
+}
+
+/* Delikatne „chmury” koloru w tle */
+.nevo-problems::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background:
+    radial-gradient(circle at 10% 0%, rgba(255, 107, 88, 0.12) 0, transparent 90%),
+    radial-gradient(circle at 90% 100%, rgba(28, 46, 64, 0.18) 0, transparent 80%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.nevo-problems__inner {
+  position: relative;
+  z-index: 1;
+}
+
+
+.nevo-problems__inner {
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+.nevo-problems__heading {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.8rem, 3vw, 2.4rem);
+  margin: 0 0 1rem;
+}
+
+.nevo-problems__lead {
+  max-width: 640px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #3b4b5b;
+  margin-bottom: 2.5rem;
+}
+
+/* Grid kart problemów */
+.nevo-problems__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 24px;
+}
+
+.nevo-problem-card {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 20px 22px;
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(28, 46, 64, 0.06);
+  margin-top: 24px!important;
+}
+
+.nevo-problem-card__icon {
+  font-size: 1.2rem;
+  margin: 0 0 0.5rem;
+  color: #ff6b58;
+}
+
+.nevo-problem-card__title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  margin: 0 0 0.4rem;
+  color: #1c2e40;
+}
+
+.nevo-problem-card__text {
+  margin: 0;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #4a5b6a;
+}
+
+.nevo-problem-card {
+  background: #ffffff;
+  border-radius: 18px;
+  box-shadow: 0 14px 40px rgba(0, 0, 0, 0.04);
+  transition:
+    transform 0.25s ease-out,
+    box-shadow 0.25s ease-out,
+    background-color 0.25s ease-out;
+  transform-origin: center center;
+}
+
+/* Hover – delikatny zoom + lekkie uniesienie */
+.nevo-problem-card:hover {
+  transform: translateY(-6px) scale(1.02);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
+  background-color: #ffffff; /* zostawiamy białe, ale możesz lekko przybeżyć */
+}
+
+/* Stopka sekcji */
+.nevo-problems__footer {
+  margin-top: 3rem;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 1.5rem;
+}
+
+.nevo-problems__solution {
+  flex: 1 1 260px;
+  margin: 0;
+  font-size: 2rem;
+  line-height: 1.7;
+  color: #2a3542;
+}
+
+.nevo-problems__cta {
+  flex: 0 0 auto;
+  margin-top:60px;
+}
+
+/* Reuse CTA styles z hero – zakładam, że już zmieniłeś kolor na koral */
+.cta-primary {
+  display: inline-block;
+  padding: 16px 32px;
+  background-color: #ff6b58;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  box-shadow: 0 8px 20px rgba(255, 107, 88, 0.35);
+}
+
+.cta-primary:hover {
+  background-color: #ff8573;
+  transform: translateY(-1px);
+  box-shadow: 0 10px 26px rgba(255, 107, 88, 0.45);
+}
+
+/* Responsywność */
+@media (max-width: 1024px) {
+  .nevo-problems__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 720px) {
+  .nevo-problems {
+    padding: 60px 16px;
+    margin-block-start: 0;
+  }
+
+  .nevo-problems__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nevo-problems__footer {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .nevo-problems__cta {
+    width: 100%;
+    text-align: center;
+  }
+
+  .cta-primary {
+    width: 100%;
+    text-align: center;
+  }
+    .nevo-problem-card:hover {
+    transform: translateY(-3px) scale(1.01);
+  }
+}
+/* ================================
+   NEVO – Efekt w liczbach
+   ================================ */
+
+.nevo-metrics {
+  padding: 140px 20px 100px 20px;
+  position: relative;
+  background: #f5f1ed;
+  overflow: hidden;
+  margin-top: 0;
+}
+
+.nevo-metrics__inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  text-align: center;
+  position: relative;
+  z-index: 3;
+}
+/* Półprzezroczyste tło z grafiką GA4 */
+.nevo-metrics::before {
+  content: '';
+  position: absolute;
+  top: -10%;
+  right: -10%;
+  width: 50%;
+  height: 110%;
+  background-image:
+    linear-gradient(
+      110deg,
+      rgba(245, 241, 237, 1) 0%,   /* beż – wtopienie w tło po lewej */
+      rgba(245, 241, 237, 1) 25%,
+      rgba(28, 46, 64, 0.0) 100%
+    ),
+    url('http://127.0.0.1/nevo-marketing/wp-content/uploads/2025/11/metrics-bg.png');
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: cover;
+  filter: saturate(1.1);
+  pointer-events: none;
+  clip-path: polygon(
+    25% 0,
+    100% 0,
+    100% 100%,
+    0 100%
+  );
+
+  z-index: 0;
+}
+
+/* KORALOWY ZĄB NA GÓRZE SEKCJI */
+.nevo-metrics::after {
+  content: '';
+  position: absolute;
+  top: -40px;        /* lekko wchodzi w poprzednią sekcję */
+  left: 0;
+  right: 0;
+  height: 120px;
+
+  background: var(--wp--preset--color--coral);
+  opacity: 0.18;
+
+  clip-path: polygon(0% 0%, 100% 0%, 100% 100%, 50% 36%, 0 100%);
+
+  z-index: 1; /* nad tłem, pod treścią */
+}
+
+.nevo-metrics__heading {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 4vw, 2.6rem);
+  color: #1c2e40;
+  margin-bottom: 0.75rem;
+}
+
+.nevo-metrics__lead {
+  font-size: 1rem;
+  color: #5c6470;
+  max-width: 560px;
+  margin: 0 auto 3rem;
+}
+
+/* Grid */
+
+.nevo-metrics__grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+}
+
+/* Karta */
+
+.nevo-metric-card {
+  background: #f7f4f0;
+  display: flex;
+  flex-direction: column;
+  border-radius: 18px;
+  padding: 28px 24px;
+  text-align: left;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.03);
+  border: 1px solid rgba(0, 0, 0, 0.03);
+  transition:
+    transform 0.25s ease-out,
+    box-shadow 0.25s ease-out,
+    background-color 0.25s ease-out,
+    border-color 0.25s ease-out;
+    margin-top: 24px !important;
+}
+
+.nevo-metric-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 18px 50px rgba(0, 0, 0, 0.07);
+  background-color: #ffffff;
+  border-color: rgba(255, 107, 88, 0.3); /* lekki koral na hover */
+}
+
+.nevo-metric-card__value {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 2.4rem;
+  color: #ff6b58; /* koral CTA */
+  margin: 0 0 0.5rem;
+}
+
+.nevo-metric-card__label {
+  font-size: 0.98rem;
+  line-height: 1.6;
+  color: #333c4a;
+  margin: 0;
+}
+@media (max-width: 992px) {
+  .nevo-metrics__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 640px) {
+  .nevo-metrics {
+    padding: 60px 16px 70px;
+  }
+
+  .nevo-metrics__grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .nevo-metric-card {
+    padding: 22px 20px;
+  }
+}
+@media (max-width: 1024px) {
+  .nevo-metrics::before {
+    width: 520px;
+    height: 520px;
+    top: -5%;
+    right: -25%;
+    opacity: 0.35;
+  }
+}
+
+@media (max-width: 768px) {
+  .nevo-metrics::before {
+    width: 360px;
+    height: 360px;
+    top: auto;
+    bottom: -25%;
+    right: -40%;
+    opacity: 0.3;
+  }
+}
+
+@media (max-width: 560px) {
+  .nevo-metrics::before {
+    display: none; /* na bardzo małych ekranach po prostu chowamy */
+  }
+  /* =========================================
+   NEVO ARC – dekoracyjny ćwierć-okrąg
+   ========================================= */
+
+.nevo-accent {
+  position: absolute;
+  pointer-events: none;
+}
+
+/* Ćwierć-okrąg w lewym dolnym rogu sekcji */
+.nevo-accent--arc {
+  left: -180px;           /* tyle wysunięte na zewnątrz */
+  bottom: -180px;
+  width: 360px;
+  height: 360px;
+  border-radius: 50%;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 107, 88, 0.9),    /* coral */
+    rgba(255, 133, 115, 0.9)
+  );
+  box-shadow: 0 40px 80px rgba(0, 0, 0, 0.18);
+  z-index: 1;               /* ponad tłem z GA4, pod kartami */
+
+  /* stan startowy (przed wejściem w viewport) */
+  opacity: 0;
+  transform: translateY(80px);
+  transition:
+    opacity 0.8s ease-out,
+    transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+/* „wycięcie” w kolorze tła sekcji, żeby zrobić ring */
+.nevo-accent--arc::after {
+  content: "";
+  position: absolute;
+  inset: 70px;
+  border-radius: 50%;
+  background: #f5f1ed;  /* tło sekcji metryk */
+}
+
+/* aktywny stan – po wejściu sekcji w viewport */
+.nevo-accent--arc.is-visible {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+/* Na mniejszych ekranach – delikatniej lub wyłącz */
+@media (max-width: 768px) {
+  .nevo-accent--arc {
+    left: -140px;
+    bottom: -140px;
+    width: 280px;
+    height: 280px;
+    box-shadow: 0 25px 50px rgba(0, 0, 0, 0.15);
+  }
+}
+
+}/* =========================================
+   NEVO – sekcja "Trzy filary" (vertical tabs)
+   ========================================= */
+
+.nevo-pillars {
+  padding: 120px 20px 140px;
+  background: #ffffff;
+  position: relative;
+}
+
+.nevo-pillars__inner {
+  max-width: 1120px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.nevo-pillars__heading {
+  font-size: clamp(2rem, 3vw, 2.6rem);
+  margin-bottom: 12px;
+  color: #1c2e40;
+}
+
+.nevo-pillars__lead {
+  max-width: 680px;
+  margin: 0 auto;
+  font-size: 1.05rem;
+  line-height: 1.7;
+  color: #4b5563;
+}
+
+/* Kontener tabsów */
+
+.nevo-pillars__tabs {
+  margin-top: 56px;
+  display: flex;
+  flex-direction: column;
+  gap: 32px;
+  align-items: stretch;
+}
+
+@media (min-width: 1024px) {
+  .nevo-pillars__tabs {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 40px;
+  }
+}
+
+/* Sidebar z zakładkami */
+
+.nevo-pillars__sidebar {
+  display: flex;
+  flex-direction: row;
+  gap: 12px;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none;
+}
+
+.nevo-pillars__sidebar::-webkit-scrollbar {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .nevo-pillars__sidebar {
+    flex-direction: column;
+    min-width: 260px;
+    max-width: 280px;
+    overflow-x: visible;
+  }
+}
+
+/* Pojedyncza zakładka */
+
+.nevo-pillars__tab {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 20px;
+  border-radius: 14px;
+  border: 2px solid transparent;
+  background: #f5f1ed;
+  cursor: pointer;
+  white-space: nowrap;
+  min-width: 180px;
+  font: 500 1rem/1.2 "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+  color: #1c2e40;
+  transition:
+    background 0.25s ease,
+    border-color 0.25s ease,
+    color 0.25s ease,
+    transform 0.2s ease;
+}
+
+.nevo-pillars__tab:hover {
+  background: #ebe1d6;
+  border-color: rgba(28, 46, 64, 0.08);
+  transform: translateY(-1px);
+}
+
+.nevo-pillars__tab.is-active {
+  background: #1c2e40;
+  border-color: var(--wp--preset--color--coral, #ff6b58);
+  color: #ffffff;
+}
+
+/* =========================================
+   POPRAWKA IKON - Jedna, spójna definicja
+   ========================================= */
+
+/* 1. Kontener na ikony - rodzic */
+.nevo-pillars__tab-icon {
+  position: relative; /* Konieczne, aby dzieci (ikony) pozycjonowały się względem tego pudełka */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 80px;        /* Stała szerokość */
+  height: 80px;       /* Stała wysokość */
+  flex-shrink: 0;     /* Zapobiega zgniataniu kontenera */
+  margin-right: 12px;
+}
+
+/* 2. Same obrazki - dzieci */
+.nevo-pillars__tab-icon .nevo-pillars__icon {
+  position: absolute; /* To sprawia, że nakładają się na siebie */
+  inset: 0;           /* Rozciąga ikonę od krawędzi do krawędzi rodzica */
+  margin: auto;       /* Centrowanie */
+  width: 100%;        /* Dopasowanie szerokości do rodzica */
+  height: 100%;       /* Dopasowanie wysokości do rodzica */
+  object-fit: contain; /* Skaluje obrazek tak, by był cały widoczny i nie spłaszczony */
+  
+  /* Bardzo ważne - resetujemy transformację, która psuła widok w poprzednim kodzie */
+  transform: none; 
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+/* 3. Stany widoczności (domyślna vs aktywna) */
+.nevo-pillars__icon--default {
+  opacity: 1;
+  transform: scale(1); /* Wyjściowa skala */
+}
+
+.nevo-pillars__icon--active {
+  opacity: 0;
+  transform: scale(1);
+}
+
+/* 4. Obsługa stanu aktywnego (przycisk .is-active lub aria-selected) */
+
+/* Ukrywamy domyślną ikonę */
+.nevo-pillars__tab.is-active .nevo-pillars__icon--default,
+.nevo-pillars__tab[aria-selected="true"] .nevo-pillars__icon--default {
+  opacity: 0;
+  transform: scale(0.90); /* Lekkie zmniejszenie przy zanikaniu */
+}
+
+/* Pokazujemy aktywną ikonę */
+.nevo-pillars__tab.is-active .nevo-pillars__icon--active,
+.nevo-pillars__tab[aria-selected="true"] .nevo-pillars__icon--active {
+  opacity: 1;
+  transform: scale(1.05); /* Lekkie powiększenie przy pojawianiu - efekt "pop" */
+}
+
+.nevo-pillars__tab-label {
+  flex: 1;
+  text-align: left;
+}
+
+.nevo-pillars__tab-arrow {
+  font-size: 1.2rem;
+  opacity: 0;
+  transform: translateX(-8px);
+  transition: opacity 0.25s ease, transform 0.25s ease;
+}
+
+.nevo-pillars__tab.is-active .nevo-pillars__tab-arrow {
+  opacity: 1;
+  transform: translateX(0);
+  color: var(--wp--preset--color--coral, #ff6b58);
+}
+
+/* Content paneli */
+
+.nevo-pillars__content {
+  flex: 1;
+  position: relative;
+}
+
+.nevo-pillars__panel {
+  background: #f5f1ed;
+  border-radius: 18px;
+  padding: 32px 28px 28px;
+  text-align: left;
+  border-left: 4px solid var(--wp--preset--color--coral, #ff6b58);
+  box-shadow:
+    0 24px 60px rgba(15, 23, 42, 0.08),
+    0 0 0 1px rgba(148, 163, 184, 0.08);
+  opacity: 0;
+  transform: translateY(10px);
+  transition: opacity 0.3s ease, transform 0.3s ease;
+  display: none; /* domyślnie ukryte */
+}
+
+.nevo-pillars__panel.is-active {
+  display: block;
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.nevo-pillars__panel[hidden] {
+  display: none;
+}
+
+.nevo-pillars__panel-title {
+  font-size: 1.6rem;
+  line-height: 1.35;
+  margin-bottom: 14px;
+  color: #1c2e40;
+}
+
+.nevo-pillars__panel-text {
+  font-size: 1.02rem;
+  line-height: 1.7;
+  color: #4b5563;
+  margin-bottom: 24px;
+}
+
+/* Lista deliverables */
+
+.nevo-pillars__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 26px;
+}
+
+.nevo-pillars__list li {
+  position: relative;
+  font-size: 0.96rem;
+  line-height: 1.6;
+  color: #111827;
+  padding-left: 14px;
+  margin-bottom: 10px;
+  border-left: 3px solid rgba(148, 163, 184, 0.5);
+}
+
+.nevo-pillars__list strong {
+  font-weight: 600;
+}
+
+.nevo-pillars__list-why {
+  display: block;
+  font-size: 0.82rem;
+  color: #6b7280;
+  margin-top: 2px;
+  font-style: italic;
+}
+
+/* Box z metryką */
+
+.nevo-pillars__metric {
+  background: #ffffff;
+  border-radius: 10px;
+  padding: 14px 18px;
+  border-top: 3px solid var(--wp--preset--color--coral, #ff6b58);
+  text-align: center;
+}
+
+.nevo-pillars__metric-value {
+  display: block;
+  font-size: 2.3rem;
+  font-weight: 700;
+  color: var(--wp--preset--color--coral, #ff6b58);
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.nevo-pillars__metric-label {
+  display: block;
+  font-size: 0.88rem;
+  line-height: 1.5;
+  color: #4b5563;
+}
+
+/* Mobile tweaks */
+
+@media (max-width: 767px) {
+  .nevo-pillars {
+    padding-top: 80px;
+    padding-bottom: 100px;
+  }
+
+  .nevo-pillars__panel {
+    padding: 24px 18px 20px;
+  }
+
+  .nevo-pillars__panel-title {
+    font-size: 1.4rem;
+  }
+}
+/* Ustawiamy przyciski w jednym wierszu, ikona + label + strzałka */
+.nevo-pillars__tab {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+}
+
+/* Wrapper na ikony – stały rozmiar dla wszystkich kart */
+.nevo-pillars__tab-icon {
+  position: relative;
+  flex: 0 0 80px;     /* szerokość kolumny z ikoną */
+  height: 80px;       /* wysokość kolumny z ikoną */
+  margin-right: 12px;
+}
+
+/* Obie wersje ikony siedzą dokładnie jedna na drugiej */
+.nevo-pillars__tab-icon .nevo-pillars__icon {
+  position: absolute;
+  inset: 0;           /* top:0; right:0; bottom:0; left:0 */
+  margin: auto;       /* wycentrowanie w pionie i poziomie */
+  width: 72px;        /* faktyczny rozmiar grafiki */
+  height: auto;
+  display: block;
+  transition: opacity 0.25s ease;
+}
+
+/* Domyślnie widać „zwykłą” ikonę */
+.nevo-pillars__icon--default {
+  opacity: 1;
+}
+
+.nevo-pillars__icon--active {
+  opacity: 0;
+}
+
+/* Po aktywacji taba zamieniamy ikony */
+.nevo-pillars__tab.is-active .nevo-pillars__icon--default,
+.nevo-pillars__tab[aria-selected="true"] .nevo-pillars__icon--default {
+  opacity: 0;
+}
+
+.nevo-pillars__tab.is-active .nevo-pillars__icon--active,
+.nevo-pillars__tab[aria-selected="true"] .nevo-pillars__icon--active {
+  opacity: 1;
+}/* =========================================
+   NEVO – sekcja procesu (timeline 4 kroki)
+   ========================================= */
+
+.nevo-process {
+  position: relative;
+  padding: 120px 20px;
+  background: #ffffff;
+  overflow: hidden;
+}
+
+/* subtelny akcent w narożniku (łuk) */
+.nevo-process::after {
+  content: "";
+  position: absolute;
+  right: -140px;
+  bottom: -140px;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 210deg,
+    rgba(255, 107, 88, 0.12),
+    rgba(245, 241, 237, 0.9) 40%,
+    transparent 65%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.nevo-process__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* Główek sekcji */
+
+.nevo-process__header {
+  margin-bottom: 48px;
+}
+
+.nevo-process__label {
+  margin: 0 0 8px 0;
+  font-size: 0.78rem;
+  text-transform: uppercase;
+  letter-spacing: 0.18em;
+  color: #9ca3af;
+}
+
+.nevo-process__title {
+  margin: 0 0 12px 0;
+  font-weight: 700;
+  font-size: clamp(2rem, 1.2vw + 1.7rem, 2.4rem);
+  line-height: 1.2;
+  color: #1c2e40;
+}
+
+.nevo-process__desc {
+  max-width: 620px;
+  margin: 0;
+  font-size: 1.02rem;
+  line-height: 1.6;
+  color: #4b5563;
+}
+
+/* =================== TIMELINE =================== */
+
+.nevo-process__steps {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  position: relative;
+}
+
+/* pozioma linia łącząca kroki – desktop */
+.nevo-process__steps::before {
+  content: "";
+  position: absolute;
+  top: 38px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    rgba(245, 241, 237, 0.8),
+    rgba(255, 133, 115, 0.4),
+    rgba(245, 241, 237, 0.8)
+  );
+  z-index: 0;
+}
+
+/* pojedynczy krok */
+
+.nevo-process__step {
+  position: relative;
+  background: #f5f1ed;
+  border-radius: 18px;
+  padding: 28px 24px 26px 24px;
+  box-shadow: 0 16px 40px rgba(15, 23, 42, 0.04);
+  border: 1px solid rgba(212, 165, 116, 0.22);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease,
+    background 0.25s ease;
+}
+
+/* żeby linia szła pod badge, nie nad nim – pusta warstwa nad pseudo-elementem steps::before */
+.nevo-process__step::before {
+  content: "";
+  position: absolute;
+  top: 38px;
+  left: 0;
+  right: 0;
+  height: 2px;
+  background: transparent;
+  z-index: 1;
+}
+
+.nevo-process__step-badge {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: #ffffff;
+  box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
+  margin-bottom: 18px;
+  z-index: 2;
+}
+
+.nevo-process__step-number {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 999px;
+  background: #ff6b58; /* coral */
+  color: #ffffff;
+  font-weight: 700;
+  font-size: 0.95rem;
+  margin: 0;
+}
+
+.nevo-process__step-time {
+  margin: 0;
+  font-size: 0.82rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: #6b7280;
+}
+
+.nevo-process__step-title {
+  margin: 4px 0 10px 0;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #1c2e40;
+}
+
+.nevo-process__step-text {
+  margin: 0;
+  font-size: 0.96rem;
+  line-height: 1.6;
+  color: #4b5563;
+}
+
+/* hover / focus – lekki "pop" jak w kartach */
+
+.nevo-process__step:hover,
+.nevo-process__step:focus-within {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
+  border-color: #ff6b58;
+  background: #ffffff;
+}
+
+/* =================== MOBILE / TABLET =================== */
+
+@media (max-width: 1023px) {
+  .nevo-process {
+    padding: 80px 16px 90px 16px;
+  }
+
+  .nevo-process__steps {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  /* pionowa linia zamiast poziomej */
+  .nevo-process__steps::before {
+    top: 0;
+    bottom: 0;
+    left: 18px;
+    right: auto;
+    width: 2px;
+    height: auto;
+    background: linear-gradient(
+      to bottom,
+      rgba(245, 241, 237, 0.9),
+      rgba(255, 133, 115, 0.5),
+      rgba(245, 241, 237, 0.9)
+    );
+  }
+
+  .nevo-process__step {
+    padding-left: 40px;
+  }
+
+  .nevo-process__step-badge {
+    margin-left: -28px;
+  }
+}
+/* CTA pod procesem – wersja kolumnowa, wycentrowana */
+
+.nevo-process__cta {
+  margin-top: 40px;
+  padding: 28px 20px 26px;
+  background: #1c2e40;
+  border-radius: 20px;
+  box-shadow: 0 18px 45px rgba(15, 23, 42, 0.5);
+
+  display: flex;
+  flex-direction: column;       /* <– zamiast wiersza */
+  align-items: center;          /* <– wyśrodkowanie w poziomie */
+  justify-content: center;      /* <– wyśrodkowanie w pionie */
+  text-align: center;           /* <– tekst na środku */
+  gap: 12px;                    /* odstęp między liniami / przyciskiem */
+}
+
+.nevo-process__cta-text {
+  font-size: 1.05rem;
+  font-weight: 500;
+  color: #ffffff;
+  margin: 0;
+}
+
+.nevo-process__cta-subtext {
+  font-size: 0.9rem;
+  color: rgba(248, 250, 252, 0.78);
+  margin: 0;
+}
+
+/* przycisk może zostać jak Twój globalny .cta-primary,
+   ale jeśli chcesz pewności, że jest wycentrowany: */
+.nevo-process__cta-button {
+  margin: 0;            /* zerujemy ewentualne auto-marginesy z boków */
+}
+/* =========================================
+   NEVO – Social proof (logotypy + certyfikaty)
+   ========================================= */
+
+.nevo-social {
+  position: relative;
+  padding: 110px 20px 120px;
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #f5f1ed 45%,
+    #ffffff 100%
+  );
+  overflow: hidden;
+}
+
+.nevo-social::before {
+  content: "";
+  position: absolute;
+  top: -140px;
+  left: -140px;
+  width: 260px;
+  height: 260px;
+  border-radius: 50%;
+  background: conic-gradient(
+    from 140deg,
+    rgba(28, 46, 64, 0.08),
+    rgba(245, 241, 237, 0.9) 40%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.nevo-social__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+/* HEADER */
+
+.nevo-social__header {
+  max-width: 760px;
+  margin-bottom: 40px;
+}
+
+.nevo-social__label {
+  font-size: 0.78rem;
+  letter-spacing: 0.16em;
+  text-transform: uppercase;
+  color: #ff6b58;
+  margin: 0 0 8px;
+}
+
+.nevo-social__title {
+  font-size: 2.1rem;
+  line-height: 1.25;
+  color: #1c2e40;
+  margin: 0 0 14px;
+}
+
+.nevo-social__desc {
+  font-size: 1.02rem;
+  line-height: 1.6;
+  color: #4b5563;
+  margin: 0;
+}
+
+/* LOGOS GRID */
+
+.nevo-social__logos {
+  margin-top: 40px;
+  margin-bottom: 30px;
+  gap: 32px;
+  align-items: center;
+}
+
+.nevo-social__logo-item {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.nevo-social__logo {
+  margin: 0;
+  filter: grayscale(100%) contrast(1.05);
+  opacity: 0.78;
+  transition:
+    opacity 0.25s ease,
+    filter 0.25s ease,
+    transform 0.25s ease;
+}
+
+.nevo-social__logo img {
+  max-height: 80px;
+  width: auto;
+  height: auto;
+}
+
+/* hover – delikatny „pop” */
+
+.nevo-social__logo:hover {
+  opacity: 1;
+  filter: grayscale(0) contrast(1.05);
+  transform: translateY(-4px);
+}
+
+/* TECH BADGES (certyfikaty / partnerstwa) */
+
+.nevo-social__tech {
+  margin-top: 20px;
+}
+
+.nevo-social__tech-label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.12em;
+  color: #6b7280;
+  margin: 0 0 10px;
+}
+
+.nevo-social__tech-badges {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+.nevo-social__tech-badge {
+  font-size: 0.85rem;
+  line-height: 1.5;
+  padding: 6px 12px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.9);
+  border: 1px solid rgba(212, 165, 116, 0.35);
+  color: #1c2e40;
+}
+
+.nevo-social__tech-badge--outline {
+  background: rgba(245, 241, 237, 0.7);
+  border-style: dashed;
+}
+
+/* RESPONSYWNOŚĆ */
+
+@media (max-width: 1024px) {
+  .nevo-social {
+    padding: 80px 16px 90px;
+  }
+
+  .nevo-social__logos {
+    gap: 24px;
+  }
+
+  .nevo-social__logo img {
+    max-width: 120px;
+  }
+
+  .nevo-social__tech-badges {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+}
+
+@media (max-width: 640px) {
+  .nevo-social__title {
+    font-size: 1.6rem;
+  }
+
+  .nevo-social__logos {
+    flex-direction: column;
+    display: flex; /* nadpisujemy wp-block-columns na mobile */
+  }
+
+  .nevo-social__logo-item {
+    width: 100%;
+    justify-content: flex-start;
+  }
+
+  .nevo-social__logo img {
+    max-width: 130px;
+  }
+}
+/* Kontener z logotypami */
+.nevo-trust__logos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 40px;              /* odstępy między logo */
+  align-items: center;
+}
+
+/* Pojedyncze logo – POWIĘKSZONE i równe optycznie */
+.nevo-trust__logo img {
+  max-height: 80px;       /* tu masz mniej więcej x1.5 w stosunku do typowych 50–55px */
+  width: auto;            /* zachowuje proporcje, nic się nie rozciąga */
+  object-fit: contain;    /* bez przycinania */
+  display: block;
+}
+
+/* Opcjonalnie: lekkie przygaszenie + hover */
+.nevo-trust__logo img {
+  filter: grayscale(0.1);
+  opacity: 0.9;
+  transition: transform 0.25s ease, opacity 0.25s ease, filter 0.25s ease;
+}
+
+.nevo-trust__logo img:hover {
+  transform: translateY(-3px);
+  opacity: 1;
+  filter: grayscale(0);
+}
+/* Wyrównanie optyczne całej sekcji */
+.nevo-trust {
+  padding: 80px 20px 60px 20px;
+}
+
+.nevo-trust__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.nevo-trust__logos {
+  margin-top: 32px;
+  margin-bottom: 28px;
+}
+
+/* =========================================
+   NEVO – FAQ (3 kolumny, kompaktowy akordeon)
+   ========================================= */
+
+.nevo-faq {
+  padding: 96px 20px 120px;
+  background: #ffffff;
+}
+
+.nevo-faq__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nevo-faq__title {
+  font-size: 2.2rem;
+  line-height: 1.2;
+  margin: 0 0 12px;
+  color: #1c2e40;
+}
+
+.nevo-faq__lead {
+  max-width: 720px;
+  font-size: 1rem;
+  line-height: 1.6;
+  color: #4b5563;
+  margin: 0 0 40px;
+}
+
+/* LISTA / KOLUMNY */
+
+.nevo-faq__list {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  column-gap: 40px;
+  row-gap: 0;
+  align-items: flex-start;
+}
+
+.nevo-faq__col {
+  display: flex;
+  flex-direction: column;
+  gap: 8px; /* odstęp między pytaniami w kolumnie */
+  margin-block-start: 0;
+
+}
+
+/* POJEDYNCZY ELEMENT FAQ – wersja „lista” */
+
+.nevo-faq__item {
+  border-radius: 10px;
+  background: transparent;
+  padding: 6px 0 10px;
+  border-bottom: 1px solid rgba(148, 163, 184, 0.35);
+  transition:
+    background 0.2s ease,
+    border-color 0.2s ease,
+    box-shadow 0.2s ease;
+  cursor: pointer;
+}
+
+.nevo-faq__item.is-open {
+  background: #f5f1ed;
+  border-color: rgba(212, 165, 116, 0.6);
+  box-shadow: 0 14px 40px rgba(15, 23, 42, 0.06);
+  padding: 20px;
+}
+
+/* nagłówek pytania (trigger) */
+
+.nevo-faq__question {
+  font-size: 0.98rem;
+  font-weight: 600;
+  margin: 0;
+  padding: 6px 26px 6px 0;
+  position: relative;
+  color: #1c2e40;
+}
+
+/* mała strzałka po prawej */
+
+.nevo-faq__question::after {
+  content: "＋";
+  position: absolute;
+  right: 0;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 0.9rem;
+  color: #d4a574;
+  transition: transform 0.2s ease, opacity 0.2s ease;
+}
+
+.nevo-faq__item.is-open .nevo-faq__question::after {
+  content: "−";
+  transform: translateY(-50%) rotate(0deg);
+}
+
+/* odpowiedź (treść) */
+
+.nevo-faq__answer {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: #4b5563;
+  margin: 4px 0 0;
+  padding-right: 8px;
+
+  max-height: 0;
+  opacity: 0;
+  overflow: hidden;
+  transition:
+    max-height 0.3s ease,
+    opacity 0.25s ease;
+}
+
+.nevo-faq__item.is-open .nevo-faq__answer {
+  max-height: 600px; /* wystarczająco dużo na długie odpowiedzi */
+  opacity: 1;
+}
+
+/* MOBILE / TABLET – 1 kolumna */
+
+@media (max-width: 1023px) {
+  .nevo-faq {
+    padding: 72px 16px 96px;
+  }
+
+  .nevo-faq__list {
+    display: block;
+  }
+
+  .nevo-faq__col {
+    gap: 10px;
+    margin-bottom: 20px;
+  }
+
+  .nevo-faq__item {
+    padding: 8px 0 12px;
+  }
+
+  .nevo-faq__question {
+    font-size: 1rem;
+  }
+}
+/* =========================================
+   NEVO – SERVICE LANDING PAGE HERO
+   ========================================= */
+
+.nevo-service-hero {
+  position: relative;
+  padding: 100px 20px 80px;
+  background: linear-gradient(
+    135deg,
+    #1c2e40 0%,
+    #243647 50%,
+    #1a2e3f 100%
+  );
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Subtelny geometric pattern w tle (wireframe/grid) */
+.nevo-service-hero::before {
+  content: "";
+  position: absolute;
+  top: -10%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100%;
+  height: 100%;
+  background-image: 
+    repeating-linear-gradient(
+      0deg,
+      rgba(255, 107, 88, 0.03) 0px,
+      transparent 1px,
+      transparent 40px,
+      rgba(255, 107, 88, 0.06) 41px
+    ),
+    repeating-linear-gradient(
+      90deg,
+      rgba(255, 107, 88, 0.04) 0px,
+      transparent 1px,
+      transparent 40px,
+      rgba(255, 107, 88, 0.07) 41px
+    );
+  opacity: 1;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Delikatny glow (radial) */
+.nevo-service-hero::after {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 107, 88, 0.08) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.nevo-service-hero__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+/* Badge (etykieta nad headline) */
+
+.nevo-service-hero__badge {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 107, 88, 0.3);
+  color: #ff6b58;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  margin: 0 0 20px;
+  backdrop-filter: blur(8px);
+}
+
+/* Headline */
+
+.nevo-service-hero__headline {
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.15;
+  margin: 0 0 18px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Subheadline */
+
+.nevo-service-hero__subhead {
+  color: #e5dcc5;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin: 0 0 32px;
+}
+
+/* CTA buttons */
+
+.nevo-service-hero__cta {
+  margin-bottom: 20px;
+}
+
+/* Benefit points (lista checkmarks) */
+
+.nevo-service-hero__benefits {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  color: rgba(229, 220, 197, 0.9);
+  font-size: 0.92rem;
+}
+
+.nevo-service-hero__benefits li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* RESPONSYWNOŚĆ */
+
+@media (max-width: 768px) {
+  .nevo-service-hero {
+    padding: 72px 16px 60px;
+  }
+
+  .nevo-service-hero__headline {
+    font-size: 1.8rem;
+  }
+
+  .nevo-service-hero__benefits {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .nevo-service-hero::before {
+    width: 600px;
+    height: 600px;
+    opacity: 0.3;
+  }
+}
+
+/* =========================================
+   NEVO – SERVICE PROBLEM SECTION
+   ========================================= */
+
+.nevo-service-problem {
+  background: linear-gradient(
+    180deg,
+    #f5f1ed 0%,
+    #ffffff 50%,
+    #f5f1ed 100%
+  );
+  padding: 100px 20px 120px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtelny accent w narożniku (opcjonalnie) */
+.nevo-service-problem::before {
+  content: "";
+  position: absolute;
+  top: -5%;
+  right: -8%;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 107, 88, 0.06) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.nevo-service-problem__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+/* Heading */
+
+.nevo-service-problem__heading {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  color: #1c2e40;
+  margin: 0 0 56px;
+}
+
+/* Grid kart */
+
+.nevo-service-problem__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  margin-bottom: 48px;
+}
+
+/* Pojedyncza karta problemu */
+
+.nevo-service-problem__card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 28px 24px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(28, 46, 64, 0.06);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.nevo-service-problem__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+  border-color: rgba(255, 107, 88, 0.2);
+}
+
+/* Ikona (emoji X) */
+
+.nevo-service-problem__icon {
+  font-size: 1.5rem;
+  margin: 0 0 12px;
+  line-height: 1;
+}
+
+/* Tytuł karty */
+
+.nevo-service-problem__title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #1c2e40;
+  margin: 0 0 10px;
+}
+
+/* Tekst opisu */
+
+.nevo-service-problem__text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #4a5b6a;
+  margin: 0;
+}
+
+/* Footer z CTA */
+
+.nevo-service-problem__footer {
+  margin-top: 56px;
+  padding-top: 40px;
+  border-top: 2px solid rgba(212, 165, 116, 0.2);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  text-align: center;
+}
+
+.nevo-service-problem__cta-text {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #1c2e40;
+  margin: 0;
+}
+
+.nevo-service-problem__cta {
+  margin: 0;
+}
+
+/* RESPONSYWNOŚĆ */
+
+@media (max-width: 1024px) {
+  .nevo-service-problem__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nevo-service-problem {
+    padding: 72px 16px 80px;
+  }
+
+  .nevo-service-problem__heading {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+
+  .nevo-service-problem__grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .nevo-service-problem__card {
+    padding: 24px 20px;
+  }
+
+  .nevo-service-problem__footer {
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 40px;
+  }
+
+  .nevo-service-problem__cta-text {
+    font-size: 1.1rem;
+  }
+}
+
+/* =========================================
+   NEVO – SERVICE SOLUTION SECTION
+   ========================================= */
+
+.nevo-service-solution {
+  background: #ffffff;
+  padding: 100px 20px 120px;
+  position: relative;
+  overflow: hidden;
+}
+
+.nevo-service-solution::before {
+  content: "";
+  position: absolute;
+  bottom: -10%;
+  left: -5%;
+  width: 500px;
+  height: 500px;
+  background-image: 
+    repeating-linear-gradient(
+      45deg,
+      rgba(212, 165, 116, 0.04) 0px,
+      transparent 1px,
+      transparent 30px,
+      rgba(212, 165, 116, 0.04) 31px
+    );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.nevo-service-solution__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+/* Heading */
+
+.nevo-service-solution__heading {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  color: #1c2e40;
+  margin: 0 0 16px;
+}
+
+/* Lead text */
+
+.nevo-service-solution__lead {
+  max-width: 640px;
+  margin: 0 auto 56px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #4b5563;
+}
+
+/* Grid kart deliverables */
+
+.nevo-service-solution__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+  margin-bottom: 48px;
+}
+
+/* Pojedyncza karta */
+
+.nevo-service-solution__card {
+  background: linear-gradient(
+    135deg,
+    #f5f1ed 0%,
+    #ffffff 100%
+  );
+  border-radius: 18px;
+  padding: 32px 28px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.04);
+  border-left: 4px solid #ff6b58;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.nevo-service-solution__card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.08);
+  border-color: #d4a574;
+}
+
+/* Ikona (obrazek) */
+
+.nevo-service-solution__icon {
+  width: 72px;
+  height: 72px;
+  margin: 0 0 16px;
+  display: block;
+}
+
+.nevo-service-solution__icon img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+  display: block;
+}
+
+/* Tytuł karty */
+
+.nevo-service-solution__title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #1c2e40;
+  margin: 0 0 6px;
+}
+
+/* Time badge */
+
+.nevo-service-solution__time {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: rgba(255, 107, 88, 0.1);
+  color: #ff6b58;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  margin: 0 0 16px;
+}
+
+/* Lista deliverables */
+
+.nevo-service-solution__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nevo-service-solution__list li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #4a5b6a;
+}
+
+.nevo-service-solution__list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #ff6b58;
+  font-weight: 600;
+}
+
+/* Highlight box (czas realizacji) */
+
+.nevo-service-solution__highlight {
+  background: linear-gradient(
+    135deg,
+    #1c2e40 0%,
+    #243647 100%
+  );
+  border-radius: 16px;
+  padding: 24px 32px;
+  text-align: center;
+  box-shadow: 0 16px 40px rgba(28, 46, 64, 0.15);
+}
+
+.nevo-service-solution__highlight-text {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #e5dcc5;
+}
+
+.nevo-service-solution__highlight-text strong {
+  color: #ff6b58;
+  font-weight: 600;
+}
+
+/* RESPONSYWNOŚĆ */
+
+@media (max-width: 768px) {
+  .nevo-service-solution {
+    padding: 72px 16px 80px;
+  }
+
+  .nevo-service-solution__heading {
+    font-size: 2rem;
+    margin-bottom: 12px;
+  }
+
+  .nevo-service-solution__lead {
+    font-size: 1rem;
+    margin-bottom: 40px;
+  }
+
+  .nevo-service-solution__grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .nevo-service-solution__card {
+    padding: 28px 24px;
+  }
+
+  .nevo-service-solution__icon {
+    width: 64px;
+    height: 64px;
+  }
+
+  .nevo-service-solution__title {
+    font-size: 1.15rem;
+  }
+
+  .nevo-service-solution__highlight {
+    padding: 20px 24px;
+  }
+
+  .nevo-service-solution__highlight-text {
+    font-size: 0.95rem;
+  }
+}
+
+/* =========================================
+   NEVO – SERVICE PROCESS SECTION (HORIZONTAL)
+   ========================================= */
+
+.nevo-service-process {
+  background: linear-gradient(
+    180deg,
+    #f5f1ed 0%,
+    #ffffff 100%
+  );
+  padding: 100px 20px 120px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtelny pattern w tle */
+.nevo-service-process::before {
+  content: "";
+  position: absolute;
+  top: -8%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 800px;
+  background-image: 
+    repeating-linear-gradient(
+      90deg,
+      rgba(28, 46, 64, 0.02) 0px,
+      transparent 1px,
+      transparent 50px,
+      rgba(28, 46, 64, 0.02) 51px
+    );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.nevo-service-process__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Heading */
+
+.nevo-service-process__heading {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  color: #1c2e40;
+  margin: 0 0 16px;
+  text-align: center;
+}
+
+/* Lead text */
+
+.nevo-service-process__lead {
+  max-width: 640px;
+  margin: 0 auto 56px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #4b5563;
+  text-align: center;
+}
+
+.nevo-service-process__lead strong {
+  color: #ff6b58;
+  font-weight: 600;
+}
+
+/* Timeline container (POZIOMY GRID) */
+
+.nevo-service-process__timeline {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  margin-bottom: 56px;
+}
+
+/* Pozioma linia łącząca kroki */
+.nevo-service-process__timeline::before {
+  content: "";
+  position: absolute;
+  top: 32px;
+  left: 12%;
+  right: 12%;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    rgba(255, 107, 88, 0.2),
+    rgba(255, 107, 88, 0.4),
+    rgba(212, 165, 116, 0.4),
+    rgba(212, 165, 116, 0.2)
+  );
+  z-index: 0;
+}
+
+/* Pojedynczy krok */
+
+.nevo-service-process__step {
+  position: relative;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 80px 20px 24px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(28, 46, 64, 0.06);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+  text-align: center;
+}
+
+.nevo-service-process__step:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+  border-color: rgba(255, 107, 88, 0.3);
+}
+
+/* Header kroku (number + time) – NAD kartą */
+
+.nevo-service-process__step-header {
+  position: absolute;
+  top: -48px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  z-index: 1;
+}
+
+/* Numer kroku */
+
+.nevo-service-process__step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff6b58, #ff8573);
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin: 0;
+  box-shadow: 0 8px 20px rgba(255, 107, 88, 0.35);
+  border: 4px solid #ffffff;
+}
+
+/* Time badge */
+
+.nevo-service-process__step-time {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(255, 107, 88, 0.12);
+  color: #ff6b58;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* Tytuł kroku */
+
+.nevo-service-process__step-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #1c2e40;
+  margin: 0 0 12px;
+}
+
+/* Opis kroku */
+
+.nevo-service-process__step-text {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #4a5b6a;
+  margin: 0 0 14px;
+}
+
+/* Output (deliverable) */
+
+.nevo-service-process__step-output {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: #6b7280;
+  margin: 0;
+  padding-top: 12px;
+  border-top: 1px solid rgba(212, 165, 116, 0.2);
+}
+
+.nevo-service-process__step-output strong {
+  color: #ff6b58;
+  font-weight: 600;
+}
+
+/* CTA footer */
+
+.nevo-service-process__cta {
+  margin-top: 56px;
+  padding: 32px 28px;
+  background: linear-gradient(135deg, #1c2e40, #243647);
+  border-radius: 18px;
+  box-shadow: 0 16px 40px rgba(28, 46, 64, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+}
+
+.nevo-service-process__cta-text {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #e5dcc5;
+  margin: 0;
+}
+
+.nevo-service-process__cta-button {
+  margin: 0;
+}
+
+.nevo-service-process__cta-note {
+  font-size: 0.85rem;
+  color: rgba(229, 220, 197, 0.7);
+  margin: 0;
+}
+
+/* RESPONSYWNOŚĆ */
+
+@media (max-width: 1024px) {
+  .nevo-service-process__timeline {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 60px 20px;
+  }
+
+  .nevo-service-process__timeline::before {
+    display: none;
+  }
+
+  .nevo-service-process__step {
+    padding: 80px 18px 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nevo-service-process {
+    padding: 72px 16px 80px;
+  }
+
+  .nevo-service-process__heading {
+    font-size: 2rem;
+    margin-bottom: 12px;
+  }
+
+  .nevo-service-process__lead {
+    font-size: 1rem;
+    margin-bottom: 48px;
+  }
+
+  .nevo-service-process__timeline {
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+
+  .nevo-service-process__step {
+    padding: 76px 20px 22px;
+  }
+
+  .nevo-service-process__step:hover {
+    transform: translateY(-4px);
+  }
+
+  .nevo-service-process__step-header {
+    top: -44px;
+  }
+
+  .nevo-service-process__step-number {
+    width: 52px;
+    height: 52px;
+    font-size: 1.3rem;
+  }
+
+  .nevo-service-process__step-title {
+    font-size: 1.1rem;
+  }
+
+  .nevo-service-process__cta {
+    padding: 24px 20px;
+    gap: 12px;
+  }
+
+  .nevo-service-process__cta-text {
+    font-size: 1rem;
+  }
+}
+
+/* =========================================
+   NEVO – SERVICE PRICING + FAQ SECTION
+   ========================================= */
+
+.nevo-service-pricing {
+  background: #ffffff;
+  padding: 100px 20px 120px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtelny gradient glow w tle */
+.nevo-service-pricing::before {
+  content: "";
+  position: absolute;
+  top: -15%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 107, 88, 0.05) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.nevo-service-pricing__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* =================== PRICE BOX =================== */
+
+.nevo-service-pricing__price-box {
+  background: linear-gradient(
+    135deg,
+    #f5f1ed 0%,
+    #ffffff 100%
+  );
+  border-radius: 20px;
+  padding: 48px 40px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.06);
+  border: 2px solid rgba(255, 107, 88, 0.15);
+  margin-bottom: 80px;
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease,
+    border-color 0.3s ease;
+}
+
+.nevo-service-pricing__price-box:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+  border-color: rgba(255, 107, 88, 0.3);
+}
+
+/* Label (małe "Inwestycja") */
+
+.nevo-service-pricing__label {
+  font-size: 0.85rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: #6b7280;
+  margin: 0 0 8px;
+}
+
+/* Amount (duża cena) */
+
+.nevo-service-pricing__amount {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: clamp(2.5rem, 5vw, 3.5rem);
+  color: #ff6b58;
+  margin: 0 0 8px;
+  line-height: 1;
+}
+
+/* Note (subtext) */
+
+.nevo-service-pricing__note {
+  font-size: 1rem;
+  color: #4b5563;
+  margin: 0 0 32px;
+}
+
+/* Divider */
+
+.nevo-service-pricing__divider {
+  border: none;
+  border-top: 1px solid rgba(212, 165, 116, 0.3);
+  margin: 32px 0;
+  opacity: 1;
+}
+
+/* Included title */
+
+.nevo-service-pricing__included-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #1c2e40;
+  margin: 0 0 20px;
+}
+
+/* Included list */
+
+.nevo-service-pricing__included-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px;
+  text-align: left;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nevo-service-pricing__included-list li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 12px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #4a5b6a;
+}
+
+.nevo-service-pricing__included-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #ff6b58;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+/* Optional section */
+
+.nevo-service-pricing__optional-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1c2e40;
+  margin: 0 0 14px;
+}
+
+.nevo-service-pricing__optional-text {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: #4b5563;
+  margin: 0 0 32px;
+}
+
+.nevo-service-pricing__optional-text strong {
+  color: #1c2e40;
+  font-weight: 600;
+}
+
+/* CTA button */
+
+.nevo-service-pricing__cta {
+  margin: 0;
+}
+
+/* =================== FAQ =================== */
+
+.nevo-service-pricing__faq {
+  margin-top: 80px;
+}
+
+.nevo-service-pricing__faq-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 3.5vw, 2.6rem);
+  color: #1c2e40;
+  margin: 0 0 48px;
+}
+
+/* FAQ Grid (2 kolumny) */
+
+.nevo-service-pricing__faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+}
+
+/* FAQ Item */
+
+.nevo-service-pricing__faq-item {
+  background: #f5f1ed;
+  border-radius: 14px;
+  padding: 24px 26px;
+  border-left: 3px solid #ff6b58;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease;
+}
+
+.nevo-service-pricing__faq-item:hover {
+  transform: translateX(6px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+/* FAQ Question */
+
+.nevo-service-pricing__faq-question {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #1c2e40;
+  margin: 0 0 10px;
+}
+
+/* FAQ Answer */
+
+.nevo-service-pricing__faq-answer {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: #4a5b6a;
+  margin: 0;
+}
+
+.nevo-service-pricing__faq-answer strong {
+  color: #1c2e40;
+  font-weight: 600;
+}
+
+/* RESPONSYWNOŚĆ */
+
+@media (max-width: 768px) {
+  .nevo-service-pricing {
+    padding: 72px 16px 80px;
+  }
+
+  .nevo-service-pricing__price-box {
+    padding: 36px 28px;
+    margin-bottom: 60px;
+  }
+
+  .nevo-service-pricing__amount {
+    font-size: 2.5rem;
+  }
+
+  .nevo-service-pricing__included-list {
+    text-align: left;
+  }
+
+  .nevo-service-pricing__faq-title {
+    font-size: 2rem;
+    margin-bottom: 32px;
+  }
+
+  .nevo-service-pricing__faq-grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .nevo-service-pricing__faq-item {
+    padding: 20px 22px;
+  }
+
+  .nevo-service-pricing__faq-item:hover {
+    transform: translateX(3px);
+  }
+
+  .nevo-service-pricing__faq-question {
+    font-size: 1rem;
+  }
+}
+
+/* =========================================
+   NEVO – SERVICE FINAL CTA SECTION
+   ========================================= */
+
+.nevo-service-final-cta {
+  background: linear-gradient(
+    135deg,
+    #1c2e40 0%,
+    #243647 100%
+  );
+  padding: 100px 20px 100px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtelny glow w tle */
+.nevo-service-final-cta::before {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 700px;
+  height: 700px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 107, 88, 0.08) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.nevo-service-final-cta__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Heading */
+
+.nevo-service-final-cta__heading {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  color: #ffffff;
+  margin: 0 0 16px;
+  line-height: 1.2;
+}
+
+/* Subheading */
+
+.nevo-service-final-cta__subheading {
+  color: #e5dcc5;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin: 0 0 48px;
+  max-width: 680px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Content wrapper (2 kolumny: form | phone) */
+
+.nevo-service-final-cta__content {
+  display: grid;
+  grid-template-columns: 1.2fr 0.8fr;
+  gap: 40px;
+  margin-bottom: 32px;
+  align-items: start;
+}
+
+/* =================== FORM COLUMN =================== */
+
+.nevo-service-final-cta__form-column {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 32px 28px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+/* Contact Form 7 styling */
+
+.nevo-cf7-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.nevo-cf7-fields label {
+  display: block;
+  color: #e5dcc5;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.nevo-cf7-input,
+.nevo-cf7-textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.95);
+  color: #1c2e40;
+  font-size: 0.95rem;
+  font-family: 'Inter', sans-serif;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.nevo-cf7-input:focus,
+.nevo-cf7-textarea:focus {
+  outline: none;
+  border-color: #ff6b58;
+  box-shadow: 0 0 0 3px rgba(255, 107, 88, 0.15);
+}
+
+.nevo-cf7-textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+.nevo-cf7-submit {
+  width: 100%;
+  padding: 14px 32px;
+  background: #ff6b58;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 20px rgba(255, 107, 88, 0.3);
+}
+
+.nevo-cf7-submit:hover {
+  background: #ff8573;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 107, 88, 0.4);
+}
+
+/* CF7 response messages */
+
+.wpcf7-response-output {
+  border: none !important;
+  padding: 12px 16px !important;
+  border-radius: 8px !important;
+  margin-top: 16px !important;
+  font-size: 0.9rem !important;
+}
+
+.wpcf7-mail-sent-ok {
+  background: rgba(74, 222, 128, 0.15) !important;
+  color: #4ade80 !important;
+  border-left: 3px solid #4ade80 !important;
+}
+
+.wpcf7-validation-errors,
+.wpcf7-mail-sent-ng {
+  background: rgba(248, 113, 113, 0.15) !important;
+  color: #f87171 !important;
+  border-left: 3px solid #f87171 !important;
+}
+
+/* =================== PHONE COLUMN =================== */
+
+.nevo-service-final-cta__phone-column {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  padding: 32px 28px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+  text-align: center;
+}
+
+/* "lub" separator */
+
+.nevo-service-final-cta__or {
+  font-size: 0.9rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: rgba(229, 220, 197, 0.5);
+  margin: 0 0 20px;
+}
+
+/* Phone title */
+
+.nevo-service-final-cta__phone-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 12px;
+}
+
+/* Phone text */
+
+.nevo-service-final-cta__phone-text {
+  color: #e5dcc5;
+  font-size: 0.95rem;
+  margin: 0 0 16px;
+}
+
+/* Phone number (duży, klikany) */
+
+.nevo-service-final-cta__phone-number {
+  margin: 0 0 16px;
+}
+
+.nevo-service-final-cta__phone-number a {
+  display: inline-block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.8rem;
+  font-weight: 700;
+  color: #ff6b58;
+  text-decoration: none;
+  transition: all 0.25s ease;
+  padding: 8px 16px;
+  border-radius: 8px;
+}
+
+.nevo-service-final-cta__phone-number a:hover {
+  color: #ff8573;
+  background: rgba(255, 107, 88, 0.1);
+}
+
+/* Phone hours */
+
+.nevo-service-final-cta__phone-hours {
+  font-size: 0.85rem;
+  color: rgba(229, 220, 197, 0.7);
+  margin: 0;
+}
+
+/* =================== NOTE (na dole) =================== */
+
+.nevo-service-final-cta__note {
+  color: rgba(229, 220, 197, 0.8);
+  font-size: 0.9rem;
+  margin: 0;
+}
+
+/* =================== RESPONSYWNOŚĆ =================== */
+
+@media (max-width: 768px) {
+  .nevo-service-final-cta {
+    padding: 72px 16px 72px;
+  }
+
+  .nevo-service-final-cta__heading {
+    font-size: 1.8rem;
+    margin-bottom: 12px;
+  }
+
+  .nevo-service-final-cta__subheading {
+    font-size: 1rem;
+    margin-bottom: 36px;
+  }
+
+  /* Stack wertykalnie na mobile */
+  .nevo-service-final-cta__content {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .nevo-service-final-cta__form-column,
+  .nevo-service-final-cta__phone-column {
+    padding: 24px 20px;
+  }
+
+  .nevo-service-final-cta__phone-number a {
+    font-size: 1.5rem;
+  }
+
+  .nevo-service-final-cta__note {
+    font-size: 0.85rem;
+  }
+}
+/* =========================================
+   NEVO – PERFORMANCE HERO (variant)
+   ========================================= */
+
+.nevo-service-hero--performance {
+  position: relative;
+  padding: 100px 20px 80px;
+  background: linear-gradient(
+    135deg,
+    #1c2e40 0%,
+    #243647 50%,
+    #1a2e3f 100%
+  );
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Gradient mesh (większa opacity, bardziej widoczny) */
+.nevo-service-hero--performance::before {
+  content: "";
+  position: absolute;
+  top: -30%;
+  left: 50%;
+  transform: translateX(-50%) rotate(-15deg);
+  width: 1000px;
+  height: 1000px;
+  background: 
+    radial-gradient(
+      ellipse at 30% 40%, 
+      rgba(255, 107, 88, 0.15) 0%, 
+      transparent 50%
+    ),
+    radial-gradient(
+      ellipse at 70% 60%, 
+      rgba(212, 165, 116, 0.12) 0%, 
+      transparent 50%
+    );
+  pointer-events: none;
+  z-index: 0;
+  animation: meshPulse 8s ease-in-out infinite;
+}
+
+/* Scattered dots pattern (data points) */
+.nevo-service-hero--performance::after {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: 
+    radial-gradient(circle, rgba(255, 107, 88, 0.4) 1px, transparent 1px),
+    radial-gradient(circle, rgba(212, 165, 116, 0.3) 1px, transparent 1px);
+  background-size: 80px 80px, 120px 120px;
+  background-position: 0 0, 40px 60px;
+  opacity: 0.3;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Mesh pulse animation (subtelne) */
+@keyframes meshPulse {
+  0%, 100% {
+    opacity: 1;
+    transform: translateX(-50%) rotate(-15deg) scale(1);
+  }
+  50% {
+    opacity: 0.8;
+    transform: translateX(-50%) rotate(-15deg) scale(1.05);
+  }
+}
+
+.nevo-service-hero__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+/* Badge */
+
+.nevo-service-hero__badge {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 107, 88, 0.3);
+  color: #ff6b58;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  margin: 0 0 20px;
+  backdrop-filter: blur(8px);
+}
+
+/* Headline */
+
+.nevo-service-hero__headline {
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.15;
+  margin: 0 0 18px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Subheadline */
+
+.nevo-service-hero__subhead {
+  color: #e5dcc5;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin: 0 0 32px;
+}
+
+/* CTA buttons */
+
+.nevo-service-hero__cta {
+  margin-bottom: 20px;
+}
+
+/* Benefit points */
+
+.nevo-service-hero__benefits {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  color: rgba(229, 220, 197, 0.9);
+  font-size: 0.92rem;
+}
+
+.nevo-service-hero__benefits li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* RESPONSYWNOŚĆ */
+
+@media (max-width: 768px) {
+  .nevo-service-hero--performance {
+    padding: 72px 16px 60px;
+  }
+
+  .nevo-service-hero__headline {
+    font-size: 1.8rem;
+  }
+
+  .nevo-service-hero__benefits {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .nevo-service-hero--performance::before {
+    width: 600px;
+    height: 600px;
+    opacity: 0.6;
+  }
+  
+  .nevo-service-hero--performance::after {
+    opacity: 0.2;
+  }
+}
+
+/* =========================================
+   NEVO – SERVICE PROBLEM (Performance variant)
+   ========================================= */
+
+.nevo-service-problem {
+  background: linear-gradient(
+    180deg,
+    #f5f1ed 0%,
+    #ffffff 50%,
+    #f5f1ed 100%
+  );
+  padding: 100px 20px 120px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtelny accent w narożniku (koral zamiast beżu) */
+.nevo-service-problem::before {
+  content: "";
+  position: absolute;
+  top: -5%;
+  right: -8%;
+  width: 400px;
+  height: 400px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 107, 88, 0.08) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.nevo-service-problem__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+/* Heading */
+
+.nevo-service-problem__heading {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  color: #1c2e40;
+  margin: 0 0 56px;
+}
+
+/* Grid kart */
+
+.nevo-service-problem__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  margin-bottom: 48px;
+}
+
+/* Pojedyncza karta problemu */
+
+.nevo-service-problem__card {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 28px 24px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(28, 46, 64, 0.06);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.nevo-service-problem__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+  border-color: rgba(255, 107, 88, 0.2);
+}
+
+/* Ikona (emoji X) */
+
+.nevo-service-problem__icon {
+  font-size: 1.5rem;
+  margin: 0 0 12px;
+  line-height: 1;
+}
+
+/* Tytuł karty */
+
+.nevo-service-problem__title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #1c2e40;
+  margin: 0 0 10px;
+}
+
+/* Tekst opisu */
+
+.nevo-service-problem__text {
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #4a5b6a;
+  margin: 0;
+}
+
+/* Footer z CTA */
+
+.nevo-service-problem__footer {
+  margin-top: 56px;
+  padding-top: 40px;
+  border-top: 2px solid rgba(212, 165, 116, 0.2);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  text-align: center;
+}
+
+.nevo-service-problem__cta-text {
+  font-size: 1.25rem;
+  font-weight: 500;
+  color: #1c2e40;
+  margin: 0;
+}
+
+.nevo-service-problem__cta {
+  margin: 0;
+}
+
+/* RESPONSYWNOŚĆ */
+
+@media (max-width: 1024px) {
+  .nevo-service-problem__grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nevo-service-problem {
+    padding: 72px 16px 80px;
+    margin-block-start: 0;
+  }
+
+  .nevo-service-problem__heading {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+
+  .nevo-service-problem__grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .nevo-service-problem__card {
+    padding: 24px 20px;
+  }
+
+  .nevo-service-problem__footer {
+    flex-direction: column;
+    gap: 16px;
+    margin-top: 40px;
+  }
+
+  .nevo-service-problem__cta-text {
+    font-size: 1.1rem;
+  }
+
+  .nevo-service-problem__card:hover {
+    transform: translateY(-3px) scale(1.01);
+  }
+}
+
+/* =========================================
+   NEVO – SERVICE SOLUTION SECTION
+   ========================================= */
+
+.nevo-service-solution {
+  background: #ffffff;
+  padding: 100px 20px 120px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtelny accent w tle */
+.nevo-service-solution::before {
+  content: "";
+  position: absolute;
+  bottom: -10%;
+  left: -5%;
+  width: 500px;
+  height: 500px;
+  background-image: 
+    repeating-linear-gradient(
+      45deg,
+      rgba(212, 165, 116, 0.04) 0px,
+      transparent 1px,
+      transparent 30px,
+      rgba(212, 165, 116, 0.04) 31px
+    );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.nevo-service-solution__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1160px;
+  margin: 0 auto;
+}
+
+/* Heading */
+
+.nevo-service-solution__heading {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  color: #1c2e40;
+  margin: 0 0 16px;
+}
+
+/* Lead text */
+
+.nevo-service-solution__lead {
+  max-width: 640px;
+  margin: 0 auto 56px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #4b5563;
+}
+
+/* Grid kart deliverables */
+
+.nevo-service-solution__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+  margin-bottom: 48px;
+}
+
+/* Pojedyncza karta */
+
+.nevo-service-solution__card {
+  background: linear-gradient(
+    135deg,
+    #f5f1ed 0%,
+    #ffffff 100%
+  );
+  border-radius: 18px;
+  padding: 32px 28px;
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.04);
+  border-left: 4px solid #ff6b58;
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+}
+
+.nevo-service-solution__card:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 18px 48px rgba(0, 0, 0, 0.08);
+  border-color: #d4a574;
+}
+
+/* Ikona (emoji – zamień na obrazki jak dla Strategii) */
+
+.nevo-service-solution__icon {
+  font-size: 2.5rem;
+  margin: 0 0 12px;
+  line-height: 1;
+}
+
+/* Tytuł karty */
+
+.nevo-service-solution__title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #1c2e40;
+  margin: 0 0 6px;
+}
+
+/* Time badge */
+
+.nevo-service-solution__time {
+  display: inline-block;
+  padding: 4px 12px;
+  border-radius: 999px;
+  background: rgba(255, 107, 88, 0.1);
+  color: #ff6b58;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  margin: 0 0 16px;
+}
+
+/* Lista deliverables */
+
+.nevo-service-solution__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nevo-service-solution__list li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 10px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #4a5b6a;
+}
+
+.nevo-service-solution__list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #ff6b58;
+  font-weight: 600;
+}
+
+/* Highlight box (minimum budget) */
+
+.nevo-service-solution__highlight {
+  background: linear-gradient(
+    135deg,
+    #1c2e40 0%,
+    #243647 100%
+  );
+  border-radius: 16px;
+  padding: 24px 32px;
+  text-align: center;
+  box-shadow: 0 16px 40px rgba(28, 46, 64, 0.15);
+}
+
+.nevo-service-solution__highlight-text {
+  margin: 0;
+  font-size: 1.05rem;
+  color: #e5dcc5;
+}
+
+.nevo-service-solution__highlight-text strong {
+  color: #ff6b58;
+  font-weight: 600;
+}
+
+/* RESPONSYWNOŚĆ */
+
+@media (max-width: 768px) {
+  .nevo-service-solution {
+    padding: 72px 16px 80px;
+  }
+
+  .nevo-service-solution__heading {
+    font-size: 2rem;
+    margin-bottom: 12px;
+  }
+
+  .nevo-service-solution__lead {
+    font-size: 1rem;
+    margin-bottom: 40px;
+  }
+
+  .nevo-service-solution__grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .nevo-service-solution__card {
+    padding: 28px 24px;
+  }
+
+  .nevo-service-solution__title {
+    font-size: 1.15rem;
+  }
+
+  .nevo-service-solution__highlight {
+    padding: 20px 24px;
+  }
+
+  .nevo-service-solution__highlight-text {
+    font-size: 0.95rem;
+  }
+}
+
+/* =========================================
+   NEVO – SERVICE PROCESS SECTION (HORIZONTAL)
+   ========================================= */
+
+.nevo-service-process {
+  background: linear-gradient(
+    180deg,
+    #f5f1ed 0%,
+    #ffffff 100%
+  );
+  padding: 100px 20px 120px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtelny pattern w tle */
+.nevo-service-process::before {
+  content: "";
+  position: absolute;
+  top: -8%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 800px;
+  height: 800px;
+  background-image: 
+    repeating-linear-gradient(
+      90deg,
+      rgba(28, 46, 64, 0.02) 0px,
+      transparent 1px,
+      transparent 50px,
+      rgba(28, 46, 64, 0.02) 51px
+    );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.nevo-service-process__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Heading */
+
+.nevo-service-process__heading {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  color: #1c2e40;
+  margin: 0 0 16px;
+  text-align: center;
+}
+
+/* Lead text */
+
+.nevo-service-process__lead {
+  max-width: 640px;
+  margin: 0 auto 56px;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  color: #4b5563;
+  text-align: center;
+}
+
+.nevo-service-process__lead strong {
+  color: #ff6b58;
+  font-weight: 600;
+}
+
+/* Timeline container (POZIOMY GRID) */
+
+.nevo-service-process__timeline {
+  position: relative;
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 24px;
+  margin-bottom: 56px;
+}
+
+/* Pozioma linia łącząca kroki */
+.nevo-service-process__timeline::before {
+  content: "";
+  position: absolute;
+  top: 32px;
+  left: 12%;
+  right: 12%;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    rgba(255, 107, 88, 0.2),
+    rgba(255, 107, 88, 0.4),
+    rgba(212, 165, 116, 0.4),
+    rgba(212, 165, 116, 0.2)
+  );
+  z-index: 0;
+}
+
+/* Pojedynczy krok */
+
+.nevo-service-process__step {
+  position: relative;
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 80px 20px 24px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(28, 46, 64, 0.06);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+  text-align: center;
+}
+
+.nevo-service-process__step:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+  border-color: rgba(255, 107, 88, 0.3);
+}
+
+/* Header kroku (number + time) – NAD kartą */
+
+.nevo-service-process__step-header {
+  position: absolute;
+  top: -48px;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6px;
+  z-index: 1;
+}
+
+/* Numer kroku */
+
+.nevo-service-process__step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 56px;
+  height: 56px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff6b58, #ff8573);
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: 1.4rem;
+  margin: 0;
+  box-shadow: 0 8px 20px rgba(255, 107, 88, 0.35);
+  border: 4px solid #ffffff;
+}
+
+/* Time badge */
+
+.nevo-service-process__step-time {
+  padding: 4px 10px;
+  border-radius: 999px;
+  background: rgba(255, 107, 88, 0.12);
+  color: #ff6b58;
+  font-size: 0.7rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  text-transform: uppercase;
+  margin: 0;
+  white-space: nowrap;
+}
+
+/* Tytuł kroku */
+
+.nevo-service-process__step-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.15rem;
+  font-weight: 600;
+  line-height: 1.3;
+  color: #1c2e40;
+  margin: 0 0 12px;
+}
+
+/* Opis kroku */
+
+.nevo-service-process__step-text {
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #4a5b6a;
+  margin: 0 0 14px;
+}
+
+/* Output (deliverable) */
+
+.nevo-service-process__step-output {
+  font-size: 0.85rem;
+  line-height: 1.4;
+  color: #6b7280;
+  margin: 0;
+  padding-top: 12px;
+  border-top: 1px solid rgba(212, 165, 116, 0.2);
+}
+
+.nevo-service-process__step-output strong {
+  color: #ff6b58;
+  font-weight: 600;
+}
+
+/* CTA footer */
+
+.nevo-service-process__cta {
+  margin-top: 56px;
+  padding: 32px 28px;
+  background: linear-gradient(135deg, #1c2e40, #243647);
+  border-radius: 18px;
+  box-shadow: 0 16px 40px rgba(28, 46, 64, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 16px;
+}
+
+.nevo-service-process__cta-text {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: #e5dcc5;
+  margin: 0;
+}
+
+.nevo-service-process__cta-button {
+  margin: 0;
+}
+
+.nevo-service-process__cta-note {
+  font-size: 0.85rem;
+  color: rgba(229, 220, 197, 0.7);
+  margin: 0;
+}
+
+/* RESPONSYWNOŚĆ */
+
+@media (max-width: 1024px) {
+  .nevo-service-process__timeline {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+    gap: 60px 20px;
+  }
+
+  .nevo-service-process__timeline::before {
+    display: none;
+  }
+
+  .nevo-service-process__step {
+    padding: 80px 18px 22px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nevo-service-process {
+    padding: 72px 16px 80px;
+  }
+
+  .nevo-service-process__heading {
+    font-size: 2rem;
+    margin-bottom: 12px;
+  }
+
+  .nevo-service-process__lead {
+    font-size: 1rem;
+    margin-bottom: 48px;
+  }
+
+  .nevo-service-process__timeline {
+    grid-template-columns: 1fr;
+    gap: 56px;
+  }
+
+  .nevo-service-process__step {
+    padding: 76px 20px 22px;
+  }
+
+  .nevo-service-process__step:hover {
+    transform: translateY(-4px);
+  }
+
+  .nevo-service-process__step-header {
+    top: -44px;
+  }
+
+  .nevo-service-process__step-number {
+    width: 52px;
+    height: 52px;
+    font-size: 1.3rem;
+  }
+
+  .nevo-service-process__step-title {
+    font-size: 1.1rem;
+  }
+
+  .nevo-service-process__cta {
+    padding: 24px 20px;
+    gap: 12px;
+  }
+
+  .nevo-service-process__cta-text {
+    font-size: 1rem;
+  }
+}
+
+/* =========================================
+   NEVO – SERVICE RESULTS (Case Study)
+   ========================================= */
+
+.nevo-service-results {
+  background: linear-gradient(
+    180deg,
+    #ffffff 0%,
+    #f5f1ed 100%
+  );
+  padding: 100px 20px 120px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtelny glow accent */
+.nevo-service-results::before {
+  content: "";
+  position: absolute;
+  bottom: -15%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(212, 165, 116, 0.08) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.nevo-service-results__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+/* Heading */
+
+.nevo-service-results__heading {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  color: #1c2e40;
+  margin: 0 0 12px;
+}
+
+/* Lead */
+
+.nevo-service-results__lead {
+  color: #6b7280;
+  font-size: 1.05rem;
+  margin: 0 0 48px;
+}
+
+/* Case Box (główny kontener) */
+
+.nevo-service-results__case-box {
+  background: #ffffff;
+  border-radius: 20px;
+  padding: 40px 36px;
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.06);
+  border: 2px solid rgba(255, 107, 88, 0.15);
+  transition:
+    transform 0.3s ease,
+    box-shadow 0.3s ease;
+}
+
+.nevo-service-results__case-box:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+}
+
+/* Comparison container (Before → After) */
+
+.nevo-service-results__comparison {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 32px;
+  align-items: center;
+  margin-bottom: 32px;
+}
+
+/* Before section */
+
+.nevo-service-results__before {
+  background: rgba(245, 241, 237, 0.5);
+  border-radius: 12px;
+  padding: 24px 20px;
+  border: 1px solid rgba(28, 46, 64, 0.08);
+}
+
+/* After section */
+
+.nevo-service-results__after {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 107, 88, 0.08) 0%,
+    rgba(212, 165, 116, 0.08) 100%
+  );
+  border-radius: 12px;
+  padding: 24px 20px;
+  border: 2px solid rgba(255, 107, 88, 0.2);
+}
+
+/* Label (PRZED / PO) */
+
+.nevo-service-results__label {
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  color: #6b7280;
+  margin: 0 0 16px;
+  text-align: center;
+}
+
+.nevo-service-results__label--success {
+  color: #ff6b58;
+}
+
+/* Arrow */
+
+.nevo-service-results__arrow {
+  font-size: 2.5rem;
+  color: #ff6b58;
+  margin: 0;
+  font-weight: 700;
+  text-align: center;
+}
+
+/* Metrics container */
+
+.nevo-service-results__metrics {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Single metric */
+
+.nevo-service-results__metric {
+  display: flex;
+  justify-content: space-between;
+  align-items: baseline;
+  padding: 8px 12px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 8px;
+  margin: 0;
+  transition: background 0.2s ease;
+}
+
+.nevo-service-results__metric--success {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.nevo-service-results__metric:hover {
+  background: rgba(255, 255, 255, 0.9);
+}
+
+/* Metric label */
+
+.metric-label {
+  font-size: 0.85rem;
+  color: #6b7280;
+  font-weight: 500;
+}
+
+/* Metric value (duża liczba) */
+
+.metric-value {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 700;
+  color: #1c2e40;
+}
+
+.nevo-service-results__metric--success .metric-value {
+  color: #ff6b58;
+}
+
+/* Metric change (% improvement) */
+
+.metric-change {
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: #059669;
+  margin-left: 8px;
+  padding: 2px 6px;
+  background: rgba(5, 150, 105, 0.1);
+  border-radius: 4px;
+}
+
+/* Divider */
+
+.nevo-service-results__divider {
+  border: none;
+  border-top: 1px solid rgba(212, 165, 116, 0.3);
+  margin: 32px 0;
+  opacity: 1;
+}
+
+/* Actions title */
+
+.nevo-service-results__actions-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.2rem;
+  font-weight: 600;
+  color: #1c2e40;
+  margin: 0 0 16px;
+  text-align: center;
+}
+
+/* Actions list */
+
+.nevo-service-results__actions-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 12px;
+}
+
+.nevo-service-results__actions-list li {
+  position: relative;
+  padding-left: 24px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: #4a5b6a;
+}
+
+.nevo-service-results__actions-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #ff6b58;
+  font-weight: 700;
+  font-size: 1.1rem;
+}
+
+/* Outcome (wynik finansowy) */
+
+.nevo-service-results__outcome {
+  text-align: center;
+  font-size: 1.15rem;
+  color: #1c2e40;
+  margin: 0;
+  padding: 20px 24px;
+  background: linear-gradient(
+    135deg,
+    rgba(255, 107, 88, 0.1) 0%,
+    rgba(212, 165, 116, 0.1) 100%
+  );
+  border-radius: 12px;
+  border: 1px solid rgba(255, 107, 88, 0.2);
+}
+
+.nevo-service-results__outcome strong {
+  color: #ff6b58;
+  font-weight: 700;
+  font-size: 1.25rem;
+}
+
+.outcome-detail {
+  display: block;
+  font-size: 0.95rem;
+  color: #6b7280;
+  margin-top: 6px;
+}
+
+/* RESPONSYWNOŚĆ */
+
+@media (max-width: 768px) {
+  .nevo-service-results {
+    padding: 72px 16px 80px;
+  }
+
+  .nevo-service-results__heading {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+  }
+
+  .nevo-service-results__lead {
+    font-size: 1rem;
+    margin-bottom: 36px;
+  }
+
+  .nevo-service-results__case-box {
+    padding: 28px 24px;
+  }
+
+  /* Stack wertykalnie na mobile */
+  .nevo-service-results__comparison {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .nevo-service-results__arrow {
+    font-size: 2rem;
+    transform: rotate(90deg);
+  }
+
+  .nevo-service-results__before,
+  .nevo-service-results__after {
+    padding: 20px 18px;
+  }
+
+  .metric-value {
+    font-size: 1.15rem;
+  }
+
+  .nevo-service-results__actions-list {
+    grid-template-columns: 1fr;
+    gap: 10px;
+  }
+
+  .nevo-service-results__outcome {
+    font-size: 1.05rem;
+    padding: 18px 20px;
+  }
+
+  .nevo-service-results__outcome strong {
+    font-size: 1.15rem;
+  }
+}
+
+/* =========================================
+   NEVO – ECOMMERCE HERO (variant)
+   ========================================= */
+
+.nevo-service-hero--ecommerce {
+  position: relative;
+  padding: 100px 20px 80px;
+  background: linear-gradient(
+    180deg,
+    #1c2e40 0%,
+    #243647 60%,
+    #2a3f52 100%
+  );
+  overflow: hidden;
+  text-align: center;
+}
+
+/* Circuit board pattern (tech/development feel) */
+.nevo-service-hero--ecommerce::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background-image: 
+    linear-gradient(90deg, rgba(255, 107, 88, 0.03) 1px, transparent 1px),
+    linear-gradient(0deg, rgba(255, 107, 88, 0.03) 1px, transparent 1px);
+  background-size: 60px 60px;
+  opacity: 0.4;
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Diagonal stripes accent (speed lines) */
+.nevo-service-hero--ecommerce::after {
+  content: "";
+  position: absolute;
+  top: -20%;
+  right: -10%;
+  width: 800px;
+  height: 800px;
+  background: 
+    repeating-linear-gradient(
+      45deg,
+      rgba(212, 165, 116, 0.05) 0px,
+      transparent 2px,
+      transparent 20px,
+      rgba(212, 165, 116, 0.05) 22px
+    );
+  pointer-events: none;
+  z-index: 0;
+  transform: rotate(-15deg);
+}
+
+.nevo-service-hero__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 820px;
+  margin: 0 auto;
+}
+
+/* Badge */
+
+.nevo-service-hero__badge {
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 999px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(212, 165, 116, 0.3);
+  color: #d4a574;
+  font-size: 0.8rem;
+  font-weight: 500;
+  letter-spacing: 0.05em;
+  margin: 0 0 20px;
+  backdrop-filter: blur(8px);
+}
+
+/* Headline */
+
+.nevo-service-hero__headline {
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 4vw, 3rem);
+  line-height: 1.15;
+  margin: 0 0 18px;
+  text-shadow: 0 2px 12px rgba(0, 0, 0, 0.2);
+}
+
+/* Subheadline */
+
+.nevo-service-hero__subhead {
+  color: #e5dcc5;
+  font-size: 1.05rem;
+  line-height: 1.6;
+  margin: 0 0 32px;
+}
+
+/* CTA buttons */
+
+.nevo-service-hero__cta {
+  margin-bottom: 20px;
+}
+
+/* Benefit points */
+
+.nevo-service-hero__benefits {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  color: rgba(229, 220, 197, 0.9);
+  font-size: 0.92rem;
+}
+
+.nevo-service-hero__benefits li {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+/* RESPONSYWNOŚĆ */
+
+@media (max-width: 768px) {
+  .nevo-service-hero--ecommerce {
+    padding: 72px 16px 60px;
+  }
+
+  .nevo-service-hero__headline {
+    font-size: 1.8rem;
+  }
+
+  .nevo-service-hero__benefits {
+    flex-direction: column;
+    align-items: center;
+    gap: 8px;
+  }
+  
+  .nevo-service-hero--ecommerce::before {
+    background-size: 40px 40px;
+    opacity: 0.3;
+  }
+  
+  .nevo-service-hero--ecommerce::after {
+    width: 500px;
+    height: 500px;
+    opacity: 0.5;
+  }
+}
+/* =========================================
+   NEVO – SERVICE PRICING (PACKAGES VARIANT)
+   ========================================= */
+
+.nevo-service-pricing--packages {
+  background: #ffffff;
+  padding: 100px 20px 120px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtelny gradient glow */
+.nevo-service-pricing--packages::before {
+  content: "";
+  position: absolute;
+  top: -10%;
+  right: -8%;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 107, 88, 0.06) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.nevo-service-pricing__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Heading */
+
+.nevo-service-pricing__heading {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  color: #1c2e40;
+  margin: 0 0 12px;
+}
+
+/* Lead */
+
+.nevo-service-pricing__lead {
+  font-size: 1.05rem;
+  color: #6b7280;
+  margin: 0 0 56px;
+}
+
+/* =================== PACKAGES GRID =================== */
+
+.nevo-service-pricing__packages {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+  margin-bottom: 64px;
+}
+
+/* Single package card */
+
+.nevo-service-pricing__package {
+  background: linear-gradient(
+    135deg,
+    #f5f1ed 0%,
+    #ffffff 100%
+  );
+  border-radius: 18px;
+  padding: 32px 28px;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
+  border: 2px solid rgba(28, 46, 64, 0.06);
+  transition:
+    transform 0.25s ease,
+    box-shadow 0.25s ease,
+    border-color 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.nevo-service-pricing__package:hover {
+  transform: translateY(-6px);
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.08);
+  border-color: rgba(212, 165, 116, 0.3);
+}
+
+/* Featured package (PRO) */
+
+.nevo-service-pricing__package--featured {
+  background: linear-gradient(
+    135deg,
+    rgba(255, 107, 88, 0.06) 0%,
+    rgba(212, 165, 116, 0.06) 100%
+  );
+  border: 2px solid rgba(255, 107, 88, 0.3);
+  position: relative;
+  transform: scale(1.05);
+}
+
+.nevo-service-pricing__package--featured:hover {
+  transform: scale(1.05) translateY(-6px);
+  border-color: rgba(255, 107, 88, 0.5);
+}
+
+/* Featured badge */
+
+.nevo-service-pricing__package-badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  padding: 4px 14px;
+  border-radius: 999px;
+  background: linear-gradient(135deg, #ff6b58, #ff8573);
+  color: #ffffff;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.05em;
+  margin: 0;
+  box-shadow: 0 4px 12px rgba(255, 107, 88, 0.3);
+  white-space: nowrap;
+}
+
+/* Package name */
+
+.nevo-service-pricing__package-name {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #1c2e40;
+  margin: 0 0 12px;
+  text-align: center;
+}
+
+/* Package price */
+
+.nevo-service-pricing__package-price {
+  text-align: center;
+  margin: 0 0 12px;
+}
+
+.price-amount {
+  display: block;
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.2rem;
+  font-weight: 700;
+  color: #ff6b58;
+  line-height: 1;
+  margin-bottom: 6px;
+}
+
+.price-note {
+  display: block;
+  font-size: 0.85rem;
+  color: #6b7280;
+}
+
+/* Package "for" */
+
+.nevo-service-pricing__package-for {
+  text-align: center;
+  font-size: 0.9rem;
+  color: #4b5563;
+  margin: 0 0 20px;
+  min-height: 2.6em; /* wyrównanie wysokości */
+}
+
+/* Divider */
+
+.nevo-service-pricing__package-divider {
+  border: none;
+  border-top: 1px solid rgba(212, 165, 116, 0.3);
+  margin: 20px 0;
+  opacity: 1;
+}
+
+/* Features list */
+
+.nevo-service-pricing__package-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 20px;
+  flex-grow: 1; /* zajmuje dostępne miejsce */
+}
+
+.nevo-service-pricing__package-features li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 10px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #4a5b6a;
+}
+
+.nevo-service-pricing__package-features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: #ff6b58;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.nevo-service-pricing__package-features li strong {
+  color: #1c2e40;
+  font-weight: 600;
+}
+
+/* Package time */
+
+.nevo-service-pricing__package-time {
+  font-size: 0.85rem;
+  color: #6b7280;
+  text-align: center;
+  margin: 0 0 20px;
+}
+
+.nevo-service-pricing__package-time strong {
+  color: #1c2e40;
+  font-weight: 600;
+}
+
+/* Package CTA */
+
+.nevo-service-pricing__package-cta {
+  margin: 0;
+}
+
+/* =================== MAINTENANCE =================== */
+
+.nevo-service-pricing__maintenance {
+  margin-bottom: 80px;
+  padding: 32px 28px;
+  background: #f5f1ed;
+  border-radius: 16px;
+  border: 1px solid rgba(28, 46, 64, 0.06);
+}
+
+.nevo-service-pricing__maintenance-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #1c2e40;
+  margin: 0 0 24px;
+}
+
+.nevo-service-pricing__maintenance-options {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 20px;
+  max-width: 700px;
+  margin: 0 auto;
+}
+
+.nevo-service-pricing__maintenance-option {
+  background: #ffffff;
+  border-radius: 12px;
+  padding: 20px;
+  text-align: center;
+  border: 1px solid rgba(28, 46, 64, 0.08);
+}
+
+.nevo-service-pricing__maintenance-price {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: #ff6b58;
+  margin: 0 0 8px;
+}
+
+.nevo-service-pricing__maintenance-desc {
+  font-size: 0.9rem;
+  color: #4b5563;
+  margin: 0;
+}
+
+/* =================== FAQ =================== */
+
+.nevo-service-pricing__faq {
+  margin-top: 80px;
+}
+
+.nevo-service-pricing__faq-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 3.5vw, 2.6rem);
+  color: #1c2e40;
+  margin: 0 0 48px;
+}
+
+/* =========================================
+   NEVO – CONTACT PAGE
+   ========================================= */
+
+/* =================== HERO + FORM =================== */
+
+.nevo-contact-hero {
+  background: linear-gradient(
+    135deg,
+    #1c2e40 0%,
+    #243647 100%
+  );
+  padding: 100px 20px 120px;
+  position: relative;
+  overflow: hidden;
+}
+
+.nevo-contact-hero::before {
+  content: "";
+  position: absolute;
+  top: -15%;
+  right: -10%;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 107, 88, 0.08) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.nevo-contact-hero__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.nevo-contact-hero__heading {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: #ffffff;
+  margin: 0 0 16px;
+  line-height: 1.2;
+}
+
+.nevo-contact-hero__subhead {
+  color: #e5dcc5;
+  font-size: 1.05rem;
+  margin: 0 0 48px;
+}
+
+/* Content grid (Form | Info) */
+
+.nevo-contact-hero__content {
+  display: grid;
+  grid-template-columns: 1.3fr 0.7fr;
+  gap: 40px;
+  align-items: start;
+}
+
+/* Form column */
+
+.nevo-contact-hero__form-column {
+  background: rgba(255, 255, 255, 0.05);
+  border-radius: 16px;
+  padding: 32px 28px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+}
+
+/* CF7 fields (reuse from Final CTA) */
+
+.nevo-cf7-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+.nevo-cf7-fields label {
+  display: block;
+  color: #e5dcc5;
+  font-size: 0.9rem;
+  font-weight: 500;
+  margin-bottom: 6px;
+}
+
+.nevo-cf7-input,
+.nevo-cf7-textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border-radius: 8px;
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  background: rgba(255, 255, 255, 0.95);
+  color: #1c2e40;
+  font-size: 0.95rem;
+  font-family: 'Inter', sans-serif;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.nevo-cf7-input:focus,
+.nevo-cf7-textarea:focus {
+  outline: none;
+  border-color: #ff6b58;
+  box-shadow: 0 0 0 3px rgba(255, 107, 88, 0.15);
+}
+
+.nevo-cf7-textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+.nevo-cf7-submit {
+  width: 100%;
+  padding: 14px 32px;
+  background: #ff6b58;
+  color: #ffffff;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.25s ease;
+  box-shadow: 0 6px 20px rgba(255, 107, 88, 0.3);
+}
+
+.nevo-cf7-submit:hover {
+  background: #ff8573;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 107, 88, 0.4);
+}
+
+/* Info column */
+
+.nevo-contact-hero__info-column {
+  background: rgba(255, 255, 255, 0.03);
+  border-radius: 16px;
+  padding: 32px 28px;
+  border: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.nevo-contact-hero__info-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.3rem;
+  font-weight: 600;
+  color: #ffffff;
+  margin: 0 0 20px;
+}
+
+.nevo-contact-hero__info-item {
+  margin: 0 0 20px;
+  color: #e5dcc5;
+  font-size: 0.95rem;
+  line-height: 1.6;
+}
+
+.nevo-contact-hero__info-item strong {
+  color: #ffffff;
+  display: block;
+  margin-bottom: 4px;
+}
+
+.nevo-contact-hero__info-item a {
+  color: #ff6b58;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nevo-contact-hero__info-item a:hover {
+  color: #ff8573;
+}
+
+.nevo-contact-hero__info-divider {
+  border: none;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  margin: 24px 0;
+}
+
+.nevo-contact-hero__info-note {
+  font-size: 0.9rem;
+  color: rgba(229, 220, 197, 0.8);
+  margin: 0;
+  line-height: 1.8;
+}
+
+/* =================== SERVICES QUICK LINKS =================== */
+
+.nevo-contact-services {
+  background: #ffffff;
+  padding: 100px 20px;
+}
+
+.nevo-contact-services__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nevo-contact-services__heading {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 3.5vw, 2.8rem);
+  color: #1c2e40;
+  margin: 0 0 56px;
+}
+
+.nevo-contact-services__grid {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.nevo-contact-services__card {
+  background: linear-gradient(135deg, #f5f1ed 0%, #ffffff 100%);
+  border-radius: 16px;
+  padding: 28px 24px;
+  border: 2px solid rgba(28, 46, 64, 0.06);
+  transition: all 0.25s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.nevo-contact-services__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.08);
+  border-color: rgba(212, 165, 116, 0.3);
+}
+
+.nevo-contact-services__card-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #1c2e40;
+  margin: 0 0 12px;
+}
+
+.nevo-contact-services__card-text {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: #4a5b6a;
+  margin: 0 0 16px;
+  flex-grow: 1;
+}
+
+.nevo-contact-services__card-price {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: #ff6b58;
+  margin: 0 0 16px;
+}
+
+.nevo-contact-services__card-cta {
+  margin: 0;
+}
+
+/* =================== FAQ =================== */
+
+.nevo-contact-faq {
+  background: #f5f1ed;
+  padding: 100px 20px;
+}
+
+.nevo-contact-faq__inner {
+  max-width: 1000px;
+  margin: 0 auto;
+}
+
+.nevo-contact-faq__heading {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 3.5vw, 2.6rem);
+  color: #1c2e40;
+  margin: 0 0 48px;
+}
+
+.nevo-contact-faq__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 28px;
+}
+
+.nevo-contact-faq__item {
+  background: #ffffff;
+  border-radius: 14px;
+  padding: 24px 26px;
+  border-left: 3px solid #ff6b58;
+  transition: all 0.25s ease;
+}
+
+.nevo-contact-faq__item:hover {
+  transform: translateX(6px);
+  box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
+}
+
+.nevo-contact-faq__question {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  line-height: 1.4;
+  color: #1c2e40;
+  margin: 0 0 10px;
+}
+
+.nevo-contact-faq__answer {
+  font-size: 0.92rem;
+  line-height: 1.6;
+  color: #4a5b6a;
+  margin: 0;
+}
+
+.nevo-contact-faq__answer strong {
+  color: #1c2e40;
+  font-weight: 600;
+}
+
+/* =================== RESPONSYWNOŚĆ =================== */
+
+@media (max-width: 768px) {
+  .nevo-contact-hero {
+    padding: 72px 16px 80px;
+  }
+
+  .nevo-contact-hero__heading {
+    font-size: 1.8rem;
+  }
+
+  .nevo-contact-hero__content {
+    grid-template-columns: 1fr;
+    gap: 28px;
+  }
+
+  .nevo-contact-hero__form-column,
+  .nevo-contact-hero__info-column {
+    padding: 24px 20px;
+  }
+
+  .nevo-contact-services {
+    padding: 72px 16px;
+  }
+
+  .nevo-contact-services__heading {
+    font-size: 2rem;
+    margin-bottom: 40px;
+  }
+
+  .nevo-contact-services__grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .nevo-contact-faq {
+    padding: 72px 16px;
+  }
+
+  .nevo-contact-faq__heading {
+    font-size: 2rem;
+    margin-bottom: 32px;
+  }
+
+  .nevo-contact-faq__grid {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .nevo-contact-faq__item:hover {
+    transform: translateX(3px);
+  }
+}
+.nevo-header {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 1000;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(10px);
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.05);
+  transition: all 0.3s ease;
+}
+
+.nevo-header__inner {
+  max-width: 1400px;
+  margin: 0 auto;
+  padding: 16px 32px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.nevo-header__logo {
+  flex-shrink: 0;
+}
+
+.nevo-header__logo-image img {
+  height: 45px;
+  width: auto;
+  display: block;
+  transition: opacity 0.2s ease;
+}
+
+.nevo-header__logo-image img:hover {
+  opacity: 0.8;
+}
+
+.nevo-header__nav--desktop {
+  display: flex;
+  margin: 0;
+}
+
+.nevo-nav-list {
+  display: flex;
+  gap: 32px;
+  align-items: center;
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nevo-nav-item {
+  position: relative;
+}
+
+.nevo-nav-link {
+  font-family: 'Inter', sans-serif;
+  font-size: 0.95rem;
+  font-weight: 500;
+  color: #1c2e40;
+  text-decoration: none;
+  padding: 8px 0;
+  transition: color 0.2s ease;
+  display: block;
+}
+
+.nevo-nav-link:hover {
+  color: #ff6b58;
+}
+
+.nevo-nav-link--cta {
+  background: #ff6b58;
+  color: #ffffff !important;
+  padding: 10px 24px !important;
+  border-radius: 8px;
+  font-weight: 600;
+  transition: all 0.2s ease;
+  box-shadow: 0 4px 12px rgba(255, 107, 88, 0.25);
+}
+
+.nevo-nav-link--cta:hover {
+  background: #ff8573;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(255, 107, 88, 0.35);
+}
+
+.nevo-nav-item--has-dropdown {
+  position: relative;
+}
+
+.nevo-nav-dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  background: #ffffff;
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  border-radius: 8px;
+  padding: 12px 0;
+  min-width: 260px;
+  opacity: 0;
+  visibility: hidden;
+  transform: translateY(-10px);
+  transition: all 0.3s ease;
+  z-index: 100;
+  list-style: none;
+  margin: 0;
+}
+
+.nevo-nav-item--has-dropdown:hover .nevo-nav-dropdown {
+  opacity: 1;
+  visibility: visible;
+  transform: translateY(0);
+}
+
+.nevo-nav-dropdown li {
+  margin: 0;
+}
+
+.nevo-nav-dropdown a {
+  display: block;
+  padding: 10px 20px;
+  font-size: 0.9rem;
+  color: #1c2e40;
+  text-decoration: none;
+  transition: background 0.2s ease;
+}
+
+.nevo-nav-dropdown a:hover {
+  background: rgba(255, 107, 88, 0.08);
+  color: #ff6b58;
+}
+
+.nevo-nav-dropdown a.coming-soon {
+  color: #9ca3af;
+  position: relative;
+}
+
+.nevo-nav-dropdown .badge {
+  display: inline-block;
+  font-size: 0.7rem;
+  background: rgba(156, 163, 175, 0.2);
+  color: #6b7280;
+  padding: 2px 6px;
+  border-radius: 4px;
+  margin-left: 8px;
+  font-weight: 500;
+}
+
+.nevo-header__mobile-toggle {
+  display: none;
+  flex-direction: column;
+  justify-content: space-around;
+  width: 32px;
+  height: 28px;
+  background: transparent;
+  border: none;
+  cursor: pointer;
+  padding: 0;
+  z-index: 1001;
+  transition: transform 0.3s ease;
+}
+
+.nevo-header__mobile-toggle:hover {
+  transform: scale(1.1);
+}
+
+.hamburger-line {
+  width: 100%;
+  height: 3px;
+  background: #1c2e40;
+  border-radius: 2px;
+  transition: all 0.3s ease;
+}
+
+.nevo-header__mobile-toggle[aria-expanded="true"] .hamburger-line:nth-child(1) {
+  transform: rotate(45deg) translateY(10px);
+}
+
+.nevo-header__mobile-toggle[aria-expanded="true"] .hamburger-line:nth-child(2) {
+  opacity: 0;
+}
+
+.nevo-header__mobile-toggle[aria-expanded="true"] .hamburger-line:nth-child(3) {
+  transform: rotate(-45deg) translateY(-10px);
+}
+
+.nevo-header__nav--mobile {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: linear-gradient(135deg, #1c2e40 0%, #243647 100%);
+  z-index: 999;
+  padding: 100px 32px 40px;
+  overflow-y: auto;
+}
+
+.nevo-header__nav--mobile.is-open {
+  display: block;
+}
+
+.nevo-nav-list-mobile {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nevo-nav-list-mobile > li {
+  margin-bottom: 24px;
+}
+
+.nevo-nav-list-mobile > li > a,
+.nevo-nav-list-mobile > li > .submenu-toggle {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #ffffff;
+  text-decoration: none;
+  padding: 12px 0;
+  display: block;
+  transition: all 0.2s ease;
+  cursor: pointer;
+}
+
+.nevo-nav-list-mobile > li > a:hover,
+.nevo-nav-list-mobile > li > .submenu-toggle:hover {
+  color: #ff6b58;
+  transform: translateX(8px);
+}
+
+.nevo-nav-list-mobile .submenu {
+  list-style: none;
+  padding-left: 20px;
+  margin-top: 12px;
+  display: none;
+}
+
+.nevo-nav-list-mobile .submenu.is-open {
+  display: block;
+}
+
+.nevo-nav-list-mobile .submenu a {
+  font-size: 1.1rem;
+  font-weight: 500;
+  color: #e5dcc5;
+  text-decoration: none;
+  padding: 8px 0;
+  display: block;
+  transition: all 0.2s ease;
+}
+
+.nevo-nav-list-mobile .submenu a:hover {
+  color: #ff6b58;
+  transform: translateX(6px);
+}
+
+.nevo-nav-list-mobile .submenu a.coming-soon {
+  color: rgba(229, 220, 197, 0.5);
+}
+
+.nevo-nav-list-mobile .mobile-cta {
+  background: #ff6b58;
+  color: #ffffff !important;
+  padding: 14px 28px !important;
+  border-radius: 8px;
+  text-align: center;
+  display: inline-block;
+  margin-top: 12px;
+}
+
+@media (max-width: 1024px) {
+  .nevo-header__nav--desktop {
+    display: none;
+  }
+
+  .nevo-header__mobile-toggle {
+    display: flex;
+  }
+}
+
+@media (max-width: 768px) {
+  .nevo-header__inner {
+    padding: 12px 20px;
+  }
+
+  .nevo-header__logo-image img {
+    height: 38px;
+  }
+
+  .nevo-header__nav--mobile {
+    padding: 80px 24px 32px;
+  }
+
+  .nevo-nav-list-mobile > li > a,
+  .nevo-nav-list-mobile > li > .submenu-toggle {
+    font-size: 1.3rem;
+  }
+}
+
+body {
+  padding-top: 77px;
+}
+
+@media (max-width: 768px) {
+  body {
+    padding-top: 62px;
+  }
+}
+
+html {
+  scroll-behavior: smooth;
+}

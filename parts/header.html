@@ -1,16 +1,67 @@
-<a href="#main-content" class="skip-link">Przejdź do treści</a>
-<!-- wp:group {"align":"full","style":{"spacing":{"padding":{"top":"var:preset|spacing|sm","bottom":"var:preset|spacing|sm"}}},"backgroundColor":"white","layout":{"type":"constrained"}} -->
-<div class="wp-block-group alignfull has-white-background-color has-background" style="padding-top:var(--wp--preset--spacing--sm);padding-bottom:var(--wp--preset--spacing--sm)">
-    
-    <!-- wp:group {"align":"wide","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"space-between"}} -->
-    <div class="wp-block-group alignwide">
-        
-        <!-- wp:site-logo {"width":180} /-->
-        
-        <!-- wp:navigation {"layout":{"type":"flex","setCascadingProperties":true,"justifyContent":"right"},"style":{"spacing":{"blockGap":"var:preset|spacing|base"}}} /-->
-        
+<!-- wp:group {"tagName":"header","align":"full","className":"nevo-header","layout":{"type":"constrained"}} -->
+<header class="wp-block-group alignfull nevo-header" id="site-header">
+
+  <!-- wp:group {"className":"nevo-header__inner","layout":{"type":"constrained"}} -->
+  <div class="wp-block-group nevo-header__inner">
+
+    <!-- wp:group {"className":"nevo-header__logo","layout":{"type":"constrained"}} -->
+    <div class="wp-block-group nevo-header__logo">
+      <!-- wp:site-logo {"width":180,"shouldSyncIcon":false,"className":"nevo-header__logo-image"} /-->
     </div>
     <!-- /wp:group -->
-    
-</div>
+
+    <!-- wp:html -->
+    <nav class="nevo-header__nav nevo-header__nav--desktop">
+      <ul class="nevo-nav-list">
+        <li class="nevo-nav-item">
+          <a href="/" class="nevo-nav-link">Home</a>
+        </li>
+        <li class="nevo-nav-item nevo-nav-item--has-dropdown">
+          <a href="#" class="nevo-nav-link">Usługi</a>
+          <ul class="nevo-nav-dropdown">
+            <li><a href="/strategia-marketingowa/">Strategia Marketingowa</a></li>
+            <li><a href="/performance-marketing/">Performance Marketing</a></li>
+            <li><a href="/ecommerce-development/">E-commerce Development</a></li>
+            <li><a href="/analityka-growth/" class="coming-soon">Analityka & Growth <span class="badge">Wkrótce</span></a></li>
+            <li><a href="/marketing-automation/" class="coming-soon">Marketing Automation <span class="badge">Wkrótce</span></a></li>
+          </ul>
+        </li>
+        <li class="nevo-nav-item">
+          <a href="/kontakt/" class="nevo-nav-link nevo-nav-link--cta">Kontakt</a>
+        </li>
+      </ul>
+    </nav>
+    <!-- /wp:html -->
+
+    <!-- wp:html -->
+    <button class="nevo-header__mobile-toggle" aria-label="Toggle menu" aria-expanded="false" data-menu-toggle>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+      <span class="hamburger-line"></span>
+    </button>
+    <!-- /wp:html -->
+
+  </div>
+  <!-- /wp:group -->
+
+  <!-- wp:html -->
+  <nav class="nevo-header__nav nevo-header__nav--mobile" data-mobile-menu>
+    <ul class="nevo-nav-list-mobile">
+      <li><a href="/">Home</a></li>
+      <li class="has-submenu">
+        <span class="submenu-toggle">Usługi</span>
+        <ul class="submenu">
+          <li><a href="/strategia-marketingowa/">Strategia Marketingowa</a></li>
+          <li><a href="/performance-marketing/">Performance Marketing</a></li>
+          <li><a href="/ecommerce-development/">E-commerce Development</a></li>
+          <li><a href="/analityka-growth/" class="coming-soon">Analityka & Growth</a></li>
+          <li><a href="/marketing-automation/" class="coming-soon">Marketing Automation</a></li>
+        </ul>
+      </li>
+      <li><a href="/kontakt/" class="mobile-cta">Kontakt</a></li>
+    </ul>
+  </nav>
+  <!-- /wp:html -->
+
+</header>
 <!-- /wp:group -->

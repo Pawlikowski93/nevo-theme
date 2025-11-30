@@ -10,34 +10,21 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Enqueue Google Fonts
- */
-function nevo_enqueue_google_fonts() {
-    wp_enqueue_style(
-        'nevo-google-fonts',
-        'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Roboto:wght@400;500;700&display=swap',
-        array(),
-        null
-    );
-}
-add_action( 'wp_enqueue_scripts', 'nevo_enqueue_google_fonts' );
-add_action( 'admin_enqueue_scripts', 'nevo_enqueue_google_fonts' );
-
-/**
  * Enqueue theme styles and scripts
  */
 function nevo_enqueue_assets() {
-    $is_dev = defined('WP_DEBUG') && WP_DEBUG;
+    $is_dev = defined( 'WP_DEBUG' ) && WP_DEBUG;
 
-    if ($is_dev) {
-        // Dev mode - Vite HMR
+    if ( $is_dev ) {
+        // Dev – Vite HMR (JS importuje main.scss)
         wp_enqueue_script(
-            'nevo-vite',
+            'nevo-vite-client',
             'http://localhost:3000/@vite/client',
             array(),
             null,
             true
         );
+
         wp_enqueue_script(
             'nevo-main',
             'http://localhost:3000/assets/js/main.js',
@@ -45,8 +32,9 @@ function nevo_enqueue_assets() {
             null,
             true
         );
+
     } else {
-        // Production - built assets
+        // Produkcja – build z Vite (dist)
         wp_enqueue_style(
             'nevo-main',
             NEVO_URI . '/dist/assets/css/main.css',
@@ -62,28 +50,23 @@ function nevo_enqueue_assets() {
             true
         );
     }
-        // Na front-page ładuj animacje
-    if (is_front_page()) {
-        wp_enqueue_script(
-            'nevo-animations',
-            NEVO_URI . '/assets/js/nevo-animations.js',
-            array(),
-            NEVO_VERSION,
-            true
-        );
-    }
 }
 add_action( 'wp_enqueue_scripts', 'nevo_enqueue_assets' );
-function nevo_defer_scripts($tag, $handle) {
-    if (is_admin()) {
+
+/**
+ * Defer dla wybranych skryptów
+ */
+function nevo_defer_scripts( $tag, $handle ) {
+    if ( is_admin() ) {
         return $tag;
     }
 
-    $defer_handles = array('nevo-main', 'nevo-animations');
-    if (in_array($handle, $defer_handles)) {
-        return str_replace(' src', ' defer src', $tag);
+    $defer_handles = array( 'nevo-main' );
+
+    if ( in_array( $handle, $defer_handles, true ) ) {
+        return str_replace( ' src', ' defer src', $tag );
     }
 
     return $tag;
 }
-add_filter('script_loader_tag', 'nevo_defer_scripts', 10, 2);
+add_filter( 'script_loader_tag', 'nevo_defer_scripts', 10, 2 );

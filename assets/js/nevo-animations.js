@@ -33,3 +33,28 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   }
 });
+// assets/js/nevo-accents.js
+document.addEventListener('DOMContentLoaded', () => {
+  const accents = document.querySelectorAll('.nevo-accent--arc');
+  if (!accents.length) return;
+
+  // fallback: brak IntersectionObserver -> pokaż od razu
+  if (!('IntersectionObserver' in window)) {
+    accents.forEach(acc => acc.classList.add('is-visible'));
+    return;
+  }
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('is-visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    },
+    { threshold: 0.3 }
+  );
+
+  accents.forEach(acc => observer.observe(acc));
+});

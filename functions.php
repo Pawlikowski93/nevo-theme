@@ -11,6 +11,9 @@ define( 'NEVO_VERSION', '0.1.0' );
 define( 'NEVO_DIR', get_template_directory() );
 define( 'NEVO_URI', get_template_directory_uri() );
 
+// Ładujemy enqueue (CSS/JS, fonty itd.)
+require_once NEVO_DIR . '/inc/enqueue.php';
+
 /**
  * Setup motywu
  */
@@ -19,6 +22,7 @@ function nevo_theme_setup() {
     add_theme_support( 'automatic-feed-links' );
     add_theme_support( 'title-tag' );
     add_theme_support( 'post-thumbnails' );
+
     add_theme_support(
         'html5',
         array(
@@ -31,6 +35,7 @@ function nevo_theme_setup() {
             'script',
         )
     );
+
     add_theme_support(
         'custom-logo',
         array(
@@ -40,6 +45,7 @@ function nevo_theme_setup() {
             'flex-width'  => true,
         )
     );
+
     add_theme_support( 'editor-styles' );
     add_theme_support( 'responsive-embeds' );
     add_theme_support( 'wp-block-styles' );
@@ -48,7 +54,7 @@ function nevo_theme_setup() {
 add_action( 'after_setup_theme', 'nevo_theme_setup' );
 
 /**
- * Enqueue Google Fonts
+ * Enqueue Google Fonts (tylko tutaj, NIE w inc/enqueue.php)
  */
 function nevo_enqueue_google_fonts() {
     wp_enqueue_style(
@@ -62,13 +68,14 @@ add_action( 'wp_enqueue_scripts', 'nevo_enqueue_google_fonts' );
 add_action( 'admin_enqueue_scripts', 'nevo_enqueue_google_fonts' );
 
 /**
- * Register custom blocks
+ * Rejestracja custom bloków (Hero, Tiles, CTA)
  */
 function nevo_register_blocks() {
-    $blocks = [ 'hero', 'tiles', 'cta' ];
+    $blocks = array( 'hero', 'tiles', 'cta' );
 
     foreach ( $blocks as $block ) {
         $block_path = NEVO_DIR . '/build/blocks/' . $block;
+
         if ( file_exists( $block_path . '/block.json' ) ) {
             register_block_type( $block_path );
         }
@@ -77,56 +84,58 @@ function nevo_register_blocks() {
 add_action( 'init', 'nevo_register_blocks' );
 
 /**
- * Register block category
+ * Kategoria bloków NEVO
  */
 function nevo_block_categories( $categories ) {
     return array_merge(
-        [
-            [
+        array(
+            array(
                 'slug'  => 'nevo-blocks',
                 'title' => __( 'NEVO Blocks', 'nevo' ),
-            ],
-        ],
+            ),
+        ),
         $categories
     );
 }
 add_filter( 'block_categories_all', 'nevo_block_categories' );
 
 /**
- * Inline block styles (workaround for HTTP serving issues)
+ * Globalne style dla bloków (front)
+ * – na razie ładujemy zawsze, bez kombinowania z has_block()
  */
-function nevo_inline_hero_css() {
-    if ( has_block( 'nevo/hero' ) || is_front_page() ) {
-        $css_file = NEVO_DIR . '/build/blocks/hero/style-index.css';
-        if ( file_exists( $css_file ) ) {
-            echo '<style id="nevo-hero-inline">' . file_get_contents( $css_file ) . '</style>';
-        }
-    }
-}
-add_action( 'wp_head', 'nevo_inline_hero_css', 100 );
+function nevo_enqueue_block_styles() {
 
-function nevo_inline_tiles_css() {
-    if ( has_block( 'nevo/tiles' ) ) {
-        $css_file = NEVO_DIR . '/build/blocks/tiles/style-index.css';
-        if ( file_exists( $css_file ) ) {
-            echo '<style id="nevo-tiles-inline">' . file_get_contents( $css_file ) . '</style>';
-        }
-    }
-}
-add_action( 'wp_head', 'nevo_inline_tiles_css', 100 );
+    // Debug – możesz na chwilę zostawić, żeby zobaczyć w źródle strony
+    echo "\n<!-- NEVO DEBUG: nevo_enqueue_block_styles fired -->\n";
 
-function nevo_inline_cta_css() {
-    if ( has_block( 'nevo/cta' ) ) {
-        $css_file = NEVO_DIR . '/build/blocks/cta/style-index.css';
-        if ( file_exists( $css_file ) ) {
-            echo '<style id="nevo-cta-inline">' . file_get_contents( $css_file ) . '</style>';
-        }
-    }
+    // Hero
+    wp_enqueue_style(
+        'nevo-hero-style',
+        NEVO_URI . '/build/blocks/hero/style-index.css',
+        array(),
+        NEVO_VERSION
+    );
+
+    // Tiles
+    wp_enqueue_style(
+        'nevo-tiles-style',
+        NEVO_URI . '/build/blocks/tiles/style-index.css',
+        array(),
+        NEVO_VERSION
+    );
+
+    // CTA
+    wp_enqueue_style(
+        'nevo-cta-style',
+        NEVO_URI . '/build/blocks/cta/style-index.css',
+        array(),
+        NEVO_VERSION
+    );
 }
-add_action( 'wp_head', 'nevo_inline_cta_css', 100 );
+add_action( 'wp_enqueue_scripts', 'nevo_enqueue_block_styles', 20 );
 
 /**
- * Add loading="lazy" to images
+ * Lazy loading obrazków
  */
 function nevo_add_lazy_loading( $attr ) {
     if ( ! isset( $attr['loading'] ) ) {
@@ -135,3 +144,11 @@ function nevo_add_lazy_loading( $attr ) {
     return $attr;
 }
 add_filter( 'wp_get_attachment_image_attributes', 'nevo_add_lazy_loading' );
+
+wp_enqueue_script(
+    'nevo-pillars-tabs',
+    get_stylesheet_directory_uri() . '/assets/js/pillars-tabs.js',
+    array(), // brak zależności
+    wp_get_theme()->get('Version'),
+    true
+);

@@ -4,17 +4,22 @@ import { resolve } from 'path';
 export default defineConfig({
   root: './',
   base: '/wp-content/themes/nevo/',
-  
+
   build: {
     outDir: 'dist',
     rollupOptions: {
       input: {
-        main: resolve(__dirname, 'assets/css/main.scss'),
-        js: resolve(__dirname, 'assets/js/main.js'),
+        main: resolve(__dirname, 'assets/js/main.js'),
       },
       output: {
         entryFileNames: 'assets/js/[name].js',
-        assetFileNames: 'assets/css/[name].[ext]',
+        assetFileNames: (assetInfo) => {
+          // CSS wrzucamy do assets/css
+          if (assetInfo.name && assetInfo.name.endsWith('.css')) {
+            return 'assets/css/[name].[ext]';
+          }
+          return 'assets/[name].[ext]';
+        },
       },
     },
     manifest: true,
@@ -23,7 +28,7 @@ export default defineConfig({
 
   server: {
     proxy: {
-      '^(?!/wp-content/themes/nevo/)': 'http://nevo-local.local', // Twoja lokalna domena
+      '^(?!/wp-content/themes/nevo/)': 'http://nevo-local.local',
     },
     cors: true,
     strictPort: true,
