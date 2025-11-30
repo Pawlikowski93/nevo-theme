@@ -8110,8 +8110,354 @@ a.nevo-footer__contact-item:focus svg {
   }
 }
 
+/* ==========================================================================
+   SEKCJA 5: PRICING - Marketing Automation
+   ========================================================================== */
+
+.nevo-pricing-automation {
+  background-color: var(--wp--preset--color--beige);
+  padding: 72px 0;
+  scroll-margin-top: 80px;
+}
+
+.nevo-pricing-automation__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.nevo-pricing-automation__header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.nevo-pricing-automation__title {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--wp--preset--color--primary);
+  margin: 0 0 16px 0;
+  line-height: 1.2;
+}
+
+.nevo-pricing-automation__lead {
+  font-family: var(--wp--preset--font-family--body);
+  font-size: 1.0625rem;
+  color: var(--wp--preset--color--gray-600);
+  margin: 0;
+  line-height: 1.6;
+}
+
+.nevo-pricing-automation__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin-bottom: 32px;
+}
+
+/* Pricing Card */
+.nevo-pricing-card {
+  position: relative;
+  background-color: var(--wp--preset--color--white);
+  border-radius: 16px;
+  padding: 32px 24px;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.05);
+  border: 2px solid transparent;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  display: flex;
+  flex-direction: column;
+}
+
+.nevo-pricing-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -4px rgba(0, 0, 0, 0.1);
+}
+
+/* Featured Card */
+.nevo-pricing-card--featured {
+  border-color: var(--wp--preset--color--coral);
+  box-shadow: 0 8px 24px -4px rgba(255, 107, 88, 0.2);
+  order: -1;
+}
+
+.nevo-pricing-card--featured:hover {
+  box-shadow: 0 16px 32px -4px rgba(255, 107, 88, 0.25);
+}
+
+/* Badge */
+.nevo-pricing-card__badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background-color: var(--wp--preset--color--gray-600);
+  color: var(--wp--preset--color--white);
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 6px 16px;
+  border-radius: 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  white-space: nowrap;
+}
+
+.nevo-pricing-card--featured .nevo-pricing-card__badge {
+  background-color: var(--wp--preset--color--coral);
+}
+
+/* Package Name */
+.nevo-pricing-card__name {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--wp--preset--color--primary);
+  margin: 12px 0 16px 0;
+  text-align: center;
+}
+
+/* Price */
+.nevo-pricing-card__price {
+  text-align: center;
+  margin-bottom: 24px;
+  padding-bottom: 24px;
+  border-bottom: 1px solid var(--wp--preset--color--gray-200);
+}
+
+.nevo-pricing-card__from {
+  display: block;
+  font-family: var(--wp--preset--font-family--body);
+  font-size: 0.875rem;
+  color: var(--wp--preset--color--gray-500);
+  margin-bottom: 4px;
+}
+
+.nevo-pricing-card__amount {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--wp--preset--color--primary);
+  line-height: 1;
+}
+
+.nevo-pricing-card__period {
+  font-family: var(--wp--preset--font-family--body);
+  font-size: 1rem;
+  color: var(--wp--preset--color--gray-500);
+  font-weight: 400;
+}
+
+/* Features List */
+.nevo-pricing-card__features {
+  list-style: none;
+  margin: 0 0 24px 0;
+  padding: 0;
+  flex-grow: 1;
+}
+
+.nevo-pricing-card__features li {
+  position: relative;
+  padding-left: 28px;
+  margin-bottom: 12px;
+  font-family: var(--wp--preset--font-family--body);
+  font-size: 0.9rem;
+  color: var(--wp--preset--color--gray-700);
+  line-height: 1.5;
+}
+
+.nevo-pricing-card__features li:last-child {
+  margin-bottom: 0;
+}
+
+/* Checkmark icon */
+.nevo-pricing-card__features li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 2px;
+  width: 18px;
+  height: 18px;
+  background-color: var(--wp--preset--color--coral);
+  border-radius: 50%;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='12' height='12' viewBox='0 0 24 24' fill='none' stroke='white' stroke-width='3' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='20 6 9 17 4 12'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: center;
+  background-size: 10px 10px;
+}
+
+/* CTA Button */
+.nevo-pricing-card__cta {
+  display: block;
+  text-align: center;
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  padding: 14px 24px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  background-color: transparent;
+  color: var(--wp--preset--color--primary);
+  border: 2px solid var(--wp--preset--color--primary);
+}
+
+.nevo-pricing-card__cta:hover {
+  background-color: var(--wp--preset--color--primary);
+  color: var(--wp--preset--color--white);
+}
+
+/* Featured CTA */
+.nevo-pricing-card__cta--featured {
+  background-color: var(--wp--preset--color--coral);
+  color: var(--wp--preset--color--white);
+  border-color: var(--wp--preset--color--coral);
+}
+
+.nevo-pricing-card__cta--featured:hover {
+  background-color: var(--wp--preset--color--coral-hover);
+  border-color: var(--wp--preset--color--coral-hover);
+  color: var(--wp--preset--color--white);
+}
+
+/* Additional Note */
+.nevo-pricing-automation__note {
+  text-align: center;
+  font-family: var(--wp--preset--font-family--body);
+  font-size: 0.875rem;
+  color: var(--wp--preset--color--gray-500);
+  margin: 0;
+  padding: 24px 0 0 0;
+  border-top: 1px solid var(--wp--preset--color--beige-dark);
+}
+
+/* Tablet breakpoint */
+@media (min-width: 768px) {
+  .nevo-pricing-automation {
+    padding: 100px 0;
+  }
+
+  .nevo-pricing-automation__title {
+    font-size: 2.25rem;
+  }
+
+  .nevo-pricing-automation__lead {
+    font-size: 1.125rem;
+  }
+
+  .nevo-pricing-automation__header {
+    margin-bottom: 64px;
+  }
+
+  .nevo-pricing-automation__grid {
+    flex-direction: row;
+    align-items: stretch;
+    gap: 20px;
+  }
+
+  .nevo-pricing-card {
+    flex: 1;
+    order: 0;
+  }
+
+  .nevo-pricing-card--featured {
+    order: 0;
+  }
+
+  .nevo-pricing-card__name {
+    font-size: 1.125rem;
+  }
+
+  .nevo-pricing-card__amount {
+    font-size: 2rem;
+  }
+
+  .nevo-pricing-card__features li {
+    font-size: 0.85rem;
+  }
+}
+
+/* Desktop breakpoint */
+@media (min-width: 1024px) {
+  .nevo-pricing-automation {
+    padding: 120px 0;
+  }
+
+  .nevo-pricing-automation__title {
+    font-size: 2.5rem;
+  }
+
+  .nevo-pricing-automation__grid {
+    gap: 24px;
+  }
+
+  .nevo-pricing-card {
+    padding: 40px 32px;
+  }
+
+  /* Featured card larger */
+  .nevo-pricing-card--featured {
+    transform: scale(1.05);
+    z-index: 1;
+  }
+
+  .nevo-pricing-card--featured:hover {
+    transform: scale(1.05) translateY(-4px);
+  }
+
+  .nevo-pricing-card__name {
+    font-size: 1.25rem;
+  }
+
+  .nevo-pricing-card__amount {
+    font-size: 2.5rem;
+  }
+
+  .nevo-pricing-card__features li {
+    font-size: 0.9rem;
+  }
+
+  .nevo-pricing-card__cta {
+    padding: 16px 28px;
+  }
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+  .nevo-pricing-automation__grid {
+    gap: 32px;
+  }
+
+  .nevo-pricing-card {
+    padding: 48px 36px;
+  }
+}
+
+/* Focus visible states */
+.nevo-pricing-card__cta:focus-visible {
+  outline: 2px solid var(--wp--preset--color--coral);
+  outline-offset: 2px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .nevo-pricing-card {
+    transition: none;
+  }
+
+  .nevo-pricing-card__cta {
+    transition: none;
+  }
+
+  .nevo-pricing-card--featured {
+    transform: none;
+  }
+
+  .nevo-pricing-card--featured:hover {
+    transform: none;
+  }
+}
+
 /* Placeholder for future sections:
-   - .nevo-benefits-automation
    - .nevo-casestudy-automation
    - .nevo-faq-automation
    - .nevo-final-cta-automation
