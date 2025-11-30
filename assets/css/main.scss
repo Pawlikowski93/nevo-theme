@@ -7821,8 +7821,296 @@ a.nevo-footer__contact-item:focus svg {
   }
 }
 
+/* ==========================================================================
+   SEKCJA 4: PROCESS - Marketing Automation
+   ========================================================================== */
+
+.nevo-process-automation {
+  background-color: var(--wp--preset--color--primary);
+  padding: 72px 0;
+  scroll-margin-top: 80px;
+}
+
+.nevo-process-automation__container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.nevo-process-automation__header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.nevo-process-automation__title {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--wp--preset--color--white);
+  margin: 0;
+  line-height: 1.2;
+}
+
+.nevo-process-automation__timeline {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  position: relative;
+}
+
+/* Pionowa linia timeline (mobile) */
+.nevo-process-automation__timeline::before {
+  content: '';
+  position: absolute;
+  left: 24px;
+  top: 0;
+  bottom: 0;
+  width: 2px;
+  background: linear-gradient(
+    180deg,
+    transparent 0%,
+    var(--wp--preset--color--coral) 5%,
+    var(--wp--preset--color--coral) 95%,
+    transparent 100%
+  );
+}
+
+/* Pojedynczy krok */
+.nevo-process-step-auto {
+  position: relative;
+  padding: 24px 24px 24px 64px;
+  background-color: rgba(255, 255, 255, 0.03);
+  border-radius: 12px;
+  margin-bottom: 16px;
+  transition: background-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nevo-process-step-auto:last-child {
+  margin-bottom: 0;
+}
+
+.nevo-process-step-auto:hover {
+  background-color: rgba(255, 255, 255, 0.08);
+  box-shadow: 0 0 30px rgba(255, 107, 88, 0.15);
+}
+
+/* Nagłówek kroku (numer + czas) */
+.nevo-process-step-auto__header {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 12px;
+}
+
+.nevo-process-step-auto__number {
+  position: absolute;
+  left: 12px;
+  top: 24px;
+  width: 28px;
+  height: 28px;
+  background-color: var(--wp--preset--color--coral);
+  color: var(--wp--preset--color--white);
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+}
+
+.nevo-process-step-auto__duration {
+  display: inline-block;
+  background-color: rgba(255, 107, 88, 0.2);
+  color: var(--wp--preset--color--coral);
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 4px 12px;
+  border-radius: 20px;
+}
+
+.nevo-process-step-auto__title {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--wp--preset--color--white);
+  margin: 0 0 12px 0;
+  line-height: 1.3;
+}
+
+.nevo-process-step-auto__list {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+}
+
+.nevo-process-step-auto__list li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 8px;
+  font-family: var(--wp--preset--font-family--body);
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.5;
+}
+
+.nevo-process-step-auto__list li:last-child {
+  margin-bottom: 0;
+}
+
+.nevo-process-step-auto__list li::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 6px;
+  height: 6px;
+  background-color: var(--wp--preset--color--coral);
+  border-radius: 50%;
+}
+
+/* Tablet breakpoint */
+@media (min-width: 768px) {
+  .nevo-process-automation {
+    padding: 100px 0;
+  }
+
+  .nevo-process-automation__title {
+    font-size: 2.25rem;
+  }
+
+  .nevo-process-automation__header {
+    margin-bottom: 64px;
+  }
+
+  .nevo-process-step-auto {
+    padding: 28px 28px 28px 72px;
+  }
+
+  .nevo-process-step-auto__number {
+    width: 32px;
+    height: 32px;
+    font-size: 0.8rem;
+    left: 16px;
+  }
+
+  .nevo-process-step-auto__title {
+    font-size: 1.25rem;
+  }
+
+  .nevo-process-automation__timeline::before {
+    left: 32px;
+  }
+}
+
+/* Desktop breakpoint - poziomy timeline */
+@media (min-width: 1024px) {
+  .nevo-process-automation {
+    padding: 120px 0;
+  }
+
+  .nevo-process-automation__title {
+    font-size: 2.5rem;
+  }
+
+  .nevo-process-automation__timeline {
+    flex-direction: row;
+    gap: 24px;
+  }
+
+  /* Pozioma linia timeline */
+  .nevo-process-automation__timeline::before {
+    left: 0;
+    right: 0;
+    top: 48px;
+    bottom: auto;
+    width: auto;
+    height: 2px;
+    background: linear-gradient(
+      90deg,
+      transparent 0%,
+      var(--wp--preset--color--coral) 5%,
+      var(--wp--preset--color--coral) 95%,
+      transparent 100%
+    );
+  }
+
+  .nevo-process-step-auto {
+    flex: 1;
+    padding: 80px 24px 24px 24px;
+    margin-bottom: 0;
+    text-align: center;
+  }
+
+  .nevo-process-step-auto__number {
+    position: absolute;
+    left: 50%;
+    top: 32px;
+    transform: translateX(-50%);
+    width: 36px;
+    height: 36px;
+    font-size: 0.875rem;
+  }
+
+  .nevo-process-step-auto__header {
+    justify-content: center;
+    margin-bottom: 16px;
+  }
+
+  .nevo-process-step-auto__title {
+    font-size: 1.125rem;
+  }
+
+  .nevo-process-step-auto__list {
+    text-align: left;
+    max-width: 220px;
+    margin: 0 auto;
+  }
+
+  .nevo-process-step-auto__list li {
+    font-size: 0.85rem;
+  }
+}
+
+/* Large desktop */
+@media (min-width: 1200px) {
+  .nevo-process-automation__timeline {
+    gap: 32px;
+  }
+
+  .nevo-process-step-auto {
+    padding: 88px 28px 28px 28px;
+  }
+
+  .nevo-process-step-auto__title {
+    font-size: 1.2rem;
+  }
+
+  .nevo-process-step-auto__list {
+    max-width: 240px;
+  }
+
+  .nevo-process-step-auto__list li {
+    font-size: 0.9rem;
+  }
+}
+
+/* Focus visible states */
+.nevo-process-step-auto:focus-within {
+  outline: 2px solid var(--wp--preset--color--coral);
+  outline-offset: 4px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .nevo-process-step-auto {
+    transition: none;
+  }
+}
+
 /* Placeholder for future sections:
-   - .nevo-process-automation
    - .nevo-benefits-automation
    - .nevo-casestudy-automation
    - .nevo-faq-automation
