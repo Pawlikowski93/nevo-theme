@@ -6844,3 +6844,224 @@ a.nevo-footer__contact-item:focus svg {
 .nevo-faq-item.is-open .nevo-faq-question {
   border-bottom: 1px solid var(--wp--preset--color--gray-100);
 }
+
+/* ==============================================
+   ANALITYKA FINAL CTA SECTION
+   ============================================== */
+
+.nevo-final-cta-analityka {
+  background-color: var(--wp--preset--color--white);
+  padding: 72px 20px 96px;
+}
+
+@media (min-width: 768px) {
+  .nevo-final-cta-analityka {
+    padding: 100px 32px 120px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nevo-final-cta-analityka {
+    padding: 120px 32px 140px;
+  }
+}
+
+.nevo-final-cta-analityka__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Inner Card */
+.nevo-final-cta__inner {
+  position: relative;
+  background: linear-gradient(135deg, #1c2e40 0%, #162536 50%, #0f1a24 100%);
+  border-radius: 20px;
+  padding: 48px 28px;
+  overflow: hidden;
+  box-shadow: 0 20px 60px rgba(28, 46, 64, 0.35);
+}
+
+@media (min-width: 768px) {
+  .nevo-final-cta__inner {
+    border-radius: 24px;
+    padding: 64px 48px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nevo-final-cta__inner {
+    padding: 80px 64px;
+  }
+}
+
+/* Glow effect */
+.nevo-final-cta__glow {
+  position: absolute;
+  top: -50%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 120%;
+  height: 100%;
+  background: radial-gradient(ellipse at center, rgba(255, 107, 88, 0.15) 0%, transparent 60%);
+  pointer-events: none;
+}
+
+/* Content */
+.nevo-final-cta__content {
+  position: relative;
+  z-index: 2;
+  text-align: center;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+/* Eyebrow */
+.nevo-final-cta__eyebrow {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--wp--preset--color--coral);
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  margin-bottom: 16px;
+}
+
+@media (min-width: 768px) {
+  .nevo-final-cta__eyebrow {
+    font-size: 0.875rem;
+    margin-bottom: 20px;
+  }
+}
+
+/* Title */
+.nevo-final-cta__title {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: clamp(1.75rem, 5vw, 2.75rem);
+  font-weight: 700;
+  color: var(--wp--preset--color--white);
+  line-height: 1.2;
+  margin: 0 0 20px 0;
+}
+
+@media (min-width: 768px) {
+  .nevo-final-cta__title {
+    margin-bottom: 24px;
+  }
+}
+
+/* Lead */
+.nevo-final-cta__lead {
+  font-size: clamp(1rem, 1.8vw, 1.125rem);
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0 0 32px 0;
+  max-width: 640px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .nevo-final-cta__lead {
+    margin-bottom: 40px;
+  }
+}
+
+/* CTA Button */
+.nevo-final-cta__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 18px 36px;
+  background-color: var(--wp--preset--color--coral);
+  color: var(--wp--preset--color--white);
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 1.0625rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  box-shadow: 0 8px 32px rgba(255, 107, 88, 0.4);
+}
+
+.nevo-final-cta__button:hover,
+.nevo-final-cta__button:focus {
+  background-color: var(--wp--preset--color--coral-hover);
+  transform: translateY(-3px);
+  box-shadow: 0 12px 40px rgba(255, 107, 88, 0.5);
+}
+
+.nevo-final-cta__button svg {
+  transition: transform 0.3s ease;
+}
+
+.nevo-final-cta__button:hover svg {
+  transform: translateX(4px);
+}
+
+@media (min-width: 768px) {
+  .nevo-final-cta__button {
+    padding: 20px 44px;
+    font-size: 1.125rem;
+  }
+}
+
+/* Benefits badges */
+.nevo-final-cta__benefits {
+  list-style: none;
+  padding: 0;
+  margin: 32px 0 0 0;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+@media (min-width: 768px) {
+  .nevo-final-cta__benefits {
+    margin-top: 40px;
+    gap: 16px;
+  }
+}
+
+.nevo-final-cta__benefits li {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 8px 14px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  border-radius: 999px;
+  font-size: 0.8rem;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.nevo-final-cta__benefits li svg {
+  color: var(--wp--preset--color--coral);
+  flex-shrink: 0;
+}
+
+@media (min-width: 768px) {
+  .nevo-final-cta__benefits li {
+    padding: 10px 18px;
+    font-size: 0.85rem;
+  }
+}
+
+/* Note */
+.nevo-final-cta__note {
+  font-size: 0.8rem;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 28px auto 0;
+  max-width: 560px;
+  font-style: italic;
+}
+
+@media (min-width: 768px) {
+  .nevo-final-cta__note {
+    font-size: 0.85rem;
+    margin-top: 36px;
+  }
+}
