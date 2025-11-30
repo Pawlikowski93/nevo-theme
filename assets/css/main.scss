@@ -5853,7 +5853,7 @@ a.nevo-footer__contact-item:focus svg {
   font-weight: 600;
   text-decoration: none;
   border-radius: 8px;
-  transition: all 0.25s ease;
+  transition: background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
   box-shadow: 0 4px 20px rgba(255, 107, 88, 0.35);
 }
 
@@ -5862,6 +5862,15 @@ a.nevo-footer__contact-item:focus svg {
   background-color: var(--wp--preset--color--coral-hover) !important;
   transform: translateY(-2px);
   box-shadow: 0 6px 28px rgba(255, 107, 88, 0.45);
+}
+
+.nevo-hero-analityka__cta .wp-block-button__link:focus {
+  outline: none;
+}
+
+.nevo-hero-analityka__cta .wp-block-button__link:focus-visible {
+  outline: 2px solid var(--wp--preset--color--white);
+  outline-offset: 3px;
 }
 
 /* Benefits list */
@@ -6013,7 +6022,7 @@ a.nevo-footer__contact-item:focus svg {
   border-radius: 12px;
   padding: 28px 24px;
   box-shadow: 0 2px 8px rgba(28, 46, 64, 0.06);
-  transition: all 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
   position: relative;
 }
 
@@ -6143,7 +6152,7 @@ a.nevo-footer__contact-item:focus svg {
   border: 1px solid var(--wp--preset--color--gray-200);
   border-radius: 12px;
   padding: 28px 24px;
-  transition: all 0.25s ease;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
 }
 
 .nevo-solution-card:hover {
@@ -6353,7 +6362,7 @@ a.nevo-footer__contact-item:focus svg {
   position: relative;
   z-index: 2;
   box-shadow: 0 0 0 4px rgba(255, 107, 88, 0.2);
-  transition: all 0.25s ease;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
 }
 
 /* Mobile: position number on the line */
@@ -6980,7 +6989,7 @@ a.nevo-footer__contact-item:focus svg {
   font-weight: 600;
   text-decoration: none;
   border-radius: 10px;
-  transition: all 0.3s ease;
+  transition: background-color 0.3s ease, transform 0.3s ease, box-shadow 0.3s ease;
   box-shadow: 0 8px 32px rgba(255, 107, 88, 0.4);
 }
 
@@ -6989,6 +6998,15 @@ a.nevo-footer__contact-item:focus svg {
   background-color: var(--wp--preset--color--coral-hover);
   transform: translateY(-3px);
   box-shadow: 0 12px 40px rgba(255, 107, 88, 0.5);
+}
+
+.nevo-final-cta__button:focus {
+  outline: none;
+}
+
+.nevo-final-cta__button:focus-visible {
+  outline: 2px solid var(--wp--preset--color--white);
+  outline-offset: 3px;
 }
 
 .nevo-final-cta__button svg {
@@ -7064,4 +7082,60 @@ a.nevo-footer__contact-item:focus svg {
     font-size: 0.85rem;
     margin-top: 36px;
   }
+}
+
+/* ==============================================
+   ACCESSIBILITY & PERFORMANCE IMPROVEMENTS
+   ============================================== */
+
+/* Scroll margin for anchor links (accounts for fixed header) */
+.nevo-hero-analityka,
+.nevo-problems-analityka,
+.nevo-solution-analityka,
+.nevo-process-analityka,
+.nevo-beforeafter-analityka,
+.nevo-faq-analityka,
+.nevo-final-cta-analityka {
+  scroll-margin-top: 80px;
+}
+
+/* Respect user's reduced motion preference */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+
+  .nevo-hero-analityka [data-animate="fadeInUp"] {
+    opacity: 1;
+    animation: none;
+  }
+
+  .nevo-problem-card:hover,
+  .nevo-solution-card:hover,
+  .nevo-process-step:hover .nevo-process-step__number,
+  .nevo-final-cta__button:hover {
+    transform: none;
+  }
+}
+
+/* Global focus-visible styles for interactive elements in landing pages */
+.nevo-landing-analityka a:focus-visible,
+.nevo-landing-analityka button:focus-visible {
+  outline: 2px solid var(--wp--preset--color--coral);
+  outline-offset: 2px;
+}
+
+/* Override for dark backgrounds */
+.nevo-hero-analityka a:focus-visible,
+.nevo-hero-analityka button:focus-visible,
+.nevo-process-analityka a:focus-visible,
+.nevo-process-analityka button:focus-visible,
+.nevo-final-cta__inner a:focus-visible,
+.nevo-final-cta__inner button:focus-visible {
+  outline-color: var(--wp--preset--color--white);
 }

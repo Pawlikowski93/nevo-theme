@@ -27,6 +27,21 @@
           "name": "Granat ciemny"
         },
         {
+          "slug": "primary-darker",
+          "color": "#182635",
+          "name": "Granat gradient mid"
+        },
+        {
+          "slug": "primary-darkest",
+          "color": "#101824",
+          "name": "Granat gradient dark"
+        },
+        {
+          "slug": "cream",
+          "color": "#e5dcc5",
+          "name": "Kremowy tekst"
+        },
+        {
           "slug": "accent",
           "color": "#d4a574",
           "name": "Złoty akcent"
