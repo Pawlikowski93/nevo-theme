@@ -8457,8 +8457,224 @@ a.nevo-footer__contact-item:focus svg {
   }
 }
 
+/* ==========================================================================
+   SEKCJA 6: BEFORE/AFTER - Marketing Automation
+   ========================================================================== */
+
+.nevo-beforeafter-automation {
+  background-color: var(--wp--preset--color--white);
+  padding: 72px 0;
+  scroll-margin-top: 80px;
+}
+
+.nevo-beforeafter-automation__container {
+  max-width: 1000px;
+  margin: 0 auto;
+  padding: 0 20px;
+}
+
+.nevo-beforeafter-automation__title {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 1.875rem;
+  font-weight: 700;
+  color: var(--wp--preset--color--primary);
+  text-align: center;
+  margin: 0 0 48px 0;
+  line-height: 1.2;
+}
+
+.nevo-beforeafter-automation__grid {
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
+}
+
+/* Single Row */
+.nevo-ba-row {
+  display: flex;
+  flex-direction: column;
+  gap: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.nevo-ba-row:hover {
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+  transform: translateY(-2px);
+}
+
+/* Before Cell */
+.nevo-ba-before {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 20px;
+  background-color: var(--wp--preset--color--gray-100);
+  border-left: 4px solid #dc3545;
+}
+
+/* After Cell */
+.nevo-ba-after {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 20px;
+  background-color: var(--wp--preset--color--white);
+  border-left: 4px solid var(--wp--preset--color--coral);
+}
+
+/* Icon Container */
+.nevo-ba-icon {
+  flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 28px;
+  height: 28px;
+  border-radius: 50%;
+  margin-top: 2px;
+}
+
+.nevo-ba-icon--before {
+  background-color: rgba(220, 53, 69, 0.15);
+  color: #dc3545;
+}
+
+.nevo-ba-icon--after {
+  background-color: rgba(255, 107, 88, 0.15);
+  color: var(--wp--preset--color--coral);
+}
+
+/* Text */
+.nevo-ba-text {
+  font-family: var(--wp--preset--font-family--body);
+  font-size: 0.9375rem;
+  line-height: 1.5;
+  margin: 0;
+  flex: 1;
+}
+
+.nevo-ba-before .nevo-ba-text {
+  color: var(--wp--preset--color--gray-600);
+}
+
+.nevo-ba-after .nevo-ba-text {
+  color: var(--wp--preset--color--gray-800);
+  font-weight: 500;
+}
+
+/* Scroll Animation */
+@keyframes baSlideIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nevo-ba-row {
+  animation: baSlideIn 0.5s ease forwards;
+  opacity: 0;
+}
+
+.nevo-ba-row:nth-child(1) { animation-delay: 0.1s; }
+.nevo-ba-row:nth-child(2) { animation-delay: 0.2s; }
+.nevo-ba-row:nth-child(3) { animation-delay: 0.3s; }
+.nevo-ba-row:nth-child(4) { animation-delay: 0.4s; }
+.nevo-ba-row:nth-child(5) { animation-delay: 0.5s; }
+
+/* Tablet breakpoint */
+@media (min-width: 768px) {
+  .nevo-beforeafter-automation {
+    padding: 100px 0;
+  }
+
+  .nevo-beforeafter-automation__title {
+    font-size: 2.25rem;
+    margin-bottom: 64px;
+  }
+
+  .nevo-beforeafter-automation__grid {
+    gap: 20px;
+  }
+
+  .nevo-ba-row {
+    flex-direction: row;
+  }
+
+  .nevo-ba-before,
+  .nevo-ba-after {
+    flex: 1;
+    padding: 24px;
+    border-left-width: 0;
+    border-top: 4px solid transparent;
+  }
+
+  .nevo-ba-before {
+    border-top-color: #dc3545;
+    border-right: 1px solid var(--wp--preset--color--gray-200);
+  }
+
+  .nevo-ba-after {
+    border-top-color: var(--wp--preset--color--coral);
+  }
+
+  .nevo-ba-text {
+    font-size: 1rem;
+  }
+}
+
+/* Desktop breakpoint */
+@media (min-width: 1024px) {
+  .nevo-beforeafter-automation {
+    padding: 120px 0;
+  }
+
+  .nevo-beforeafter-automation__title {
+    font-size: 2.5rem;
+  }
+
+  .nevo-ba-before,
+  .nevo-ba-after {
+    padding: 28px 32px;
+  }
+
+  .nevo-ba-icon {
+    width: 32px;
+    height: 32px;
+  }
+
+  .nevo-ba-icon svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .nevo-ba-text {
+    font-size: 1.0625rem;
+  }
+}
+
+/* Focus visible states */
+.nevo-ba-row:focus-within {
+  outline: 2px solid var(--wp--preset--color--coral);
+  outline-offset: 2px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .nevo-ba-row {
+    animation: none;
+    opacity: 1;
+    transition: none;
+  }
+}
+
 /* Placeholder for future sections:
-   - .nevo-casestudy-automation
    - .nevo-faq-automation
    - .nevo-final-cta-automation
 */
