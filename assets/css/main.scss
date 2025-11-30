@@ -6452,3 +6452,230 @@ a.nevo-footer__contact-item:focus svg {
     display: none;
   }
 }
+
+/* ==============================================
+   ANALITYKA BEFORE/AFTER SECTION
+   ============================================== */
+
+.nevo-beforeafter-analityka {
+  background-color: var(--wp--preset--color--white);
+  padding: 72px 20px;
+}
+
+@media (min-width: 768px) {
+  .nevo-beforeafter-analityka {
+    padding: 100px 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nevo-beforeafter-analityka {
+    padding: 120px 32px;
+  }
+}
+
+.nevo-beforeafter-analityka__container {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+/* Header */
+.nevo-beforeafter-analityka__header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  .nevo-beforeafter-analityka__header {
+    margin-bottom: 56px;
+  }
+}
+
+.nevo-beforeafter-analityka__title {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 700;
+  color: var(--wp--preset--color--primary);
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* Table */
+.nevo-beforeafter-analityka__table {
+  display: flex;
+  flex-direction: column;
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 24px rgba(28, 46, 64, 0.08);
+}
+
+/* Table Header */
+.nevo-ba-header {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .nevo-ba-header {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    background: var(--wp--preset--color--primary);
+  }
+
+  .nevo-ba-header__before,
+  .nevo-ba-header__after {
+    padding: 16px 24px;
+    font-family: var(--wp--preset--font-family--heading);
+    font-size: 0.875rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+
+  .nevo-ba-header__before {
+    color: rgba(255, 255, 255, 0.7);
+    background: var(--wp--preset--color--primary);
+  }
+
+  .nevo-ba-header__after {
+    color: var(--wp--preset--color--white);
+    background: var(--wp--preset--color--primary-light);
+  }
+}
+
+/* Table Rows */
+.nevo-ba-row {
+  display: flex;
+  flex-direction: column;
+  border-bottom: 1px solid var(--wp--preset--color--gray-200);
+  transition: background-color 0.2s ease;
+}
+
+.nevo-ba-row:last-child {
+  border-bottom: none;
+}
+
+@media (min-width: 768px) {
+  .nevo-ba-row {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+  }
+
+  .nevo-ba-row:hover {
+    background-color: var(--wp--preset--color--beige);
+  }
+}
+
+/* Cells */
+.nevo-ba-before,
+.nevo-ba-after {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 20px;
+  font-size: 0.925rem;
+  line-height: 1.6;
+}
+
+@media (min-width: 768px) {
+  .nevo-ba-before,
+  .nevo-ba-after {
+    padding: 24px;
+  }
+}
+
+/* Before cell */
+.nevo-ba-before {
+  background: var(--wp--preset--color--gray-50);
+  color: var(--wp--preset--color--gray-500);
+}
+
+.nevo-ba-before::before {
+  content: "PRZED";
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--wp--preset--color--gray-400);
+  margin-bottom: 4px;
+}
+
+@media (min-width: 768px) {
+  .nevo-ba-before::before {
+    display: none;
+  }
+}
+
+.nevo-ba-before .nevo-ba-icon {
+  color: var(--wp--preset--color--gray-400);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.nevo-ba-before span {
+  display: block;
+}
+
+/* After cell */
+.nevo-ba-after {
+  background: var(--wp--preset--color--white);
+  color: var(--wp--preset--color--primary);
+}
+
+.nevo-ba-after::before {
+  content: "PO";
+  display: block;
+  font-size: 0.65rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  color: var(--wp--preset--color--coral);
+  margin-bottom: 4px;
+}
+
+@media (min-width: 768px) {
+  .nevo-ba-after::before {
+    display: none;
+  }
+}
+
+.nevo-ba-after .nevo-ba-icon {
+  color: var(--wp--preset--color--coral);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.nevo-ba-after span {
+  display: block;
+  font-weight: 500;
+}
+
+/* Mobile: stack with visual separation */
+@media (max-width: 767px) {
+  .nevo-ba-row {
+    margin-bottom: 16px;
+    border-radius: 12px;
+    overflow: hidden;
+    box-shadow: 0 2px 8px rgba(28, 46, 64, 0.06);
+    border: 1px solid var(--wp--preset--color--gray-200);
+  }
+
+  .nevo-ba-row:last-child {
+    margin-bottom: 0;
+  }
+
+  .nevo-ba-before,
+  .nevo-ba-after {
+    flex-direction: column;
+    padding: 16px 20px;
+  }
+
+  .nevo-ba-before .nevo-ba-icon,
+  .nevo-ba-after .nevo-ba-icon {
+    display: none;
+  }
+
+  .nevo-ba-after {
+    border-top: 1px solid var(--wp--preset--color--gray-100);
+  }
+}
