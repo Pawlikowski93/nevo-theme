@@ -448,6 +448,139 @@
     </section>
     <!-- /wp:group -->
 
+    <!-- ========================================
+         SEKCJA 6: FAQ
+         ======================================== -->
+    <!-- wp:group {"align":"full","className":"nevo-faq-analityka","layout":{"type":"default"}} -->
+    <section class="wp-block-group alignfull nevo-faq-analityka">
+
+        <!-- wp:group {"className":"nevo-faq-analityka__container","layout":{"type":"constrained","contentSize":"900px"}} -->
+        <div class="wp-block-group nevo-faq-analityka__container">
+
+            <!-- Header -->
+            <!-- wp:group {"className":"nevo-faq-analityka__header","layout":{"type":"constrained","contentSize":"700px"}} -->
+            <div class="wp-block-group nevo-faq-analityka__header">
+
+                <!-- wp:heading {"level":2,"className":"nevo-faq-analityka__title"} -->
+                <h2 class="wp-block-heading nevo-faq-analityka__title">Często zadawane pytania</h2>
+                <!-- /wp:heading -->
+
+            </div>
+            <!-- /wp:group -->
+
+            <!-- FAQ Items -->
+            <!-- wp:html -->
+            <div class="nevo-faq-analityka__list" data-faq-accordion>
+
+                <div class="nevo-faq-item">
+                    <button class="nevo-faq-question" aria-expanded="false" aria-controls="faq-1">
+                        <span>Czy muszę mieć już GA4?</span>
+                        <svg class="nevo-faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="nevo-faq-answer" id="faq-1">
+                        <p>Nie. Wdrożymy od zera lub zmigrujemy istniejącą konfigurację. Jeśli masz Universal Analytics — najwyższy czas, bo UA już nie zbiera danych.</p>
+                    </div>
+                </div>
+
+                <div class="nevo-faq-item">
+                    <button class="nevo-faq-question" aria-expanded="false" aria-controls="faq-2">
+                        <span>Co z danymi historycznymi z Universal Analytics?</span>
+                        <svg class="nevo-faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="nevo-faq-answer" id="faq-2">
+                        <p>GA4 nie importuje danych z UA. Dlatego im szybciej wdrożysz, tym więcej danych zbierzesz. Historię z UA możemy wyeksportować do BigQuery.</p>
+                    </div>
+                </div>
+
+                <div class="nevo-faq-item">
+                    <button class="nevo-faq-question" aria-expanded="false" aria-controls="faq-3">
+                        <span>Czy Consent Mode v2 jest obowiązkowy?</span>
+                        <svg class="nevo-faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="nevo-faq-answer" id="faq-3">
+                        <p>Tak. Od marca 2024 Google wymaga Consent Mode v2 dla remarketingu i raportowania konwersji. Bez tego tracisz dane i możliwość optymalizacji kampanii.</p>
+                    </div>
+                </div>
+
+                <div class="nevo-faq-item">
+                    <button class="nevo-faq-question" aria-expanded="false" aria-controls="faq-4">
+                        <span>Ile trwa wdrożenie?</span>
+                        <svg class="nevo-faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="nevo-faq-answer" id="faq-4">
+                        <p>Standardowe wdrożenie GA4 + GTM + Consent Mode: 5-10 dni roboczych. Audyt: 1-2 dni. Kompleksowe wdrożenie z dashboardami: 2-3 tygodnie.</p>
+                    </div>
+                </div>
+
+                <div class="nevo-faq-item">
+                    <button class="nevo-faq-question" aria-expanded="false" aria-controls="faq-5">
+                        <span>Czy potrzebuję programisty po mojej stronie?</span>
+                        <svg class="nevo-faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="nevo-faq-answer" id="faq-5">
+                        <p>Nie. GTM pozwala wdrażać tracking bez ingerencji w kod strony. Potrzebujemy tylko dostęp do GTM i GA4 (lub założymy nowe konta).</p>
+                    </div>
+                </div>
+
+                <div class="nevo-faq-item">
+                    <button class="nevo-faq-question" aria-expanded="false" aria-controls="faq-6">
+                        <span>Co jeśli mam już GTM, ale nie wiem czy działa poprawnie?</span>
+                        <svg class="nevo-faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="nevo-faq-answer" id="faq-6">
+                        <p>Zrobimy audyt istniejącego containera. Znajdziemy błędy, duplikaty, brakujące tagi. Naprawimy lub zbudujemy od nowa — zależy co będzie szybsze.</p>
+                    </div>
+                </div>
+
+                <div class="nevo-faq-item">
+                    <button class="nevo-faq-question" aria-expanded="false" aria-controls="faq-7">
+                        <span>Jak wyglądają raporty?</span>
+                        <svg class="nevo-faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="nevo-faq-answer" id="faq-7">
+                        <p>Dashboard Looker Studio z dostępem 24/7 + raport PDF wysyłany mailem co miesiąc + alerty na Slacka/maila przy anomaliach (np. spadek konwersji >20%).</p>
+                    </div>
+                </div>
+
+                <div class="nevo-faq-item">
+                    <button class="nevo-faq-question" aria-expanded="false" aria-controls="faq-8">
+                        <span>Czy obsługujecie inne platformy analityczne niż GA4?</span>
+                        <svg class="nevo-faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="nevo-faq-answer" id="faq-8">
+                        <p>Tak: Mixpanel, Amplitude, Piwik PRO, Matomo. GA4 to standard rynkowy, ale jeśli masz powody do alternatywy — wdrożymy.</p>
+                    </div>
+                </div>
+
+                <div class="nevo-faq-item">
+                    <button class="nevo-faq-question" aria-expanded="false" aria-controls="faq-9">
+                        <span>Co z RODO i potencjalnymi karami?</span>
+                        <svg class="nevo-faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="nevo-faq-answer" id="faq-9">
+                        <p>Wdrażamy zgodnie z RODO i wytycznymi UODO. Consent Mode + poprawnie skonfigurowany CMP (banner cookies) = pełna zgodność. Możemy też przygotować dokumentację dla IOD.</p>
+                    </div>
+                </div>
+
+                <div class="nevo-faq-item">
+                    <button class="nevo-faq-question" aria-expanded="false" aria-controls="faq-10">
+                        <span>Od czego zacząć?</span>
+                        <svg class="nevo-faq-icon" width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M6 9l6 6 6-6"/></svg>
+                    </button>
+                    <div class="nevo-faq-answer" id="faq-10">
+                        <p>Bezpłatny audyt. 30 minut rozmowy video, sprawdzimy Twoje GA4, GTM, Consent Mode. Dostaniesz raport z rekomendacjami. Bez zobowiązań — jeśli wszystko działa, powiemy Ci to wprost.</p>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /wp:html -->
+
+        </div>
+        <!-- /wp:group -->
+
+    </section>
+    <!-- /wp:group -->
+
 </main>
 <!-- /wp:group -->
 

@@ -140,19 +140,19 @@ document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('a[href^="#"]').forEach(anchor => {
     anchor.addEventListener('click', function (e) {
       const href = this.getAttribute('href');
-      
+
       if (href === '#' || href === '') {
         e.preventDefault();
         return;
       }
 
       e.preventDefault();
-      
+
       const target = document.querySelector(href);
       if (target) {
         const headerHeight = header ? header.offsetHeight : 0;
         const targetPosition = target.offsetTop - headerHeight - 20;
-        
+
         window.scrollTo({
           top: targetPosition,
           behavior: 'smooth'
@@ -161,4 +161,50 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 
+});
+
+/**
+ * FAQ Accordion - Analityka Landing Page
+ * Only one item open at a time, smooth animation
+ */
+document.addEventListener('DOMContentLoaded', () => {
+  const faqAccordions = document.querySelectorAll('[data-faq-accordion]');
+
+  faqAccordions.forEach(accordion => {
+    const items = accordion.querySelectorAll('.nevo-faq-item');
+
+    items.forEach(item => {
+      const question = item.querySelector('.nevo-faq-question');
+      const answer = item.querySelector('.nevo-faq-answer');
+
+      if (!question || !answer) return;
+
+      question.addEventListener('click', () => {
+        const isCurrentlyOpen = item.classList.contains('is-open');
+
+        // Close all items in this accordion
+        items.forEach(otherItem => {
+          otherItem.classList.remove('is-open');
+          const otherQuestion = otherItem.querySelector('.nevo-faq-question');
+          if (otherQuestion) {
+            otherQuestion.setAttribute('aria-expanded', 'false');
+          }
+        });
+
+        // Toggle current item (open if it was closed)
+        if (!isCurrentlyOpen) {
+          item.classList.add('is-open');
+          question.setAttribute('aria-expanded', 'true');
+        }
+      });
+
+      // Keyboard accessibility
+      question.addEventListener('keydown', (e) => {
+        if (e.key === 'Enter' || e.key === ' ') {
+          e.preventDefault();
+          question.click();
+        }
+      });
+    });
+  });
 });
