@@ -7244,8 +7244,280 @@ a.nevo-footer__contact-item:focus svg {
   outline-offset: 2px;
 }
 
+/* ==============================================
+   AUTOMATION HERO
+   ============================================== */
+
+.nevo-hero-automation {
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(
+    135deg,
+    var(--wp--preset--color--primary) 0%,
+    var(--wp--preset--color--primary-darker) 50%,
+    var(--wp--preset--color--primary-darkest) 100%
+  );
+  padding: 100px 20px 80px;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .nevo-hero-automation {
+    min-height: 90vh;
+    padding: 120px 32px 100px;
+  }
+}
+
+/* Background pattern - automation flow visualization */
+.nevo-hero-automation__pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.06;
+  background-image:
+    /* Horizontal flow lines */
+    linear-gradient(90deg, transparent 0%, rgba(255,107,88,0.3) 20%, rgba(255,107,88,0.5) 50%, rgba(255,107,88,0.3) 80%, transparent 100%),
+    /* Vertical connectors */
+    linear-gradient(180deg, transparent 0%, rgba(255,255,255,0.1) 50%, transparent 100%),
+    /* Node circles - automation triggers */
+    radial-gradient(circle at 15% 25%, rgba(255,107,88,0.6) 0%, transparent 3%),
+    radial-gradient(circle at 35% 25%, rgba(255,107,88,0.4) 0%, transparent 2%),
+    radial-gradient(circle at 55% 25%, rgba(255,107,88,0.5) 0%, transparent 2.5%),
+    radial-gradient(circle at 75% 25%, rgba(255,107,88,0.4) 0%, transparent 2%),
+    radial-gradient(circle at 90% 25%, rgba(255,107,88,0.6) 0%, transparent 3%),
+    /* Second row - email/SMS nodes */
+    radial-gradient(circle at 25% 50%, rgba(255,255,255,0.4) 0%, transparent 2%),
+    radial-gradient(circle at 45% 50%, rgba(255,255,255,0.3) 0%, transparent 1.5%),
+    radial-gradient(circle at 65% 50%, rgba(255,255,255,0.4) 0%, transparent 2%),
+    radial-gradient(circle at 85% 50%, rgba(255,255,255,0.3) 0%, transparent 1.5%),
+    /* Third row - conversion nodes */
+    radial-gradient(circle at 20% 75%, rgba(255,107,88,0.4) 0%, transparent 2%),
+    radial-gradient(circle at 50% 75%, rgba(255,107,88,0.5) 0%, transparent 2.5%),
+    radial-gradient(circle at 80% 75%, rgba(255,107,88,0.4) 0%, transparent 2%),
+    /* Connection lines grid */
+    linear-gradient(rgba(255,255,255,0.03) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.03) 1px, transparent 1px);
+  background-size:
+    100% 2px,
+    2px 100%,
+    100% 100%,
+    100% 100%,
+    100% 100%,
+    100% 100%,
+    100% 100%,
+    100% 100%,
+    100% 100%,
+    100% 100%,
+    100% 100%,
+    100% 100%,
+    100% 100%,
+    100% 100%,
+    80px 80px,
+    80px 80px;
+  background-position:
+    0 25%,
+    50% 0,
+    0 0,
+    0 0,
+    0 0,
+    0 0,
+    0 0,
+    0 0,
+    0 0,
+    0 0,
+    0 0,
+    0 0,
+    0 0,
+    0 0,
+    0 0,
+    0 0;
+  pointer-events: none;
+}
+
+.nevo-hero-automation__container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.nevo-hero-automation__content {
+  max-width: 800px;
+}
+
+/* Trust Badge */
+.nevo-hero-automation__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 18px;
+  background: rgba(12, 25, 40, 0.85);
+  border: 1px solid rgba(212, 165, 116, 0.35);
+  border-radius: 999px;
+  margin-bottom: 24px;
+}
+
+.nevo-hero-automation__badge svg {
+  color: var(--wp--preset--color--coral);
+  flex-shrink: 0;
+}
+
+.nevo-hero-automation__badge span {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--wp--preset--color--cream);
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 640px) {
+  .nevo-hero-automation__badge span {
+    font-size: 0.65rem;
+  }
+}
+
+/* Headline */
+.nevo-hero-automation__headline {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: clamp(2.2rem, 6vw, 3.75rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--wp--preset--color--white);
+  margin: 0 0 16px 0;
+}
+
+/* Tagline */
+.nevo-hero-automation__tagline {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  font-weight: 600;
+  color: var(--wp--preset--color--coral);
+  margin: 0 0 24px 0;
+  letter-spacing: 0.01em;
+}
+
+/* Subheadline */
+.nevo-hero-automation__subheadline {
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0 0 32px 0;
+  max-width: 640px;
+}
+
+/* CTA Button */
+.nevo-hero-automation__cta-wrap {
+  margin-bottom: 28px;
+}
+
+.nevo-hero-automation__cta .wp-block-button__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 32px;
+  background-color: var(--wp--preset--color--coral) !important;
+  color: var(--wp--preset--color--white) !important;
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background-color 0.25s ease, transform 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 4px 20px rgba(255, 107, 88, 0.35);
+}
+
+.nevo-hero-automation__cta .wp-block-button__link:hover,
+.nevo-hero-automation__cta .wp-block-button__link:focus {
+  background-color: var(--wp--preset--color--coral-hover) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 28px rgba(255, 107, 88, 0.45);
+}
+
+.nevo-hero-automation__cta .wp-block-button__link:focus {
+  outline: none;
+}
+
+.nevo-hero-automation__cta .wp-block-button__link:focus-visible {
+  outline: 2px solid var(--wp--preset--color--white);
+  outline-offset: 3px;
+}
+
+/* Benefits list */
+.nevo-hero-automation__benefits {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+}
+
+.nevo-hero-automation__benefits li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.nevo-hero-automation__benefits svg {
+  color: var(--wp--preset--color--coral);
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .nevo-hero-automation__benefits {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Animations */
+@keyframes nevoFadeInUpAuto {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nevo-hero-automation [data-animate="fadeInUp"] {
+  opacity: 0;
+  animation: nevoFadeInUpAuto 0.6s ease-out forwards;
+}
+
+.nevo-hero-automation [data-delay="100"] {
+  animation-delay: 0.1s;
+}
+
+.nevo-hero-automation [data-delay="150"] {
+  animation-delay: 0.15s;
+}
+
+.nevo-hero-automation [data-delay="200"] {
+  animation-delay: 0.2s;
+}
+
+.nevo-hero-automation [data-delay="250"] {
+  animation-delay: 0.25s;
+}
+
+.nevo-hero-automation [data-delay="300"] {
+  animation-delay: 0.3s;
+}
+
+/* Override for dark background focus */
+.nevo-hero-automation a:focus-visible,
+.nevo-hero-automation button:focus-visible {
+  outline-color: var(--wp--preset--color--white);
+}
+
 /* Placeholder for future sections:
-   - .nevo-hero-automation
    - .nevo-problems-automation
    - .nevo-solution-automation
    - .nevo-process-automation

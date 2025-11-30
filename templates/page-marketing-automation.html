@@ -4,10 +4,85 @@
 <main class="wp-block-group alignfull nevo-landing-automation">
 
     <!-- ========================================
-         SEKCJE LANDING PAGE: MARKETING AUTOMATION
+         SEKCJA 1: HERO
+         ======================================== -->
+    <!-- wp:group {"align":"full","className":"nevo-hero-automation","layout":{"type":"default"}} -->
+    <section class="wp-block-group alignfull nevo-hero-automation">
 
+        <!-- Background pattern - automation flow visualization -->
+        <!-- wp:html -->
+        <div class="nevo-hero-automation__pattern" aria-hidden="true"></div>
+        <!-- /wp:html -->
+
+        <!-- wp:group {"className":"nevo-hero-automation__container","layout":{"type":"constrained","contentSize":"1400px"}} -->
+        <div class="wp-block-group nevo-hero-automation__container">
+
+            <!-- wp:group {"className":"nevo-hero-automation__content","layout":{"type":"constrained","contentSize":"800px","justifyContent":"left"}} -->
+            <div class="wp-block-group nevo-hero-automation__content">
+
+                <!-- Trust Badge -->
+                <!-- wp:html -->
+                <div class="nevo-hero-automation__badge" data-animate="fadeInUp">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 11.08V12a10 10 0 1 1-5.93-9.14"/><polyline points="22 4 12 14.01 9 11.01"/></svg>
+                    <span>Klaviyo Partner • 30+ wdrożeń e-commerce • Średnio +25% przychodu z email</span>
+                </div>
+                <!-- /wp:html -->
+
+                <!-- Headline -->
+                <!-- wp:heading {"level":1,"className":"nevo-hero-automation__headline"} -->
+                <h1 class="wp-block-heading nevo-hero-automation__headline" data-animate="fadeInUp" data-delay="100">Marketing, który pracuje, kiedy Ty śpisz</h1>
+                <!-- /wp:heading -->
+
+                <!-- Tagline -->
+                <!-- wp:paragraph {"className":"nevo-hero-automation__tagline"} -->
+                <p class="nevo-hero-automation__tagline" data-animate="fadeInUp" data-delay="150">Automatyzacja e-mail i SMS dla e-commerce</p>
+                <!-- /wp:paragraph -->
+
+                <!-- Subheadline -->
+                <!-- wp:paragraph {"className":"nevo-hero-automation__subheadline"} -->
+                <p class="nevo-hero-automation__subheadline" data-animate="fadeInUp" data-delay="200">Wdrażamy Klaviyo i budujemy flow, które odzyskują porzucone koszyki, aktywują uśpionych klientów i zamieniają jednorazowych kupujących w stałych. Bez ręcznej pracy — raz ustawiamy, zawsze działa.</p>
+                <!-- /wp:paragraph -->
+
+                <!-- CTA Button -->
+                <!-- wp:buttons {"className":"nevo-hero-automation__cta-wrap","layout":{"type":"flex"}} -->
+                <div class="wp-block-buttons nevo-hero-automation__cta-wrap" data-animate="fadeInUp" data-delay="250">
+                    <!-- wp:button {"className":"nevo-hero-automation__cta"} -->
+                    <div class="wp-block-button nevo-hero-automation__cta">
+                        <a class="wp-block-button__link wp-element-button" href="/kontakt/">Zamów bezpłatny audyt automatyzacji</a>
+                    </div>
+                    <!-- /wp:button -->
+                </div>
+                <!-- /wp:buttons -->
+
+                <!-- Benefits -->
+                <!-- wp:html -->
+                <ul class="nevo-hero-automation__benefits" data-animate="fadeInUp" data-delay="300">
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                        Sprawdzimy Twoją bazę i obecne flow
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                        Pokażemy ile zostawiasz na stole
+                    </li>
+                    <li>
+                        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                        Bez zobowiązań
+                    </li>
+                </ul>
+                <!-- /wp:html -->
+
+            </div>
+            <!-- /wp:group -->
+
+        </div>
+        <!-- /wp:group -->
+
+    </section>
+    <!-- /wp:group -->
+
+    <!-- ========================================
          Planowane sekcje:
-         1. Hero
          2. Problems
          3. Solution
          4. Process
