@@ -7139,3 +7139,118 @@ a.nevo-footer__contact-item:focus svg {
 .nevo-final-cta__inner button:focus-visible {
   outline-color: var(--wp--preset--color--white);
 }
+
+/* ==============================================
+   MARKETING AUTOMATION LANDING PAGE
+   ============================================== */
+
+/* Main container */
+.nevo-landing-automation {
+  overflow-x: hidden;
+}
+
+/* Common section styles */
+.nevo-landing-automation__section {
+  padding: 72px 20px;
+}
+
+@media (min-width: 768px) {
+  .nevo-landing-automation__section {
+    padding: 100px 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nevo-landing-automation__section {
+    padding: 120px 32px;
+  }
+}
+
+/* Section container */
+.nevo-landing-automation__container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Section header */
+.nevo-landing-automation__header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+@media (min-width: 768px) {
+  .nevo-landing-automation__header {
+    margin-bottom: 64px;
+  }
+}
+
+/* Section title */
+.nevo-landing-automation__title {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 700;
+  color: var(--wp--preset--color--primary);
+  margin: 0 0 16px 0;
+  line-height: 1.2;
+}
+
+/* Section lead text */
+.nevo-landing-automation__lead {
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  line-height: 1.7;
+  color: var(--wp--preset--color--gray-600);
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+/* Variant: Primary (navy) background */
+.nevo-landing-automation__section--primary {
+  background-color: var(--wp--preset--color--primary);
+  color: var(--wp--preset--color--white);
+}
+
+.nevo-landing-automation__section--primary .nevo-landing-automation__title {
+  color: var(--wp--preset--color--white);
+}
+
+.nevo-landing-automation__section--primary .nevo-landing-automation__lead {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+/* Variant: Beige background */
+.nevo-landing-automation__section--beige {
+  background: linear-gradient(180deg,
+    var(--wp--preset--color--beige) 0%,
+    #ebe5dd 100%
+  );
+}
+
+/* Scroll margin for anchor links */
+.nevo-hero-automation,
+.nevo-problems-automation,
+.nevo-solution-automation,
+.nevo-process-automation,
+.nevo-benefits-automation,
+.nevo-casestudy-automation,
+.nevo-faq-automation,
+.nevo-final-cta-automation {
+  scroll-margin-top: 80px;
+}
+
+/* Global focus-visible styles for Marketing Automation */
+.nevo-landing-automation a:focus-visible,
+.nevo-landing-automation button:focus-visible {
+  outline: 2px solid var(--wp--preset--color--coral);
+  outline-offset: 2px;
+}
+
+/* Placeholder for future sections:
+   - .nevo-hero-automation
+   - .nevo-problems-automation
+   - .nevo-solution-automation
+   - .nevo-process-automation
+   - .nevo-benefits-automation
+   - .nevo-casestudy-automation
+   - .nevo-faq-automation
+   - .nevo-final-cta-automation
+*/
