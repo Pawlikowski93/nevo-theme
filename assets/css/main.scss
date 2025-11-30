@@ -7517,8 +7517,146 @@ a.nevo-footer__contact-item:focus svg {
   outline-color: var(--wp--preset--color--white);
 }
 
+/* ==============================================
+   AUTOMATION PROBLEMS SECTION
+   ============================================== */
+
+.nevo-problems-automation {
+  background: linear-gradient(
+    180deg,
+    var(--wp--preset--color--beige) 0%,
+    #ebe5dd 100%
+  );
+  padding: 72px 20px;
+}
+
+@media (min-width: 768px) {
+  .nevo-problems-automation {
+    padding: 100px 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nevo-problems-automation {
+    padding: 120px 32px;
+  }
+}
+
+.nevo-problems-automation__container {
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+/* Header */
+.nevo-problems-automation__header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+@media (min-width: 768px) {
+  .nevo-problems-automation__header {
+    margin-bottom: 64px;
+  }
+}
+
+.nevo-problems-automation__title {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 700;
+  color: var(--wp--preset--color--primary);
+  margin: 0 0 16px 0;
+  line-height: 1.2;
+}
+
+.nevo-problems-automation__lead {
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  line-height: 1.7;
+  color: var(--wp--preset--color--gray-600);
+  margin: 0 auto;
+  max-width: 600px;
+}
+
+/* Cards Grid */
+.nevo-problems-automation__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
+}
+
+@media (min-width: 640px) {
+  .nevo-problems-automation__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nevo-problems-automation__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 28px;
+  }
+}
+
+/* Problem Card */
+.nevo-problem-card-auto {
+  background: var(--wp--preset--color--white);
+  border-radius: 12px;
+  padding: 28px 24px;
+  box-shadow: 0 2px 8px rgba(28, 46, 64, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+  position: relative;
+}
+
+.nevo-problem-card-auto:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(28, 46, 64, 0.12);
+}
+
+/* Icon */
+.nevo-problem-card-auto__icon {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: rgba(255, 107, 88, 0.1);
+  border-radius: 10px;
+  margin-bottom: 16px;
+}
+
+.nevo-problem-card-auto__icon svg {
+  color: var(--wp--preset--color--coral);
+}
+
+/* Title */
+.nevo-problem-card-auto__title {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--wp--preset--color--primary);
+  margin: 0 0 10px 0;
+  line-height: 1.3;
+}
+
+/* Description */
+.nevo-problem-card-auto__desc {
+  font-size: 0.925rem;
+  line-height: 1.65;
+  color: var(--wp--preset--color--gray-600);
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .nevo-problem-card-auto {
+    padding: 32px 28px;
+  }
+
+  .nevo-problem-card-auto__title {
+    font-size: 1.2rem;
+  }
+}
+
 /* Placeholder for future sections:
-   - .nevo-problems-automation
    - .nevo-solution-automation
    - .nevo-process-automation
    - .nevo-benefits-automation

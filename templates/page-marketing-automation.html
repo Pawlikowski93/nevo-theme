@@ -82,8 +82,112 @@
     <!-- /wp:group -->
 
     <!-- ========================================
+         SEKCJA 2: PROBLEMY
+         ======================================== -->
+    <!-- wp:group {"align":"full","className":"nevo-problems-automation","layout":{"type":"default"}} -->
+    <section class="wp-block-group alignfull nevo-problems-automation">
+
+        <!-- wp:group {"className":"nevo-problems-automation__container","layout":{"type":"constrained","contentSize":"1400px"}} -->
+        <div class="wp-block-group nevo-problems-automation__container">
+
+            <!-- Header -->
+            <!-- wp:group {"className":"nevo-problems-automation__header","layout":{"type":"constrained","contentSize":"700px"}} -->
+            <div class="wp-block-group nevo-problems-automation__header">
+
+                <!-- wp:heading {"level":2,"className":"nevo-problems-automation__title"} -->
+                <h2 class="wp-block-heading nevo-problems-automation__title">Ile sprzedaży zostawiasz na stole?</h2>
+                <!-- /wp:heading -->
+
+                <!-- wp:paragraph {"className":"nevo-problems-automation__lead"} -->
+                <p class="nevo-problems-automation__lead">Masz bazę mailową, masz ruch w sklepie — ale pieniądze przeciekają Ci przez palce.</p>
+                <!-- /wp:paragraph -->
+
+            </div>
+            <!-- /wp:group -->
+
+            <!-- Cards Grid -->
+            <!-- wp:html -->
+            <div class="nevo-problems-automation__grid">
+
+                <article class="nevo-problem-card-auto">
+                    <div class="nevo-problem-card-auto__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="9" cy="21" r="1"/><circle cx="20" cy="21" r="1"/>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 0 0 2 1.61h9.72a2 2 0 0 0 2-1.61L23 6H6"/>
+                        </svg>
+                    </div>
+                    <h3 class="nevo-problem-card-auto__title">Porzucone koszyki bez odzysku</h3>
+                    <p class="nevo-problem-card-auto__desc">70% koszyków jest porzucanych. Bez automatycznego przypomnienia — ta sprzedaż przepada na zawsze.</p>
+                </article>
+
+                <article class="nevo-problem-card-auto">
+                    <div class="nevo-problem-card-auto__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/>
+                            <polyline points="22,6 12,13 2,6"/>
+                        </svg>
+                    </div>
+                    <h3 class="nevo-problem-card-auto__title">Newsletter raz na miesiąc (ręcznie)</h3>
+                    <p class="nevo-problem-card-auto__desc">Wysyłasz «jak się uda», do wszystkich to samo. Open rate 12%, sprzedaż minimalna.</p>
+                </article>
+
+                <article class="nevo-problem-card-auto">
+                    <div class="nevo-problem-card-auto__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/>
+                            <circle cx="9" cy="7" r="4"/>
+                            <path d="M23 21v-2a4 4 0 0 0-3-3.87"/>
+                            <path d="M16 3.13a4 4 0 0 1 0 7.75"/>
+                        </svg>
+                    </div>
+                    <h3 class="nevo-problem-card-auto__title">Brak segmentacji klientów</h3>
+                    <p class="nevo-problem-card-auto__desc">VIP, który kupił 10 razy, dostaje tę samą wiadomość co ktoś, kto nigdy nie kupił. To nie działa.</p>
+                </article>
+
+                <article class="nevo-problem-card-auto">
+                    <div class="nevo-problem-card-auto__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"/>
+                            <polyline points="12 6 12 12 16 14"/>
+                        </svg>
+                    </div>
+                    <h3 class="nevo-problem-card-auto__title">Uśpieni klienci odchodzą w ciszę</h3>
+                    <p class="nevo-problem-card-auto__desc">Klient nie kupił 6 miesięcy. Nie wysłałeś win-back. Poszedł do konkurencji.</p>
+                </article>
+
+                <article class="nevo-problem-card-auto">
+                    <div class="nevo-problem-card-auto__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <polyline points="22 12 16 12 14 15 10 15 8 12 2 12"/>
+                            <path d="M5.45 5.11L2 12v6a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2v-6l-3.45-6.89A2 2 0 0 0 16.76 4H7.24a2 2 0 0 0-1.79 1.11z"/>
+                        </svg>
+                    </div>
+                    <h3 class="nevo-problem-card-auto__title">Brak welcome flow</h3>
+                    <p class="nevo-problem-card-auto__desc">Nowy subskrybent zapisał się na newsletter. Dostał... nic. Zapomniał o Tobie w 24h.</p>
+                </article>
+
+                <article class="nevo-problem-card-auto">
+                    <div class="nevo-problem-card-auto__icon">
+                        <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M17.94 17.94A10.07 10.07 0 0 1 12 20c-7 0-11-8-11-8a18.45 18.45 0 0 1 5.06-5.94M9.9 4.24A9.12 9.12 0 0 1 12 4c7 0 11 8 11 8a18.5 18.5 0 0 1-2.16 3.19m-6.72-1.07a3 3 0 1 1-4.24-4.24"/>
+                            <line x1="1" y1="1" x2="23" y2="23"/>
+                        </svg>
+                    </div>
+                    <h3 class="nevo-problem-card-auto__title">Zero danych o zachowaniu</h3>
+                    <p class="nevo-problem-card-auto__desc">Nie wiesz, kto otwiera maile, kto klika, kto kupuje. Działasz na ślepo.</p>
+                </article>
+
+            </div>
+            <!-- /wp:html -->
+
+        </div>
+        <!-- /wp:group -->
+
+    </section>
+    <!-- /wp:group -->
+
+    <!-- ========================================
          Planowane sekcje:
-         2. Problems
          3. Solution
          4. Process
          5. Benefits / Features
