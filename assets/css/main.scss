@@ -5710,3 +5710,223 @@ a.nevo-footer__contact-item:focus svg {
 .nevo-landing-analityka__section--primary .nevo-landing-analityka__subheading {
   color: rgba(255, 255, 255, 0.8);
 }
+
+/* ==============================================
+   ANALITYKA HERO
+   ============================================== */
+
+.nevo-hero-analityka {
+  position: relative;
+  min-height: 85vh;
+  display: flex;
+  align-items: center;
+  background: linear-gradient(135deg, #1c2e40 0%, #182635 50%, #101824 100%);
+  padding: 100px 20px 80px;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .nevo-hero-analityka {
+    min-height: 90vh;
+    padding: 120px 32px 100px;
+  }
+}
+
+/* Background pattern - data flow visualization */
+.nevo-hero-analityka__pattern {
+  position: absolute;
+  inset: 0;
+  opacity: 0.08;
+  background-image:
+    /* Grid lines */
+    linear-gradient(rgba(255,255,255,0.1) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255,255,255,0.1) 1px, transparent 1px),
+    /* Data points */
+    radial-gradient(circle at 20% 30%, rgba(255,107,88,0.4) 0%, transparent 2%),
+    radial-gradient(circle at 80% 20%, rgba(255,107,88,0.3) 0%, transparent 1.5%),
+    radial-gradient(circle at 60% 70%, rgba(255,107,88,0.35) 0%, transparent 2.5%),
+    radial-gradient(circle at 30% 80%, rgba(255,107,88,0.25) 0%, transparent 1%),
+    radial-gradient(circle at 90% 60%, rgba(255,107,88,0.3) 0%, transparent 2%),
+    radial-gradient(circle at 10% 50%, rgba(255,107,88,0.2) 0%, transparent 1.5%),
+    radial-gradient(circle at 70% 40%, rgba(255,107,88,0.35) 0%, transparent 2%),
+    radial-gradient(circle at 40% 10%, rgba(255,107,88,0.25) 0%, transparent 1%);
+  background-size:
+    60px 60px,
+    60px 60px,
+    100% 100%,
+    100% 100%,
+    100% 100%,
+    100% 100%,
+    100% 100%,
+    100% 100%,
+    100% 100%,
+    100% 100%;
+  pointer-events: none;
+}
+
+.nevo-hero-analityka__container {
+  position: relative;
+  z-index: 2;
+  width: 100%;
+  max-width: 1400px;
+  margin: 0 auto;
+}
+
+.nevo-hero-analityka__content {
+  max-width: 800px;
+}
+
+/* Trust Badge */
+.nevo-hero-analityka__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 18px;
+  background: rgba(12, 25, 40, 0.85);
+  border: 1px solid rgba(212, 165, 116, 0.35);
+  border-radius: 999px;
+  margin-bottom: 24px;
+}
+
+.nevo-hero-analityka__badge svg {
+  color: var(--wp--preset--color--coral);
+  flex-shrink: 0;
+}
+
+.nevo-hero-analityka__badge span {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: #e5dcc5;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+}
+
+@media (max-width: 640px) {
+  .nevo-hero-analityka__badge span {
+    font-size: 0.65rem;
+  }
+}
+
+/* Headline */
+.nevo-hero-analityka__headline {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: clamp(2.2rem, 6vw, 3.75rem);
+  font-weight: 700;
+  line-height: 1.1;
+  color: var(--wp--preset--color--white);
+  margin: 0 0 16px 0;
+}
+
+/* Tagline */
+.nevo-hero-analityka__tagline {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: clamp(1.1rem, 2.5vw, 1.5rem);
+  font-weight: 600;
+  color: var(--wp--preset--color--coral);
+  margin: 0 0 24px 0;
+  letter-spacing: 0.01em;
+}
+
+/* Subheadline */
+.nevo-hero-analityka__subheadline {
+  font-size: clamp(1rem, 1.8vw, 1.2rem);
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0 0 32px 0;
+  max-width: 640px;
+}
+
+/* CTA Button */
+.nevo-hero-analityka__cta-wrap {
+  margin-bottom: 28px;
+}
+
+.nevo-hero-analityka__cta .wp-block-button__link {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 16px 32px;
+  background-color: var(--wp--preset--color--coral) !important;
+  color: var(--wp--preset--color--white) !important;
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+  box-shadow: 0 4px 20px rgba(255, 107, 88, 0.35);
+}
+
+.nevo-hero-analityka__cta .wp-block-button__link:hover,
+.nevo-hero-analityka__cta .wp-block-button__link:focus {
+  background-color: var(--wp--preset--color--coral-hover) !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 28px rgba(255, 107, 88, 0.45);
+}
+
+/* Benefits list */
+.nevo-hero-analityka__benefits {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 12px 24px;
+}
+
+.nevo-hero-analityka__benefits li {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.nevo-hero-analityka__benefits svg {
+  color: var(--wp--preset--color--coral);
+  flex-shrink: 0;
+}
+
+@media (max-width: 640px) {
+  .nevo-hero-analityka__benefits {
+    flex-direction: column;
+    gap: 10px;
+  }
+}
+
+/* Animations */
+@keyframes nevoFadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(24px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.nevo-hero-analityka [data-animate="fadeInUp"] {
+  opacity: 0;
+  animation: nevoFadeInUp 0.6s ease-out forwards;
+}
+
+.nevo-hero-analityka [data-delay="100"] {
+  animation-delay: 0.1s;
+}
+
+.nevo-hero-analityka [data-delay="150"] {
+  animation-delay: 0.15s;
+}
+
+.nevo-hero-analityka [data-delay="200"] {
+  animation-delay: 0.2s;
+}
+
+.nevo-hero-analityka [data-delay="250"] {
+  animation-delay: 0.25s;
+}
+
+.nevo-hero-analityka [data-delay="300"] {
+  animation-delay: 0.3s;
+}
