@@ -145,10 +145,26 @@ function nevo_add_lazy_loading( $attr ) {
 }
 add_filter( 'wp_get_attachment_image_attributes', 'nevo_add_lazy_loading' );
 
-wp_enqueue_script(
-    'nevo-pillars-tabs',
-    get_stylesheet_directory_uri() . '/assets/js/pillars-tabs.js',
-    array(), // brak zależności
-    wp_get_theme()->get('Version'),
-    true
-);
+/**
+ * Enqueue dodatkowych skryptów frontendowych
+ */
+function nevo_enqueue_frontend_scripts() {
+    // Pillars tabs
+    wp_enqueue_script(
+        'nevo-pillars-tabs',
+        get_stylesheet_directory_uri() . '/assets/js/pillars-tabs.js',
+        array(),
+        filemtime( NEVO_DIR . '/assets/js/pillars-tabs.js' ),
+        true
+    );
+
+    // Carousel (dla sekcji problems i innych)
+    wp_enqueue_script(
+        'nevo-carousel',
+        get_stylesheet_directory_uri() . '/assets/js/nevo-carousel.js',
+        array(),
+        filemtime( NEVO_DIR . '/assets/js/nevo-carousel.js' ),
+        true
+    );
+}
+add_action( 'wp_enqueue_scripts', 'nevo_enqueue_frontend_scripts' );

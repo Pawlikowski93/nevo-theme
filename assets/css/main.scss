@@ -369,12 +369,186 @@
   margin-bottom: 2.5rem;
 }
 
-/* Grid kart problemów */
-.nevo-problems__grid {
-  display: grid;
-  grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 24px;
+/* ==============================================
+   NEVO CAROUSEL - Komponent karuzeli
+   ============================================== */
+
+.nevo-carousel {
+  position: relative;
+  width: 100%;
 }
+
+.nevo-carousel__viewport {
+  overflow-x: auto;
+  scroll-snap-type: x mandatory;
+  scroll-behavior: smooth;
+  -webkit-overflow-scrolling: touch;
+  scrollbar-width: none; /* Firefox */
+  -ms-overflow-style: none; /* IE/Edge */
+}
+
+.nevo-carousel__viewport::-webkit-scrollbar {
+  display: none; /* Chrome/Safari */
+}
+
+.nevo-carousel__track {
+  display: flex;
+  gap: 24px;
+  padding: 4px 2px 8px 2px; /* żeby cień nie był ucinany */
+}
+
+.nevo-carousel__slide {
+  flex: 0 0 var(--slide-width, 100%);
+  scroll-snap-align: start;
+  min-width: 0; /* zapobiega overflow */
+}
+
+/* Przyciski prev/next */
+.nevo-carousel__btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  z-index: 10;
+  width: 48px;
+  height: 48px;
+  border: none;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.95);
+  backdrop-filter: blur(8px);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background-color 0.2s ease, transform 0.2s ease, opacity 0.2s ease;
+}
+
+.nevo-carousel__btn::before {
+  content: '';
+  width: 10px;
+  height: 10px;
+  border-top: 2px solid #1c2e40;
+  border-right: 2px solid #1c2e40;
+}
+
+.nevo-carousel__btn--prev {
+  left: -24px;
+}
+
+.nevo-carousel__btn--prev::before {
+  transform: rotate(-135deg);
+  margin-left: 4px;
+}
+
+.nevo-carousel__btn--next {
+  right: -24px;
+}
+
+.nevo-carousel__btn--next::before {
+  transform: rotate(45deg);
+  margin-right: 4px;
+}
+
+.nevo-carousel__btn:hover {
+  background: #ffffff;
+  transform: translateY(-50%) scale(1.05);
+}
+
+.nevo-carousel__btn:disabled {
+  opacity: 0.3;
+  cursor: not-allowed;
+  transform: translateY(-50%);
+}
+
+.nevo-carousel__btn:focus-visible {
+  outline: 2px solid #ff6b58;
+  outline-offset: 2px;
+}
+
+/* Reduced motion */
+@media (prefers-reduced-motion: reduce) {
+  .nevo-carousel__viewport {
+    scroll-behavior: auto;
+  }
+
+  .nevo-carousel__btn {
+    transition: none;
+  }
+}
+
+/* ==============================================
+   NEVO PROBLEMS CAROUSEL - Specyficzne style
+   ============================================== */
+
+.nevo-problems__carousel {
+  --slide-width: calc(100% - 16px);
+  margin: 0 -20px;
+  padding: 0 20px;
+}
+
+.nevo-problems__carousel .nevo-carousel__viewport {
+  padding: 0 20px;
+  margin: 0 -20px;
+}
+
+.nevo-problems__carousel .nevo-carousel__track {
+  padding: 24px 20px 32px 20px;
+}
+
+.nevo-problems__carousel .nevo-carousel__btn {
+  display: none; /* ukryte na mobile */
+}
+
+/* Tablet: 2 karty widoczne */
+@media (min-width: 768px) {
+  .nevo-problems__carousel {
+    --slide-width: calc((100% - 24px) / 2);
+    margin: 0;
+    padding: 0;
+  }
+
+  .nevo-problems__carousel .nevo-carousel__viewport {
+    padding: 0;
+    margin: 0;
+  }
+
+  .nevo-problems__carousel .nevo-carousel__track {
+    padding: 24px 2px 32px 2px;
+  }
+
+  .nevo-problems__carousel .nevo-carousel__btn {
+    display: flex;
+  }
+}
+
+/* Desktop: 3 karty widoczne z peek 4-tej */
+@media (min-width: 1024px) {
+  .nevo-problems__carousel {
+    --slide-width: calc((100% - 48px) / 3);
+  }
+
+  .nevo-problems__carousel .nevo-carousel__btn--prev {
+    left: -28px;
+  }
+
+  .nevo-problems__carousel .nevo-carousel__btn--next {
+    right: -28px;
+  }
+}
+
+/* Duże ekrany: lepsze pozycjonowanie przycisków */
+@media (min-width: 1280px) {
+  .nevo-problems__carousel .nevo-carousel__btn--prev {
+    left: -36px;
+  }
+
+  .nevo-problems__carousel .nevo-carousel__btn--next {
+    right: -36px;
+  }
+}
+
+/* Legacy grid fallback - usuwamy, zastępujemy karuzelą */
+/* .nevo-problems__grid - DEPRECATED, użyj .nevo-problems__carousel */
 
 .nevo-problem-card {
   background: #ffffff;
@@ -467,21 +641,11 @@
   box-shadow: 0 10px 26px rgba(255, 107, 88, 0.45);
 }
 
-/* Responsywność */
-@media (max-width: 1024px) {
-  .nevo-problems__grid {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
-}
-
+/* Responsywność nevo-problems */
 @media (max-width: 720px) {
   .nevo-problems {
     padding: 60px 16px;
     margin-block-start: 0;
-  }
-
-  .nevo-problems__grid {
-    grid-template-columns: 1fr;
   }
 
   .nevo-problems__footer {
@@ -498,7 +662,8 @@
     width: 100%;
     text-align: center;
   }
-    .nevo-problem-card:hover {
+
+  .nevo-problem-card:hover {
     transform: translateY(-3px) scale(1.01);
   }
 }
