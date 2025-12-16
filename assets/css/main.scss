@@ -8839,7 +8839,65 @@ a.nevo-footer__contact-item:focus svg {
   }
 }
 
+/* ==============================================
+   MARKETING AUTOMATION FAQ SECTION
+   ============================================== */
+
+.nevo-faq-automation {
+  background: linear-gradient(180deg, #f5f1ed 0%, #ebe5dd 100%);
+  padding: 72px 20px;
+}
+
+@media (min-width: 768px) {
+  .nevo-faq-automation {
+    padding: 100px 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nevo-faq-automation {
+    padding: 120px 32px;
+  }
+}
+
+.nevo-faq-automation__container {
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+/* Header */
+.nevo-faq-automation__header {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+@media (min-width: 768px) {
+  .nevo-faq-automation__header {
+    margin-bottom: 56px;
+  }
+}
+
+.nevo-faq-automation__title {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: clamp(1.75rem, 4vw, 2.75rem);
+  font-weight: 700;
+  color: var(--wp--preset--color--primary);
+  margin: 0;
+  line-height: 1.2;
+}
+
+/* FAQ List */
+.nevo-faq-automation__list {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+}
+
+/* Scroll margin for anchor links */
+.nevo-faq-automation {
+  scroll-margin-top: 80px;
+}
+
 /* Placeholder for future sections:
-   - .nevo-faq-automation
    - .nevo-final-cta-automation
 */
