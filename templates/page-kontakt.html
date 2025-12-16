@@ -66,7 +66,7 @@
                 <div class="wp-block-column nevo-kontakt-hero__form-column" style="flex-basis:40%">
 
                     <!-- wp:html -->
-                    <div class="nevo-kontakt-hero__form-card">
+                    <div class="nevo-kontakt-hero__form-card" id="kontakt-form">
                         <h3 class="nevo-kontakt-hero__form-title">Wypełnij formularz</h3>
 
                         <!-- Placeholder dla Contact Form 7 -->
@@ -205,9 +205,108 @@
     <!-- /wp:group -->
 
     <!-- ========================================
-         SEKCJA 4: MAPA / LOKALIZACJA
+         SEKCJA 4: QUICK LINKS (usługi)
          ======================================== -->
-    <!-- Placeholder dla mapy -->
+    <!-- wp:group {"align":"full","className":"nevo-quick-links","layout":{"type":"default"}} -->
+    <section class="wp-block-group alignfull nevo-quick-links">
+
+        <!-- wp:group {"className":"nevo-quick-links__container","layout":{"type":"constrained","contentSize":"1200px"}} -->
+        <div class="wp-block-group nevo-quick-links__container">
+
+            <!-- wp:heading {"level":2,"className":"nevo-quick-links__heading"} -->
+            <h2 class="nevo-quick-links__heading">Jak możemy Ci pomóc?</h2>
+            <!-- /wp:heading -->
+
+            <!-- wp:paragraph {"className":"nevo-quick-links__lead"} -->
+            <p class="nevo-quick-links__lead">Nie wiesz od czego zacząć? Wybierz obszar, który Cię interesuje.</p>
+            <!-- /wp:paragraph -->
+
+            <!-- wp:html -->
+            <div class="nevo-quick-links__grid">
+
+                <!-- Karta 1: Strategia Marketingowa -->
+                <a href="/strategia-marketingowa/" class="nevo-quick-link-card">
+                    <div class="nevo-quick-link-card__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <polygon points="16.24 7.76 14.12 14.12 7.76 16.24 9.88 9.88 16.24 7.76"></polygon>
+                        </svg>
+                    </div>
+                    <h3 class="nevo-quick-link-card__title">Strategia Marketingowa</h3>
+                    <p class="nevo-quick-link-card__desc">Roadmapa wzrostu, priorytety, KPI</p>
+                </a>
+
+                <!-- Karta 2: Performance Marketing -->
+                <a href="/performance-marketing/" class="nevo-quick-link-card">
+                    <div class="nevo-quick-link-card__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <polyline points="23 6 13.5 15.5 8.5 10.5 1 18"></polyline>
+                            <polyline points="17 6 23 6 23 12"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="nevo-quick-link-card__title">Performance Marketing</h3>
+                    <p class="nevo-quick-link-card__desc">Google Ads, Meta Ads, kampanie sprzedażowe</p>
+                </a>
+
+                <!-- Karta 3: E-commerce Development -->
+                <a href="/ecommerce-development/" class="nevo-quick-link-card">
+                    <div class="nevo-quick-link-card__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="9" cy="21" r="1"></circle>
+                            <circle cx="20" cy="21" r="1"></circle>
+                            <path d="M1 1h4l2.68 13.39a2 2 0 002 1.61h9.72a2 2 0 002-1.61L23 6H6"></path>
+                        </svg>
+                    </div>
+                    <h3 class="nevo-quick-link-card__title">E-commerce Development</h3>
+                    <p class="nevo-quick-link-card__desc">Sklepy WooCommerce, optymalizacja, UX</p>
+                </a>
+
+                <!-- Karta 4: Analityka & Growth -->
+                <a href="/analityka-growth/" class="nevo-quick-link-card">
+                    <div class="nevo-quick-link-card__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <line x1="18" y1="20" x2="18" y2="10"></line>
+                            <line x1="12" y1="20" x2="12" y2="4"></line>
+                            <line x1="6" y1="20" x2="6" y2="14"></line>
+                        </svg>
+                    </div>
+                    <h3 class="nevo-quick-link-card__title">Analityka & Growth</h3>
+                    <p class="nevo-quick-link-card__desc">GA4, GTM, Consent Mode, dashboardy</p>
+                </a>
+
+                <!-- Karta 5: Marketing Automation -->
+                <a href="/marketing-automation/" class="nevo-quick-link-card">
+                    <div class="nevo-quick-link-card__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"></path>
+                            <polyline points="22,6 12,13 2,6"></polyline>
+                        </svg>
+                    </div>
+                    <h3 class="nevo-quick-link-card__title">Marketing Automation</h3>
+                    <p class="nevo-quick-link-card__desc">Klaviyo, email flow, segmentacja</p>
+                </a>
+
+                <!-- Karta 6: Nie wiem jeszcze -->
+                <a href="#kontakt-form" class="nevo-quick-link-card nevo-quick-link-card--highlight">
+                    <div class="nevo-quick-link-card__icon" aria-hidden="true">
+                        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
+                            <circle cx="12" cy="12" r="10"></circle>
+                            <path d="M9.09 9a3 3 0 015.83 1c0 2-3 3-3 3"></path>
+                            <line x1="12" y1="17" x2="12.01" y2="17"></line>
+                        </svg>
+                    </div>
+                    <h3 class="nevo-quick-link-card__title">Nie wiem jeszcze</h3>
+                    <p class="nevo-quick-link-card__desc">Porozmawiajmy — pomożemy określić potrzeby</p>
+                </a>
+
+            </div>
+            <!-- /wp:html -->
+
+        </div>
+        <!-- /wp:group -->
+
+    </section>
+    <!-- /wp:group -->
 
     <!-- ========================================
          SEKCJA 5: FAQ (opcjonalnie)
