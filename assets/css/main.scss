@@ -83,7 +83,7 @@
   padding: 6px 18px;
   border-radius: 999px;
   background: rgba(12, 25, 40, 0.85);
-  color: #e5dcc5;
+  color: var(--wp--preset--color--cream);
   font-size: 0.75rem;
   letter-spacing: 0.08em;
   text-transform: uppercase;
@@ -93,7 +93,7 @@
 }
 
 .hero-headline {
-  color: #ffffff;
+  color: var(--wp--preset--color--white);
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: clamp(2.1rem, 6vw, 3.6rem);
@@ -102,7 +102,7 @@
 }
 
 .hero-tagline {
-  color: #ff6b58;
+  color: var(--wp--preset--color--coral);
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   font-size: clamp(1.2rem, 3.2vw, 1.6rem);
@@ -110,7 +110,7 @@
 }
 
 .hero-subheadline {
-  color: #e5dcc5;
+  color: var(--wp--preset--color--cream);
   font-size: 1rem;
   line-height: 1.6;
   max-width: 540px;
@@ -128,7 +128,7 @@
 
 /* Dymek z case study */
 .case-study-box {
-  background: #ffffff;
+  background: var(--wp--preset--color--white);
   border-radius: 14px;
   padding: 18px 22px;
   box-shadow: 0 12px 40px rgba(0, 0, 0, 0.25);
@@ -136,14 +136,14 @@
 
 .case-stat {
   margin: 0;
-  color: #1c2e40;
+  color: var(--wp--preset--color--primary);
   font-size: 0.95rem;
   line-height: 1.5;
 }
 
 .case-stat strong {
   display: block;
-  color: #ff6b58;
+  color: var(--wp--preset--color--coral);
   font-size: 1.05rem;
   font-weight: 700;
 }
@@ -163,8 +163,8 @@
 .cta-primary {
   display: inline-block;
   padding: 14px 32px;
-  background-color: #d4a574;
-  color: #1c2e40;
+  background-color: var(--wp--preset--color--accent);
+  color: var(--wp--preset--color--primary);
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -175,7 +175,7 @@
 }
 
 .cta-primary:hover {
-  background-color: #e8c9a8;
+  background-color: var(--wp--preset--color--accent-light);
   transform: translateY(-2px);
   box-shadow: 0 10px 26px rgba(212, 165, 116, 0.45);
 }
@@ -185,7 +185,7 @@
   list-style: none;
   padding: 0;
   margin: 0;
-  color: #e5dcc5;
+  color: var(--wp--preset--color--cream);
   font-size: 0.95rem;
 }
 
@@ -324,7 +324,7 @@
     #ffffff 100%
   );
   padding: 80px 20px 140px 20px;
-  color: #1c2e40;
+  color: var(--wp--preset--color--primary);
   position: relative;
   overflow: hidden;
   z-index: 0; /* tworzymy stacking context */
@@ -427,8 +427,8 @@
   content: '';
   width: 10px;
   height: 10px;
-  border-top: 2px solid #1c2e40;
-  border-right: 2px solid #1c2e40;
+  border-top: 2px solid var(--wp--preset--color--primary);
+  border-right: 2px solid var(--wp--preset--color--primary);
 }
 
 .nevo-carousel__btn--prev {
@@ -450,7 +450,7 @@
 }
 
 .nevo-carousel__btn:hover {
-  background: #ffffff;
+  background: var(--wp--preset--color--white);
   transform: translateY(-50%) scale(1.05);
 }
 
@@ -461,7 +461,7 @@
 }
 
 .nevo-carousel__btn:focus-visible {
-  outline: 2px solid #ff6b58;
+  outline: 2px solid var(--wp--preset--color--coral);
   outline-offset: 2px;
 }
 
@@ -551,7 +551,7 @@
 /* .nevo-problems__grid - DEPRECATED, użyj .nevo-problems__carousel */
 
 .nevo-problem-card {
-  background: #ffffff;
+  background: var(--wp--preset--color--white);
   border-radius: 14px;
   padding: 20px 22px;
   box-shadow: 0 10px 30px rgba(0, 0, 0, 0.06);
@@ -562,7 +562,7 @@
 .nevo-problem-card__icon {
   font-size: 1.2rem;
   margin: 0 0 0.5rem;
-  color: #ff6b58;
+  color: var(--wp--preset--color--coral);
 }
 
 .nevo-problem-card__title {
@@ -570,7 +570,7 @@
   font-size: 1.05rem;
   font-weight: 600;
   margin: 0 0 0.4rem;
-  color: #1c2e40;
+  color: var(--wp--preset--color--primary);
 }
 
 .nevo-problem-card__text {
@@ -581,7 +581,7 @@
 }
 
 .nevo-problem-card {
-  background: #ffffff;
+  background: var(--wp--preset--color--white);
   border-radius: 18px;
   box-shadow: 0 14px 40px rgba(0, 0, 0, 0.04);
   transition:
@@ -595,7 +595,7 @@
 .nevo-problem-card:hover {
   transform: translateY(-6px) scale(1.02);
   box-shadow: 0 20px 60px rgba(0, 0, 0, 0.08);
-  background-color: #ffffff; /* zostawiamy białe, ale możesz lekko przybeżyć */
+  background-color: var(--wp--preset--color--white); /* zostawiamy białe, ale możesz lekko przybeżyć */
 }
 
 /* Stopka sekcji */
@@ -624,8 +624,8 @@
 .cta-primary {
   display: inline-block;
   padding: 16px 32px;
-  background-color: #ff6b58;
-  color: #ffffff;
+  background-color: var(--wp--preset--color--coral);
+  color: var(--wp--preset--color--white);
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -636,7 +636,7 @@
 }
 
 .cta-primary:hover {
-  background-color: #ff8573;
+  background-color: var(--wp--preset--color--coral-hover);
   transform: translateY(-1px);
   box-shadow: 0 10px 26px rgba(255, 107, 88, 0.45);
 }
@@ -674,7 +674,7 @@
 .nevo-metrics {
   padding: 140px 20px 100px 20px;
   position: relative;
-  background: #f5f1ed;
+  background: var(--wp--preset--color--beige);
   overflow: hidden;
   margin-top: 0;
 }
@@ -738,7 +738,7 @@
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: clamp(2rem, 4vw, 2.6rem);
-  color: #1c2e40;
+  color: var(--wp--preset--color--primary);
   margin-bottom: 0.75rem;
 }
 
@@ -779,7 +779,7 @@
 .nevo-metric-card:hover {
   transform: translateY(-4px);
   box-shadow: 0 18px 50px rgba(0, 0, 0, 0.07);
-  background-color: #ffffff;
+  background-color: var(--wp--preset--color--white);
   border-color: rgba(255, 107, 88, 0.3); /* lekki koral na hover */
 }
 
@@ -787,7 +787,7 @@
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: 2.4rem;
-  color: #ff6b58; /* koral CTA */
+  color: var(--wp--preset--color--coral); /* koral CTA */
   margin: 0 0 0.5rem;
 }
 
@@ -880,7 +880,7 @@
   position: absolute;
   inset: 70px;
   border-radius: 50%;
-  background: #f5f1ed;  /* tło sekcji metryk */
+  background: var(--wp--preset--color--beige);  /* tło sekcji metryk */
 }
 
 /* aktywny stan – po wejściu sekcji w viewport */
@@ -906,7 +906,7 @@
 
 .nevo-pillars {
   padding: 120px 20px 140px;
-  background: #ffffff;
+  background: var(--wp--preset--color--white);
   position: relative;
 }
 
@@ -919,7 +919,7 @@
 .nevo-pillars__heading {
   font-size: clamp(2rem, 3vw, 2.6rem);
   margin-bottom: 12px;
-  color: #1c2e40;
+  color: var(--wp--preset--color--primary);
 }
 
 .nevo-pillars__lead {
@@ -927,7 +927,7 @@
   margin: 0 auto;
   font-size: 1.05rem;
   line-height: 1.7;
-  color: #4b5563;
+  color: var(--wp--preset--color--gray-600);
 }
 
 /* Kontener tabsów */
@@ -981,12 +981,12 @@
   padding: 14px 20px;
   border-radius: 14px;
   border: 2px solid transparent;
-  background: #f5f1ed;
+  background: var(--wp--preset--color--beige);
   cursor: pointer;
   white-space: nowrap;
   min-width: 180px;
   font: 500 1rem/1.2 "Montserrat", system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
-  color: #1c2e40;
+  color: var(--wp--preset--color--primary);
   transition:
     background 0.25s ease,
     border-color 0.25s ease,
@@ -1001,9 +1001,9 @@
 }
 
 .nevo-pillars__tab.is-active {
-  background: #1c2e40;
+  background: var(--wp--preset--color--primary);
   border-color: var(--wp--preset--color--coral, #ff6b58);
-  color: #ffffff;
+  color: var(--wp--preset--color--white);
 }
 
 /* =========================================
@@ -1089,7 +1089,7 @@
 }
 
 .nevo-pillars__panel {
-  background: #f5f1ed;
+  background: var(--wp--preset--color--beige);
   border-radius: 18px;
   padding: 32px 28px 28px;
   text-align: left;
@@ -1117,13 +1117,13 @@
   font-size: 1.6rem;
   line-height: 1.35;
   margin-bottom: 14px;
-  color: #1c2e40;
+  color: var(--wp--preset--color--primary);
 }
 
 .nevo-pillars__panel-text {
   font-size: 1.02rem;
   line-height: 1.7;
-  color: #4b5563;
+  color: var(--wp--preset--color--gray-600);
   margin-bottom: 24px;
 }
 
@@ -1152,7 +1152,7 @@
 .nevo-pillars__list-why {
   display: block;
   font-size: 0.82rem;
-  color: #6b7280;
+  color: var(--wp--preset--color--gray-500);
   margin-top: 2px;
   font-style: italic;
 }
@@ -1160,7 +1160,7 @@
 /* Box z metryką */
 
 .nevo-pillars__metric {
-  background: #ffffff;
+  background: var(--wp--preset--color--white);
   border-radius: 10px;
   padding: 14px 18px;
   border-top: 3px solid var(--wp--preset--color--coral, #ff6b58);
@@ -1180,7 +1180,7 @@
   display: block;
   font-size: 0.88rem;
   line-height: 1.5;
-  color: #4b5563;
+  color: var(--wp--preset--color--gray-600);
 }
 
 /* Mobile tweaks */
@@ -1250,7 +1250,7 @@
 .nevo-process {
   position: relative;
   padding: 120px 20px;
-  background: #ffffff;
+  background: var(--wp--preset--color--white);
   overflow: hidden;
 }
 
@@ -1299,7 +1299,7 @@
   font-weight: 700;
   font-size: clamp(2rem, 1.2vw + 1.7rem, 2.4rem);
   line-height: 1.2;
-  color: #1c2e40;
+  color: var(--wp--preset--color--primary);
 }
 
 .nevo-process__desc {
@@ -1307,7 +1307,7 @@
   margin: 0;
   font-size: 1.02rem;
   line-height: 1.6;
-  color: #4b5563;
+  color: var(--wp--preset--color--gray-600);
 }
 
 /* =================== TIMELINE =================== */
@@ -1340,7 +1340,7 @@
 
 .nevo-process__step {
   position: relative;
-  background: #f5f1ed;
+  background: var(--wp--preset--color--beige);
   border-radius: 18px;
   padding: 28px 24px 26px 24px;
   box-shadow: 0 16px 40px rgba(15, 23, 42, 0.04);
@@ -1371,7 +1371,7 @@
   gap: 10px;
   padding: 6px 12px;
   border-radius: 999px;
-  background: #ffffff;
+  background: var(--wp--preset--color--white);
   box-shadow: 0 8px 20px rgba(15, 23, 42, 0.06);
   margin-bottom: 18px;
   z-index: 2;
@@ -1384,8 +1384,8 @@
   width: 28px;
   height: 28px;
   border-radius: 999px;
-  background: #ff6b58; /* coral */
-  color: #ffffff;
+  background: var(--wp--preset--color--coral); /* coral */
+  color: var(--wp--preset--color--white);
   font-weight: 700;
   font-size: 0.95rem;
   margin: 0;
@@ -1396,21 +1396,21 @@
   font-size: 0.82rem;
   text-transform: uppercase;
   letter-spacing: 0.08em;
-  color: #6b7280;
+  color: var(--wp--preset--color--gray-500);
 }
 
 .nevo-process__step-title {
   margin: 4px 0 10px 0;
   font-size: 1.1rem;
   font-weight: 600;
-  color: #1c2e40;
+  color: var(--wp--preset--color--primary);
 }
 
 .nevo-process__step-text {
   margin: 0;
   font-size: 0.96rem;
   line-height: 1.6;
-  color: #4b5563;
+  color: var(--wp--preset--color--gray-600);
 }
 
 /* hover / focus – lekki "pop" jak w kartach */
@@ -1419,8 +1419,8 @@
 .nevo-process__step:focus-within {
   transform: translateY(-6px);
   box-shadow: 0 18px 45px rgba(15, 23, 42, 0.08);
-  border-color: #ff6b58;
-  background: #ffffff;
+  border-color: var(--wp--preset--color--coral);
+  background: var(--wp--preset--color--white);
 }
 
 /* =================== MOBILE / TABLET =================== */
@@ -1464,7 +1464,7 @@
 .nevo-process__cta {
   margin-top: 40px;
   padding: 28px 20px 26px;
-  background: #1c2e40;
+  background: var(--wp--preset--color--primary);
   border-radius: 20px;
   box-shadow: 0 18px 45px rgba(15, 23, 42, 0.5);
 
@@ -1479,7 +1479,7 @@
 .nevo-process__cta-text {
   font-size: 1.05rem;
   font-weight: 500;
-  color: #ffffff;
+  color: var(--wp--preset--color--white);
   margin: 0;
 }
 
@@ -1546,21 +1546,21 @@
   font-size: 0.78rem;
   letter-spacing: 0.16em;
   text-transform: uppercase;
-  color: #ff6b58;
+  color: var(--wp--preset--color--coral);
   margin: 0 0 8px;
 }
 
 .nevo-social__title {
   font-size: 2.1rem;
   line-height: 1.25;
-  color: #1c2e40;
+  color: var(--wp--preset--color--primary);
   margin: 0 0 14px;
 }
 
 .nevo-social__desc {
   font-size: 1.02rem;
   line-height: 1.6;
-  color: #4b5563;
+  color: var(--wp--preset--color--gray-600);
   margin: 0;
 }
 
@@ -1613,7 +1613,7 @@
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.12em;
-  color: #6b7280;
+  color: var(--wp--preset--color--gray-500);
   margin: 0 0 10px;
 }
 
@@ -1630,7 +1630,7 @@
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.9);
   border: 1px solid rgba(212, 165, 116, 0.35);
-  color: #1c2e40;
+  color: var(--wp--preset--color--primary);
 }
 
 .nevo-social__tech-badge--outline {
@@ -1729,7 +1729,7 @@
 
 .nevo-faq {
   padding: 96px 20px 120px;
-  background: #ffffff;
+  background: var(--wp--preset--color--white);
 }
 
 .nevo-faq__inner {
@@ -1741,14 +1741,14 @@
   font-size: 2.2rem;
   line-height: 1.2;
   margin: 0 0 12px;
-  color: #1c2e40;
+  color: var(--wp--preset--color--primary);
 }
 
 .nevo-faq__lead {
   max-width: 720px;
   font-size: 1rem;
   line-height: 1.6;
-  color: #4b5563;
+  color: var(--wp--preset--color--gray-600);
   margin: 0 0 40px;
 }
 
@@ -1785,7 +1785,7 @@
 }
 
 .nevo-faq__item.is-open {
-  background: #f5f1ed;
+  background: var(--wp--preset--color--beige);
   border-color: rgba(212, 165, 116, 0.6);
   box-shadow: 0 14px 40px rgba(15, 23, 42, 0.06);
   padding: 20px;
@@ -1799,7 +1799,7 @@
   margin: 0;
   padding: 6px 26px 6px 0;
   position: relative;
-  color: #1c2e40;
+  color: var(--wp--preset--color--primary);
 }
 
 /* mała strzałka po prawej */
@@ -1825,7 +1825,7 @@
 .nevo-faq__answer {
   font-size: 0.92rem;
   line-height: 1.6;
-  color: #4b5563;
+  color: var(--wp--preset--color--gray-600);
   margin: 4px 0 0;
   padding-right: 8px;
 
@@ -1946,7 +1946,7 @@
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 107, 88, 0.3);
-  color: #ff6b58;
+  color: var(--wp--preset--color--coral);
   font-size: 0.8rem;
   font-weight: 500;
   letter-spacing: 0.05em;
@@ -1957,7 +1957,7 @@
 /* Headline */
 
 .nevo-service-hero__headline {
-  color: #ffffff;
+  color: var(--wp--preset--color--white);
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: clamp(2rem, 4vw, 3rem);
@@ -1969,7 +1969,7 @@
 /* Subheadline */
 
 .nevo-service-hero__subhead {
-  color: #e5dcc5;
+  color: var(--wp--preset--color--cream);
   font-size: 1.05rem;
   line-height: 1.6;
   margin: 0 0 32px;
@@ -2072,7 +2072,7 @@
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: clamp(2rem, 3.5vw, 2.8rem);
-  color: #1c2e40;
+  color: var(--wp--preset--color--primary);
   margin: 0 0 56px;
 }
 
@@ -2088,7 +2088,7 @@
 /* Pojedyncza karta problemu */
 
 .nevo-service-problem__card {
-  background: #ffffff;
+  background: var(--wp--preset--color--white);
   border-radius: 16px;
   padding: 28px 24px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
@@ -2120,7 +2120,7 @@
   font-size: 1.1rem;
   font-weight: 600;
   line-height: 1.3;
-  color: #1c2e40;
+  color: var(--wp--preset--color--primary);
   margin: 0 0 10px;
 }
 
@@ -2150,7 +2150,7 @@
 .nevo-service-problem__cta-text {
   font-size: 1.25rem;
   font-weight: 500;
-  color: #1c2e40;
+  color: var(--wp--preset--color--primary);
   margin: 0;
 }
 
@@ -2202,7 +2202,7 @@
    ========================================= */
 
 .nevo-service-solution {
-  background: #ffffff;
+  background: var(--wp--preset--color--white);
   padding: 100px 20px 120px;
   position: relative;
   overflow: hidden;
@@ -2240,7 +2240,7 @@
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: clamp(2rem, 3.5vw, 2.8rem);
-  color: #1c2e40;
+  color: var(--wp--preset--color--primary);
   margin: 0 0 16px;
 }
 
@@ -2251,7 +2251,7 @@
   margin: 0 auto 56px;
   font-size: 1.05rem;
   line-height: 1.6;
-  color: #4b5563;
+  color: var(--wp--preset--color--gray-600);
 }
 
 /* Grid kart deliverables */
@@ -2310,7 +2310,7 @@
   font-size: 1.3rem;
   font-weight: 600;
   line-height: 1.3;
-  color: #1c2e40;
+  color: var(--wp--preset--color--primary);
   margin: 0 0 6px;
 }
 
@@ -2321,7 +2321,7 @@
   padding: 4px 12px;
   border-radius: 999px;
   background: rgba(255, 107, 88, 0.1);
-  color: #ff6b58;
+  color: var(--wp--preset--color--coral);
   font-size: 0.8rem;
   font-weight: 500;
   letter-spacing: 0.05em;
@@ -2349,7 +2349,7 @@
   content: "✓";
   position: absolute;
   left: 0;
-  color: #ff6b58;
+  color: var(--wp--preset--color--coral);
   font-weight: 600;
 }
 
@@ -2370,11 +2370,11 @@
 .nevo-service-solution__highlight-text {
   margin: 0;
   font-size: 1.05rem;
-  color: #e5dcc5;
+  color: var(--wp--preset--color--cream);
 }
 
 .nevo-service-solution__highlight-text strong {
-  color: #ff6b58;
+  color: var(--wp--preset--color--coral);
   font-weight: 600;
 }
 
@@ -2471,7 +2471,7 @@
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: clamp(2rem, 3.5vw, 2.8rem);
-  color: #1c2e40;
+  color: var(--wp--preset--color--primary);
   margin: 0 0 16px;
   text-align: center;
 }
@@ -2483,12 +2483,12 @@
   margin: 0 auto 56px;
   font-size: 1.05rem;
   line-height: 1.6;
-  color: #4b5563;
+  color: var(--wp--preset--color--gray-600);
   text-align: center;
 }
 
 .nevo-service-process__lead strong {
-  color: #ff6b58;
+  color: var(--wp--preset--color--coral);
   font-weight: 600;
 }
 
@@ -2524,7 +2524,7 @@
 
 .nevo-service-process__step {
   position: relative;
-  background: #ffffff;
+  background: var(--wp--preset--color--white);
   border-radius: 16px;
   padding: 80px 20px 24px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
@@ -2566,7 +2566,7 @@
   height: 56px;
   border-radius: 50%;
   background: linear-gradient(135deg, #ff6b58, #ff8573);
-  color: #ffffff;
+  color: var(--wp--preset--color--white);
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: 1.4rem;
@@ -2581,7 +2581,7 @@
   padding: 4px 10px;
   border-radius: 999px;
   background: rgba(255, 107, 88, 0.12);
-  color: #ff6b58;
+  color: var(--wp--preset--color--coral);
   font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.05em;
@@ -2597,7 +2597,7 @@
   font-size: 1.15rem;
   font-weight: 600;
   line-height: 1.3;
-  color: #1c2e40;
+  color: var(--wp--preset--color--primary);
   margin: 0 0 12px;
 }
 
@@ -2615,14 +2615,14 @@
 .nevo-service-process__step-output {
   font-size: 0.85rem;
   line-height: 1.4;
-  color: #6b7280;
+  color: var(--wp--preset--color--gray-500);
   margin: 0;
   padding-top: 12px;
   border-top: 1px solid rgba(212, 165, 116, 0.2);
 }
 
 .nevo-service-process__step-output strong {
-  color: #ff6b58;
+  color: var(--wp--preset--color--coral);
   font-weight: 600;
 }
 
@@ -2644,7 +2644,7 @@
 .nevo-service-process__cta-text {
   font-size: 1.15rem;
   font-weight: 500;
-  color: #e5dcc5;
+  color: var(--wp--preset--color--cream);
   margin: 0;
 }
 
@@ -2732,7 +2732,7 @@
    ========================================= */
 
 .nevo-service-pricing {
-  background: #ffffff;
+  background: var(--wp--preset--color--white);
   padding: 100px 20px 120px;
   position: relative;
   overflow: hidden;
@@ -2794,7 +2794,7 @@
   font-size: 0.85rem;
   text-transform: uppercase;
   letter-spacing: 0.1em;
-  color: #6b7280;
+  color: var(--wp--preset--color--gray-500);
   margin: 0 0 8px;
 }
 
@@ -2804,7 +2804,7 @@
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: clamp(2.5rem, 5vw, 3.5rem);
-  color: #ff6b58;
+  color: var(--wp--preset--color--coral);
   margin: 0 0 8px;
   line-height: 1;
 }
@@ -2813,7 +2813,7 @@
 
 .nevo-service-pricing__note {
   font-size: 1rem;
-  color: #4b5563;
+  color: var(--wp--preset--color--gray-600);
   margin: 0 0 32px;
 }
 
@@ -2832,7 +2832,7 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 1.3rem;
   font-weight: 600;
-  color: #1c2e40;
+  color: var(--wp--preset--color--primary);
   margin: 0 0 20px;
 }
 
@@ -2861,7 +2861,7 @@
   content: "✓";
   position: absolute;
   left: 0;
-  color: #ff6b58;
+  color: var(--wp--preset--color--coral);
   font-weight: 700;
   font-size: 1.1rem;
 }
@@ -2872,19 +2872,19 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 1.2rem;
   font-weight: 600;
-  color: #1c2e40;
+  color: var(--wp--preset--color--primary);
   margin: 0 0 14px;
 }
 
 .nevo-service-pricing__optional-text {
   font-size: 0.95rem;
   line-height: 1.7;
-  color: #4b5563;
+  color: var(--wp--preset--color--gray-600);
   margin: 0 0 32px;
 }
 
 .nevo-service-pricing__optional-text strong {
-  color: #1c2e40;
+  color: var(--wp--preset--color--primary);
   font-weight: 600;
 }
 
@@ -2904,7 +2904,7 @@
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: clamp(2rem, 3.5vw, 2.6rem);
-  color: #1c2e40;
+  color: var(--wp--preset--color--primary);
   margin: 0 0 48px;
 }
 
@@ -2919,7 +2919,7 @@
 /* FAQ Item */
 
 .nevo-service-pricing__faq-item {
-  background: #f5f1ed;
+  background: var(--wp--preset--color--beige);
   border-radius: 14px;
   padding: 24px 26px;
   border-left: 3px solid #ff6b58;
@@ -2940,7 +2940,7 @@
   font-size: 1.05rem;
   font-weight: 600;
   line-height: 1.4;
-  color: #1c2e40;
+  color: var(--wp--preset--color--primary);
   margin: 0 0 10px;
 }
 
@@ -2954,7 +2954,7 @@
 }
 
 .nevo-service-pricing__faq-answer strong {
-  color: #1c2e40;
+  color: var(--wp--preset--color--primary);
   font-weight: 600;
 }
 
@@ -3048,7 +3048,7 @@
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: clamp(2rem, 4vw, 2.8rem);
-  color: #ffffff;
+  color: var(--wp--preset--color--white);
   margin: 0 0 16px;
   line-height: 1.2;
 }
@@ -3056,7 +3056,7 @@
 /* Subheading */
 
 .nevo-service-final-cta__subheading {
-  color: #e5dcc5;
+  color: var(--wp--preset--color--cream);
   font-size: 1.05rem;
   line-height: 1.6;
   margin: 0 0 48px;
@@ -3095,7 +3095,7 @@
 
 .nevo-cf7-fields label {
   display: block;
-  color: #e5dcc5;
+  color: var(--wp--preset--color--cream);
   font-size: 0.9rem;
   font-weight: 500;
   margin-bottom: 6px;
@@ -3108,7 +3108,7 @@
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   background: rgba(255, 255, 255, 0.95);
-  color: #1c2e40;
+  color: var(--wp--preset--color--primary);
   font-size: 0.95rem;
   font-family: 'Inter', sans-serif;
   transition: border-color 0.25s ease, box-shadow 0.25s ease;
@@ -3117,7 +3117,7 @@
 .nevo-cf7-input:focus,
 .nevo-cf7-textarea:focus {
   outline: none;
-  border-color: #ff6b58;
+  border-color: var(--wp--preset--color--coral);
   box-shadow: 0 0 0 3px rgba(255, 107, 88, 0.15);
 }
 
@@ -3129,8 +3129,8 @@
 .nevo-cf7-submit {
   width: 100%;
   padding: 14px 32px;
-  background: #ff6b58;
-  color: #ffffff;
+  background: var(--wp--preset--color--coral);
+  color: var(--wp--preset--color--white);
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -3196,14 +3196,14 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 1.3rem;
   font-weight: 600;
-  color: #ffffff;
+  color: var(--wp--preset--color--white);
   margin: 0 0 12px;
 }
 
 /* Phone text */
 
 .nevo-service-final-cta__phone-text {
-  color: #e5dcc5;
+  color: var(--wp--preset--color--cream);
   font-size: 0.95rem;
   margin: 0 0 16px;
 }
@@ -3219,7 +3219,7 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 1.8rem;
   font-weight: 700;
-  color: #ff6b58;
+  color: var(--wp--preset--color--coral);
   text-decoration: none;
   transition: all 0.25s ease;
   padding: 8px 16px;
@@ -3367,7 +3367,7 @@
   border-radius: 999px;
   background: rgba(255, 255, 255, 0.08);
   border: 1px solid rgba(255, 107, 88, 0.3);
-  color: #ff6b58;
+  color: var(--wp--preset--color--coral);
   font-size: 0.8rem;
   font-weight: 500;
   letter-spacing: 0.05em;
@@ -3378,7 +3378,7 @@
 /* Headline */
 
 .nevo-service-hero__headline {
-  color: #ffffff;
+  color: var(--wp--preset--color--white);
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: clamp(2rem, 4vw, 3rem);
@@ -3390,7 +3390,7 @@
 /* Subheadline */
 
 .nevo-service-hero__subhead {
-  color: #e5dcc5;
+  color: var(--wp--preset--color--cream);
   font-size: 1.05rem;
   line-height: 1.6;
   margin: 0 0 32px;
@@ -3497,7 +3497,7 @@
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: clamp(2rem, 3.5vw, 2.8rem);
-  color: #1c2e40;
+  color: var(--wp--preset--color--primary);
   margin: 0 0 56px;
 }
 
@@ -3513,7 +3513,7 @@
 /* Pojedyncza karta problemu */
 
 .nevo-service-problem__card {
-  background: #ffffff;
+  background: var(--wp--preset--color--white);
   border-radius: 16px;
   padding: 28px 24px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
@@ -3545,7 +3545,7 @@
   font-size: 1.1rem;
   font-weight: 600;
   line-height: 1.3;
-  color: #1c2e40;
+  color: var(--wp--preset--color--primary);
   margin: 0 0 10px;
 }
 
@@ -3575,7 +3575,7 @@
 .nevo-service-problem__cta-text {
   font-size: 1.25rem;
   font-weight: 500;
-  color: #1c2e40;
+  color: var(--wp--preset--color--primary);
   margin: 0;
 }
 
@@ -3632,7 +3632,7 @@
    ========================================= */
 
 .nevo-service-solution {
-  background: #ffffff;
+  background: var(--wp--preset--color--white);
   padding: 100px 20px 120px;
   position: relative;
   overflow: hidden;
@@ -3671,7 +3671,7 @@
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: clamp(2rem, 3.5vw, 2.8rem);
-  color: #1c2e40;
+  color: var(--wp--preset--color--primary);
   margin: 0 0 16px;
 }
 
@@ -3682,7 +3682,7 @@
   margin: 0 auto 56px;
   font-size: 1.05rem;
   line-height: 1.6;
-  color: #4b5563;
+  color: var(--wp--preset--color--gray-600);
 }
 
 /* Grid kart deliverables */
@@ -3733,7 +3733,7 @@
   font-size: 1.3rem;
   font-weight: 600;
   line-height: 1.3;
-  color: #1c2e40;
+  color: var(--wp--preset--color--primary);
   margin: 0 0 6px;
 }
 
@@ -3744,7 +3744,7 @@
   padding: 4px 12px;
   border-radius: 999px;
   background: rgba(255, 107, 88, 0.1);
-  color: #ff6b58;
+  color: var(--wp--preset--color--coral);
   font-size: 0.8rem;
   font-weight: 500;
   letter-spacing: 0.05em;
@@ -3772,7 +3772,7 @@
   content: "✓";
   position: absolute;
   left: 0;
-  color: #ff6b58;
+  color: var(--wp--preset--color--coral);
   font-weight: 600;
 }
 
@@ -3793,11 +3793,11 @@
 .nevo-service-solution__highlight-text {
   margin: 0;
   font-size: 1.05rem;
-  color: #e5dcc5;
+  color: var(--wp--preset--color--cream);
 }
 
 .nevo-service-solution__highlight-text strong {
-  color: #ff6b58;
+  color: var(--wp--preset--color--coral);
   font-weight: 600;
 }
 
@@ -3889,7 +3889,7 @@
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: clamp(2rem, 3.5vw, 2.8rem);
-  color: #1c2e40;
+  color: var(--wp--preset--color--primary);
   margin: 0 0 16px;
   text-align: center;
 }
@@ -3901,12 +3901,12 @@
   margin: 0 auto 56px;
   font-size: 1.05rem;
   line-height: 1.6;
-  color: #4b5563;
+  color: var(--wp--preset--color--gray-600);
   text-align: center;
 }
 
 .nevo-service-process__lead strong {
-  color: #ff6b58;
+  color: var(--wp--preset--color--coral);
   font-weight: 600;
 }
 
@@ -3942,7 +3942,7 @@
 
 .nevo-service-process__step {
   position: relative;
-  background: #ffffff;
+  background: var(--wp--preset--color--white);
   border-radius: 16px;
   padding: 80px 20px 24px;
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.04);
@@ -3984,7 +3984,7 @@
   height: 56px;
   border-radius: 50%;
   background: linear-gradient(135deg, #ff6b58, #ff8573);
-  color: #ffffff;
+  color: var(--wp--preset--color--white);
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: 1.4rem;
@@ -3999,7 +3999,7 @@
   padding: 4px 10px;
   border-radius: 999px;
   background: rgba(255, 107, 88, 0.12);
-  color: #ff6b58;
+  color: var(--wp--preset--color--coral);
   font-size: 0.7rem;
   font-weight: 600;
   letter-spacing: 0.05em;
@@ -4015,7 +4015,7 @@
   font-size: 1.15rem;
   font-weight: 600;
   line-height: 1.3;
-  color: #1c2e40;
+  color: var(--wp--preset--color--primary);
   margin: 0 0 12px;
 }
 
@@ -4033,14 +4033,14 @@
 .nevo-service-process__step-output {
   font-size: 0.85rem;
   line-height: 1.4;
-  color: #6b7280;
+  color: var(--wp--preset--color--gray-500);
   margin: 0;
   padding-top: 12px;
   border-top: 1px solid rgba(212, 165, 116, 0.2);
 }
 
 .nevo-service-process__step-output strong {
-  color: #ff6b58;
+  color: var(--wp--preset--color--coral);
   font-weight: 600;
 }
 
@@ -4062,7 +4062,7 @@
 .nevo-service-process__cta-text {
   font-size: 1.15rem;
   font-weight: 500;
-  color: #e5dcc5;
+  color: var(--wp--preset--color--cream);
   margin: 0;
 }
 
@@ -4192,14 +4192,14 @@
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: clamp(2rem, 3.5vw, 2.8rem);
-  color: #1c2e40;
+  color: var(--wp--preset--color--primary);
   margin: 0 0 12px;
 }
 
 /* Lead */
 
 .nevo-service-results__lead {
-  color: #6b7280;
+  color: var(--wp--preset--color--gray-500);
   font-size: 1.05rem;
   margin: 0 0 48px;
 }
@@ -4207,7 +4207,7 @@
 /* Case Box (główny kontener) */
 
 .nevo-service-results__case-box {
-  background: #ffffff;
+  background: var(--wp--preset--color--white);
   border-radius: 20px;
   padding: 40px 36px;
   box-shadow: 0 16px 48px rgba(0, 0, 0, 0.06);
@@ -4261,20 +4261,20 @@
   text-transform: uppercase;
   letter-spacing: 0.1em;
   font-weight: 600;
-  color: #6b7280;
+  color: var(--wp--preset--color--gray-500);
   margin: 0 0 16px;
   text-align: center;
 }
 
 .nevo-service-results__label--success {
-  color: #ff6b58;
+  color: var(--wp--preset--color--coral);
 }
 
 /* Arrow */
 
 .nevo-service-results__arrow {
   font-size: 2.5rem;
-  color: #ff6b58;
+  color: var(--wp--preset--color--coral);
   margin: 0;
   font-weight: 700;
   text-align: center;
@@ -4313,7 +4313,7 @@
 
 .metric-label {
   font-size: 0.85rem;
-  color: #6b7280;
+  color: var(--wp--preset--color--gray-500);
   font-weight: 500;
 }
 
@@ -4323,11 +4323,11 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 1.3rem;
   font-weight: 700;
-  color: #1c2e40;
+  color: var(--wp--preset--color--primary);
 }
 
 .nevo-service-results__metric--success .metric-value {
-  color: #ff6b58;
+  color: var(--wp--preset--color--coral);
 }
 
 /* Metric change (% improvement) */
@@ -4357,7 +4357,7 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 1.2rem;
   font-weight: 600;
-  color: #1c2e40;
+  color: var(--wp--preset--color--primary);
   margin: 0 0 16px;
   text-align: center;
 }
@@ -4385,7 +4385,7 @@
   content: "✓";
   position: absolute;
   left: 0;
-  color: #ff6b58;
+  color: var(--wp--preset--color--coral);
   font-weight: 700;
   font-size: 1.1rem;
 }
@@ -4395,7 +4395,7 @@
 .nevo-service-results__outcome {
   text-align: center;
   font-size: 1.15rem;
-  color: #1c2e40;
+  color: var(--wp--preset--color--primary);
   margin: 0;
   padding: 20px 24px;
   background: linear-gradient(
@@ -4408,7 +4408,7 @@
 }
 
 .nevo-service-results__outcome strong {
-  color: #ff6b58;
+  color: var(--wp--preset--color--coral);
   font-weight: 700;
   font-size: 1.25rem;
 }
@@ -4416,7 +4416,7 @@
 .outcome-detail {
   display: block;
   font-size: 0.95rem;
-  color: #6b7280;
+  color: var(--wp--preset--color--gray-500);
   margin-top: 6px;
 }
 
@@ -4554,7 +4554,7 @@
 /* Headline */
 
 .nevo-service-hero__headline {
-  color: #ffffff;
+  color: var(--wp--preset--color--white);
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: clamp(2rem, 4vw, 3rem);
@@ -4566,7 +4566,7 @@
 /* Subheadline */
 
 .nevo-service-hero__subhead {
-  color: #e5dcc5;
+  color: var(--wp--preset--color--cream);
   font-size: 1.05rem;
   line-height: 1.6;
   margin: 0 0 32px;
@@ -4631,7 +4631,7 @@
    ========================================= */
 
 .nevo-service-pricing--packages {
-  background: #ffffff;
+  background: var(--wp--preset--color--white);
   padding: 100px 20px 120px;
   position: relative;
   overflow: hidden;
@@ -4668,7 +4668,7 @@
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: clamp(2rem, 3.5vw, 2.8rem);
-  color: #1c2e40;
+  color: var(--wp--preset--color--primary);
   margin: 0 0 12px;
 }
 
@@ -4676,7 +4676,7 @@
 
 .nevo-service-pricing__lead {
   font-size: 1.05rem;
-  color: #6b7280;
+  color: var(--wp--preset--color--gray-500);
   margin: 0 0 56px;
 }
 
@@ -4743,7 +4743,7 @@
   padding: 4px 14px;
   border-radius: 999px;
   background: linear-gradient(135deg, #ff6b58, #ff8573);
-  color: #ffffff;
+  color: var(--wp--preset--color--white);
   font-size: 0.75rem;
   font-weight: 600;
   letter-spacing: 0.05em;
@@ -4758,7 +4758,7 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
-  color: #1c2e40;
+  color: var(--wp--preset--color--primary);
   margin: 0 0 12px;
   text-align: center;
 }
@@ -4775,7 +4775,7 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 2.2rem;
   font-weight: 700;
-  color: #ff6b58;
+  color: var(--wp--preset--color--coral);
   line-height: 1;
   margin-bottom: 6px;
 }
@@ -4783,7 +4783,7 @@
 .price-note {
   display: block;
   font-size: 0.85rem;
-  color: #6b7280;
+  color: var(--wp--preset--color--gray-500);
 }
 
 /* Package "for" */
@@ -4791,7 +4791,7 @@
 .nevo-service-pricing__package-for {
   text-align: center;
   font-size: 0.9rem;
-  color: #4b5563;
+  color: var(--wp--preset--color--gray-600);
   margin: 0 0 20px;
   min-height: 2.6em; /* wyrównanie wysokości */
 }
@@ -4827,13 +4827,13 @@
   content: "✓";
   position: absolute;
   left: 0;
-  color: #ff6b58;
+  color: var(--wp--preset--color--coral);
   font-weight: 700;
   font-size: 1rem;
 }
 
 .nevo-service-pricing__package-features li strong {
-  color: #1c2e40;
+  color: var(--wp--preset--color--primary);
   font-weight: 600;
 }
 
@@ -4841,13 +4841,13 @@
 
 .nevo-service-pricing__package-time {
   font-size: 0.85rem;
-  color: #6b7280;
+  color: var(--wp--preset--color--gray-500);
   text-align: center;
   margin: 0 0 20px;
 }
 
 .nevo-service-pricing__package-time strong {
-  color: #1c2e40;
+  color: var(--wp--preset--color--primary);
   font-weight: 600;
 }
 
@@ -4862,7 +4862,7 @@
 .nevo-service-pricing__maintenance {
   margin-bottom: 80px;
   padding: 32px 28px;
-  background: #f5f1ed;
+  background: var(--wp--preset--color--beige);
   border-radius: 16px;
   border: 1px solid rgba(28, 46, 64, 0.06);
 }
@@ -4871,7 +4871,7 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 1.3rem;
   font-weight: 600;
-  color: #1c2e40;
+  color: var(--wp--preset--color--primary);
   margin: 0 0 24px;
 }
 
@@ -4884,7 +4884,7 @@
 }
 
 .nevo-service-pricing__maintenance-option {
-  background: #ffffff;
+  background: var(--wp--preset--color--white);
   border-radius: 12px;
   padding: 20px;
   text-align: center;
@@ -4895,13 +4895,13 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 1.5rem;
   font-weight: 700;
-  color: #ff6b58;
+  color: var(--wp--preset--color--coral);
   margin: 0 0 8px;
 }
 
 .nevo-service-pricing__maintenance-desc {
   font-size: 0.9rem;
-  color: #4b5563;
+  color: var(--wp--preset--color--gray-600);
   margin: 0;
 }
 
@@ -4915,7 +4915,7 @@
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: clamp(2rem, 3.5vw, 2.6rem);
-  color: #1c2e40;
+  color: var(--wp--preset--color--primary);
   margin: 0 0 48px;
 }
 
@@ -4964,13 +4964,13 @@
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: clamp(2rem, 4vw, 3rem);
-  color: #ffffff;
+  color: var(--wp--preset--color--white);
   margin: 0 0 16px;
   line-height: 1.2;
 }
 
 .nevo-contact-hero__subhead {
-  color: #e5dcc5;
+  color: var(--wp--preset--color--cream);
   font-size: 1.05rem;
   margin: 0 0 48px;
 }
@@ -5004,7 +5004,7 @@
 
 .nevo-cf7-fields label {
   display: block;
-  color: #e5dcc5;
+  color: var(--wp--preset--color--cream);
   font-size: 0.9rem;
   font-weight: 500;
   margin-bottom: 6px;
@@ -5017,7 +5017,7 @@
   border-radius: 8px;
   border: 1px solid rgba(255, 255, 255, 0.2);
   background: rgba(255, 255, 255, 0.95);
-  color: #1c2e40;
+  color: var(--wp--preset--color--primary);
   font-size: 0.95rem;
   font-family: 'Inter', sans-serif;
   transition: border-color 0.25s ease, box-shadow 0.25s ease;
@@ -5026,7 +5026,7 @@
 .nevo-cf7-input:focus,
 .nevo-cf7-textarea:focus {
   outline: none;
-  border-color: #ff6b58;
+  border-color: var(--wp--preset--color--coral);
   box-shadow: 0 0 0 3px rgba(255, 107, 88, 0.15);
 }
 
@@ -5038,8 +5038,8 @@
 .nevo-cf7-submit {
   width: 100%;
   padding: 14px 32px;
-  background: #ff6b58;
-  color: #ffffff;
+  background: var(--wp--preset--color--coral);
+  color: var(--wp--preset--color--white);
   font-family: 'Montserrat', sans-serif;
   font-weight: 600;
   font-size: 1rem;
@@ -5069,25 +5069,25 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 1.3rem;
   font-weight: 600;
-  color: #ffffff;
+  color: var(--wp--preset--color--white);
   margin: 0 0 20px;
 }
 
 .nevo-contact-hero__info-item {
   margin: 0 0 20px;
-  color: #e5dcc5;
+  color: var(--wp--preset--color--cream);
   font-size: 0.95rem;
   line-height: 1.6;
 }
 
 .nevo-contact-hero__info-item strong {
-  color: #ffffff;
+  color: var(--wp--preset--color--white);
   display: block;
   margin-bottom: 4px;
 }
 
 .nevo-contact-hero__info-item a {
-  color: #ff6b58;
+  color: var(--wp--preset--color--coral);
   text-decoration: none;
   transition: color 0.2s ease;
 }
@@ -5112,7 +5112,7 @@
 /* =================== SERVICES QUICK LINKS =================== */
 
 .nevo-contact-services {
-  background: #ffffff;
+  background: var(--wp--preset--color--white);
   padding: 100px 20px;
 }
 
@@ -5125,7 +5125,7 @@
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: clamp(2rem, 3.5vw, 2.8rem);
-  color: #1c2e40;
+  color: var(--wp--preset--color--primary);
   margin: 0 0 56px;
 }
 
@@ -5155,7 +5155,7 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 1.25rem;
   font-weight: 600;
-  color: #1c2e40;
+  color: var(--wp--preset--color--primary);
   margin: 0 0 12px;
 }
 
@@ -5171,7 +5171,7 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 1.1rem;
   font-weight: 600;
-  color: #ff6b58;
+  color: var(--wp--preset--color--coral);
   margin: 0 0 16px;
 }
 
@@ -5182,7 +5182,7 @@
 /* =================== FAQ =================== */
 
 .nevo-contact-faq {
-  background: #f5f1ed;
+  background: var(--wp--preset--color--beige);
   padding: 100px 20px;
 }
 
@@ -5195,7 +5195,7 @@
   font-family: 'Montserrat', sans-serif;
   font-weight: 700;
   font-size: clamp(2rem, 3.5vw, 2.6rem);
-  color: #1c2e40;
+  color: var(--wp--preset--color--primary);
   margin: 0 0 48px;
 }
 
@@ -5206,7 +5206,7 @@
 }
 
 .nevo-contact-faq__item {
-  background: #ffffff;
+  background: var(--wp--preset--color--white);
   border-radius: 14px;
   padding: 24px 26px;
   border-left: 3px solid #ff6b58;
@@ -5223,7 +5223,7 @@
   font-size: 1.05rem;
   font-weight: 600;
   line-height: 1.4;
-  color: #1c2e40;
+  color: var(--wp--preset--color--primary);
   margin: 0 0 10px;
 }
 
@@ -5235,7 +5235,7 @@
 }
 
 .nevo-contact-faq__answer strong {
-  color: #1c2e40;
+  color: var(--wp--preset--color--primary);
   font-weight: 600;
 }
 
@@ -5350,7 +5350,7 @@
   font-family: 'Inter', sans-serif;
   font-size: 0.95rem;
   font-weight: 500;
-  color: #1c2e40;
+  color: var(--wp--preset--color--primary);
   text-decoration: none;
   padding: 8px 0;
   transition: color 0.2s ease;
@@ -5358,11 +5358,11 @@
 }
 
 .nevo-nav-link:hover {
-  color: #ff6b58;
+  color: var(--wp--preset--color--coral);
 }
 
 .nevo-nav-link--cta {
-  background: #ff6b58;
+  background: var(--wp--preset--color--coral);
   color: #ffffff !important;
   padding: 10px 24px !important;
   border-radius: 8px;
@@ -5385,7 +5385,7 @@
   position: absolute;
   top: 100%;
   left: 0;
-  background: #ffffff;
+  background: var(--wp--preset--color--white);
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
   border-radius: 8px;
   padding: 12px 0;
@@ -5413,14 +5413,14 @@
   display: block;
   padding: 10px 20px;
   font-size: 0.9rem;
-  color: #1c2e40;
+  color: var(--wp--preset--color--primary);
   text-decoration: none;
   transition: background 0.2s ease;
 }
 
 .nevo-nav-dropdown a:hover {
   background: rgba(255, 107, 88, 0.08);
-  color: #ff6b58;
+  color: var(--wp--preset--color--coral);
 }
 
 .nevo-nav-dropdown a.coming-soon {
@@ -5432,7 +5432,7 @@
   display: inline-block;
   font-size: 0.7rem;
   background: rgba(156, 163, 175, 0.2);
-  color: #6b7280;
+  color: var(--wp--preset--color--gray-500);
   padding: 2px 6px;
   border-radius: 4px;
   margin-left: 8px;
@@ -5460,7 +5460,7 @@
 .hamburger-line {
   width: 100%;
   height: 3px;
-  background: #1c2e40;
+  background: var(--wp--preset--color--primary);
   border-radius: 2px;
   transition: all 0.3s ease;
 }
@@ -5509,7 +5509,7 @@
   font-family: 'Montserrat', sans-serif;
   font-size: 1.5rem;
   font-weight: 600;
-  color: #ffffff;
+  color: var(--wp--preset--color--white);
   text-decoration: none;
   padding: 12px 0;
   display: block;
@@ -5519,7 +5519,7 @@
 
 .nevo-nav-list-mobile > li > a:hover,
 .nevo-nav-list-mobile > li > .submenu-toggle:hover {
-  color: #ff6b58;
+  color: var(--wp--preset--color--coral);
   transform: translateX(8px);
 }
 
@@ -5537,7 +5537,7 @@
 .nevo-nav-list-mobile .submenu a {
   font-size: 1.1rem;
   font-weight: 500;
-  color: #e5dcc5;
+  color: var(--wp--preset--color--cream);
   text-decoration: none;
   padding: 8px 0;
   display: block;
@@ -5545,7 +5545,7 @@
 }
 
 .nevo-nav-list-mobile .submenu a:hover {
-  color: #ff6b58;
+  color: var(--wp--preset--color--coral);
   transform: translateX(6px);
 }
 
@@ -5554,7 +5554,7 @@
 }
 
 .nevo-nav-list-mobile .mobile-cta {
-  background: #ff6b58;
+  background: var(--wp--preset--color--coral);
   color: #ffffff !important;
   padding: 14px 28px !important;
   border-radius: 8px;
@@ -5961,7 +5961,7 @@ a.nevo-footer__contact-item:focus svg {
 .nevo-hero-analityka__badge span {
   font-size: 0.75rem;
   font-weight: 500;
-  color: #e5dcc5;
+  color: var(--wp--preset--color--cream);
   letter-spacing: 0.03em;
   text-transform: uppercase;
 }
