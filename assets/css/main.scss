@@ -9592,3 +9592,159 @@ a.nevo-contact-info__value:hover {
 #kontakt-form {
   scroll-margin-top: 100px;
 }
+
+/* ============================
+   TRUST BAR SEKCJA
+   ============================ */
+.nevo-trust-bar {
+  background: var(--wp--preset--color--gray-50);
+  padding: 32px 20px;
+  border-top: 1px solid var(--wp--preset--color--gray-200);
+}
+
+@media (min-width: 768px) {
+  .nevo-trust-bar {
+    padding: 40px 32px;
+  }
+}
+
+.nevo-trust-bar__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nevo-trust-bar__list {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px 16px;
+  align-items: center;
+  justify-items: center;
+}
+
+@media (min-width: 768px) {
+  .nevo-trust-bar__list {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    gap: 0;
+  }
+}
+
+/* Separator (ukryty na mobile) */
+.nevo-trust-bar__separator {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .nevo-trust-bar__separator {
+    display: block;
+    width: 1px;
+    height: 32px;
+    background: var(--wp--preset--color--gray-300);
+    margin: 0 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nevo-trust-bar__separator {
+    margin: 0 40px;
+  }
+}
+
+/* Trust Bar Item */
+.nevo-trust-bar__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  gap: 4px;
+}
+
+@media (min-width: 768px) {
+  .nevo-trust-bar__item {
+    flex-direction: row;
+    gap: 8px;
+  }
+}
+
+/* Logo placeholder */
+.nevo-trust-bar__logo-placeholder {
+  font-size: 0.75rem;
+  color: var(--wp--preset--color--gray-400);
+  background: var(--wp--preset--color--gray-100);
+  padding: 8px 16px;
+  border-radius: 4px;
+  border: 1px dashed var(--wp--preset--color--gray-300);
+}
+
+/* Przyszłe logo */
+.nevo-trust-bar__item--logo img {
+  max-height: 40px;
+  width: auto;
+  filter: grayscale(100%);
+  opacity: 0.7;
+  transition: all 0.2s ease;
+}
+
+.nevo-trust-bar__item--logo:hover img {
+  filter: grayscale(0%);
+  opacity: 1;
+}
+
+/* Metryki */
+.nevo-trust-bar__value {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--wp--preset--color--primary);
+}
+
+@media (min-width: 768px) {
+  .nevo-trust-bar__value {
+    font-size: 1.5rem;
+  }
+}
+
+.nevo-trust-bar__label {
+  font-size: 0.75rem;
+  color: var(--wp--preset--color--gray-500);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
+@media (min-width: 768px) {
+  .nevo-trust-bar__label {
+    font-size: 0.8125rem;
+    text-transform: none;
+    letter-spacing: normal;
+  }
+}
+
+/* Obietnica */
+.nevo-trust-bar__text {
+  font-size: 0.875rem;
+  font-weight: 500;
+  color: var(--wp--preset--color--gray-600);
+}
+
+@media (min-width: 768px) {
+  .nevo-trust-bar__text {
+    font-size: 0.9375rem;
+  }
+}
+
+/* Promise item z ikoną */
+.nevo-trust-bar__item--promise {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.nevo-trust-bar__item--promise::before {
+  content: '';
+  width: 8px;
+  height: 8px;
+  background: var(--wp--preset--color--coral);
+  border-radius: 50%;
+}
