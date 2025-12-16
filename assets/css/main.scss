@@ -8901,3 +8901,114 @@ a.nevo-footer__contact-item:focus svg {
 /* Placeholder for future sections:
    - .nevo-final-cta-automation
 */
+
+/* ==============================================
+   KONTAKT PAGE
+   ============================================== */
+
+.nevo-page-kontakt {
+  /* Reset dla strony kontakt */
+}
+
+/* Hero sekcja */
+.nevo-kontakt-hero {
+  background: var(--wp--preset--color--primary);
+  padding: 80px 20px 60px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .nevo-kontakt-hero {
+    padding: 100px 32px 80px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nevo-kontakt-hero {
+    padding: 120px 32px 100px;
+  }
+}
+
+.nevo-kontakt-hero__container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.nevo-kontakt-hero__title {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: clamp(2rem, 5vw, 3rem);
+  font-weight: 700;
+  color: var(--wp--preset--color--white);
+  margin: 0 0 16px;
+  line-height: 1.2;
+}
+
+.nevo-kontakt-hero__lead {
+  font-size: 1.125rem;
+  color: var(--wp--preset--color--cream);
+  line-height: 1.6;
+  margin: 0;
+}
+
+/* Formularz sekcja */
+.nevo-kontakt-form {
+  background: var(--wp--preset--color--beige);
+  padding: 60px 20px;
+}
+
+@media (min-width: 768px) {
+  .nevo-kontakt-form {
+    padding: 80px 32px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nevo-kontakt-form {
+    padding: 100px 32px;
+  }
+}
+
+.nevo-kontakt-form__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Dane kontaktowe sekcja */
+.nevo-kontakt-info {
+  background: var(--wp--preset--color--white);
+  padding: 60px 20px;
+}
+
+@media (min-width: 768px) {
+  .nevo-kontakt-info {
+    padding: 80px 32px;
+  }
+}
+
+/* Mapa sekcja */
+.nevo-kontakt-map {
+  background: var(--wp--preset--color--gray-100);
+  padding: 0;
+  min-height: 400px;
+}
+
+/* FAQ sekcja (opcjonalna) */
+.nevo-kontakt-faq {
+  background: var(--wp--preset--color--beige);
+  padding: 60px 20px;
+}
+
+@media (min-width: 768px) {
+  .nevo-kontakt-faq {
+    padding: 80px 32px;
+  }
+}
+
+/* Scroll margin dla anchor links */
+.nevo-kontakt-hero,
+.nevo-kontakt-form,
+.nevo-kontakt-info,
+.nevo-kontakt-map,
+.nevo-kontakt-faq {
+  scroll-margin-top: 80px;
+}
