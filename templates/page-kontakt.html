@@ -4,9 +4,137 @@
 <main class="wp-block-group alignfull nevo-page-kontakt" id="main-content">
 
     <!-- ========================================
-         SEKCJA 1: HERO (nagłówek + intro)
+         SEKCJA 1: HERO (nagłówek + formularz)
          ======================================== -->
-    <!-- Placeholder dla sekcji Hero -->
+    <!-- wp:group {"align":"full","className":"nevo-kontakt-hero","layout":{"type":"default"}} -->
+    <section class="wp-block-group alignfull nevo-kontakt-hero">
+
+        <!-- wp:group {"className":"nevo-kontakt-hero__container","layout":{"type":"constrained","contentSize":"1200px"}} -->
+        <div class="wp-block-group nevo-kontakt-hero__container">
+
+            <!-- wp:columns {"className":"nevo-kontakt-hero__columns"} -->
+            <div class="wp-block-columns nevo-kontakt-hero__columns">
+
+                <!-- wp:column {"width":"60%","className":"nevo-kontakt-hero__content"} -->
+                <div class="wp-block-column nevo-kontakt-hero__content" style="flex-basis:60%">
+
+                    <!-- wp:heading {"level":1,"className":"nevo-kontakt-hero__title"} -->
+                    <h1 class="nevo-kontakt-hero__title">Porozmawiajmy o Twoim biznesie</h1>
+                    <!-- /wp:heading -->
+
+                    <!-- wp:paragraph {"className":"nevo-kontakt-hero__subtitle"} -->
+                    <p class="nevo-kontakt-hero__subtitle">Bezpłatna konsultacja strategiczna</p>
+                    <!-- /wp:paragraph -->
+
+                    <!-- wp:paragraph {"className":"nevo-kontakt-hero__lead"} -->
+                    <p class="nevo-kontakt-hero__lead">Opisz swoje wyzwania, a nasi eksperci przygotują spersonalizowaną propozycję działań. Bez zobowiązań – chcemy najpierw poznać Twoje potrzeby.</p>
+                    <!-- /wp:paragraph -->
+
+                    <!-- wp:html -->
+                    <ul class="nevo-kontakt-hero__benefits">
+                        <li>
+                            <svg class="benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Odpowiedź w ciągu 24 godzin</span>
+                        </li>
+                        <li>
+                            <svg class="benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Bezpłatna analiza potrzeb</span>
+                        </li>
+                        <li>
+                            <svg class="benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Indywidualne podejście do każdego projektu</span>
+                        </li>
+                        <li>
+                            <svg class="benefit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                <polyline points="20 6 9 17 4 12"></polyline>
+                            </svg>
+                            <span>Bez ukrytych kosztów</span>
+                        </li>
+                    </ul>
+                    <!-- /wp:html -->
+
+                </div>
+                <!-- /wp:column -->
+
+                <!-- wp:column {"width":"40%","className":"nevo-kontakt-hero__form-column"} -->
+                <div class="wp-block-column nevo-kontakt-hero__form-column" style="flex-basis:40%">
+
+                    <!-- wp:html -->
+                    <div class="nevo-kontakt-hero__form-card">
+                        <h3 class="nevo-kontakt-hero__form-title">Wypełnij formularz</h3>
+
+                        <!-- Placeholder dla Contact Form 7 -->
+                        <form class="nevo-kontakt-form" action="#" method="post">
+                            <div class="nevo-form-row">
+                                <label for="kontakt-imie" class="nevo-form-label">Imię i nazwisko *</label>
+                                <input type="text" id="kontakt-imie" name="imie" class="nevo-form-input" placeholder="Jan Kowalski" required>
+                            </div>
+
+                            <div class="nevo-form-row">
+                                <label for="kontakt-email" class="nevo-form-label">E-mail *</label>
+                                <input type="email" id="kontakt-email" name="email" class="nevo-form-input" placeholder="jan@firma.pl" required>
+                            </div>
+
+                            <div class="nevo-form-row">
+                                <label for="kontakt-telefon" class="nevo-form-label">Telefon</label>
+                                <input type="tel" id="kontakt-telefon" name="telefon" class="nevo-form-input" placeholder="+48 123 456 789">
+                            </div>
+
+                            <div class="nevo-form-row">
+                                <label for="kontakt-temat" class="nevo-form-label">Czego dotyczy zapytanie? *</label>
+                                <select id="kontakt-temat" name="temat" class="nevo-form-select" required>
+                                    <option value="">Wybierz temat...</option>
+                                    <option value="strategia">Strategia Marketingowa</option>
+                                    <option value="performance">Performance Marketing</option>
+                                    <option value="ecommerce">E-commerce Development</option>
+                                    <option value="analityka">Analityka & Growth</option>
+                                    <option value="automation">Marketing Automation</option>
+                                    <option value="inne">Inne</option>
+                                </select>
+                            </div>
+
+                            <div class="nevo-form-row">
+                                <label for="kontakt-wiadomosc" class="nevo-form-label">Wiadomość *</label>
+                                <textarea id="kontakt-wiadomosc" name="wiadomosc" class="nevo-form-textarea" rows="4" placeholder="Opisz krótko swoje potrzeby lub wyzwania..." required></textarea>
+                            </div>
+
+                            <div class="nevo-form-row nevo-form-row--checkbox">
+                                <label class="nevo-form-checkbox-label">
+                                    <input type="checkbox" name="rodo" class="nevo-form-checkbox" required>
+                                    <span class="nevo-form-checkbox-text">Wyrażam zgodę na przetwarzanie moich danych osobowych w celu odpowiedzi na zapytanie. <a href="/polityka-prywatnosci/" target="_blank">Polityka prywatności</a></span>
+                                </label>
+                            </div>
+
+                            <div class="nevo-form-row nevo-form-row--submit">
+                                <button type="submit" class="nevo-form-submit">
+                                    Wyślij wiadomość
+                                    <svg class="submit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                                        <line x1="5" y1="12" x2="19" y2="12"></line>
+                                        <polyline points="12 5 19 12 12 19"></polyline>
+                                    </svg>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
+                    <!-- /wp:html -->
+
+                </div>
+                <!-- /wp:column -->
+
+            </div>
+            <!-- /wp:columns -->
+
+        </div>
+        <!-- /wp:group -->
+
+    </section>
+    <!-- /wp:group -->
 
     <!-- ========================================
          SEKCJA 2: FORMULARZ KONTAKTOWY

@@ -8910,11 +8910,12 @@ a.nevo-footer__contact-item:focus svg {
   /* Reset dla strony kontakt */
 }
 
-/* Hero sekcja */
+/* ============================
+   HERO SEKCJA Z FORMULARZEM
+   ============================ */
 .nevo-kontakt-hero {
-  background: var(--wp--preset--color--primary);
+  background: linear-gradient(135deg, var(--wp--preset--color--primary) 0%, var(--wp--preset--color--primary-dark) 100%);
   padding: 80px 20px 60px;
-  text-align: center;
 }
 
 @media (min-width: 768px) {
@@ -8930,8 +8931,34 @@ a.nevo-footer__contact-item:focus svg {
 }
 
 .nevo-kontakt-hero__container {
-  max-width: 800px;
+  max-width: 1200px;
   margin: 0 auto;
+}
+
+.nevo-kontakt-hero__columns {
+  display: flex;
+  flex-direction: column;
+  gap: 40px;
+}
+
+@media (min-width: 1024px) {
+  .nevo-kontakt-hero__columns {
+    flex-direction: row;
+    gap: 60px;
+    align-items: flex-start;
+  }
+}
+
+/* Lewa kolumna - treść */
+.nevo-kontakt-hero__content {
+  flex: 1;
+}
+
+@media (min-width: 1024px) {
+  .nevo-kontakt-hero__content {
+    flex: 0 0 55%;
+    padding-top: 20px;
+  }
 }
 
 .nevo-kontakt-hero__title {
@@ -8943,34 +8970,242 @@ a.nevo-footer__contact-item:focus svg {
   line-height: 1.2;
 }
 
+.nevo-kontakt-hero__subtitle {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--wp--preset--color--coral);
+  margin: 0 0 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+}
+
 .nevo-kontakt-hero__lead {
   font-size: 1.125rem;
   color: var(--wp--preset--color--cream);
-  line-height: 1.6;
+  line-height: 1.7;
+  margin: 0 0 32px;
+}
+
+/* Benefits lista */
+.nevo-kontakt-hero__benefits {
+  list-style: none;
+  padding: 0;
   margin: 0;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
 }
 
-/* Formularz sekcja */
-.nevo-kontakt-form {
-  background: var(--wp--preset--color--beige);
-  padding: 60px 20px;
+.nevo-kontakt-hero__benefits li {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  color: var(--wp--preset--color--cream);
+  font-size: 1rem;
 }
 
-@media (min-width: 768px) {
-  .nevo-kontakt-form {
-    padding: 80px 32px;
-  }
+.nevo-kontakt-hero__benefits .benefit-icon {
+  width: 24px;
+  height: 24px;
+  flex-shrink: 0;
+  color: var(--wp--preset--color--coral);
+}
+
+.nevo-kontakt-hero__benefits span {
+  line-height: 1.4;
+}
+
+/* Prawa kolumna - formularz */
+.nevo-kontakt-hero__form-column {
+  flex: 1;
 }
 
 @media (min-width: 1024px) {
-  .nevo-kontakt-form {
-    padding: 100px 32px;
+  .nevo-kontakt-hero__form-column {
+    flex: 0 0 40%;
   }
 }
 
-.nevo-kontakt-form__container {
-  max-width: 1200px;
-  margin: 0 auto;
+.nevo-kontakt-hero__form-card {
+  background: var(--wp--preset--color--white);
+  border-radius: 16px;
+  padding: 32px 24px;
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.25);
+}
+
+@media (min-width: 768px) {
+  .nevo-kontakt-hero__form-card {
+    padding: 40px 32px;
+  }
+}
+
+.nevo-kontakt-hero__form-title {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--wp--preset--color--primary);
+  margin: 0 0 24px;
+  text-align: center;
+}
+
+/* ============================
+   FORMULARZ KONTAKTOWY
+   ============================ */
+.nevo-kontakt-form {
+  /* Form w hero karcie */
+}
+
+.nevo-form-row {
+  margin-bottom: 20px;
+}
+
+.nevo-form-row:last-child {
+  margin-bottom: 0;
+}
+
+.nevo-form-label {
+  display: block;
+  font-family: var(--wp--preset--font-family--body);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--wp--preset--color--gray-700);
+  margin-bottom: 6px;
+}
+
+.nevo-form-input,
+.nevo-form-select,
+.nevo-form-textarea {
+  width: 100%;
+  padding: 12px 16px;
+  font-family: var(--wp--preset--font-family--body);
+  font-size: 1rem;
+  color: var(--wp--preset--color--gray-900);
+  background: var(--wp--preset--color--gray-50);
+  border: 2px solid var(--wp--preset--color--gray-200);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+  box-sizing: border-box;
+}
+
+.nevo-form-input:focus,
+.nevo-form-select:focus,
+.nevo-form-textarea:focus {
+  outline: none;
+  border-color: var(--wp--preset--color--coral);
+  background: var(--wp--preset--color--white);
+  box-shadow: 0 0 0 3px rgba(255, 107, 88, 0.15);
+}
+
+.nevo-form-input::placeholder,
+.nevo-form-textarea::placeholder {
+  color: var(--wp--preset--color--gray-400);
+}
+
+.nevo-form-select {
+  appearance: none;
+  background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='24' height='24' viewBox='0 0 24 24' fill='none' stroke='%236b7280' stroke-width='2' stroke-linecap='round' stroke-linejoin='round'%3E%3Cpolyline points='6 9 12 15 18 9'%3E%3C/polyline%3E%3C/svg%3E");
+  background-repeat: no-repeat;
+  background-position: right 12px center;
+  background-size: 20px;
+  padding-right: 44px;
+  cursor: pointer;
+}
+
+.nevo-form-textarea {
+  resize: vertical;
+  min-height: 100px;
+}
+
+/* Checkbox row */
+.nevo-form-row--checkbox {
+  margin-top: 24px;
+}
+
+.nevo-form-checkbox-label {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  cursor: pointer;
+}
+
+.nevo-form-checkbox {
+  width: 20px;
+  height: 20px;
+  flex-shrink: 0;
+  margin-top: 2px;
+  accent-color: var(--wp--preset--color--coral);
+  cursor: pointer;
+}
+
+.nevo-form-checkbox-text {
+  font-size: 0.8125rem;
+  color: var(--wp--preset--color--gray-600);
+  line-height: 1.5;
+}
+
+.nevo-form-checkbox-text a {
+  color: var(--wp--preset--color--coral);
+  text-decoration: underline;
+}
+
+.nevo-form-checkbox-text a:hover {
+  color: var(--wp--preset--color--coral-hover);
+}
+
+/* Submit button */
+.nevo-form-row--submit {
+  margin-top: 28px;
+}
+
+.nevo-form-submit {
+  width: 100%;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 32px;
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--wp--preset--color--white);
+  background: var(--wp--preset--color--coral);
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+}
+
+.nevo-form-submit:hover {
+  background: var(--wp--preset--color--coral-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 20px -5px rgba(255, 107, 88, 0.4);
+}
+
+.nevo-form-submit:active {
+  transform: translateY(0);
+}
+
+.nevo-form-submit .submit-icon {
+  width: 20px;
+  height: 20px;
+  transition: transform 0.2s ease;
+}
+
+.nevo-form-submit:hover .submit-icon {
+  transform: translateX(4px);
+}
+
+/* Form validation states */
+.nevo-form-input:invalid:not(:placeholder-shown),
+.nevo-form-select:invalid:not([value=""]),
+.nevo-form-textarea:invalid:not(:placeholder-shown) {
+  border-color: #ef4444;
+}
+
+.nevo-form-input:valid:not(:placeholder-shown),
+.nevo-form-textarea:valid:not(:placeholder-shown) {
+  border-color: #22c55e;
 }
 
 /* Dane kontaktowe sekcja */
