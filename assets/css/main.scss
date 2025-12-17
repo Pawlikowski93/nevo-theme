@@ -10225,31 +10225,206 @@ a.nevo-contact-info__value:hover {
   scroll-margin-top: 80px;
 }
 
-/* Section base classes - to be expanded */
-.nevo-case-study__breadcrumb {
-  /* Sekcja 1: Breadcrumb + Back link */
+/* ============================
+   SEKCJA 1: BREADCRUMB
+   ============================ */
+.nevo-cs-breadcrumb {
+  background: var(--wp--preset--color--white);
+  padding: 16px 24px;
+  border-bottom: 1px solid var(--wp--preset--color--gray-100);
 }
 
-.nevo-case-study__hero {
-  /* Sekcja 2: Hero z danymi klienta */
+.nevo-cs-breadcrumb__nav {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+  color: var(--wp--preset--color--gray-500);
 }
 
+.nevo-cs-breadcrumb__link {
+  color: var(--wp--preset--color--gray-500);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nevo-cs-breadcrumb__link:hover {
+  color: var(--wp--preset--color--coral);
+}
+
+.nevo-cs-breadcrumb__separator {
+  color: var(--wp--preset--color--gray-400);
+}
+
+.nevo-cs-breadcrumb__current {
+  color: var(--wp--preset--color--gray-700);
+  font-weight: 500;
+}
+
+/* ============================
+   SEKCJA 2: HERO (Single Case Study)
+   ============================ */
+.nevo-cs-single-hero {
+  background: var(--wp--preset--color--beige);
+  padding: 48px 24px 64px;
+}
+
+.nevo-cs-single-hero__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nevo-cs-single-hero__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+  align-items: center;
+}
+
+@media (min-width: 1024px) {
+  .nevo-cs-single-hero {
+    padding: 64px 32px 80px;
+  }
+
+  .nevo-cs-single-hero__grid {
+    grid-template-columns: 55% 45%;
+    gap: 60px;
+  }
+}
+
+/* Hero Content */
+.nevo-cs-single-hero__badge {
+  display: inline-block;
+  padding: 8px 16px;
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--wp--preset--color--primary);
+  background: var(--wp--preset--color--beige-medium);
+  border-radius: 50px;
+  margin-bottom: 20px;
+}
+
+.nevo-cs-single-hero__title {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: clamp(2.5rem, 6vw, 4rem);
+  font-weight: 700;
+  color: var(--wp--preset--color--primary);
+  margin: 0 0 12px;
+  line-height: 1.1;
+}
+
+.nevo-cs-single-hero__subtitle {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+  font-weight: 400;
+  font-style: italic;
+  color: var(--wp--preset--color--gray-600);
+  margin: 0 0 24px;
+  line-height: 1.4;
+}
+
+.nevo-cs-single-hero__lead {
+  font-size: 1.0625rem;
+  color: var(--wp--preset--color--gray-700);
+  line-height: 1.7;
+  margin: 0 0 28px;
+}
+
+/* Meta info */
+.nevo-cs-single-hero__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px 24px;
+  margin-bottom: 32px;
+}
+
+.nevo-cs-single-hero__meta-item {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.875rem;
+  color: var(--wp--preset--color--gray-500);
+}
+
+.nevo-cs-single-hero__meta-icon {
+  font-size: 1rem;
+}
+
+/* CTA */
+.nevo-cs-single-hero__cta {
+  display: inline-flex;
+  align-items: center;
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--wp--preset--color--coral);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nevo-cs-single-hero__cta:hover {
+  color: var(--wp--preset--color--coral-hover);
+  text-decoration: underline;
+}
+
+/* Hero Image */
+.nevo-cs-single-hero__image {
+  position: relative;
+}
+
+.nevo-cs-single-hero__image img {
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  border-radius: 16px;
+  box-shadow: 0 20px 40px rgba(0, 0, 0, 0.15), 0 8px 16px rgba(0, 0, 0, 0.1);
+}
+
+@media (min-width: 1024px) {
+  .nevo-cs-single-hero__image img {
+    aspect-ratio: 3 / 2;
+  }
+}
+
+/* Mobile: image first */
+@media (max-width: 1023px) {
+  .nevo-cs-single-hero__grid {
+    display: flex;
+    flex-direction: column-reverse;
+  }
+}
+
+/* ============================
+   SEKCJA 3: WYZWANIE
+   ============================ */
 .nevo-case-study__challenge {
-  /* Sekcja 3: Wyzwanie */
+  /* Placeholder */
 }
 
+/* ============================
+   SEKCJA 4: TIMELINE
+   ============================ */
 .nevo-case-study__timeline {
-  /* Sekcja 4: Timeline etapów */
+  /* Placeholder */
 }
 
+/* ============================
+   SEKCJA 5: REZULTATY
+   ============================ */
 .nevo-case-study__results {
-  /* Sekcja 5: Rezultaty zbiorcze */
+  /* Placeholder */
 }
 
+/* ============================
+   SEKCJA 6: GALERIA
+   ============================ */
 .nevo-case-study__gallery {
-  /* Sekcja 6: Galeria */
+  /* Placeholder */
 }
 
+/* ============================
+   SEKCJA 7: CTA + NAWIGACJA
+   ============================ */
 .nevo-case-study__cta {
-  /* Sekcja 7: CTA + nawigacja */
+  /* Placeholder */
 }
