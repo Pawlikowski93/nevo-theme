@@ -11245,8 +11245,187 @@ a.nevo-contact-info__value:hover {
 /* ============================
    ETAP SEKCJA 1: NAWIGACJA ETAPÓW
    ============================ */
-.nevo-etap-nav {
-  /* Placeholder */
+.nevo-cs-nav {
+  background: var(--wp--preset--color--white);
+  border-bottom: 1px solid var(--wp--preset--color--gray-200);
+  padding: 16px 24px 24px;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+}
+
+@media (min-width: 768px) {
+  .nevo-cs-nav {
+    padding: 20px 24px 28px;
+  }
+}
+
+/* Breadcrumb */
+.nevo-cs-nav__breadcrumb {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 8px;
+  font-size: 0.8125rem;
+  margin-bottom: 20px;
+}
+
+.nevo-cs-nav__breadcrumb a {
+  color: var(--wp--preset--color--gray-500);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nevo-cs-nav__breadcrumb a:hover {
+  color: var(--wp--preset--color--coral);
+}
+
+.nevo-cs-nav__separator {
+  color: var(--wp--preset--color--gray-400);
+}
+
+.nevo-cs-nav__current {
+  color: var(--wp--preset--color--gray-700);
+  font-weight: 500;
+}
+
+/* Mini Timeline */
+.nevo-cs-nav__timeline {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0;
+  overflow-x: auto;
+  padding-bottom: 4px;
+  -webkit-overflow-scrolling: touch;
+}
+
+/* Timeline Item */
+.nevo-cs-nav__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-decoration: none;
+  flex-shrink: 0;
+  padding: 0 8px;
+  transition: all 0.2s ease;
+}
+
+@media (min-width: 768px) {
+  .nevo-cs-nav__item {
+    padding: 0 16px;
+  }
+}
+
+/* Badge (numer) */
+.nevo-cs-nav__badge {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  border-radius: 50%;
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  margin-bottom: 6px;
+  transition: all 0.2s ease;
+}
+
+@media (min-width: 768px) {
+  .nevo-cs-nav__badge {
+    width: 40px;
+    height: 40px;
+    font-size: 0.875rem;
+    margin-bottom: 8px;
+  }
+}
+
+/* Label (nazwa etapu) */
+.nevo-cs-nav__label {
+  font-size: 0.6875rem;
+  font-weight: 500;
+  text-align: center;
+  white-space: nowrap;
+  transition: all 0.2s ease;
+}
+
+@media (min-width: 768px) {
+  .nevo-cs-nav__label {
+    font-size: 0.8125rem;
+  }
+}
+
+/* Linia łącząca */
+.nevo-cs-nav__line {
+  width: 32px;
+  height: 2px;
+  background: var(--wp--preset--color--gray-300);
+  flex-shrink: 0;
+  margin-top: -18px;
+}
+
+@media (min-width: 768px) {
+  .nevo-cs-nav__line {
+    width: 48px;
+    margin-top: -22px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nevo-cs-nav__line {
+    width: 64px;
+  }
+}
+
+.nevo-cs-nav__line--upcoming {
+  background: var(--wp--preset--color--gray-200);
+}
+
+/* Stan: Aktywny */
+.nevo-cs-nav__item--active .nevo-cs-nav__badge {
+  background: var(--wp--preset--color--coral);
+  color: var(--wp--preset--color--white);
+  box-shadow: 0 4px 12px rgba(255, 107, 88, 0.3);
+}
+
+.nevo-cs-nav__item--active .nevo-cs-nav__label {
+  color: var(--wp--preset--color--coral);
+  font-weight: 600;
+}
+
+/* Stan: Ukończony */
+.nevo-cs-nav__item--completed .nevo-cs-nav__badge {
+  background: var(--wp--preset--color--primary);
+  color: var(--wp--preset--color--white);
+}
+
+.nevo-cs-nav__item--completed .nevo-cs-nav__label {
+  color: var(--wp--preset--color--primary);
+}
+
+.nevo-cs-nav__item--completed:hover .nevo-cs-nav__badge {
+  background: var(--wp--preset--color--primary-light);
+  transform: scale(1.05);
+}
+
+.nevo-cs-nav__item--completed:hover .nevo-cs-nav__label {
+  color: var(--wp--preset--color--primary-light);
+}
+
+/* Stan: Przyszły */
+.nevo-cs-nav__item--upcoming {
+  opacity: 0.5;
+  cursor: default;
+}
+
+.nevo-cs-nav__item--upcoming .nevo-cs-nav__badge {
+  background: var(--wp--preset--color--gray-200);
+  color: var(--wp--preset--color--gray-500);
+}
+
+.nevo-cs-nav__item--upcoming .nevo-cs-nav__label {
+  color: var(--wp--preset--color--gray-500);
 }
 
 /* ============================
