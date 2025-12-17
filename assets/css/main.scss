@@ -9761,14 +9761,51 @@ a.nevo-contact-info__value:hover {
    SEKCJA 1: HERO (krótki)
    ============================ */
 .nevo-cs-hero {
-  background: var(--wp--preset--color--primary);
-  padding: 80px 20px 60px;
+  background: var(--wp--preset--color--beige);
+  padding: 60px 20px 48px;
   text-align: center;
 }
 
 @media (min-width: 768px) {
   .nevo-cs-hero {
-    padding: 100px 32px 80px;
+    padding: 80px 32px 64px;
+  }
+}
+
+.nevo-cs-hero__container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.nevo-cs-hero__title {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: clamp(2.5rem, 6vw, 3.5rem);
+  font-weight: 700;
+  color: var(--wp--preset--color--primary);
+  margin: 0 0 16px;
+  line-height: 1.1;
+}
+
+.nevo-cs-hero__subtitle {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: clamp(1.125rem, 2.5vw, 1.375rem);
+  font-weight: 500;
+  color: var(--wp--preset--color--gray-600);
+  margin: 0 0 20px;
+  line-height: 1.4;
+}
+
+.nevo-cs-hero__lead {
+  font-size: 1rem;
+  color: var(--wp--preset--color--gray-500);
+  line-height: 1.7;
+  margin: 0 auto;
+  max-width: 700px;
+}
+
+@media (min-width: 768px) {
+  .nevo-cs-hero__lead {
+    font-size: 1.0625rem;
   }
 }
 
