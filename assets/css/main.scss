@@ -11045,6 +11045,173 @@ a.nevo-contact-info__value:hover {
 /* ============================
    SEKCJA 7: CTA + NAWIGACJA
    ============================ */
-.nevo-case-study__cta {
-  /* Placeholder */
+.nevo-cs-cta-section {
+  background: linear-gradient(135deg, var(--wp--preset--color--primary) 0%, #1a2a4a 100%);
+  padding: 64px 24px;
+}
+
+@media (min-width: 768px) {
+  .nevo-cs-cta-section {
+    padding: 80px 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nevo-cs-cta-section {
+    padding: 100px 24px;
+  }
+}
+
+/* Grid z dwoma CTA */
+.nevo-cs-cta-grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .nevo-cs-cta-grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+}
+
+/* CTA Box */
+.nevo-cs-cta-box {
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  border-radius: 16px;
+  padding: 32px 24px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .nevo-cs-cta-box {
+    padding: 40px 32px;
+  }
+}
+
+.nevo-cs-cta-box__title {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: clamp(1.25rem, 3vw, 1.5rem);
+  font-weight: 700;
+  color: var(--wp--preset--color--white);
+  margin: 0 0 12px;
+}
+
+.nevo-cs-cta-box__lead {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.6;
+  margin: 0 0 24px;
+}
+
+.nevo-cs-cta-box__btn {
+  display: inline-block;
+  padding: 14px 28px;
+  border-radius: 8px;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.nevo-cs-cta-box__btn--primary {
+  background: var(--wp--preset--color--coral);
+  color: var(--wp--preset--color--white);
+}
+
+.nevo-cs-cta-box__btn--primary:hover {
+  background: #e05a47;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 20px rgba(233, 107, 88, 0.3);
+}
+
+.nevo-cs-cta-box__btn--outline {
+  background: transparent;
+  color: var(--wp--preset--color--white);
+  border: 2px solid var(--wp--preset--color--white);
+}
+
+.nevo-cs-cta-box__btn--outline:hover {
+  background: var(--wp--preset--color--white);
+  color: var(--wp--preset--color--primary);
+  transform: translateY(-2px);
+}
+
+/* Separator */
+.nevo-cs-cta-section__separator {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.15);
+  margin: 48px 0;
+}
+
+@media (min-width: 768px) {
+  .nevo-cs-cta-section__separator {
+    margin: 64px 0;
+  }
+}
+
+/* Inne realizacje */
+.nevo-cs-related__title {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.6);
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  text-align: center;
+  margin: 0 0 24px;
+}
+
+.nevo-cs-related__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 600px) {
+  .nevo-cs-related__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+.nevo-cs-related__card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 20px 16px;
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.nevo-cs-related__card:hover {
+  background: rgba(255, 255, 255, 0.15);
+  border-color: rgba(255, 255, 255, 0.25);
+  transform: translateY(-3px);
+}
+
+.nevo-cs-related__name {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--wp--preset--color--white);
+  margin-bottom: 4px;
+}
+
+.nevo-cs-related__category {
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.6);
+}
+
+/* Mobile: opcjonalnie ukryj mini-karty */
+@media (max-width: 599px) {
+  .nevo-cs-related {
+    display: block; /* Można zmienić na 'none' żeby ukryć */
+  }
 }
