@@ -10397,8 +10397,91 @@ a.nevo-contact-info__value:hover {
 /* ============================
    SEKCJA 3: WYZWANIE
    ============================ */
-.nevo-case-study__challenge {
-  /* Placeholder */
+.nevo-cs-challenge {
+  background: var(--wp--preset--color--white);
+  padding: 64px 24px;
+}
+
+@media (min-width: 768px) {
+  .nevo-cs-challenge {
+    padding: 80px 32px;
+  }
+}
+
+.nevo-cs-challenge__container {
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.nevo-cs-challenge__title {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 700;
+  color: var(--wp--preset--color--primary);
+  margin: 0 0 32px;
+}
+
+.nevo-cs-challenge__lead {
+  font-size: 1.1875rem;
+  font-style: normal;
+  color: var(--wp--preset--color--gray-700);
+  line-height: 1.7;
+  margin: 0 0 24px;
+  padding-left: 20px;
+  border-left: 4px solid var(--wp--preset--color--coral);
+}
+
+.nevo-cs-challenge__context {
+  font-size: 1.0625rem;
+  color: var(--wp--preset--color--gray-600);
+  line-height: 1.7;
+  margin: 0 0 32px;
+}
+
+.nevo-cs-challenge__list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 32px;
+}
+
+.nevo-cs-challenge__list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 1rem;
+  color: var(--wp--preset--color--gray-700);
+  line-height: 1.6;
+  padding: 10px 0;
+  border-bottom: 1px solid var(--wp--preset--color--gray-100);
+}
+
+.nevo-cs-challenge__list li:last-child {
+  border-bottom: none;
+}
+
+.nevo-cs-challenge__icon {
+  flex-shrink: 0;
+  font-size: 1rem;
+}
+
+.nevo-cs-challenge__solution {
+  background: var(--wp--preset--color--beige);
+  padding: 24px;
+  border-radius: 12px;
+  margin-top: 8px;
+}
+
+.nevo-cs-challenge__solution p {
+  font-size: 1.0625rem;
+  color: var(--wp--preset--color--gray-700);
+  line-height: 1.7;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .nevo-cs-challenge__solution {
+    padding: 32px;
+  }
 }
 
 /* ============================
