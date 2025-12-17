@@ -9814,14 +9814,85 @@ a.nevo-contact-info__value:hover {
    ============================ */
 .nevo-cs-filters {
   background: var(--wp--preset--color--white);
-  padding: 32px 20px;
+  padding: 24px 20px;
   border-bottom: 1px solid var(--wp--preset--color--gray-200);
 }
 
 @media (min-width: 768px) {
   .nevo-cs-filters {
-    padding: 40px 32px;
+    padding: 32px 32px;
   }
+}
+
+.nevo-cs-filters__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Filter buttons container */
+.nevo-case-filters {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 10px;
+}
+
+@media (min-width: 768px) {
+  .nevo-case-filters {
+    gap: 12px;
+  }
+}
+
+/* Filter button */
+.nevo-case-filter-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: 8px 16px;
+  font-family: var(--wp--preset--font-family--body);
+  font-size: 0.8125rem;
+  font-weight: 500;
+  color: var(--wp--preset--color--primary);
+  background: transparent;
+  border: 1px solid var(--wp--preset--color--gray-300);
+  border-radius: 50px;
+  cursor: pointer;
+  transition: all 0.2s ease;
+  white-space: nowrap;
+}
+
+@media (min-width: 768px) {
+  .nevo-case-filter-btn {
+    padding: 10px 20px;
+    font-size: 0.875rem;
+  }
+}
+
+/* Hover state (inactive) */
+.nevo-case-filter-btn:hover:not(.is-active) {
+  border-color: var(--wp--preset--color--coral);
+  color: var(--wp--preset--color--coral);
+}
+
+/* Active state */
+.nevo-case-filter-btn.is-active {
+  background: var(--wp--preset--color--coral);
+  border-color: var(--wp--preset--color--coral);
+  color: var(--wp--preset--color--white);
+}
+
+/* Focus state for accessibility */
+.nevo-case-filter-btn:focus {
+  outline: none;
+  box-shadow: 0 0 0 3px rgba(255, 107, 88, 0.3);
+}
+
+.nevo-case-filter-btn:focus:not(:focus-visible) {
+  box-shadow: none;
+}
+
+.nevo-case-filter-btn:focus-visible {
+  box-shadow: 0 0 0 3px rgba(255, 107, 88, 0.3);
 }
 
 /* ============================
