@@ -10134,15 +10134,66 @@ a.nevo-contact-info__value:hover {
 /* ============================
    SEKCJA 5: TRUST BAR
    ============================ */
-.nevo-cs-trust {
-  background: var(--wp--preset--color--gray-50);
-  padding: 32px 20px;
+.nevo-case-trust-bar {
+  background: #f9fafb;
+  padding: 48px 24px;
   border-top: 1px solid var(--wp--preset--color--gray-200);
 }
 
-@media (min-width: 768px) {
-  .nevo-cs-trust {
-    padding: 40px 32px;
+.nevo-case-trust-items {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.nevo-case-trust-item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 0 24px;
+  border-right: 1px solid var(--wp--preset--color--gray-200);
+}
+
+.nevo-case-trust-item:last-child {
+  border-right: none;
+}
+
+.nevo-case-trust-item__number {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--wp--preset--color--primary);
+  line-height: 1.2;
+}
+
+.nevo-case-trust-item__label {
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--wp--preset--color--gray-500);
+  text-transform: uppercase;
+  letter-spacing: 0.5px;
+  margin-top: 4px;
+}
+
+@media (max-width: 768px) {
+  .nevo-case-trust-bar {
+    padding: 32px 20px;
+  }
+
+  .nevo-case-trust-items {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 24px;
+  }
+
+  .nevo-case-trust-item {
+    padding: 0;
+    border-right: none;
+  }
+
+  .nevo-case-trust-item__number {
+    font-size: 1.75rem;
   }
 }
 
@@ -10151,6 +10202,6 @@ a.nevo-contact-info__value:hover {
 .nevo-cs-filters,
 .nevo-cs-grid-section,
 .nevo-case-cta,
-.nevo-cs-trust {
+.nevo-case-trust-bar {
   scroll-margin-top: 80px;
 }
