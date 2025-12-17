@@ -9936,7 +9936,7 @@ a.nevo-contact-info__value:hover {
   border-radius: 12px;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   overflow: hidden;
-  transition: transform 0.3s ease, box-shadow 0.3s ease, border-left 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-left 0.3s ease, opacity 0.3s ease;
   border-left: 4px solid transparent;
 }
 
@@ -10044,9 +10044,21 @@ a.nevo-contact-info__value:hover {
   margin-left: 4px;
 }
 
-/* Hidden state for filtering */
+/* Filter animation states */
 .nevo-case-card.is-hidden {
-  display: none;
+  opacity: 0;
+  transform: scale(0.95);
+  pointer-events: none;
+  position: absolute;
+  visibility: hidden;
+}
+
+.nevo-case-card.is-visible {
+  opacity: 1;
+  transform: scale(1);
+  pointer-events: auto;
+  position: relative;
+  visibility: visible;
 }
 
 /* ============================

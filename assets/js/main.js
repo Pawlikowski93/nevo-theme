@@ -208,3 +208,38 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+/**
+ * Case Studies Filter
+ * Filter cards by category tags
+ */
+document.addEventListener('DOMContentLoaded', () => {
+  const filterButtons = document.querySelectorAll('.nevo-case-filter-btn');
+  const caseCards = document.querySelectorAll('.nevo-case-card');
+
+  if (filterButtons.length === 0 || caseCards.length === 0) return;
+
+  filterButtons.forEach(button => {
+    button.addEventListener('click', () => {
+      const filter = button.dataset.filter;
+
+      // Update active state
+      filterButtons.forEach(btn => btn.classList.remove('is-active'));
+      button.classList.add('is-active');
+
+      // Filter cards
+      caseCards.forEach(card => {
+        const tags = card.dataset.tags || '';
+        const shouldShow = filter === 'all' || tags.includes(filter);
+
+        if (shouldShow) {
+          card.classList.remove('is-hidden');
+          card.classList.add('is-visible');
+        } else {
+          card.classList.remove('is-visible');
+          card.classList.add('is-hidden');
+        }
+      });
+    });
+  });
+});
