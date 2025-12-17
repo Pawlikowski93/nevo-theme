@@ -10205,3 +10205,51 @@ a.nevo-contact-info__value:hover {
 .nevo-case-trust-bar {
   scroll-margin-top: 80px;
 }
+
+/* ============================================================================
+   CASE STUDY SINGLE PAGE
+   ============================================================================ */
+
+/* Base container */
+.nevo-case-study {
+  background: var(--wp--preset--color--white);
+}
+
+/* Modifier for specific case studies */
+.nevo-case-study--legenda-lasu {
+  /* Specific overrides for Legenda Lasu if needed */
+}
+
+/* Common section spacing */
+.nevo-case-study section {
+  scroll-margin-top: 80px;
+}
+
+/* Section base classes - to be expanded */
+.nevo-case-study__breadcrumb {
+  /* Sekcja 1: Breadcrumb + Back link */
+}
+
+.nevo-case-study__hero {
+  /* Sekcja 2: Hero z danymi klienta */
+}
+
+.nevo-case-study__challenge {
+  /* Sekcja 3: Wyzwanie */
+}
+
+.nevo-case-study__timeline {
+  /* Sekcja 4: Timeline etapów */
+}
+
+.nevo-case-study__results {
+  /* Sekcja 5: Rezultaty zbiorcze */
+}
+
+.nevo-case-study__gallery {
+  /* Sekcja 6: Galeria */
+}
+
+.nevo-case-study__cta {
+  /* Sekcja 7: CTA + nawigacja */
+}
