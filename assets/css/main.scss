@@ -10487,8 +10487,288 @@ a.nevo-contact-info__value:hover {
 /* ============================
    SEKCJA 4: TIMELINE
    ============================ */
-.nevo-case-study__timeline {
-  /* Placeholder */
+.nevo-cs-timeline {
+  background: var(--wp--preset--color--beige);
+  padding: 64px 24px;
+}
+
+@media (min-width: 768px) {
+  .nevo-cs-timeline {
+    padding: 80px 32px;
+  }
+}
+
+.nevo-cs-timeline__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nevo-cs-timeline__header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.nevo-cs-timeline__title {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: clamp(1.75rem, 4vw, 2.25rem);
+  font-weight: 700;
+  color: var(--wp--preset--color--primary);
+  margin: 0 0 16px;
+}
+
+.nevo-cs-timeline__lead {
+  font-size: 1.0625rem;
+  color: var(--wp--preset--color--gray-600);
+  margin: 0;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* Timeline Grid */
+.nevo-cs-timeline__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .nevo-cs-timeline__grid {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+}
+
+@media (min-width: 1200px) {
+  .nevo-cs-timeline__grid {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+  }
+}
+
+/* Timeline Item */
+.nevo-cs-timeline__item {
+  position: relative;
+}
+
+/* Connector line - desktop */
+@media (min-width: 1200px) {
+  .nevo-cs-timeline__connector {
+    position: absolute;
+    top: 40px;
+    left: 100%;
+    width: 24px;
+    height: 2px;
+    background: var(--wp--preset--color--gray-300);
+  }
+
+  .nevo-cs-timeline__item:last-child .nevo-cs-timeline__connector {
+    display: none;
+  }
+
+  .nevo-cs-timeline__item--completed .nevo-cs-timeline__connector {
+    background: var(--wp--preset--color--coral);
+  }
+}
+
+/* Mobile connector line */
+@media (max-width: 1199px) {
+  .nevo-cs-timeline__connector {
+    display: none;
+  }
+
+  .nevo-cs-timeline__item {
+    padding-left: 32px;
+    border-left: 2px solid var(--wp--preset--color--gray-300);
+  }
+
+  .nevo-cs-timeline__item--completed {
+    border-left-color: var(--wp--preset--color--coral);
+  }
+
+  .nevo-cs-timeline__item--current {
+    border-left-color: var(--wp--preset--color--primary);
+  }
+
+  .nevo-cs-timeline__item::before {
+    content: '';
+    position: absolute;
+    left: -7px;
+    top: 24px;
+    width: 12px;
+    height: 12px;
+    border-radius: 50%;
+    background: var(--wp--preset--color--gray-300);
+    border: 2px solid var(--wp--preset--color--beige);
+  }
+
+  .nevo-cs-timeline__item--completed::before {
+    background: var(--wp--preset--color--coral);
+  }
+
+  .nevo-cs-timeline__item--current::before {
+    background: var(--wp--preset--color--primary);
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1199px) {
+  .nevo-cs-timeline__item {
+    padding-left: 0;
+    border-left: none;
+  }
+
+  .nevo-cs-timeline__item::before {
+    display: none;
+  }
+}
+
+/* Timeline Card */
+.nevo-cs-timeline__card {
+  background: var(--wp--preset--color--white);
+  border-radius: 12px;
+  padding: 24px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-left-color 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+.nevo-cs-timeline__item--completed .nevo-cs-timeline__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.12);
+  border-left-color: var(--wp--preset--color--coral);
+}
+
+/* Planned/Current items - muted */
+.nevo-cs-timeline__item--planned .nevo-cs-timeline__card,
+.nevo-cs-timeline__item--current .nevo-cs-timeline__card {
+  opacity: 0.85;
+}
+
+.nevo-cs-timeline__item--current .nevo-cs-timeline__card {
+  border-left-color: var(--wp--preset--color--primary);
+  opacity: 1;
+}
+
+/* Number */
+.nevo-cs-timeline__number {
+  display: inline-block;
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--wp--preset--color--coral);
+  margin-bottom: 12px;
+  line-height: 1;
+}
+
+.nevo-cs-timeline__item--planned .nevo-cs-timeline__number {
+  color: var(--wp--preset--color--gray-400);
+}
+
+.nevo-cs-timeline__item--current .nevo-cs-timeline__number {
+  color: var(--wp--preset--color--primary);
+}
+
+/* Item Title */
+.nevo-cs-timeline__item-title {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 1.125rem;
+  font-weight: 700;
+  color: var(--wp--preset--color--primary);
+  margin: 0 0 12px;
+}
+
+/* Tags */
+.nevo-cs-timeline__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 12px;
+}
+
+.nevo-cs-timeline__tag {
+  display: inline-block;
+  padding: 4px 8px;
+  font-size: 0.6875rem;
+  font-weight: 500;
+  color: var(--wp--preset--color--gray-600);
+  background: var(--wp--preset--color--gray-100);
+  border-radius: 4px;
+}
+
+/* Description */
+.nevo-cs-timeline__desc {
+  font-size: 0.9375rem;
+  color: var(--wp--preset--color--gray-600);
+  line-height: 1.6;
+  margin: 0 0 16px;
+  flex-grow: 1;
+}
+
+/* Metric */
+.nevo-cs-timeline__metric {
+  padding: 12px;
+  background: var(--wp--preset--color--beige);
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.nevo-cs-timeline__metric-value {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--wp--preset--color--primary);
+}
+
+/* Footer */
+.nevo-cs-timeline__footer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding-top: 12px;
+  border-top: 1px solid var(--wp--preset--color--gray-100);
+  margin-top: auto;
+}
+
+/* Status */
+.nevo-cs-timeline__status {
+  font-size: 0.8125rem;
+  font-weight: 500;
+}
+
+.nevo-cs-timeline__status--completed {
+  color: #10b981;
+}
+
+.nevo-cs-timeline__status--current {
+  color: var(--wp--preset--color--primary);
+}
+
+.nevo-cs-timeline__status--planned {
+  color: var(--wp--preset--color--gray-500);
+}
+
+/* CTA */
+.nevo-cs-timeline__cta {
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--wp--preset--color--coral);
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.nevo-cs-timeline__cta:hover {
+  color: var(--wp--preset--color--coral-hover);
+}
+
+.nevo-cs-timeline__cta--disabled {
+  color: var(--wp--preset--color--gray-400);
+  cursor: default;
+}
+
+.nevo-cs-timeline__cta--disabled:hover {
+  color: var(--wp--preset--color--gray-400);
 }
 
 /* ============================
