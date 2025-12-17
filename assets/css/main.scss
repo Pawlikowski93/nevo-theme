@@ -11215,3 +11215,85 @@ a.nevo-contact-info__value:hover {
     display: block; /* Można zmienić na 'none' żeby ukryć */
   }
 }
+
+/* ============================================================
+   CASE STUDY ETAP - Strony szczegółowe etapów
+   ============================================================ */
+
+/* Base container dla stron etapów */
+.nevo-case-study-etap {
+  background: var(--wp--preset--color--white);
+}
+
+/* Modyfikator dla konkretnego etapu */
+.nevo-cs-etap--branding {
+  /* Etap 1: Branding & Social - akcent coral */
+}
+
+.nevo-cs-etap--website {
+  /* Etap 2: Strona WWW - akcent primary */
+}
+
+.nevo-cs-etap--seo {
+  /* Etap 3: SEO - akcent accent */
+}
+
+.nevo-cs-etap--booking {
+  /* Etap 4: System rezerwacji - akcent coral */
+}
+
+/* ============================
+   ETAP SEKCJA 1: NAWIGACJA ETAPÓW
+   ============================ */
+.nevo-etap-nav {
+  /* Placeholder */
+}
+
+/* ============================
+   ETAP SEKCJA 2: HERO
+   ============================ */
+.nevo-etap-hero {
+  /* Placeholder */
+}
+
+/* ============================
+   ETAP SEKCJA 3: KONTEKST
+   ============================ */
+.nevo-etap-context {
+  /* Placeholder */
+}
+
+/* ============================
+   ETAP SEKCJA 4-6: DZIAŁANIA
+   ============================ */
+.nevo-etap-action {
+  /* Placeholder */
+}
+
+/* ============================
+   ETAP SEKCJA 7: REZULTATY
+   ============================ */
+.nevo-etap-results {
+  /* Placeholder */
+}
+
+/* ============================
+   ETAP SEKCJA 8: GALERIA
+   ============================ */
+.nevo-etap-gallery {
+  /* Placeholder */
+}
+
+/* ============================
+   ETAP SEKCJA 9: NAWIGACJA PREV/NEXT
+   ============================ */
+.nevo-etap-pagination {
+  /* Placeholder */
+}
+
+/* ============================
+   ETAP SEKCJA 10: CTA
+   ============================ */
+.nevo-etap-cta {
+  /* Placeholder */
+}
