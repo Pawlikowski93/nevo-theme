@@ -9898,21 +9898,155 @@ a.nevo-contact-info__value:hover {
 /* ============================
    SEKCJA 3: GRID CASE STUDIES
    ============================ */
-.nevo-cs-grid {
+.nevo-cs-grid-section {
+  padding: 48px 0 80px;
   background: var(--wp--preset--color--beige);
-  padding: 60px 20px;
 }
 
-@media (min-width: 768px) {
-  .nevo-cs-grid {
-    padding: 80px 32px;
+.nevo-cs-grid-section__container {
+  padding: 0 24px;
+}
+
+/* Case Grid */
+.nevo-case-grid {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 32px;
+}
+
+@media (max-width: 1024px) {
+  .nevo-case-grid {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
-@media (min-width: 1024px) {
-  .nevo-cs-grid {
-    padding: 100px 32px;
+@media (max-width: 768px) {
+  .nevo-case-grid {
+    grid-template-columns: 1fr;
   }
+
+  .nevo-cs-grid-section {
+    padding: 32px 0 60px;
+  }
+}
+
+/* Case Card */
+.nevo-case-card {
+  background: var(--wp--preset--color--white);
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  overflow: hidden;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, border-left 0.3s ease;
+  border-left: 4px solid transparent;
+}
+
+.nevo-case-card:hover {
+  transform: translateY(-8px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.15);
+  border-left-color: var(--wp--preset--color--coral);
+}
+
+.nevo-case-card__link {
+  display: block;
+  text-decoration: none;
+  color: inherit;
+}
+
+/* Card Image */
+.nevo-case-card__image {
+  aspect-ratio: 16 / 10;
+  overflow: hidden;
+  background: var(--wp--preset--color--gray-200);
+}
+
+.nevo-case-card__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.nevo-case-card:hover .nevo-case-card__image img {
+  transform: scale(1.05);
+}
+
+/* Card Content */
+.nevo-case-card__content {
+  padding: 24px;
+}
+
+.nevo-case-card__title {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--wp--preset--color--primary);
+  margin: 0 0 8px;
+  line-height: 1.3;
+}
+
+.nevo-case-card__meta {
+  font-size: 0.875rem;
+  color: var(--wp--preset--color--gray-500);
+  margin: 0 0 12px;
+}
+
+/* Card Tags */
+.nevo-case-card__tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-bottom: 16px;
+}
+
+.nevo-case-tag {
+  display: inline-block;
+  padding: 4px 10px;
+  font-size: 0.75rem;
+  font-weight: 500;
+  color: var(--wp--preset--color--primary);
+  background: var(--wp--preset--color--beige);
+  border-radius: 50px;
+}
+
+/* Card Quote */
+.nevo-case-card__quote {
+  font-size: 0.95rem;
+  font-style: italic;
+  color: var(--wp--preset--color--gray-700);
+  margin: 0 0 16px;
+  line-height: 1.5;
+}
+
+/* Card CTA */
+.nevo-case-card__cta {
+  display: inline-flex;
+  align-items: center;
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--wp--preset--color--coral);
+  transition: color 0.2s ease;
+}
+
+.nevo-case-card:hover .nevo-case-card__cta {
+  color: var(--wp--preset--color--coral-hover);
+}
+
+/* Arrow animation on hover */
+.nevo-case-card__cta::after {
+  content: '';
+  display: inline-block;
+  width: 0;
+  transition: width 0.3s ease, margin-left 0.3s ease;
+}
+
+.nevo-case-card:hover .nevo-case-card__cta::after {
+  width: 4px;
+  margin-left: 4px;
+}
+
+/* Hidden state for filtering */
+.nevo-case-card.is-hidden {
+  display: none;
 }
 
 /* ============================
