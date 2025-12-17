@@ -10928,8 +10928,118 @@ a.nevo-contact-info__value:hover {
 /* ============================
    SEKCJA 6: GALERIA
    ============================ */
-.nevo-case-study__gallery {
-  /* Placeholder */
+.nevo-cs-gallery {
+  background: var(--wp--preset--color--beige);
+  padding: 64px 24px;
+}
+
+@media (min-width: 768px) {
+  .nevo-cs-gallery {
+    padding: 80px 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nevo-cs-gallery {
+    padding: 100px 24px;
+  }
+}
+
+.nevo-cs-gallery__title {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: clamp(1.75rem, 4vw, 2.5rem);
+  font-weight: 700;
+  color: var(--wp--preset--color--primary);
+  text-align: center;
+  margin: 0 0 40px;
+}
+
+@media (min-width: 768px) {
+  .nevo-cs-gallery__title {
+    margin-bottom: 48px;
+  }
+}
+
+.nevo-cs-gallery__grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 768px) {
+  .nevo-cs-gallery__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nevo-cs-gallery__grid {
+    gap: 24px;
+  }
+}
+
+.nevo-cs-gallery__item {
+  position: relative;
+  margin: 0;
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+  cursor: pointer;
+  aspect-ratio: 4 / 3;
+}
+
+.nevo-cs-gallery__item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  transition: transform 0.4s ease;
+}
+
+.nevo-cs-gallery__item:hover img {
+  transform: scale(1.03);
+}
+
+/* Główne zdjęcie - 2 kolumny */
+.nevo-cs-gallery__item--featured {
+  grid-column: span 2;
+  aspect-ratio: 16 / 9;
+}
+
+@media (min-width: 768px) {
+  .nevo-cs-gallery__item--featured {
+    grid-column: span 2;
+    grid-row: span 2;
+    aspect-ratio: auto;
+  }
+}
+
+/* Overlay z ikoną */
+.nevo-cs-gallery__overlay {
+  position: absolute;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.nevo-cs-gallery__item:hover .nevo-cs-gallery__overlay {
+  opacity: 1;
+}
+
+.nevo-cs-gallery__icon {
+  font-size: 2rem;
+  filter: grayscale(100%) brightness(10);
+}
+
+@media (min-width: 768px) {
+  .nevo-cs-gallery__icon {
+    font-size: 2.5rem;
+  }
 }
 
 /* ============================
