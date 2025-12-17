@@ -10064,14 +10064,70 @@ a.nevo-contact-info__value:hover {
 /* ============================
    SEKCJA 4: CTA
    ============================ */
-.nevo-cs-cta {
-  background: var(--wp--preset--color--primary);
-  padding: 60px 20px;
+.nevo-case-cta {
+  background: var(--wp--preset--color--beige);
+  padding: 80px 24px;
 }
 
-@media (min-width: 768px) {
-  .nevo-cs-cta {
-    padding: 80px 32px;
+.nevo-case-cta__container {
+  text-align: center;
+}
+
+.nevo-case-cta__title {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--wp--preset--color--primary);
+  margin: 0 0 16px;
+  line-height: 1.3;
+}
+
+.nevo-case-cta__lead {
+  font-size: 1.125rem;
+  color: var(--wp--preset--color--gray-600);
+  margin: 0 0 32px;
+  line-height: 1.6;
+}
+
+.nevo-case-cta__action {
+  display: flex;
+  justify-content: center;
+}
+
+.nevo-case-cta__button {
+  display: inline-block;
+  padding: 16px 32px;
+  font-family: var(--wp--preset--font-family--body);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--wp--preset--color--white);
+  background: var(--wp--preset--color--coral);
+  border-radius: 8px;
+  text-decoration: none;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nevo-case-cta__button:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 107, 88, 0.3);
+}
+
+@media (max-width: 768px) {
+  .nevo-case-cta {
+    padding: 60px 20px;
+  }
+
+  .nevo-case-cta__title {
+    font-size: 1.5rem;
+  }
+
+  .nevo-case-cta__lead {
+    font-size: 1rem;
+  }
+
+  .nevo-case-cta__button {
+    width: 100%;
+    text-align: center;
   }
 }
 
@@ -10093,8 +10149,8 @@ a.nevo-contact-info__value:hover {
 /* Scroll margin dla anchor links */
 .nevo-cs-hero,
 .nevo-cs-filters,
-.nevo-cs-grid,
-.nevo-cs-cta,
+.nevo-cs-grid-section,
+.nevo-case-cta,
 .nevo-cs-trust {
   scroll-margin-top: 80px;
 }
