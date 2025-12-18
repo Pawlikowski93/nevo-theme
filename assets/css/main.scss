@@ -11431,8 +11431,132 @@ a.nevo-contact-info__value:hover {
 /* ============================
    ETAP SEKCJA 2: HERO
    ============================ */
-.nevo-etap-hero {
-  /* Placeholder */
+.nevo-cs-etap-hero {
+  background: linear-gradient(135deg, var(--wp--preset--color--primary) 0%, #1a2a4a 100%);
+  padding: 48px 24px 64px;
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .nevo-cs-etap-hero {
+    padding: 64px 24px 80px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nevo-cs-etap-hero {
+    padding: 80px 24px 100px;
+  }
+}
+
+/* Badge */
+.nevo-cs-etap-hero__badge {
+  display: inline-block;
+  padding: 8px 20px;
+  background: var(--wp--preset--color--coral);
+  color: var(--wp--preset--color--white);
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 0.8125rem;
+  font-weight: 600;
+  border-radius: 50px;
+  margin-bottom: 24px;
+}
+
+@media (min-width: 768px) {
+  .nevo-cs-etap-hero__badge {
+    font-size: 0.875rem;
+    margin-bottom: 32px;
+  }
+}
+
+/* Tytuł */
+.nevo-cs-etap-hero__title {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: clamp(1.75rem, 5vw, 3rem);
+  font-weight: 700;
+  color: var(--wp--preset--color--white);
+  line-height: 1.2;
+  margin: 0 0 16px;
+}
+
+@media (min-width: 768px) {
+  .nevo-cs-etap-hero__title {
+    margin-bottom: 20px;
+  }
+}
+
+/* Subtitle */
+.nevo-cs-etap-hero__subtitle {
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.5;
+  margin: 0 0 32px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .nevo-cs-etap-hero__subtitle {
+    margin-bottom: 40px;
+  }
+}
+
+/* Metric box */
+.nevo-cs-etap-hero__metric {
+  display: inline-flex;
+  flex-direction: column;
+  align-items: center;
+  background: var(--wp--preset--color--white);
+  padding: 24px 32px;
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.15);
+  margin-bottom: 32px;
+}
+
+@media (min-width: 768px) {
+  .nevo-cs-etap-hero__metric {
+    padding: 32px 48px;
+    margin-bottom: 40px;
+  }
+}
+
+.nevo-cs-etap-hero__metric-value {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: clamp(2.5rem, 8vw, 4rem);
+  font-weight: 700;
+  color: var(--wp--preset--color--coral);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.nevo-cs-etap-hero__metric-label {
+  font-size: 0.9375rem;
+  color: var(--wp--preset--color--gray-600);
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .nevo-cs-etap-hero__metric-label {
+    font-size: 1rem;
+  }
+}
+
+/* Opis */
+.nevo-cs-etap-hero__desc {
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.7;
+  margin: 0;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+@media (min-width: 768px) {
+  .nevo-cs-etap-hero__desc {
+    font-size: 1.0625rem;
+  }
 }
 
 /* ============================
