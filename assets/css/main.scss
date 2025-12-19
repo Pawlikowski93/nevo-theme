@@ -11712,8 +11712,193 @@ a.nevo-contact-info__value:hover {
 /* ============================
    ETAP SEKCJA 4-6: DZIAŁANIA
    ============================ */
-.nevo-etap-action {
-  /* Placeholder */
+.nevo-cs-action {
+  padding: 48px 24px;
+}
+
+@media (min-width: 768px) {
+  .nevo-cs-action {
+    padding: 64px 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nevo-cs-action {
+    padding: 80px 24px;
+  }
+}
+
+/* Modyfikator dla Booking */
+.nevo-cs-action--booking {
+  background: var(--wp--preset--color--beige);
+}
+
+/* Grid layout */
+.nevo-cs-action__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+@media (min-width: 1024px) {
+  .nevo-cs-action__grid {
+    grid-template-columns: 1.5fr 1fr;
+    gap: 48px;
+    align-items: start;
+  }
+}
+
+/* Badge */
+.nevo-cs-action__badge {
+  display: inline-block;
+  padding: 6px 14px;
+  background: var(--wp--preset--color--coral);
+  color: var(--wp--preset--color--white);
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 4px;
+  margin-bottom: 16px;
+}
+
+/* Tytuł */
+.nevo-cs-action__title {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 700;
+  color: var(--wp--preset--color--primary);
+  line-height: 1.3;
+  margin: 0 0 16px;
+}
+
+/* Lead */
+.nevo-cs-action__lead {
+  font-size: 1.0625rem;
+  color: var(--wp--preset--color--gray-600);
+  line-height: 1.6;
+  margin: 0 0 32px;
+}
+
+/* Steps container */
+.nevo-cs-action__steps {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+/* Single step */
+.nevo-cs-action__step {
+  display: flex;
+  gap: 16px;
+}
+
+.nevo-cs-action__step-number {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 32px;
+  height: 32px;
+  background: var(--wp--preset--color--primary);
+  color: var(--wp--preset--color--white);
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 0.875rem;
+  font-weight: 700;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.nevo-cs-action__step-content {
+  flex: 1;
+  padding-top: 4px;
+}
+
+.nevo-cs-action__step-title {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--wp--preset--color--primary);
+  margin: 0 0 6px;
+}
+
+.nevo-cs-action__step-desc {
+  font-size: 0.9375rem;
+  color: var(--wp--preset--color--gray-600);
+  line-height: 1.6;
+  margin: 0;
+}
+
+.nevo-cs-action__step-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nevo-cs-action__step-list li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 0.9375rem;
+  color: var(--wp--preset--color--gray-600);
+  line-height: 1.5;
+  margin-bottom: 6px;
+}
+
+.nevo-cs-action__step-list li:last-child {
+  margin-bottom: 0;
+}
+
+.nevo-cs-action__step-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--wp--preset--color--coral);
+  font-weight: bold;
+}
+
+/* Image column */
+.nevo-cs-action__image {
+  position: sticky;
+  top: 120px;
+}
+
+.nevo-cs-action__figure {
+  margin: 0;
+}
+
+.nevo-cs-action__figure img {
+  width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+  transform: perspective(1000px) rotateY(-3deg);
+  transition: transform 0.3s ease;
+}
+
+.nevo-cs-action__figure:hover img {
+  transform: perspective(1000px) rotateY(0deg);
+}
+
+.nevo-cs-action__caption {
+  font-size: 0.8125rem;
+  color: var(--wp--preset--color--gray-500);
+  text-align: center;
+  margin-top: 12px;
+}
+
+/* Mobile: bez rotacji */
+@media (max-width: 1023px) {
+  .nevo-cs-action__figure img {
+    transform: none;
+  }
+
+  .nevo-cs-action__figure:hover img {
+    transform: none;
+  }
+
+  .nevo-cs-action__image {
+    position: static;
+  }
 }
 
 /* ============================
