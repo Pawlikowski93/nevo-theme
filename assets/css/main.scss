@@ -11562,8 +11562,151 @@ a.nevo-contact-info__value:hover {
 /* ============================
    ETAP SEKCJA 3: KONTEKST
    ============================ */
-.nevo-etap-context {
-  /* Placeholder */
+.nevo-cs-context {
+  background: var(--wp--preset--color--white);
+  padding: 48px 24px;
+}
+
+@media (min-width: 768px) {
+  .nevo-cs-context {
+    padding: 64px 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nevo-cs-context {
+    padding: 80px 24px;
+  }
+}
+
+.nevo-cs-context__title {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 700;
+  color: var(--wp--preset--color--primary);
+  margin: 0 0 24px;
+}
+
+.nevo-cs-context__lead {
+  font-size: 1.1875rem;
+  color: var(--wp--preset--color--gray-700);
+  line-height: 1.6;
+  padding-left: 20px;
+  border-left: 4px solid var(--wp--preset--color--coral);
+  margin: 0 0 24px;
+}
+
+@media (min-width: 768px) {
+  .nevo-cs-context__lead {
+    font-size: 1.25rem;
+    padding-left: 24px;
+    margin-bottom: 32px;
+  }
+}
+
+.nevo-cs-context__text {
+  font-size: 1rem;
+  color: var(--wp--preset--color--gray-600);
+  line-height: 1.7;
+  margin: 0 0 32px;
+}
+
+@media (min-width: 768px) {
+  .nevo-cs-context__text {
+    font-size: 1.0625rem;
+    margin-bottom: 40px;
+  }
+}
+
+/* Challenges box */
+.nevo-cs-context__challenges {
+  background: var(--wp--preset--color--gray-50);
+  border-radius: 12px;
+  padding: 24px;
+  margin-bottom: 32px;
+}
+
+@media (min-width: 768px) {
+  .nevo-cs-context__challenges {
+    padding: 32px;
+    margin-bottom: 40px;
+  }
+}
+
+.nevo-cs-context__challenges-title {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--wp--preset--color--primary);
+  margin: 0 0 16px;
+}
+
+.nevo-cs-context__challenges-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nevo-cs-context__challenges-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.9375rem;
+  color: var(--wp--preset--color--gray-700);
+  line-height: 1.5;
+  padding: 8px 0;
+  border-bottom: 1px solid var(--wp--preset--color--gray-200);
+}
+
+.nevo-cs-context__challenges-list li:last-child {
+  border-bottom: none;
+  padding-bottom: 0;
+}
+
+.nevo-cs-context__challenges-list li:first-child {
+  padding-top: 0;
+}
+
+.nevo-cs-context__icon {
+  flex-shrink: 0;
+  font-size: 1rem;
+}
+
+/* Quote */
+.nevo-cs-context__quote {
+  background: var(--wp--preset--color--beige);
+  border-left: 4px solid var(--wp--preset--color--coral);
+  border-radius: 0 12px 12px 0;
+  padding: 24px;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .nevo-cs-context__quote {
+    padding: 32px;
+  }
+}
+
+.nevo-cs-context__quote p {
+  font-size: 1.0625rem;
+  font-style: italic;
+  color: var(--wp--preset--color--gray-700);
+  line-height: 1.7;
+  margin: 0 0 12px;
+}
+
+@media (min-width: 768px) {
+  .nevo-cs-context__quote p {
+    font-size: 1.125rem;
+  }
+}
+
+.nevo-cs-context__quote cite {
+  display: block;
+  font-size: 0.875rem;
+  font-style: normal;
+  font-weight: 500;
+  color: var(--wp--preset--color--gray-500);
 }
 
 /* ============================
