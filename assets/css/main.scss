@@ -11989,6 +11989,45 @@ a.nevo-contact-info__value:hover {
   }
 }
 
+/* Modyfikator dla Facebook */
+.nevo-cs-action--facebook {
+  background: var(--wp--preset--color--beige);
+}
+
+/* Reversed grid (obrazek po lewej, treść po prawej) */
+.nevo-cs-action__grid--reversed {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 40px;
+}
+
+@media (min-width: 1024px) {
+  .nevo-cs-action__grid--reversed {
+    grid-template-columns: 1fr 1.5fr;
+    gap: 48px;
+    align-items: start;
+  }
+}
+
+/* Rotacja w drugą stronę dla lewego obrazka */
+.nevo-cs-action__figure--left img {
+  transform: perspective(1000px) rotateY(3deg);
+}
+
+.nevo-cs-action__figure--left:hover img {
+  transform: perspective(1000px) rotateY(0deg);
+}
+
+@media (max-width: 1023px) {
+  .nevo-cs-action__figure--left img {
+    transform: none;
+  }
+
+  .nevo-cs-action__figure--left:hover img {
+    transform: none;
+  }
+}
+
 /* ============================
    ETAP SEKCJA 7: REZULTATY
    ============================ */
