@@ -11280,6 +11280,12 @@ a.nevo-contact-info__value:hover {
   color: var(--wp--preset--color--coral);
 }
 
+.nevo-cs-nav__breadcrumb a:focus-visible {
+  outline: 2px solid var(--wp--preset--color--coral);
+  outline-offset: 2px;
+  border-radius: 2px;
+}
+
 .nevo-cs-nav__separator {
   color: var(--wp--preset--color--gray-400);
 }
@@ -11411,6 +11417,12 @@ a.nevo-contact-info__value:hover {
 
 .nevo-cs-nav__item--completed:hover .nevo-cs-nav__label {
   color: var(--wp--preset--color--primary-light);
+}
+
+.nevo-cs-nav__item--completed:focus-visible {
+  outline: 2px solid var(--wp--preset--color--primary);
+  outline-offset: 4px;
+  border-radius: 8px;
 }
 
 /* Stan: Przyszły */
@@ -12386,6 +12398,13 @@ a.nevo-contact-info__value:hover {
   box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
 }
 
+.nevo-cs-pagination__prev:focus-visible,
+.nevo-cs-pagination__next:focus-visible {
+  outline: 2px solid var(--wp--preset--color--primary);
+  outline-offset: 2px;
+  background: rgba(255, 255, 255, 0.9);
+}
+
 /* Prev alignment */
 .nevo-cs-pagination__prev {
   text-align: left;
@@ -12551,6 +12570,11 @@ a.nevo-contact-info__value:hover {
   background: #ff5a45;
   transform: translateY(-2px);
   box-shadow: 0 8px 24px rgba(255, 107, 88, 0.4);
+}
+
+.nevo-cs-cta-final__button:focus-visible {
+  outline: 2px solid var(--wp--preset--color--white);
+  outline-offset: 4px;
 }
 
 @media (min-width: 768px) {
