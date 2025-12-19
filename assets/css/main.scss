@@ -11901,6 +11901,94 @@ a.nevo-contact-info__value:hover {
   }
 }
 
+/* Modyfikator dla Copy */
+.nevo-cs-action--copy {
+  background: var(--wp--preset--color--white);
+}
+
+/* USP List */
+.nevo-cs-usp-list {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 12px;
+  margin-top: 12px;
+}
+
+@media (min-width: 600px) {
+  .nevo-cs-usp-list {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 16px;
+  }
+}
+
+.nevo-cs-usp-item {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  padding: 16px;
+  background: var(--wp--preset--color--gray-50);
+  border-radius: 8px;
+  transition: all 0.2s ease;
+}
+
+.nevo-cs-usp-item:hover {
+  background: var(--wp--preset--color--beige);
+}
+
+.nevo-cs-usp-icon {
+  font-size: 1.25rem;
+  flex-shrink: 0;
+}
+
+.nevo-cs-usp-text {
+  font-size: 0.875rem;
+  color: var(--wp--preset--color--gray-700);
+  line-height: 1.5;
+}
+
+/* Example Text Box */
+.nevo-cs-example-text {
+  margin-top: 40px;
+  background: rgba(255, 107, 88, 0.08);
+  border-left: 4px solid var(--wp--preset--color--coral);
+  border-radius: 0 12px 12px 0;
+  padding: 24px;
+}
+
+@media (min-width: 768px) {
+  .nevo-cs-example-text {
+    padding: 32px;
+    margin-top: 48px;
+  }
+}
+
+.nevo-cs-example-text__label {
+  display: block;
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--wp--preset--color--coral);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 12px;
+}
+
+.nevo-cs-example-text__quote {
+  font-size: 1.0625rem;
+  font-style: italic;
+  color: var(--wp--preset--color--gray-700);
+  line-height: 1.8;
+  margin: 0;
+  border: none;
+  padding: 0;
+}
+
+@media (min-width: 768px) {
+  .nevo-cs-example-text__quote {
+    font-size: 1.125rem;
+  }
+}
+
 /* ============================
    ETAP SEKCJA 7: REZULTATY
    ============================ */
