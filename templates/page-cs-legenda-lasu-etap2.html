@@ -6,7 +6,62 @@
     <!-- ========================================
          SEKCJA 1: NAWIGACJA ETAPÓW (mini timeline)
          ======================================== -->
-    <!-- Placeholder: breadcrumb + timeline z Etap 2 jako aktywny -->
+    <!-- wp:group {"align":"full","className":"nevo-cs-nav","layout":{"type":"default"}} -->
+    <section class="wp-block-group alignfull nevo-cs-nav">
+        <!-- wp:group {"className":"nevo-cs-nav__container","layout":{"type":"constrained","contentSize":"1200px"}} -->
+        <div class="wp-block-group nevo-cs-nav__container">
+            <!-- wp:html -->
+
+            <!-- Breadcrumb -->
+            <nav class="nevo-cs-nav__breadcrumb" aria-label="Breadcrumb">
+                <a href="/case-study/">Realizacje</a>
+                <span class="nevo-cs-nav__separator">›</span>
+                <a href="/case-study/legenda-lasu/">Legenda Lasu</a>
+                <span class="nevo-cs-nav__separator">›</span>
+                <span class="nevo-cs-nav__current">Etap 2: Strona internetowa</span>
+            </nav>
+
+            <!-- Mini Timeline -->
+            <div class="nevo-cs-nav__timeline">
+                <!-- Etap 1: Ukończony (link) -->
+                <a href="/case-study/legenda-lasu/branding-social/" class="nevo-cs-nav__item nevo-cs-nav__item--completed">
+                    <span class="nevo-cs-nav__badge">01</span>
+                    <span class="nevo-cs-nav__label">Branding & Social</span>
+                </a>
+
+                <!-- Linia łącząca -->
+                <div class="nevo-cs-nav__line"></div>
+
+                <!-- Etap 2: Aktywny -->
+                <div class="nevo-cs-nav__item nevo-cs-nav__item--active">
+                    <span class="nevo-cs-nav__badge">02</span>
+                    <span class="nevo-cs-nav__label">Strona WWW</span>
+                </div>
+
+                <!-- Linia łącząca -->
+                <div class="nevo-cs-nav__line nevo-cs-nav__line--upcoming"></div>
+
+                <!-- Etap 3: Przyszły -->
+                <div class="nevo-cs-nav__item nevo-cs-nav__item--upcoming">
+                    <span class="nevo-cs-nav__badge">03</span>
+                    <span class="nevo-cs-nav__label">SEO</span>
+                </div>
+
+                <!-- Linia łącząca -->
+                <div class="nevo-cs-nav__line nevo-cs-nav__line--upcoming"></div>
+
+                <!-- Etap 4: Przyszły -->
+                <div class="nevo-cs-nav__item nevo-cs-nav__item--upcoming">
+                    <span class="nevo-cs-nav__badge">04</span>
+                    <span class="nevo-cs-nav__label">Rezerwacje</span>
+                </div>
+            </div>
+
+            <!-- /wp:html -->
+        </div>
+        <!-- /wp:group -->
+    </section>
+    <!-- /wp:group -->
 
     <!-- ========================================
          SEKCJA 2: HERO ETAPU
