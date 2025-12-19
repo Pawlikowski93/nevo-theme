@@ -12326,8 +12326,123 @@ a.nevo-contact-info__value:hover {
 /* ============================
    ETAP SEKCJA 9: NAWIGACJA PREV/NEXT
    ============================ */
-.nevo-etap-pagination {
-  /* Placeholder */
+.nevo-cs-pagination {
+  padding: 48px 24px;
+  background: var(--wp--preset--color--beige);
+}
+
+@media (min-width: 768px) {
+  .nevo-cs-pagination {
+    padding: 64px 24px;
+  }
+}
+
+/* Grid layout */
+.nevo-cs-pagination__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 768px) {
+  .nevo-cs-pagination__grid {
+    grid-template-columns: 1fr auto 1fr;
+    gap: 32px;
+    align-items: center;
+  }
+}
+
+/* Separator */
+.nevo-cs-pagination__separator {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .nevo-cs-pagination__separator {
+    display: block;
+    width: 1px;
+    height: 80px;
+    background: var(--wp--preset--color--gray-300);
+  }
+}
+
+/* Shared link styles */
+.nevo-cs-pagination__prev,
+.nevo-cs-pagination__next {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+  padding: 24px;
+  background: rgba(255, 255, 255, 0.5);
+  border-radius: 12px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+}
+
+.nevo-cs-pagination__prev:hover,
+.nevo-cs-pagination__next:hover {
+  background: rgba(255, 255, 255, 0.9);
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+/* Prev alignment */
+.nevo-cs-pagination__prev {
+  text-align: left;
+}
+
+/* Next alignment */
+.nevo-cs-pagination__next {
+  text-align: right;
+}
+
+@media (min-width: 768px) {
+  .nevo-cs-pagination__next {
+    align-items: flex-end;
+  }
+}
+
+/* Label */
+.nevo-cs-pagination__label {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 0.75rem;
+  font-weight: 600;
+  color: var(--wp--preset--color--gray-500);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+/* Arrow */
+.nevo-cs-pagination__arrow {
+  display: inline-block;
+  transition: transform 0.3s ease;
+}
+
+.nevo-cs-pagination__prev:hover .nevo-cs-pagination__arrow--left {
+  transform: translateX(-4px);
+}
+
+.nevo-cs-pagination__next:hover .nevo-cs-pagination__arrow--right {
+  transform: translateX(4px);
+}
+
+/* Title */
+.nevo-cs-pagination__title {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: clamp(1rem, 2.5vw, 1.25rem);
+  font-weight: 700;
+  color: var(--wp--preset--color--primary);
+  line-height: 1.3;
+}
+
+/* Description */
+.nevo-cs-pagination__desc {
+  font-size: 0.875rem;
+  color: var(--wp--preset--color--gray-600);
+  line-height: 1.5;
 }
 
 /* ============================
