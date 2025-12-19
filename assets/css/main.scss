@@ -12448,6 +12448,121 @@ a.nevo-contact-info__value:hover {
 /* ============================
    ETAP SEKCJA 10: CTA
    ============================ */
-.nevo-etap-cta {
-  /* Placeholder */
+.nevo-cs-cta-final {
+  padding: 64px 24px;
+  background: var(--wp--preset--color--white);
+}
+
+@media (min-width: 768px) {
+  .nevo-cs-cta-final {
+    padding: 80px 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nevo-cs-cta-final {
+    padding: 96px 24px;
+  }
+}
+
+/* Card */
+.nevo-cs-cta-final__card {
+  background: linear-gradient(135deg, var(--wp--preset--color--primary) 0%, #2a4560 100%);
+  border-radius: 16px;
+  padding: 40px 24px;
+  text-align: center;
+  box-shadow: 0 24px 64px rgba(28, 46, 64, 0.25);
+}
+
+@media (min-width: 768px) {
+  .nevo-cs-cta-final__card {
+    padding: 56px 48px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nevo-cs-cta-final__card {
+    padding: 64px 80px;
+  }
+}
+
+/* Title */
+.nevo-cs-cta-final__title {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  font-weight: 700;
+  color: var(--wp--preset--color--white);
+  margin: 0 0 16px;
+}
+
+/* Lead */
+.nevo-cs-cta-final__lead {
+  font-size: 1.0625rem;
+  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.7;
+  max-width: 600px;
+  margin: 0 auto 32px;
+}
+
+/* List */
+.nevo-cs-cta-final__list {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 12px;
+  list-style: none;
+  padding: 0;
+  margin: 0 auto 32px;
+  text-align: left;
+}
+
+.nevo-cs-cta-final__list li {
+  position: relative;
+  padding-left: 28px;
+  font-size: 0.9375rem;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.5;
+}
+
+.nevo-cs-cta-final__list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--wp--preset--color--coral);
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+/* Button */
+.nevo-cs-cta-final__button {
+  display: inline-block;
+  padding: 16px 40px;
+  background: var(--wp--preset--color--coral);
+  color: var(--wp--preset--color--white);
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 1rem;
+  font-weight: 700;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 16px rgba(255, 107, 88, 0.3);
+}
+
+.nevo-cs-cta-final__button:hover {
+  background: #ff5a45;
+  transform: translateY(-2px);
+  box-shadow: 0 8px 24px rgba(255, 107, 88, 0.4);
+}
+
+@media (min-width: 768px) {
+  .nevo-cs-cta-final__button {
+    padding: 18px 48px;
+    font-size: 1.0625rem;
+  }
+}
+
+/* Note */
+.nevo-cs-cta-final__note {
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 16px 0 0;
 }
