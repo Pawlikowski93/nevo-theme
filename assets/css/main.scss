@@ -13078,3 +13078,182 @@ a.nevo-contact-info__value:hover {
   color: rgba(255, 255, 255, 0.6);
   margin: 16px 0 0;
 }
+
+/* ============================
+   STRAMA EKO - REZULTATY (SINGLE PAGE CS)
+   ============================ */
+
+/* Strama Eko Results modifier - navy background */
+.nevo-cs-results--strama {
+  background: var(--wp--preset--color--primary);
+  padding: 64px 24px;
+}
+
+@media (min-width: 768px) {
+  .nevo-cs-results--strama {
+    padding: 80px 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nevo-cs-results--strama {
+    padding: 96px 24px;
+  }
+}
+
+.nevo-cs-results--strama .nevo-cs-results__title {
+  color: var(--wp--preset--color--white);
+  text-align: center;
+}
+
+.nevo-cs-results--strama .nevo-cs-results__lead {
+  color: rgba(255, 255, 255, 0.85);
+  text-align: center;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+/* 4-column metrics grid */
+.nevo-cs-results__metrics--4cols {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 20px;
+  margin: 48px 0;
+}
+
+@media (min-width: 768px) {
+  .nevo-cs-results__metrics--4cols {
+    grid-template-columns: repeat(4, 1fr);
+    gap: 24px;
+    margin: 56px 0;
+  }
+}
+
+/* Light metric variant for dark backgrounds */
+.nevo-cs-metric--light {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  padding: 28px 20px;
+  background: rgba(255, 255, 255, 0.08);
+  border-radius: 16px;
+  border: 1px solid rgba(255, 255, 255, 0.12);
+  transition: transform 0.3s ease, background 0.3s ease;
+}
+
+.nevo-cs-metric--light:hover {
+  transform: translateY(-4px);
+  background: rgba(255, 255, 255, 0.12);
+}
+
+.nevo-cs-metric--light .nevo-cs-metric__icon {
+  font-size: 2rem;
+  margin-bottom: 12px;
+}
+
+.nevo-cs-metric--light .nevo-cs-metric__value {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 700;
+  color: var(--wp--preset--color--coral);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.nevo-cs-metric--light .nevo-cs-metric__label {
+  font-size: 0.9375rem;
+  font-weight: 500;
+  color: var(--wp--preset--color--white);
+  line-height: 1.4;
+}
+
+/* Context text below label */
+.nevo-cs-metric__context {
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin-top: 6px;
+  font-weight: 400;
+}
+
+/* Text value variant (for "Sold out") */
+.nevo-cs-metric--text .nevo-cs-metric__value {
+  font-size: clamp(1.5rem, 4vw, 2rem);
+  letter-spacing: -0.02em;
+}
+
+/* Light testimonial for dark backgrounds */
+.nevo-cs-testimonial--light {
+  position: relative;
+  max-width: 800px;
+  margin: 48px auto;
+  padding: 32px 40px;
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  border-left: 4px solid var(--wp--preset--color--coral);
+  text-align: left;
+}
+
+.nevo-cs-testimonial--light .nevo-cs-testimonial__quote-mark {
+  position: absolute;
+  top: 20px;
+  left: 24px;
+  font-family: Georgia, serif;
+  font-size: 4rem;
+  line-height: 1;
+  color: var(--wp--preset--color--coral);
+  opacity: 0.4;
+}
+
+.nevo-cs-testimonial--light .nevo-cs-testimonial__text {
+  font-size: 1.125rem;
+  font-style: italic;
+  line-height: 1.8;
+  color: rgba(255, 255, 255, 0.95);
+  margin: 0 0 16px;
+  padding-left: 24px;
+}
+
+.nevo-cs-testimonial--light .nevo-cs-testimonial__author {
+  display: block;
+  font-size: 0.9375rem;
+  font-style: normal;
+  font-weight: 600;
+  color: var(--wp--preset--color--cream);
+  padding-left: 24px;
+}
+
+@media (max-width: 600px) {
+  .nevo-cs-testimonial--light {
+    padding: 24px 20px;
+    margin: 32px auto;
+  }
+
+  .nevo-cs-testimonial--light .nevo-cs-testimonial__quote-mark {
+    font-size: 3rem;
+    top: 12px;
+    left: 16px;
+  }
+
+  .nevo-cs-testimonial--light .nevo-cs-testimonial__text {
+    font-size: 1rem;
+    padding-left: 16px;
+  }
+
+  .nevo-cs-testimonial--light .nevo-cs-testimonial__author {
+    padding-left: 16px;
+  }
+}
+
+/* Results note */
+.nevo-cs-results__note {
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.5);
+  text-align: center;
+  line-height: 1.6;
+  max-width: 700px;
+  margin: 0 auto;
+  padding-top: 24px;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
