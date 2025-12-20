@@ -243,3 +243,116 @@ document.addEventListener('DOMContentLoaded', () => {
     });
   });
 });
+
+/**
+ * Table of Contents Generator
+ * Dynamically generates ToC from H2 headings in article content
+ */
+document.addEventListener('DOMContentLoaded', () => {
+  const articleContent = document.querySelector('.nevo-article-content');
+  const tocList = document.querySelector('.nevo-toc__list');
+  const tocWrapper = document.querySelector('.nevo-toc');
+
+  if (!articleContent || !tocList) return;
+
+  // Find all H2 headings in article content
+  const headings = articleContent.querySelectorAll('h2');
+
+  // Hide ToC if no headings found
+  if (headings.length === 0) {
+    if (tocWrapper) {
+      tocWrapper.style.display = 'none';
+    }
+    return;
+  }
+
+  // Clear placeholder items
+  tocList.innerHTML = '';
+
+  // Generate ToC items
+  headings.forEach((heading, index) => {
+    // Generate ID if not exists
+    if (!heading.id) {
+      // Create slug from heading text
+      const slug = heading.textContent
+        .toLowerCase()
+        .replace(/[^a-z0-9ąćęłńóśźżĄĆĘŁŃÓŚŹŻ\s-]/g, '')
+        .replace(/\s+/g, '-')
+        .replace(/-+/g, '-')
+        .substring(0, 50);
+      heading.id = slug || `section-${index + 1}`;
+    }
+
+    // Create list item with link
+    const li = document.createElement('li');
+    const a = document.createElement('a');
+    a.href = `#${heading.id}`;
+    a.textContent = heading.textContent;
+    a.className = 'nevo-toc__link';
+    li.appendChild(a);
+    tocList.appendChild(li);
+  });
+
+  // Get all ToC links for active state management
+  const tocLinks = tocList.querySelectorAll('.nevo-toc__link');
+
+  // Intersection Observer for highlighting active section
+  const observerOptions = {
+    rootMargin: '-100px 0px -66%',
+    threshold: 0
+  };
+
+  let currentActiveLink = null;
+
+  const observer = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+      const id = entry.target.id;
+      const tocLink = tocList.querySelector(`a[href="#${id}"]`);
+
+      if (entry.isIntersecting) {
+        // Remove active from all links
+        tocLinks.forEach(link => link.classList.remove('is-active'));
+        // Add active to current link
+        if (tocLink) {
+          tocLink.classList.add('is-active');
+          currentActiveLink = tocLink;
+        }
+      }
+    });
+  }, observerOptions);
+
+  // Observe all headings
+  headings.forEach(heading => observer.observe(heading));
+
+  // Smooth scroll for ToC links
+  tocLinks.forEach(link => {
+    link.addEventListener('click', (e) => {
+      e.preventDefault();
+      const targetId = link.getAttribute('href').slice(1);
+      const target = document.getElementById(targetId);
+
+      if (target) {
+        // Calculate offset for fixed header
+        const headerHeight = document.querySelector('#site-header')?.offsetHeight || 0;
+        const targetPosition = target.offsetTop - headerHeight - 20;
+
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+
+        // Update active state immediately
+        tocLinks.forEach(l => l.classList.remove('is-active'));
+        link.classList.add('is-active');
+
+        // Update URL hash without jumping
+        history.pushState(null, null, `#${targetId}`);
+      }
+    });
+  });
+
+  // Set first item as active on load if at top
+  if (tocLinks.length > 0 && window.scrollY < 200) {
+    tocLinks[0].classList.add('is-active');
+  }
+});

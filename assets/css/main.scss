@@ -14941,21 +14941,20 @@ a.nevo-contact-info__value:hover {
 .nevo-toc {
   position: sticky;
   top: 100px;
-  padding: 24px;
-  background: var(--wp--preset--color--gray-50);
-  border-radius: 12px;
+  padding: 0;
   max-height: calc(100vh - 140px);
   overflow-y: auto;
 }
 
 .nevo-toc__title {
   font-family: var(--wp--preset--font-family--heading);
-  font-size: 0.875rem;
+  font-size: 0.75rem;
   font-weight: 700;
   text-transform: uppercase;
-  letter-spacing: 0.05em;
+  letter-spacing: 0.08em;
   color: var(--wp--preset--color--gray-500);
   margin: 0 0 16px;
+  padding-left: 16px;
 }
 
 .nevo-toc__nav {
@@ -14966,37 +14965,59 @@ a.nevo-contact-info__value:hover {
   list-style: none;
   padding: 0;
   margin: 0;
-  counter-reset: toc-counter;
+  border-left: 2px solid var(--wp--preset--color--gray-200);
 }
 
 .nevo-toc__list li {
-  margin: 0 0 8px;
+  margin: 0;
   padding-left: 0;
 }
 
-.nevo-toc__list li:last-child {
-  margin-bottom: 0;
-}
-
-.nevo-toc__list a {
+/* ToC link - using class from JS */
+.nevo-toc__link {
   display: block;
-  padding: 8px 12px;
+  padding: 10px 16px;
+  margin-left: -2px;
   font-size: 0.875rem;
   line-height: 1.4;
   color: var(--wp--preset--color--gray-600);
   text-decoration: none;
-  border-radius: 6px;
+  border-left: 2px solid transparent;
   transition: all 0.2s ease;
 }
 
-.nevo-toc__list a:hover {
+.nevo-toc__link:hover {
   color: var(--wp--preset--color--primary);
-  background: var(--wp--preset--color--white);
+  border-left-color: var(--wp--preset--color--gray-400);
 }
 
-.nevo-toc__list a.is-active {
+.nevo-toc__link.is-active {
   color: var(--wp--preset--color--coral);
-  background: var(--wp--preset--color--white);
+  border-left-color: var(--wp--preset--color--coral);
+  font-weight: 500;
+}
+
+/* Fallback for old a selector */
+.nevo-toc__list a:not(.nevo-toc__link) {
+  display: block;
+  padding: 10px 16px;
+  margin-left: -2px;
+  font-size: 0.875rem;
+  line-height: 1.4;
+  color: var(--wp--preset--color--gray-600);
+  text-decoration: none;
+  border-left: 2px solid transparent;
+  transition: all 0.2s ease;
+}
+
+.nevo-toc__list a:not(.nevo-toc__link):hover {
+  color: var(--wp--preset--color--primary);
+  border-left-color: var(--wp--preset--color--gray-400);
+}
+
+.nevo-toc__list a.is-active:not(.nevo-toc__link) {
+  color: var(--wp--preset--color--coral);
+  border-left-color: var(--wp--preset--color--coral);
   font-weight: 500;
 }
 
