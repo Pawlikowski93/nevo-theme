@@ -11722,6 +11722,47 @@ a.nevo-contact-info__value:hover {
   color: var(--wp--preset--color--gray-500);
 }
 
+/* Insight box */
+.nevo-cs-context__insight {
+  margin-top: 32px;
+  padding: 24px;
+  background: var(--wp--preset--color--beige);
+  border-left: 4px solid var(--wp--preset--color--coral);
+  border-radius: 0 12px 12px 0;
+}
+
+@media (min-width: 768px) {
+  .nevo-cs-context__insight {
+    margin-top: 40px;
+    padding: 28px 32px;
+  }
+}
+
+.nevo-cs-context__insight-label {
+  display: inline-block;
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 0.6875rem;
+  font-weight: 700;
+  color: var(--wp--preset--color--coral);
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  margin-bottom: 8px;
+}
+
+.nevo-cs-context__insight-text {
+  font-size: 1rem;
+  font-style: italic;
+  color: var(--wp--preset--color--gray-700);
+  line-height: 1.7;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .nevo-cs-context__insight-text {
+    font-size: 1.0625rem;
+  }
+}
+
 /* ============================
    ETAP SEKCJA 4-6: DZIAŁANIA
    ============================ */
