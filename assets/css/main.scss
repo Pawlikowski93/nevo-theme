@@ -14558,3 +14558,152 @@ a.nevo-contact-info__value:hover {
   color: rgba(255, 255, 255, 0.6);
   margin: 0;
 }
+
+/* ==============================================
+   SINGLE POST
+   Szablon pojedynczego wpisu blogowego
+   ============================================== */
+
+/* ============================
+   SINGLE POST - BASE
+   ============================ */
+.nevo-single-post {
+  background: var(--wp--preset--color--white);
+}
+
+/* Content width for readability */
+.nevo-single-post__content {
+  max-width: 700px;
+  margin: 0 auto;
+  font-size: 1.125rem;
+  line-height: 1.75;
+  color: var(--wp--preset--color--gray-800);
+}
+
+@media (min-width: 768px) {
+  .nevo-single-post__content {
+    font-size: 1.125rem;
+    line-height: 1.8;
+  }
+}
+
+/* ============================
+   SINGLE POST - BREADCRUMB
+   ============================ */
+.nevo-post-breadcrumb {
+  padding: 16px 24px;
+  background: var(--wp--preset--color--gray-50);
+  border-bottom: 1px solid var(--wp--preset--color--gray-200);
+}
+
+/* ============================
+   SINGLE POST - ARTICLE HEADER
+   ============================ */
+.nevo-post-header {
+  padding: 48px 24px;
+  background: var(--wp--preset--color--white);
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .nevo-post-header {
+    padding: 64px 24px 48px;
+  }
+}
+
+/* ============================
+   SINGLE POST - ARTICLE BODY
+   2-column layout with sticky ToC
+   ============================ */
+.nevo-post-body {
+  padding: 48px 24px;
+  background: var(--wp--preset--color--white);
+}
+
+@media (min-width: 768px) {
+  .nevo-post-body {
+    padding: 64px 24px;
+  }
+}
+
+.nevo-post-body__layout {
+  display: block;
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+  .nevo-post-body__layout {
+    display: grid;
+    grid-template-columns: 280px 1fr;
+    gap: 48px;
+  }
+}
+
+/* Table of Contents - sticky sidebar */
+.nevo-post-toc {
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .nevo-post-toc {
+    display: block;
+    position: sticky;
+    top: 100px;
+    align-self: start;
+    max-height: calc(100vh - 120px);
+    overflow-y: auto;
+  }
+}
+
+/* ============================
+   SINGLE POST - AUTHOR BOX
+   ============================ */
+.nevo-post-author {
+  padding: 48px 24px;
+  background: var(--wp--preset--color--beige);
+}
+
+@media (min-width: 768px) {
+  .nevo-post-author {
+    padding: 64px 24px;
+  }
+}
+
+/* ============================
+   SINGLE POST - SHARE + CTA
+   ============================ */
+.nevo-post-share {
+  padding: 48px 24px;
+  background: var(--wp--preset--color--white);
+  border-top: 1px solid var(--wp--preset--color--gray-200);
+  border-bottom: 1px solid var(--wp--preset--color--gray-200);
+}
+
+/* ============================
+   SINGLE POST - RELATED POSTS
+   ============================ */
+.nevo-post-related {
+  padding: 64px 24px;
+  background: var(--wp--preset--color--gray-50);
+}
+
+@media (min-width: 768px) {
+  .nevo-post-related {
+    padding: 80px 24px;
+  }
+}
+
+/* ============================
+   SINGLE POST - COMMENTS
+   ============================ */
+.nevo-post-comments {
+  padding: 48px 24px;
+  background: var(--wp--preset--color--white);
+}
+
+@media (min-width: 768px) {
+  .nevo-post-comments {
+    padding: 64px 24px;
+  }
+}
