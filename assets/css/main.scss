@@ -10404,6 +10404,37 @@ a.nevo-contact-info__value:hover {
   }
 }
 
+/* Highlighted metric card */
+.nevo-cs-single-hero__highlight {
+  display: inline-flex;
+  flex-direction: column;
+  gap: 4px;
+  padding: 20px 28px;
+  background: var(--wp--preset--color--white);
+  border-radius: 12px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  border-left: 4px solid var(--wp--preset--color--coral);
+}
+
+.nevo-cs-single-hero__highlight-value {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: clamp(2rem, 5vw, 2.75rem);
+  font-weight: 700;
+  color: var(--wp--preset--color--coral);
+  line-height: 1;
+}
+
+.nevo-cs-single-hero__highlight-label {
+  font-size: 0.9375rem;
+  color: var(--wp--preset--color--gray-600);
+  line-height: 1.4;
+}
+
+/* Strama Eko hero modifier */
+.nevo-cs-single-hero--strama-eko {
+  background: var(--wp--preset--color--white);
+}
+
 /* ============================
    SEKCJA 3: WYZWANIE
    ============================ */
