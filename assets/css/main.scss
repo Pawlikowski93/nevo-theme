@@ -13257,3 +13257,77 @@ a.nevo-contact-info__value:hover {
   padding-top: 24px;
   border-top: 1px solid rgba(255, 255, 255, 0.1);
 }
+
+/* ============================
+   STRAMA EKO - GALERIA
+   ============================ */
+
+/* Strama gallery modifier - beige background */
+.nevo-cs-gallery--strama {
+  background: var(--wp--preset--color--beige);
+}
+
+/* 2x2 grid variant */
+.nevo-cs-gallery__grid--2x2 {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 600px) {
+  .nevo-cs-gallery__grid--2x2 {
+    grid-template-columns: repeat(2, 1fr);
+  }
+}
+
+/* Gallery frame with hover effect */
+.nevo-cs-gallery--strama .nevo-cs-gallery__frame {
+  background: var(--wp--preset--color--white);
+  border-radius: 12px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.08);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nevo-cs-gallery--strama .nevo-cs-gallery__frame:hover {
+  transform: scale(1.02);
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+}
+
+.nevo-cs-gallery--strama .nevo-cs-gallery__frame img {
+  display: block;
+  width: 100%;
+  height: auto;
+  object-fit: cover;
+}
+
+/* Caption styling */
+.nevo-cs-gallery--strama .nevo-cs-gallery__caption {
+  font-size: 0.875rem;
+  color: var(--wp--preset--color--gray-500);
+  text-align: center;
+  margin-top: 12px;
+}
+
+/* Mobile item - phone frame */
+.nevo-cs-gallery--strama .nevo-cs-gallery__item--mobile {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.nevo-cs-gallery--strama .nevo-cs-gallery__frame--phone {
+  max-width: 200px;
+  padding: 8px;
+  background: #1a1a1a;
+  border-radius: 24px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.15);
+}
+
+.nevo-cs-gallery--strama .nevo-cs-gallery__frame--phone img {
+  border-radius: 16px;
+}
+
+.nevo-cs-gallery--strama .nevo-cs-gallery__frame--phone:hover {
+  transform: scale(1.03);
+}
