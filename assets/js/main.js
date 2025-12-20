@@ -356,3 +356,69 @@ document.addEventListener('DOMContentLoaded', () => {
     tocLinks[0].classList.add('is-active');
   }
 });
+
+/**
+ * Share Buttons
+ * Generate share URLs and handle copy link functionality
+ */
+document.addEventListener('DOMContentLoaded', () => {
+  const shareButtons = document.querySelectorAll('.nevo-share-btn[data-share]');
+  const copyButton = document.querySelector('.nevo-share-copy');
+
+  if (shareButtons.length === 0 && !copyButton) return;
+
+  const pageUrl = encodeURIComponent(window.location.href);
+  const pageTitle = encodeURIComponent(document.title);
+
+  // Share URL templates
+  const shareUrls = {
+    facebook: `https://www.facebook.com/sharer/sharer.php?u=${pageUrl}`,
+    linkedin: `https://www.linkedin.com/sharing/share-offsite/?url=${pageUrl}`,
+    twitter: `https://twitter.com/intent/tweet?url=${pageUrl}&text=${pageTitle}`
+  };
+
+  // Set share URLs
+  shareButtons.forEach(button => {
+    const platform = button.dataset.share;
+    if (shareUrls[platform]) {
+      button.href = shareUrls[platform];
+    }
+  });
+
+  // Copy link button
+  if (copyButton) {
+    copyButton.addEventListener('click', async () => {
+      try {
+        await navigator.clipboard.writeText(window.location.href);
+
+        // Show success state
+        copyButton.classList.add('is-copied');
+
+        // Reset after 2 seconds
+        setTimeout(() => {
+          copyButton.classList.remove('is-copied');
+        }, 2000);
+      } catch (err) {
+        // Fallback for older browsers
+        const textArea = document.createElement('textarea');
+        textArea.value = window.location.href;
+        textArea.style.position = 'fixed';
+        textArea.style.left = '-999999px';
+        document.body.appendChild(textArea);
+        textArea.select();
+
+        try {
+          document.execCommand('copy');
+          copyButton.classList.add('is-copied');
+          setTimeout(() => {
+            copyButton.classList.remove('is-copied');
+          }, 2000);
+        } catch (e) {
+          console.error('Could not copy link:', e);
+        }
+
+        document.body.removeChild(textArea);
+      }
+    });
+  }
+});
