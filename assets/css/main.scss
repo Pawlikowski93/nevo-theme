@@ -12159,6 +12159,69 @@ a.nevo-contact-info__value:hover {
   }
 }
 
+/* Performance action modifier */
+.nevo-cs-action--performance {
+  background: var(--wp--preset--color--beige);
+}
+
+/* Core Web Vitals mini-cards */
+.nevo-cs-vitals {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 32px;
+}
+
+.nevo-cs-vitals__card {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  padding: 12px 16px;
+  background: var(--wp--preset--color--white);
+  border-radius: 8px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.08);
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.nevo-cs-vitals__card:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.12);
+}
+
+.nevo-cs-vitals__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 24px;
+  height: 24px;
+  background: #22c55e;
+  color: var(--wp--preset--color--white);
+  border-radius: 50%;
+  font-size: 14px;
+  font-weight: 700;
+}
+
+.nevo-cs-vitals__label {
+  font-size: 14px;
+  font-weight: 600;
+  color: var(--wp--preset--color--primary);
+}
+
+.nevo-cs-vitals__value {
+  font-size: 14px;
+  color: var(--wp--preset--color--gray);
+}
+
+@media (min-width: 768px) {
+  .nevo-cs-vitals {
+    gap: 20px;
+  }
+
+  .nevo-cs-vitals__card {
+    padding: 14px 20px;
+  }
+}
+
 /* ============================
    ETAP SEKCJA 7: REZULTATY
    ============================ */
