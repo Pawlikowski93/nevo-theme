@@ -13331,3 +13331,121 @@ a.nevo-contact-info__value:hover {
 .nevo-cs-gallery--strama .nevo-cs-gallery__frame--phone:hover {
   transform: scale(1.03);
 }
+
+/* ============================
+   RELATED CASE STUDIES NAVIGATION
+   ============================ */
+
+.nevo-cs-related {
+  padding: 48px 24px;
+  background: var(--wp--preset--color--beige);
+}
+
+@media (min-width: 768px) {
+  .nevo-cs-related {
+    padding: 64px 24px;
+  }
+}
+
+.nevo-cs-related__title {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 1.125rem;
+  font-weight: 600;
+  color: var(--wp--preset--color--gray-500);
+  text-align: center;
+  margin: 0 0 24px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+@media (min-width: 768px) {
+  .nevo-cs-related__title {
+    margin-bottom: 32px;
+  }
+}
+
+/* Grid layout */
+.nevo-cs-related__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 16px;
+}
+
+@media (min-width: 600px) {
+  .nevo-cs-related__grid {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 20px;
+  }
+}
+
+/* Card */
+.nevo-cs-related__card {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  padding: 20px 24px;
+  background: var(--wp--preset--color--white);
+  border-radius: 12px;
+  box-shadow: 0 2px 12px rgba(0, 0, 0, 0.06);
+  text-decoration: none;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  position: relative;
+}
+
+.nevo-cs-related__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.1);
+}
+
+.nevo-cs-related__card:focus-visible {
+  outline: 2px solid var(--wp--preset--color--coral);
+  outline-offset: 2px;
+}
+
+/* Name */
+.nevo-cs-related__name {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 1.0625rem;
+  font-weight: 700;
+  color: var(--wp--preset--color--primary);
+  line-height: 1.3;
+}
+
+/* Industry */
+.nevo-cs-related__industry {
+  font-size: 0.8125rem;
+  color: var(--wp--preset--color--gray-500);
+  line-height: 1.4;
+}
+
+/* Arrow */
+.nevo-cs-related__arrow {
+  position: absolute;
+  top: 50%;
+  right: 20px;
+  transform: translateY(-50%);
+  font-size: 1.25rem;
+  color: var(--wp--preset--color--coral);
+  transition: transform 0.3s ease;
+}
+
+.nevo-cs-related__card:hover .nevo-cs-related__arrow {
+  transform: translateY(-50%) translateX(4px);
+}
+
+@media (min-width: 600px) {
+  .nevo-cs-related__card {
+    padding: 24px;
+  }
+
+  .nevo-cs-related__arrow {
+    position: static;
+    transform: none;
+    margin-top: auto;
+    align-self: flex-end;
+  }
+
+  .nevo-cs-related__card:hover .nevo-cs-related__arrow {
+    transform: translateX(4px);
+  }
+}
