@@ -271,7 +271,63 @@
          SEKCJA 6: RELATED POSTS
          3 powiązane artykuły (Query Loop)
          ======================================== -->
-    <!-- Placeholder: powiązane artykuły -->
+    <!-- wp:group {"align":"full","className":"nevo-related-section","layout":{"type":"default"}} -->
+    <section class="wp-block-group alignfull nevo-related-section">
+        <!-- wp:group {"className":"nevo-related-section__container","layout":{"type":"constrained","contentSize":"1000px"}} -->
+        <div class="wp-block-group nevo-related-section__container">
+
+            <!-- wp:heading {"level":2,"className":"nevo-related-section__title"} -->
+            <h2 class="wp-block-heading nevo-related-section__title">Może Cię też zainteresować</h2>
+            <!-- /wp:heading -->
+
+            <!-- wp:query {"queryId":2,"query":{"perPage":3,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"exclude","inherit":false},"className":"nevo-related-posts"} -->
+            <div class="wp-block-query nevo-related-posts">
+                <!-- wp:post-template {"className":"nevo-related-grid"} -->
+
+                    <!-- wp:group {"className":"nevo-related-card","layout":{"type":"default"}} -->
+                    <article class="wp-block-group nevo-related-card">
+                        <!-- wp:group {"className":"nevo-related-card__link","layout":{"type":"default"}} -->
+                        <a class="wp-block-group nevo-related-card__link" href="#">
+
+                            <!-- wp:post-featured-image {"aspectRatio":"16/9","className":"nevo-related-card__image"} /-->
+
+                            <!-- wp:group {"className":"nevo-related-card__content","layout":{"type":"default"}} -->
+                            <div class="wp-block-group nevo-related-card__content">
+
+                                <!-- wp:post-terms {"term":"category","className":"nevo-related-card__category"} /-->
+
+                                <!-- wp:post-title {"level":4,"isLink":true,"className":"nevo-related-card__title"} /-->
+
+                                <!-- wp:html -->
+                                <span class="nevo-related-card__meta">
+                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                    5 min czytania
+                                </span>
+                                <!-- /wp:html -->
+
+                            </div>
+                            <!-- /wp:group -->
+
+                        </a>
+                        <!-- /wp:group -->
+                    </article>
+                    <!-- /wp:group -->
+
+                <!-- /wp:post-template -->
+
+                <!-- wp:query-no-results -->
+                <!-- wp:paragraph {"className":"nevo-related-empty"} -->
+                <p class="nevo-related-empty">Brak powiązanych artykułów.</p>
+                <!-- /wp:paragraph -->
+                <!-- /wp:query-no-results -->
+
+            </div>
+            <!-- /wp:query -->
+
+        </div>
+        <!-- /wp:group -->
+    </section>
+    <!-- /wp:group -->
 
     <!-- ========================================
          SEKCJA 7: NEWSLETTER CTA
