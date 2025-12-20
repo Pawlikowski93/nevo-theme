@@ -12517,6 +12517,70 @@ a.nevo-contact-info__value:hover {
   margin-top: 12px;
 }
 
+/* Phone frame for mobile screenshots */
+.nevo-cs-gallery__frame--phone {
+  padding: 12px 8px;
+  border-radius: 24px;
+  background: #1a1a1a;
+  max-width: 280px;
+  margin: 0 auto;
+}
+
+.nevo-cs-gallery__frame--phone::before {
+  display: none;
+}
+
+.nevo-cs-gallery__frame-notch {
+  position: absolute;
+  top: 8px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 80px;
+  height: 6px;
+  background: #333;
+  border-radius: 3px;
+  z-index: 1;
+}
+
+.nevo-cs-gallery__frame--phone img {
+  border-radius: 16px;
+}
+
+.nevo-cs-gallery__item--mobile {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+/* 6-item grid layout */
+.nevo-cs-gallery__grid--6items {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+}
+
+@media (min-width: 600px) {
+  .nevo-cs-gallery__grid--6items {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .nevo-cs-gallery__grid--6items .nevo-cs-gallery__item--featured {
+    grid-column: span 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nevo-cs-gallery__grid--6items {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 32px;
+  }
+
+  .nevo-cs-gallery__grid--6items .nevo-cs-gallery__item--featured {
+    grid-column: span 2;
+    grid-row: span 1;
+  }
+}
+
 /* ============================
    ETAP SEKCJA 9: NAWIGACJA PREV/NEXT
    ============================ */
