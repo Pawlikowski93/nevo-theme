@@ -12251,6 +12251,136 @@ a.nevo-contact-info__value:hover {
   font-weight: 600;
 }
 
+/* Wizytówka Google action modifier */
+.nevo-cs-action--wizytowka {
+  background: var(--wp--preset--color--white);
+}
+
+/* Statistics table component */
+.nevo-cs-stats {
+  margin-top: 48px;
+  padding: 32px;
+  background: var(--wp--preset--color--beige);
+  border-radius: 16px;
+}
+
+.nevo-cs-stats__title {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--wp--preset--color--primary);
+  margin: 0 0 24px;
+  text-align: center;
+}
+
+.nevo-cs-stats__table-wrapper {
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch;
+}
+
+.nevo-cs-stats__table {
+  width: 100%;
+  border-collapse: collapse;
+  font-size: 0.9375rem;
+  min-width: 500px;
+}
+
+.nevo-cs-stats__table th,
+.nevo-cs-stats__table td {
+  padding: 12px 16px;
+  text-align: center;
+  border-bottom: 1px solid var(--wp--preset--color--gray-200);
+}
+
+.nevo-cs-stats__table th {
+  background: var(--wp--preset--color--primary);
+  color: var(--wp--preset--color--white);
+  font-weight: 600;
+  font-size: 0.8125rem;
+  text-transform: uppercase;
+  letter-spacing: 0.03em;
+}
+
+.nevo-cs-stats__table th:first-child {
+  border-radius: 8px 0 0 0;
+}
+
+.nevo-cs-stats__table th:last-child {
+  border-radius: 0 8px 0 0;
+}
+
+.nevo-cs-stats__table tbody tr:nth-child(even) {
+  background: rgba(255, 255, 255, 0.5);
+}
+
+.nevo-cs-stats__table tbody tr:hover {
+  background: rgba(255, 255, 255, 0.8);
+}
+
+.nevo-cs-stats__table td:first-child {
+  font-weight: 500;
+  text-align: left;
+  color: var(--wp--preset--color--primary);
+}
+
+.nevo-cs-stats__total {
+  background: var(--wp--preset--color--white) !important;
+}
+
+.nevo-cs-stats__total td {
+  border-top: 2px solid var(--wp--preset--color--coral);
+  border-bottom: none;
+  color: var(--wp--preset--color--coral);
+  font-weight: 700;
+}
+
+.nevo-cs-stats__total td:first-child {
+  color: var(--wp--preset--color--primary);
+}
+
+/* Stats highlight */
+.nevo-cs-stats__highlight {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  margin-top: 24px;
+  padding: 20px 24px;
+  background: var(--wp--preset--color--white);
+  border-radius: 12px;
+  border-left: 4px solid var(--wp--preset--color--coral);
+}
+
+.nevo-cs-stats__highlight-value {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--wp--preset--color--coral);
+  line-height: 1;
+  flex-shrink: 0;
+}
+
+.nevo-cs-stats__highlight-text {
+  font-size: 0.9375rem;
+  color: var(--wp--preset--color--gray-700);
+  line-height: 1.5;
+}
+
+@media (max-width: 600px) {
+  .nevo-cs-stats {
+    padding: 20px;
+  }
+
+  .nevo-cs-stats__highlight {
+    flex-direction: column;
+    text-align: center;
+    gap: 12px;
+  }
+
+  .nevo-cs-stats__highlight-value {
+    font-size: 2rem;
+  }
+}
+
 /* Core Web Vitals mini-cards */
 .nevo-cs-vitals {
   display: flex;
