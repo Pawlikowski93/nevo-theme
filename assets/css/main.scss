@@ -12053,6 +12053,78 @@ a.nevo-contact-info__value:hover {
   background: var(--wp--preset--color--beige);
 }
 
+/* Modyfikator dla Seasonal design */
+.nevo-cs-action--seasonal {
+  background: var(--wp--preset--color--white);
+}
+
+/* Seasonal Compare - porównanie zima/lato */
+.nevo-cs-seasonal-compare {
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 24px;
+  margin-top: 48px;
+}
+
+@media (min-width: 768px) {
+  .nevo-cs-seasonal-compare {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 32px;
+  }
+}
+
+.nevo-cs-seasonal-compare__item {
+  position: relative;
+}
+
+.nevo-cs-seasonal-compare__label {
+  display: inline-block;
+  padding: 8px 20px;
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 0.75rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  border-radius: 6px 6px 0 0;
+  margin-bottom: -4px;
+  position: relative;
+  z-index: 1;
+}
+
+.nevo-cs-seasonal-compare__label--winter {
+  background: linear-gradient(135deg, #4a90a4 0%, #2c5f7c 100%);
+  color: var(--wp--preset--color--white);
+}
+
+.nevo-cs-seasonal-compare__label--summer {
+  background: linear-gradient(135deg, #7cb342 0%, #558b2f 100%);
+  color: var(--wp--preset--color--white);
+}
+
+.nevo-cs-seasonal-compare__figure {
+  margin: 0;
+  border-radius: 0 12px 12px 12px;
+  overflow: hidden;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.12);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.nevo-cs-seasonal-compare__item:hover .nevo-cs-seasonal-compare__figure {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.18);
+}
+
+.nevo-cs-seasonal-compare__figure img {
+  display: block;
+  width: 100%;
+  height: auto;
+  transition: transform 0.4s ease;
+}
+
+.nevo-cs-seasonal-compare__item:hover .nevo-cs-seasonal-compare__figure img {
+  transform: scale(1.02);
+}
+
 /* Reversed grid (obrazek po lewej, treść po prawej) */
 .nevo-cs-action__grid--reversed {
   display: grid;
