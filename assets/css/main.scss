@@ -13542,13 +13542,199 @@ a.nevo-contact-info__value:hover {
    ============================ */
 .nevo-blog-featured {
   padding: 48px 24px;
-  background: var(--wp--preset--color--white);
+  background: var(--wp--preset--color--beige);
 }
 
 @media (min-width: 768px) {
   .nevo-blog-featured {
     padding: 64px 24px;
   }
+}
+
+/* Card wrapper (link) */
+.nevo-blog-featured__card {
+  position: relative;
+  display: block;
+  text-decoration: none;
+  background: var(--wp--preset--color--white);
+  border-radius: 16px;
+  overflow: hidden;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  transition: box-shadow 0.3s ease, transform 0.3s ease;
+}
+
+.nevo-blog-featured__card:hover {
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.12);
+  transform: translateY(-4px);
+}
+
+.nevo-blog-featured__card:focus-visible {
+  outline: 2px solid var(--wp--preset--color--coral);
+  outline-offset: 4px;
+}
+
+/* Badge */
+.nevo-blog-featured__badge {
+  position: absolute;
+  top: 16px;
+  left: 16px;
+  z-index: 2;
+  padding: 6px 12px;
+  background: var(--wp--preset--color--coral);
+  color: var(--wp--preset--color--white);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-radius: 6px;
+}
+
+/* Grid layout */
+.nevo-blog-featured__grid {
+  display: grid;
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .nevo-blog-featured__grid {
+    grid-template-columns: 1fr 1fr;
+  }
+}
+
+/* Image column */
+.nevo-blog-featured__image {
+  position: relative;
+  aspect-ratio: 16 / 9;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .nevo-blog-featured__image {
+    aspect-ratio: auto;
+    min-height: 100%;
+  }
+}
+
+.nevo-blog-featured__image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  transition: transform 0.4s ease;
+}
+
+.nevo-blog-featured__card:hover .nevo-blog-featured__image img {
+  transform: scale(1.02);
+}
+
+/* Content column */
+.nevo-blog-featured__content {
+  display: flex;
+  flex-direction: column;
+  padding: 28px 24px;
+  gap: 12px;
+}
+
+@media (min-width: 768px) {
+  .nevo-blog-featured__content {
+    padding: 40px 48px;
+    gap: 16px;
+    justify-content: center;
+  }
+}
+
+/* Category pill */
+.nevo-blog-featured__category {
+  display: inline-block;
+  width: fit-content;
+  padding: 4px 12px;
+  background: var(--wp--preset--color--beige);
+  color: var(--wp--preset--color--primary);
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+  border-radius: 4px;
+}
+
+/* Title */
+.nevo-blog-featured__title {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--wp--preset--color--primary);
+  line-height: 1.3;
+  margin: 0;
+}
+
+@media (min-width: 768px) {
+  .nevo-blog-featured__title {
+    font-size: 1.75rem;
+  }
+}
+
+/* Excerpt */
+.nevo-blog-featured__excerpt {
+  font-size: 0.9375rem;
+  line-height: 1.6;
+  color: var(--wp--preset--color--gray-600);
+  margin: 0;
+  display: -webkit-box;
+  -webkit-line-clamp: 3;
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+}
+
+@media (min-width: 768px) {
+  .nevo-blog-featured__excerpt {
+    font-size: 1rem;
+  }
+}
+
+/* Meta */
+.nevo-blog-featured__meta {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 16px;
+  margin-top: 4px;
+}
+
+.nevo-blog-featured__date,
+.nevo-blog-featured__reading-time {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 0.8125rem;
+  color: var(--wp--preset--color--gray-500);
+}
+
+.nevo-blog-featured__date svg,
+.nevo-blog-featured__reading-time svg {
+  opacity: 0.7;
+}
+
+/* CTA */
+.nevo-blog-featured__cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  margin-top: 8px;
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 0.9375rem;
+  font-weight: 600;
+  color: var(--wp--preset--color--coral);
+  transition: gap 0.3s ease;
+}
+
+.nevo-blog-featured__card:hover .nevo-blog-featured__cta {
+  gap: 12px;
+}
+
+.nevo-blog-featured__cta svg {
+  transition: transform 0.3s ease;
+}
+
+.nevo-blog-featured__card:hover .nevo-blog-featured__cta svg {
+  transform: translateX(4px);
 }
 
 /* ============================
