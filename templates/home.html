@@ -287,9 +287,42 @@
     <!-- /wp:group -->
 
     <!-- ========================================
-         SEKCJA 6: NEWSLETTER CTA (OPCJONALNIE)
+         SEKCJA 6: NEWSLETTER CTA
          ======================================== -->
-    <!-- Placeholder: zapis do newslettera -->
+    <!-- wp:group {"align":"full","className":"nevo-blog-newsletter","layout":{"type":"default"}} -->
+    <section class="wp-block-group alignfull nevo-blog-newsletter">
+        <!-- wp:group {"className":"nevo-blog-newsletter__container","layout":{"type":"constrained","contentSize":"1200px"}} -->
+        <div class="wp-block-group nevo-blog-newsletter__container">
+            <!-- wp:html -->
+
+            <div class="nevo-newsletter-card">
+                <h2 class="nevo-newsletter-card__title">Piątkowy Przegląd</h2>
+
+                <p class="nevo-newsletter-card__lead">Co tydzień najważniejsze newsy z marketingu i e-commerce. Bez spamu — tylko esencja, którą przeczytasz w 5 minut.</p>
+
+                <form class="nevo-newsletter-form" action="#" method="post">
+                    <div class="nevo-newsletter-form__row">
+                        <input
+                            type="email"
+                            class="nevo-newsletter-form__input"
+                            placeholder="Twój adres email"
+                            required
+                            aria-label="Adres email"
+                        >
+                        <button type="submit" class="nevo-newsletter-form__button">
+                            Zapisz się
+                        </button>
+                    </div>
+                </form>
+
+                <p class="nevo-newsletter-card__note">Dołącz do 2,500+ subskrybentów. Możesz wypisać się w każdej chwili.</p>
+            </div>
+
+            <!-- /wp:html -->
+        </div>
+        <!-- /wp:group -->
+    </section>
+    <!-- /wp:group -->
 
 </main>
 <!-- /wp:group -->
