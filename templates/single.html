@@ -331,9 +331,47 @@
 
     <!-- ========================================
          SEKCJA 7: NEWSLETTER CTA
-         Taki sam jak na archiwum bloga
+         Subtelniejszy niż na archiwum - dla tych co doczytali
          ======================================== -->
-    <!-- Placeholder: zapis do newslettera -->
+    <!-- wp:group {"align":"full","className":"nevo-post-newsletter-section","layout":{"type":"default"}} -->
+    <section class="wp-block-group alignfull nevo-post-newsletter-section">
+        <!-- wp:group {"className":"nevo-post-newsletter-section__container","layout":{"type":"constrained","contentSize":"600px"}} -->
+        <div class="wp-block-group nevo-post-newsletter-section__container">
+
+            <!-- wp:html -->
+            <div class="nevo-post-newsletter">
+                <h3 class="nevo-post-newsletter__title">Podobał Ci się artykuł?</h3>
+                <p class="nevo-post-newsletter__lead">
+                    Zapisz się na Piątkowy Przegląd — co tydzień najważniejsze newsy
+                    z marketingu i e-commerce prosto na Twoją skrzynkę.
+                </p>
+
+                <form class="nevo-post-newsletter__form" action="#" method="post">
+                    <div class="nevo-post-newsletter__input-group">
+                        <input
+                            type="email"
+                            name="email"
+                            placeholder="Twój adres email"
+                            class="nevo-post-newsletter__input"
+                            required
+                            aria-label="Adres email"
+                        >
+                        <button type="submit" class="nevo-post-newsletter__button">
+                            Zapisz się
+                        </button>
+                    </div>
+                </form>
+
+                <p class="nevo-post-newsletter__disclaimer">
+                    Zero spamu. Wypisz się kiedy chcesz.
+                </p>
+            </div>
+            <!-- /wp:html -->
+
+        </div>
+        <!-- /wp:group -->
+    </section>
+    <!-- /wp:group -->
 
     <!-- ========================================
          SEKCJA 8: KOMENTARZE (OPCJONALNIE)
