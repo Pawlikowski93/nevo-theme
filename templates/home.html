@@ -93,7 +93,27 @@
     <!-- ========================================
          SEKCJA 3: KATEGORIE / FILTRY
          ======================================== -->
-    <!-- Placeholder: nawigacja po kategoriach -->
+    <!-- wp:group {"align":"full","className":"nevo-blog-categories","layout":{"type":"default"}} -->
+    <section class="wp-block-group alignfull nevo-blog-categories">
+        <!-- wp:group {"className":"nevo-blog-categories__container","layout":{"type":"constrained","contentSize":"1200px"}} -->
+        <div class="wp-block-group nevo-blog-categories__container">
+            <!-- wp:html -->
+
+            <nav class="nevo-blog-categories__nav" aria-label="Kategorie bloga">
+                <a href="/blog/" class="nevo-blog-category-link is-active">Wszystkie</a>
+                <a href="/kategoria/strategia/" class="nevo-blog-category-link">Strategia</a>
+                <a href="/kategoria/google-ads/" class="nevo-blog-category-link">Google Ads</a>
+                <a href="/kategoria/seo/" class="nevo-blog-category-link">SEO</a>
+                <a href="/kategoria/analityka/" class="nevo-blog-category-link">Analityka</a>
+                <a href="/kategoria/e-commerce/" class="nevo-blog-category-link">E-commerce</a>
+                <a href="/kategoria/automatyzacja/" class="nevo-blog-category-link">Automatyzacja</a>
+            </nav>
+
+            <!-- /wp:html -->
+        </div>
+        <!-- /wp:group -->
+    </section>
+    <!-- /wp:group -->
 
     <!-- ========================================
          SEKCJA 4: GRID ARTYKUŁÓW (QUERY LOOP)
