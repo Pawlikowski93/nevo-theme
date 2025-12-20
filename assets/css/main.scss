@@ -12205,6 +12205,52 @@ a.nevo-contact-info__value:hover {
   background: var(--wp--preset--color--beige);
 }
 
+/* One Page action modifier */
+.nevo-cs-action--onepage {
+  background: var(--wp--preset--color--beige);
+}
+
+/* Benefits box (why One Page) */
+.nevo-cs-action__benefits {
+  margin-top: 32px;
+  padding: 24px;
+  background: var(--wp--preset--color--white);
+  border-radius: 12px;
+  border-left: 4px solid var(--wp--preset--color--coral);
+}
+
+.nevo-cs-action__benefits-title {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--wp--preset--color--primary);
+  margin: 0 0 12px;
+}
+
+.nevo-cs-action__benefits-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: grid;
+  gap: 8px;
+}
+
+.nevo-cs-action__benefits-list li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 0.9375rem;
+  color: var(--wp--preset--color--gray-700);
+  line-height: 1.5;
+}
+
+.nevo-cs-action__benefits-list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--wp--preset--color--coral);
+  font-weight: 600;
+}
+
 /* Core Web Vitals mini-cards */
 .nevo-cs-vitals {
   display: flex;
