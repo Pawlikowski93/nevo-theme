@@ -12710,6 +12710,31 @@ a.nevo-contact-info__value:hover {
   line-height: 1.5;
 }
 
+/* Upcoming badge */
+.nevo-cs-pagination__badge {
+  display: inline-block;
+  padding: 4px 10px;
+  background: var(--wp--preset--color--coral);
+  color: var(--wp--preset--color--white);
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 0.625rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 4px;
+  align-self: flex-end;
+}
+
+/* Upcoming modifier - slightly muted */
+.nevo-cs-pagination__next--upcoming {
+  opacity: 0.85;
+  pointer-events: none;
+}
+
+.nevo-cs-pagination__next--upcoming .nevo-cs-pagination__title {
+  color: var(--wp--preset--color--gray-500);
+}
+
 /* ============================
    ETAP SEKCJA 10: CTA
    ============================ */
