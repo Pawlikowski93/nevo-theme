@@ -122,7 +122,55 @@
          Desktop: 280px ToC + ~700px content
          Mobile: ToC ukryty lub zwinięty
          ======================================== -->
-    <!-- Placeholder: treść artykułu z spisem treści -->
+    <!-- wp:group {"align":"full","className":"nevo-article-body","layout":{"type":"default"}} -->
+    <section class="wp-block-group alignfull nevo-article-body">
+        <!-- wp:group {"className":"nevo-article-body__container","layout":{"type":"constrained","contentSize":"1100px"}} -->
+        <div class="wp-block-group nevo-article-body__container">
+
+            <!-- wp:columns {"className":"nevo-article-layout"} -->
+            <div class="wp-block-columns nevo-article-layout">
+
+                <!-- Table of Contents (left column) -->
+                <!-- wp:column {"width":"250px","className":"nevo-toc-column"} -->
+                <div class="wp-block-column nevo-toc-column" style="flex-basis:250px">
+                    <!-- wp:html -->
+                    <aside class="nevo-toc" aria-label="Spis treści">
+                        <h4 class="nevo-toc__title">Spis treści</h4>
+                        <nav class="nevo-toc__nav">
+                            <ol class="nevo-toc__list" id="toc-list">
+                                <!-- Generowane dynamicznie przez JS -->
+                                <li><a href="#wstep">1. Wstęp</a></li>
+                                <li><a href="#problem">2. Problem</a></li>
+                                <li><a href="#rozwiazanie">3. Rozwiązanie</a></li>
+                                <li><a href="#przyklad">4. Przykład</a></li>
+                                <li><a href="#podsumowanie">5. Podsumowanie</a></li>
+                            </ol>
+                        </nav>
+                    </aside>
+                    <!-- /wp:html -->
+                </div>
+                <!-- /wp:column -->
+
+                <!-- Article Content (right column) -->
+                <!-- wp:column {"className":"nevo-content-column"} -->
+                <div class="wp-block-column nevo-content-column">
+                    <!-- wp:group {"className":"nevo-article-content","layout":{"type":"default"}} -->
+                    <article class="wp-block-group nevo-article-content">
+
+                        <!-- wp:post-content {"className":"nevo-prose"} /-->
+
+                    </article>
+                    <!-- /wp:group -->
+                </div>
+                <!-- /wp:column -->
+
+            </div>
+            <!-- /wp:columns -->
+
+        </div>
+        <!-- /wp:group -->
+    </section>
+    <!-- /wp:group -->
 
     <!-- ========================================
          SEKCJA 4: AUTHOR BOX
