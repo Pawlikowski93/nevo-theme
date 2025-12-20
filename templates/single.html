@@ -6,7 +6,45 @@
     <!-- ========================================
          SEKCJA 1: BREADCRUMB
          ======================================== -->
-    <!-- Placeholder: nawigacja okruszkowa -->
+    <!-- wp:group {"align":"full","className":"nevo-post-breadcrumb","layout":{"type":"default"}} -->
+    <section class="wp-block-group alignfull nevo-post-breadcrumb">
+        <!-- wp:group {"className":"nevo-post-breadcrumb__container","layout":{"type":"constrained","contentSize":"1200px"}} -->
+        <div class="wp-block-group nevo-post-breadcrumb__container">
+
+            <!-- Desktop breadcrumb -->
+            <!-- wp:group {"className":"nevo-breadcrumb nevo-breadcrumb--desktop","layout":{"type":"flex","flexWrap":"nowrap","justifyContent":"left"}} -->
+            <nav class="wp-block-group nevo-breadcrumb nevo-breadcrumb--desktop" aria-label="Breadcrumb">
+
+                <!-- wp:html -->
+                <a href="/blog/" class="nevo-breadcrumb__link">Blog</a>
+                <span class="nevo-breadcrumb__separator" aria-hidden="true">›</span>
+                <!-- /wp:html -->
+
+                <!-- wp:post-terms {"term":"category","className":"nevo-breadcrumb__category"} /-->
+
+                <!-- wp:html -->
+                <span class="nevo-breadcrumb__separator" aria-hidden="true">›</span>
+                <!-- /wp:html -->
+
+                <!-- wp:post-title {"className":"nevo-breadcrumb__current"} /-->
+
+            </nav>
+            <!-- /wp:group -->
+
+            <!-- Mobile breadcrumb (simplified) -->
+            <!-- wp:html -->
+            <nav class="nevo-breadcrumb nevo-breadcrumb--mobile" aria-label="Powrót">
+                <a href="/blog/" class="nevo-breadcrumb__back">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+                    Blog
+                </a>
+            </nav>
+            <!-- /wp:html -->
+
+        </div>
+        <!-- /wp:group -->
+    </section>
+    <!-- /wp:group -->
 
     <!-- ========================================
          SEKCJA 2: ARTICLE HEADER

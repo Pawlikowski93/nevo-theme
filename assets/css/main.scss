@@ -14596,6 +14596,132 @@ a.nevo-contact-info__value:hover {
   border-bottom: 1px solid var(--wp--preset--color--gray-200);
 }
 
+.nevo-post-breadcrumb__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Breadcrumb nav */
+.nevo-breadcrumb {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.875rem;
+  line-height: 1.4;
+}
+
+/* Desktop version */
+.nevo-breadcrumb--desktop {
+  display: none;
+}
+
+@media (min-width: 768px) {
+  .nevo-breadcrumb--desktop {
+    display: flex;
+  }
+}
+
+/* Mobile version */
+.nevo-breadcrumb--mobile {
+  display: flex;
+}
+
+@media (min-width: 768px) {
+  .nevo-breadcrumb--mobile {
+    display: none;
+  }
+}
+
+/* Back link (mobile) */
+.nevo-breadcrumb__back {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  color: var(--wp--preset--color--primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+}
+
+.nevo-breadcrumb__back:hover {
+  color: var(--wp--preset--color--coral);
+}
+
+.nevo-breadcrumb__back svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Breadcrumb link */
+.nevo-breadcrumb__link {
+  color: var(--wp--preset--color--primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  white-space: nowrap;
+}
+
+.nevo-breadcrumb__link:hover {
+  color: var(--wp--preset--color--coral);
+}
+
+/* Separator */
+.nevo-breadcrumb__separator {
+  color: var(--wp--preset--color--gray-400);
+  font-weight: 400;
+  flex-shrink: 0;
+}
+
+/* Category (from wp:post-terms) */
+.nevo-breadcrumb__category {
+  display: inline-flex;
+  gap: 4px;
+  margin: 0;
+}
+
+.nevo-breadcrumb__category a {
+  color: var(--wp--preset--color--primary);
+  text-decoration: none;
+  font-weight: 500;
+  transition: color 0.2s ease;
+  white-space: nowrap;
+}
+
+.nevo-breadcrumb__category a:hover {
+  color: var(--wp--preset--color--coral);
+}
+
+/* Current page title */
+.nevo-breadcrumb__current {
+  color: var(--wp--preset--color--gray-500);
+  font-weight: 400;
+  max-width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+/* When using wp:post-title inside breadcrumb */
+.nevo-breadcrumb__current.wp-block-post-title {
+  font-size: 0.875rem;
+  font-family: var(--wp--preset--font-family--body);
+  font-weight: 400;
+  color: var(--wp--preset--color--gray-500);
+  margin: 0;
+  max-width: 300px;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+@media (min-width: 1024px) {
+  .nevo-breadcrumb__current,
+  .nevo-breadcrumb__current.wp-block-post-title {
+    max-width: 400px;
+  }
+}
+
 /* ============================
    SINGLE POST - ARTICLE HEADER
    ============================ */
