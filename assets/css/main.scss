@@ -13984,8 +13984,162 @@ a.nevo-contact-info__value:hover {
    PAGINATION
    ============================ */
 .nevo-blog-pagination {
-  padding: 32px 24px 48px;
+  padding: 48px 24px;
   background: var(--wp--preset--color--white);
+}
+
+@media (min-width: 768px) {
+  .nevo-blog-pagination {
+    padding: 64px 24px;
+  }
+}
+
+.nevo-blog-pagination__container {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Main pagination wrapper */
+.nevo-pagination,
+.wp-block-query-pagination.nevo-pagination {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+  flex-wrap: wrap;
+}
+
+/* Prev/Next buttons */
+.nevo-pagination__prev,
+.nevo-pagination__next,
+.wp-block-query-pagination-previous,
+.wp-block-query-pagination-next {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+  padding: 10px 16px;
+  background: transparent;
+  color: var(--wp--preset--color--coral);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: background-color 0.2s ease, color 0.2s ease;
+}
+
+.nevo-pagination__prev:hover,
+.nevo-pagination__next:hover,
+.wp-block-query-pagination-previous:hover,
+.wp-block-query-pagination-next:hover {
+  background: var(--wp--preset--color--beige);
+  color: var(--wp--preset--color--coral);
+}
+
+.nevo-pagination__prev svg,
+.nevo-pagination__next svg {
+  width: 16px;
+  height: 16px;
+  flex-shrink: 0;
+}
+
+/* Disabled state */
+.nevo-pagination__prev.is-disabled,
+.nevo-pagination__next.is-disabled,
+.wp-block-query-pagination-previous[aria-disabled="true"],
+.wp-block-query-pagination-next[aria-disabled="true"] {
+  color: var(--wp--preset--color--gray-400);
+  pointer-events: none;
+  cursor: default;
+}
+
+.nevo-pagination__prev.is-disabled:hover,
+.nevo-pagination__next.is-disabled:hover {
+  background: transparent;
+}
+
+/* Page numbers container */
+.nevo-pagination__numbers,
+.wp-block-query-pagination-numbers {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+/* Individual page number */
+.nevo-pagination__number,
+.wp-block-query-pagination-numbers .page-numbers {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
+  padding: 0 12px;
+  background: var(--wp--preset--color--white);
+  border: 1px solid var(--wp--preset--color--gray-200);
+  color: var(--wp--preset--color--primary);
+  font-size: 0.875rem;
+  font-weight: 500;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: border-color 0.2s ease, background-color 0.2s ease, color 0.2s ease;
+}
+
+.nevo-pagination__number:hover,
+.wp-block-query-pagination-numbers .page-numbers:hover {
+  border-color: var(--wp--preset--color--coral);
+  color: var(--wp--preset--color--coral);
+}
+
+/* Current page */
+.nevo-pagination__number.is-current,
+.wp-block-query-pagination-numbers .page-numbers.current {
+  background: var(--wp--preset--color--coral);
+  border-color: var(--wp--preset--color--coral);
+  color: var(--wp--preset--color--white);
+  pointer-events: none;
+}
+
+/* Ellipsis */
+.nevo-pagination__ellipsis,
+.wp-block-query-pagination-numbers .page-numbers.dots {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 40px;
+  height: 40px;
+  color: var(--wp--preset--color--gray-400);
+  font-size: 0.875rem;
+  font-weight: 500;
+  pointer-events: none;
+}
+
+/* Mobile: simplified pagination */
+@media (max-width: 599px) {
+  .nevo-pagination__numbers,
+  .wp-block-query-pagination-numbers {
+    display: none;
+  }
+
+  .nevo-pagination,
+  .wp-block-query-pagination.nevo-pagination {
+    gap: 16px;
+  }
+
+  .nevo-pagination__prev,
+  .nevo-pagination__next,
+  .wp-block-query-pagination-previous,
+  .wp-block-query-pagination-next {
+    padding: 12px 20px;
+    background: var(--wp--preset--color--beige);
+    border-radius: 8px;
+  }
+}
+
+/* Hide static fallback when WordPress pagination is active */
+.wp-block-query-pagination + .nevo-pagination--static {
+  display: none;
 }
 
 /* ============================

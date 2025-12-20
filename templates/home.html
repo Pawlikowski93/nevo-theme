@@ -243,7 +243,48 @@
     <!-- ========================================
          SEKCJA 5: PAGINACJA
          ======================================== -->
-    <!-- Placeholder: nawigacja stron -->
+    <!-- wp:group {"align":"full","className":"nevo-blog-pagination","layout":{"type":"default"}} -->
+    <section class="wp-block-group alignfull nevo-blog-pagination">
+        <!-- wp:group {"className":"nevo-blog-pagination__container","layout":{"type":"constrained","contentSize":"1200px"}} -->
+        <div class="wp-block-group nevo-blog-pagination__container">
+
+            <!-- wp:query-pagination {"layout":{"type":"flex","justifyContent":"center"},"className":"nevo-pagination"} -->
+
+            <!-- wp:query-pagination-previous {"label":"Poprzednia","className":"nevo-pagination__prev"} /-->
+
+            <!-- wp:query-pagination-numbers {"className":"nevo-pagination__numbers"} /-->
+
+            <!-- wp:query-pagination-next {"label":"Następna","className":"nevo-pagination__next"} /-->
+
+            <!-- /wp:query-pagination -->
+
+            <!-- wp:html -->
+            <!-- Fallback static pagination for preview -->
+            <nav class="nevo-pagination nevo-pagination--static" aria-label="Paginacja">
+                <a href="#" class="nevo-pagination__prev is-disabled" aria-disabled="true">
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="15 18 9 12 15 6"/></svg>
+                    Poprzednia
+                </a>
+
+                <div class="nevo-pagination__numbers">
+                    <span class="nevo-pagination__number is-current" aria-current="page">1</span>
+                    <a href="#" class="nevo-pagination__number">2</a>
+                    <a href="#" class="nevo-pagination__number">3</a>
+                    <span class="nevo-pagination__ellipsis">…</span>
+                    <a href="#" class="nevo-pagination__number">12</a>
+                </div>
+
+                <a href="#" class="nevo-pagination__next">
+                    Następna
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><polyline points="9 18 15 12 9 6"/></svg>
+                </a>
+            </nav>
+            <!-- /wp:html -->
+
+        </div>
+        <!-- /wp:group -->
+    </section>
+    <!-- /wp:group -->
 
     <!-- ========================================
          SEKCJA 6: NEWSLETTER CTA (OPCJONALNIE)
