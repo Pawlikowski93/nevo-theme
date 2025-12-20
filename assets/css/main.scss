@@ -13449,3 +13449,92 @@ a.nevo-contact-info__value:hover {
     transform: translateX(4px);
   }
 }
+
+/* ============================================================
+   BLOG ARCHIVE
+   Portal wiedzy NEVO — profesjonalny blog / archiwum postów
+   ============================================================ */
+
+.nevo-blog-archive {
+  background: var(--wp--preset--color--white);
+}
+
+/* ============================
+   BLOG HERO
+   ============================ */
+.nevo-blog-hero {
+  padding: 48px 24px 40px;
+  background: var(--wp--preset--color--beige);
+  text-align: center;
+}
+
+@media (min-width: 768px) {
+  .nevo-blog-hero {
+    padding: 64px 24px 56px;
+  }
+}
+
+/* ============================
+   FEATURED POST
+   ============================ */
+.nevo-blog-featured {
+  padding: 48px 24px;
+  background: var(--wp--preset--color--white);
+}
+
+@media (min-width: 768px) {
+  .nevo-blog-featured {
+    padding: 64px 24px;
+  }
+}
+
+/* ============================
+   CATEGORIES / FILTERS
+   ============================ */
+.nevo-blog-categories {
+  padding: 24px;
+  background: var(--wp--preset--color--white);
+  border-bottom: 1px solid var(--wp--preset--color--gray-200);
+}
+
+/* ============================
+   POSTS GRID
+   ============================ */
+.nevo-blog-grid {
+  padding: 48px 24px;
+  background: var(--wp--preset--color--white);
+}
+
+@media (min-width: 768px) {
+  .nevo-blog-grid {
+    padding: 64px 24px;
+  }
+}
+
+@media (min-width: 1024px) {
+  .nevo-blog-grid {
+    padding: 80px 24px;
+  }
+}
+
+/* ============================
+   PAGINATION
+   ============================ */
+.nevo-blog-pagination {
+  padding: 32px 24px 48px;
+  background: var(--wp--preset--color--white);
+}
+
+/* ============================
+   NEWSLETTER CTA
+   ============================ */
+.nevo-blog-newsletter {
+  padding: 64px 24px;
+  background: var(--wp--preset--color--primary);
+}
+
+@media (min-width: 768px) {
+  .nevo-blog-newsletter {
+    padding: 80px 24px;
+  }
+}
