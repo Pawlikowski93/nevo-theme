@@ -1,49 +1,104 @@
 /**
  * NEVO Main JavaScript
- * 
+ *
  * @package NEVO
  */
 
 console.log('NEVO theme loaded');
 import '../css/main.scss';
 
-// Mobile menu toggle
-document.addEventListener('DOMContentLoaded', () => {
-  const menuToggle = document.querySelector('[data-menu-toggle]');
-  const mobileMenu = document.querySelector('[data-mobile-menu]');
-
-  if (menuToggle && mobileMenu) {
-    menuToggle.addEventListener('click', () => {
-      mobileMenu.classList.toggle('hidden');
-      menuToggle.setAttribute(
-        'aria-expanded',
-        menuToggle.getAttribute('aria-expanded') === 'false' ? 'true' : 'false'
-      );
-    });
-  }
-});
-// Mobile menu (rozszerz istniejący kod)
+/**
+ * Mobile Menu Toggle
+ */
 document.addEventListener('DOMContentLoaded', () => {
   const menuToggle = document.querySelector('[data-menu-toggle]');
   const mobileMenu = document.querySelector('[data-mobile-menu]');
   const body = document.body;
 
   if (menuToggle && mobileMenu) {
+    // Toggle menu on button click
     menuToggle.addEventListener('click', () => {
       const isOpen = mobileMenu.classList.toggle('is-open');
       menuToggle.setAttribute('aria-expanded', isOpen);
-      body.classList.toggle('menu-open', isOpen);
+
+      if (isOpen) {
+        body.style.overflow = 'hidden';
+      } else {
+        body.style.overflow = '';
+      }
     });
 
-    // Close on escape
+    // Close on Escape key
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && mobileMenu.classList.contains('is-open')) {
         mobileMenu.classList.remove('is-open');
         menuToggle.setAttribute('aria-expanded', 'false');
-        body.classList.remove('menu-open');
+        body.style.overflow = '';
+      }
+    });
+
+    // Close when clicking on links
+    const mobileLinks = mobileMenu.querySelectorAll('a');
+    mobileLinks.forEach(link => {
+      link.addEventListener('click', () => {
+        mobileMenu.classList.remove('is-open');
+        menuToggle.setAttribute('aria-expanded', 'false');
+        body.style.overflow = '';
+      });
+    });
+
+    // Submenu toggles
+    const submenuToggles = mobileMenu.querySelectorAll('.submenu-toggle');
+    submenuToggles.forEach(toggle => {
+      toggle.addEventListener('click', () => {
+        const submenu = toggle.nextElementSibling;
+        if (submenu && submenu.classList.contains('submenu')) {
+          submenu.classList.toggle('is-open');
+          toggle.classList.toggle('active');
+        }
+      });
+    });
+  }
+
+  // Header scroll effect
+  const header = document.getElementById('site-header');
+
+  if (header) {
+    window.addEventListener('scroll', () => {
+      const currentScroll = window.pageYOffset;
+
+      if (currentScroll > 50) {
+        header.classList.add('scrolled');
+      } else {
+        header.classList.remove('scrolled');
       }
     });
   }
+
+  // Smooth scroll for anchor links
+  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      const href = this.getAttribute('href');
+
+      if (href === '#' || href === '') {
+        e.preventDefault();
+        return;
+      }
+
+      e.preventDefault();
+
+      const target = document.querySelector(href);
+      if (target) {
+        const headerHeight = header ? header.offsetHeight : 0;
+        const targetPosition = target.offsetTop - headerHeight - 20;
+
+        window.scrollTo({
+          top: targetPosition,
+          behavior: 'smooth'
+        });
+      }
+    });
+  });
 });
 
 // assets/js/nevo-faq.js
@@ -73,94 +128,6 @@ document.addEventListener('DOMContentLoaded', function () {
       }
     });
   });
-});
-
-
-document.addEventListener('DOMContentLoaded', () => {
-  
-  const menuToggle = document.querySelector('[data-menu-toggle]');
-  const mobileMenu = document.querySelector('[data-mobile-menu]');
-  const body = document.body;
-
-  if (menuToggle && mobileMenu) {
-    menuToggle.addEventListener('click', () => {
-      const isOpen = mobileMenu.classList.toggle('is-open');
-      menuToggle.setAttribute('aria-expanded', isOpen);
-      
-      if (isOpen) {
-        body.style.overflow = 'hidden';
-      } else {
-        body.style.overflow = '';
-      }
-    });
-
-    document.addEventListener('keydown', (e) => {
-      if (e.key === 'Escape' && mobileMenu.classList.contains('is-open')) {
-        mobileMenu.classList.remove('is-open');
-        menuToggle.setAttribute('aria-expanded', 'false');
-        body.style.overflow = '';
-      }
-    });
-
-    const mobileLinks = mobileMenu.querySelectorAll('a');
-    mobileLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.remove('is-open');
-        menuToggle.setAttribute('aria-expanded', 'false');
-        body.style.overflow = '';
-      });
-    });
-
-    const submenuToggles = mobileMenu.querySelectorAll('.submenu-toggle');
-    submenuToggles.forEach(toggle => {
-      toggle.addEventListener('click', () => {
-        const submenu = toggle.nextElementSibling;
-        if (submenu && submenu.classList.contains('submenu')) {
-          submenu.classList.toggle('is-open');
-          toggle.classList.toggle('active');
-        }
-      });
-    });
-  }
-
-  const header = document.getElementById('site-header');
-
-  if (header) {
-    window.addEventListener('scroll', () => {
-      const currentScroll = window.pageYOffset;
-
-      if (currentScroll > 50) {
-        header.classList.add('scrolled');
-      } else {
-        header.classList.remove('scrolled');
-      }
-    });
-  }
-
-  document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-    anchor.addEventListener('click', function (e) {
-      const href = this.getAttribute('href');
-
-      if (href === '#' || href === '') {
-        e.preventDefault();
-        return;
-      }
-
-      e.preventDefault();
-
-      const target = document.querySelector(href);
-      if (target) {
-        const headerHeight = header ? header.offsetHeight : 0;
-        const targetPosition = target.offsetTop - headerHeight - 20;
-
-        window.scrollTo({
-          top: targetPosition,
-          behavior: 'smooth'
-        });
-      }
-    });
-  });
-
 });
 
 /**
