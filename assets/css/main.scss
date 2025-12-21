@@ -565,6 +565,23 @@
   color: var(--wp--preset--color--coral);
 }
 
+.nevo-problem-card__icon--error {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: rgba(239, 68, 68, 0.1);
+  color: #ef4444;
+  margin-bottom: 16px;
+}
+
+.nevo-problem-card__icon--error svg {
+  width: 22px;
+  height: 22px;
+}
+
 .nevo-problem-card__title {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.05rem;
@@ -2178,6 +2195,43 @@
 
 .nevo-service-problem__cta {
   margin: 0;
+}
+
+.nevo-service-problem__footer-text {
+  font-size: 1.15rem;
+  font-weight: 500;
+  color: var(--wp--preset--color--primary);
+  margin: 0;
+}
+
+.nevo-service-problem__footer-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  background: var(--wp--preset--color--coral);
+  color: var(--wp--preset--color--white);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 999px;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(255, 107, 88, 0.3);
+  transition: all 0.25s ease;
+}
+
+.nevo-service-problem__footer-cta:hover {
+  background: var(--wp--preset--color--coral-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(255, 107, 88, 0.4);
+}
+
+.nevo-service-problem__footer-cta svg {
+  transition: transform 0.2s ease;
+}
+
+.nevo-service-problem__footer-cta:hover svg {
+  transform: translateX(4px);
 }
 
 /* RESPONSYWNOŚĆ */
