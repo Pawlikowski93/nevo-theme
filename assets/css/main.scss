@@ -13881,11 +13881,13 @@ a.nevo-contact-info__value:hover {
   flex-wrap: wrap;
   justify-content: center;
   gap: 10px;
+  margin-bottom: 16px;
 }
 
 @media (min-width: 768px) {
   .nevo-blog-categories__nav {
     gap: 12px;
+    margin-bottom: 20px;
   }
 }
 
