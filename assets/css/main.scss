@@ -976,6 +976,7 @@
 
 .nevo-pillars__tab {
   display: flex;
+  flex-direction: column;
   align-items: center;
   gap: 10px;
   padding: 14px 20px;
@@ -1199,11 +1200,21 @@
     font-size: 1.4rem;
   }
 }
-/* Ustawiamy przyciski w jednym wierszu, ikona + label + strzałka */
+/* Ustawiamy przyciski - ikona nad tekstem na mobile, w rzędzie na desktop */
 .nevo-pillars__tab {
   display: flex;
+  flex-direction: column;
   align-items: center;
-  gap: 16px;
+  gap: 12px;
+  text-align: center;
+}
+
+@media (min-width: 1024px) {
+  .nevo-pillars__tab {
+    flex-direction: row;
+    text-align: left;
+    gap: 16px;
+  }
 }
 
 /* Wrapper na ikony – stały rozmiar dla wszystkich kart */
@@ -1211,7 +1222,13 @@
   position: relative;
   flex: 0 0 80px;     /* szerokość kolumny z ikoną */
   height: 80px;       /* wysokość kolumny z ikoną */
-  margin-right: 12px;
+  margin-right: 0;
+}
+
+@media (min-width: 1024px) {
+  .nevo-pillars__tab-icon {
+    margin-right: 12px;
+  }
 }
 
 /* Obie wersje ikony siedzą dokładnie jedna na drugiej */
@@ -5512,7 +5529,7 @@
   justify-content: center;
   background: transparent;
   border: none;
-  color: var(--wp--preset--color--white);
+  color: #fff;
   cursor: pointer;
   z-index: 1001;
   transition: all 0.2s ease;
