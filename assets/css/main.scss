@@ -14236,6 +14236,13 @@ a.nevo-contact-info__value:hover {
   background: var(--wp--preset--color--cream);
 }
 
+/* Hide separator between category terms */
+.nevo-blog-card__category .wp-block-post-terms__separator,
+.nevo-blog-featured__category .wp-block-post-terms__separator,
+.nevo-related-card__category .wp-block-post-terms__separator {
+  display: none;
+}
+
 /* Card excerpt (WordPress block) */
 .nevo-blog-card__excerpt p {
   margin: 0;

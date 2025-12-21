@@ -1,102 +1,19 @@
 <!-- wp:template-part {"slug":"header","tagName":"header"} /-->
 
-<!-- wp:group {"tagName":"main","align":"full","className":"nevo-blog-archive","layout":{"type":"default"}} -->
-<main class="wp-block-group alignfull nevo-blog-archive" id="main-content">
+<!-- wp:group {"tagName":"main","align":"full","className":"nevo-blog-archive nevo-category-archive","layout":{"type":"default"}} -->
+<main class="wp-block-group alignfull nevo-blog-archive nevo-category-archive" id="main-content">
 
     <!-- ========================================
-         SEKCJA 1: HERO
+         SEKCJA 1: HERO - TYTUŁ KATEGORII
          ======================================== -->
     <!-- wp:group {"align":"full","className":"nevo-blog-hero","layout":{"type":"default"}} -->
     <section class="wp-block-group alignfull nevo-blog-hero">
         <!-- wp:group {"className":"nevo-blog-hero__container","layout":{"type":"constrained","contentSize":"700px"}} -->
         <div class="wp-block-group nevo-blog-hero__container">
-            <!-- wp:html -->
 
-            <div class="nevo-blog-hero__decorator" aria-hidden="true">
-                <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round">
-                    <path d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"/>
-                    <path d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2z"/>
-                    <line x1="8" y1="6" x2="16" y2="6"/>
-                    <line x1="8" y1="10" x2="14" y2="10"/>
-                </svg>
-            </div>
+            <!-- wp:query-title {"type":"archive","textAlign":"center","className":"nevo-blog-hero__title"} /-->
 
-            <h1 class="nevo-blog-hero__title">Wiedza, która działa</h1>
-
-            <p class="nevo-blog-hero__subtitle">Strategie, narzędzia i case studies dla e-commerce i marketingu. Bez lania wody — tylko to, co możesz wdrożyć.</p>
-
-            <span class="nevo-blog-hero__meta">Aktualizowane co tydzień</span>
-
-            <!-- /wp:html -->
-        </div>
-        <!-- /wp:group -->
-    </section>
-    <!-- /wp:group -->
-
-    <!-- ========================================
-         SEKCJA 2: FEATURED POST (DYNAMICZNY - STICKY POST)
-         ======================================== -->
-    <!-- wp:group {"align":"full","className":"nevo-blog-featured","layout":{"type":"default"}} -->
-    <section class="wp-block-group alignfull nevo-blog-featured">
-        <!-- wp:group {"className":"nevo-blog-featured__container","layout":{"type":"constrained","contentSize":"1200px"}} -->
-        <div class="wp-block-group nevo-blog-featured__container">
-
-            <!-- wp:query {"queryId":1,"query":{"perPage":1,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"only","inherit":false},"className":"nevo-featured-query"} -->
-            <div class="wp-block-query nevo-featured-query">
-
-                <!-- wp:post-template {"className":"nevo-blog-featured__list"} -->
-
-                <!-- wp:group {"className":"nevo-blog-featured__card-wrapper","layout":{"type":"default"}} -->
-                <div class="wp-block-group nevo-blog-featured__card-wrapper">
-                    <!-- wp:html -->
-                    <span class="nevo-blog-featured__badge">Wyróżnione</span>
-                    <!-- /wp:html -->
-
-                    <!-- wp:group {"className":"nevo-blog-featured__grid","layout":{"type":"default"}} -->
-                    <div class="wp-block-group nevo-blog-featured__grid">
-
-                        <!-- wp:group {"className":"nevo-blog-featured__image","layout":{"type":"default"}} -->
-                        <div class="wp-block-group nevo-blog-featured__image">
-                            <!-- wp:post-featured-image {"isLink":true,"aspectRatio":"16/9","className":"nevo-blog-featured__thumbnail"} /-->
-                        </div>
-                        <!-- /wp:group -->
-
-                        <!-- wp:group {"className":"nevo-blog-featured__content","layout":{"type":"default"}} -->
-                        <div class="wp-block-group nevo-blog-featured__content">
-
-                            <!-- wp:post-terms {"term":"category","className":"nevo-blog-featured__category"} /-->
-
-                            <!-- wp:post-title {"level":2,"isLink":true,"className":"nevo-blog-featured__title"} /-->
-
-                            <!-- wp:post-excerpt {"moreText":"","showMoreOnNewLine":false,"excerptLength":30,"className":"nevo-blog-featured__excerpt"} /-->
-
-                            <!-- wp:group {"className":"nevo-blog-featured__meta","layout":{"type":"flex","flexWrap":"nowrap"}} -->
-                            <div class="wp-block-group nevo-blog-featured__meta">
-                                <!-- wp:post-date {"format":"j F Y","className":"nevo-blog-featured__date"} /-->
-                                <!-- wp:html -->
-                                <span class="nevo-blog-featured__reading-time">
-                                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                                    5 min czytania
-                                </span>
-                                <!-- /wp:html -->
-                            </div>
-                            <!-- /wp:group -->
-
-                            <!-- wp:read-more {"content":"Czytaj artykuł →","className":"nevo-blog-featured__cta"} /-->
-
-                        </div>
-                        <!-- /wp:group -->
-
-                    </div>
-                    <!-- /wp:group -->
-                </div>
-                <!-- /wp:group -->
-
-                <!-- /wp:post-template -->
-
-
-            </div>
-            <!-- /wp:query -->
+            <!-- wp:term-description {"textAlign":"center","className":"nevo-blog-hero__subtitle"} /-->
 
         </div>
         <!-- /wp:group -->
@@ -104,7 +21,7 @@
     <!-- /wp:group -->
 
     <!-- ========================================
-         SEKCJA 3: KATEGORIE / FILTRY (DYNAMICZNE)
+         SEKCJA 2: KATEGORIE / FILTRY
          ======================================== -->
     <!-- wp:group {"align":"full","className":"nevo-blog-categories","layout":{"type":"default"}} -->
     <section class="wp-block-group alignfull nevo-blog-categories">
@@ -113,7 +30,7 @@
 
             <!-- wp:html -->
             <nav class="nevo-blog-categories__nav" aria-label="Kategorie bloga">
-                <a href="/blog/" class="nevo-blog-category-link is-active">Wszystkie</a>
+                <a href="/blog/" class="nevo-blog-category-link">Wszystkie</a>
             </nav>
             <!-- /wp:html -->
 
@@ -125,9 +42,9 @@
     <!-- /wp:group -->
 
     <!-- ========================================
-         SEKCJA 4: GRID ARTYKUŁÓW (DYNAMICZNY QUERY LOOP)
+         SEKCJA 3: GRID ARTYKUŁÓW (QUERY LOOP - INHERIT)
          ======================================== -->
-    <!-- wp:query {"queryId":2,"query":{"perPage":9,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"exclude","inherit":true},"align":"full","className":"nevo-blog-grid"} -->
+    <!-- wp:query {"queryId":1,"query":{"perPage":9,"pages":0,"offset":0,"postType":"post","order":"desc","orderBy":"date","author":"","search":"","exclude":[],"sticky":"exclude","inherit":true},"align":"full","className":"nevo-blog-grid"} -->
     <section class="wp-block-query alignfull nevo-blog-grid">
         <!-- wp:group {"className":"nevo-blog-grid__container","layout":{"type":"constrained","contentSize":"1200px"}} -->
         <div class="wp-block-group nevo-blog-grid__container">
@@ -166,12 +83,11 @@
 
             <!-- /wp:post-template -->
 
-
         </div>
         <!-- /wp:group -->
 
         <!-- ========================================
-             SEKCJA 5: PAGINACJA (WEWNĄTRZ QUERY)
+             SEKCJA 4: PAGINACJA
              ======================================== -->
         <!-- wp:group {"className":"nevo-blog-pagination__container","layout":{"type":"constrained","contentSize":"1200px"}} -->
         <div class="wp-block-group nevo-blog-pagination__container">
@@ -193,7 +109,7 @@
     <!-- /wp:query -->
 
     <!-- ========================================
-         SEKCJA 6: NEWSLETTER CTA
+         SEKCJA 5: NEWSLETTER CTA
          ======================================== -->
     <!-- wp:group {"align":"full","className":"nevo-blog-newsletter","layout":{"type":"default"}} -->
     <section class="wp-block-group alignfull nevo-blog-newsletter">
