@@ -2454,6 +2454,122 @@
   font-weight: 600;
 }
 
+/* =========================================
+   NEVO – STRATEGIA SOLUTION VARIANT
+   ========================================= */
+
+.nevo-service-solution--strategia {
+  background: var(--wp--preset--color--beige);
+}
+
+.nevo-service-solution--strategia::before {
+  background: radial-gradient(
+    circle at 80% 20%,
+    rgba(255, 107, 88, 0.05) 0%,
+    transparent 50%
+  );
+}
+
+.nevo-service-solution--strategia .nevo-service-solution__grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 32px;
+}
+
+.nevo-service-solution--strategia .nevo-service-solution__card {
+  background: var(--wp--preset--color--white);
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(28, 46, 64, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.nevo-service-solution--strategia .nevo-service-solution__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.08);
+}
+
+.nevo-service-solution--strategia .nevo-service-solution__icon {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 72px;
+  height: 72px;
+  margin-bottom: 20px;
+  color: var(--wp--preset--color--coral);
+}
+
+.nevo-service-solution--strategia .nevo-service-solution__icon svg {
+  width: 48px;
+  height: 48px;
+}
+
+.nevo-service-solution--strategia .nevo-service-solution__title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1.25rem;
+  color: var(--wp--preset--color--primary);
+  margin: 0 0 8px;
+}
+
+.nevo-service-solution--strategia .nevo-service-solution__time {
+  display: inline-block;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: var(--wp--preset--color--coral);
+  margin-bottom: 16px;
+}
+
+.nevo-service-solution--strategia .nevo-service-solution__list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nevo-service-solution--strategia .nevo-service-solution__list li {
+  position: relative;
+  padding-left: 24px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: var(--wp--preset--color--gray-600);
+  margin-bottom: 10px;
+}
+
+.nevo-service-solution--strategia .nevo-service-solution__list li:last-child {
+  margin-bottom: 0;
+}
+
+.nevo-service-solution--strategia .nevo-service-solution__list li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 8px;
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: var(--wp--preset--color--coral);
+  opacity: 0.6;
+}
+
+.nevo-service-solution--strategia .nevo-service-solution__highlight {
+  margin-top: 48px;
+  padding: 24px 32px;
+  background: var(--wp--preset--color--primary);
+  border-radius: 12px;
+  text-align: center;
+}
+
+.nevo-service-solution--strategia .nevo-service-solution__highlight-text {
+  font-size: 1.05rem;
+  color: var(--wp--preset--color--white);
+  margin: 0;
+}
+
+.nevo-service-solution--strategia .nevo-service-solution__highlight-text strong {
+  color: var(--wp--preset--color--coral);
+}
+
 /* RESPONSYWNOŚĆ */
 
 @media (max-width: 768px) {
@@ -2495,6 +2611,24 @@
 
   .nevo-service-solution__highlight-text {
     font-size: 0.95rem;
+  }
+
+  .nevo-service-solution--strategia .nevo-service-solution__grid {
+    grid-template-columns: 1fr;
+  }
+
+  .nevo-service-solution--strategia .nevo-service-solution__card {
+    padding: 28px 24px;
+  }
+
+  .nevo-service-solution--strategia .nevo-service-solution__icon {
+    width: 56px;
+    height: 56px;
+  }
+
+  .nevo-service-solution--strategia .nevo-service-solution__icon svg {
+    width: 40px;
+    height: 40px;
   }
 }
 
