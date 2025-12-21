@@ -1586,8 +1586,18 @@
 .nevo-social__logos {
   margin-top: 40px;
   margin-bottom: 30px;
-  gap: 32px;
+  gap: 32px 48px;
   align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+/* Nadpisanie równego podziału WordPress columns - każde logo zajmuje tyle ile potrzebuje */
+.nevo-social__logos.wp-block-columns > .wp-block-column {
+  flex-basis: auto !important;
+  flex-grow: 0;
+  flex-shrink: 0;
+  width: auto;
 }
 
 .nevo-social__logo-item {
@@ -1607,9 +1617,10 @@
 }
 
 .nevo-social__logo img {
-  max-height: 80px;
-  width: auto;
-  height: auto;
+  max-height: 60px;
+  width: auto !important;
+  height: auto !important;
+  object-fit: contain;
 }
 
 /* hover – delikatny „pop” */
@@ -1663,11 +1674,11 @@
   }
 
   .nevo-social__logos {
-    gap: 24px;
+    gap: 24px 32px;
   }
 
   .nevo-social__logo img {
-    max-width: 120px;
+    max-height: 50px;
   }
 
   .nevo-social__tech-badges {
@@ -1682,17 +1693,11 @@
   }
 
   .nevo-social__logos {
-    flex-direction: column;
-    display: flex; /* nadpisujemy wp-block-columns na mobile */
-  }
-
-  .nevo-social__logo-item {
-    width: 100%;
-    justify-content: flex-start;
+    gap: 20px 24px;
   }
 
   .nevo-social__logo img {
-    max-width: 130px;
+    max-height: 45px;
   }
 }
 /* Kontener z logotypami */
