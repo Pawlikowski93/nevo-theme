@@ -3620,6 +3620,60 @@
   box-shadow: 0 8px 24px rgba(255, 107, 88, 0.4);
 }
 
+.nevo-cf7-submit svg {
+  display: inline-block;
+  vertical-align: middle;
+  margin-left: 8px;
+  transition: transform 0.2s ease;
+}
+
+.nevo-cf7-submit:hover svg {
+  transform: translateX(4px);
+}
+
+/* Alternative: native input/textarea styling */
+.nevo-cf7-field input,
+.nevo-cf7-field textarea {
+  width: 100%;
+  padding: 14px 18px;
+  border-radius: 10px;
+  border: 2px solid rgba(255, 255, 255, 0.15);
+  background: rgba(255, 255, 255, 0.95);
+  color: var(--wp--preset--color--primary);
+  font-size: 1rem;
+  font-family: 'Inter', sans-serif;
+  transition: border-color 0.25s ease, box-shadow 0.25s ease;
+}
+
+.nevo-cf7-field input::placeholder,
+.nevo-cf7-field textarea::placeholder {
+  color: #8a9bab;
+}
+
+.nevo-cf7-field input:focus,
+.nevo-cf7-field textarea:focus {
+  outline: none;
+  border-color: var(--wp--preset--color--coral);
+  box-shadow: 0 0 0 4px rgba(255, 107, 88, 0.15);
+}
+
+.nevo-cf7-field textarea {
+  min-height: 120px;
+  resize: vertical;
+}
+
+/* Label modifiers */
+.nevo-cf7-field label .required {
+  color: var(--wp--preset--color--coral);
+  font-weight: 400;
+}
+
+.nevo-cf7-field label .optional {
+  color: rgba(229, 220, 197, 0.5);
+  font-weight: 400;
+  font-size: 0.85em;
+}
+
 /* CF7 response messages */
 
 .wpcf7-response-output {
