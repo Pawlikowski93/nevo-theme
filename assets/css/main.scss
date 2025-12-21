@@ -4648,6 +4648,174 @@
     opacity: 0.5;
   }
 }
+
+/* =========================================
+   NEVO – STRATEGIA HERO (variant)
+   ========================================= */
+
+.nevo-service-hero--strategia {
+  position: relative;
+  padding: 120px 20px 100px;
+  background: linear-gradient(
+    160deg,
+    var(--wp--preset--color--primary) 0%,
+    var(--wp--preset--color--primary-dark) 50%,
+    var(--wp--preset--color--primary-darkest) 100%
+  );
+  color: var(--wp--preset--color--white);
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Abstract network pattern (strategy/connections feel) */
+.nevo-service-hero--strategia::before {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1000px;
+  height: 1000px;
+  border-radius: 50%;
+  background:
+    radial-gradient(
+      circle at 30% 30%,
+      rgba(255, 107, 88, 0.08) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 70% 60%,
+      rgba(212, 165, 116, 0.06) 0%,
+      transparent 40%
+    );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Diagonal accent line */
+.nevo-service-hero--strategia::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--wp--preset--color--coral) 50%,
+    transparent 100%
+  );
+  opacity: 0.6;
+}
+
+.nevo-service-hero--strategia .nevo-service-hero__inner {
+  position: relative;
+  z-index: 1;
+  max-width: 800px;
+  margin: 0 auto;
+}
+
+.nevo-service-hero--strategia .nevo-service-hero__badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  padding: 8px 20px;
+  background: rgba(255, 107, 88, 0.15);
+  border: 1px solid rgba(255, 107, 88, 0.3);
+  border-radius: 999px;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: var(--wp--preset--color--coral);
+  margin-bottom: 24px;
+}
+
+.nevo-service-hero--strategia .nevo-service-hero__headline {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.2;
+  color: var(--wp--preset--color--white);
+  margin: 0 0 20px;
+}
+
+.nevo-service-hero--strategia .nevo-service-hero__subhead {
+  font-size: clamp(1.05rem, 1.5vw, 1.2rem);
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 400;
+  margin: 0 0 32px;
+}
+
+.nevo-service-hero--strategia .nevo-service-hero__cta-wrap {
+  margin-bottom: 28px;
+}
+
+.nevo-service-hero--strategia .nevo-service-hero__cta .wp-block-button__link {
+  background: var(--wp--preset--color--coral);
+  color: var(--wp--preset--color--white);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 18px 40px;
+  border-radius: 999px;
+  box-shadow: 0 8px 24px rgba(255, 107, 88, 0.35);
+  transition: all 0.25s ease;
+}
+
+.nevo-service-hero--strategia .nevo-service-hero__cta .wp-block-button__link:hover {
+  background: var(--wp--preset--color--coral-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(255, 107, 88, 0.45);
+}
+
+.nevo-service-hero--strategia .nevo-service-hero__benefits {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px 32px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nevo-service-hero--strategia .nevo-service-hero__benefits li {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.nevo-service-hero--strategia .nevo-service-hero__benefits li svg {
+  color: var(--wp--preset--color--coral);
+  flex-shrink: 0;
+}
+
+/* RESPONSYWNOŚĆ */
+
+@media (max-width: 768px) {
+  .nevo-service-hero--strategia {
+    padding: 80px 16px 64px;
+  }
+
+  .nevo-service-hero--strategia .nevo-service-hero__headline {
+    font-size: clamp(1.75rem, 6vw, 2.2rem);
+  }
+
+  .nevo-service-hero--strategia .nevo-service-hero__benefits {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .nevo-service-hero--strategia::before {
+    width: 600px;
+    height: 600px;
+    opacity: 0.6;
+  }
+}
+
 /* =========================================
    NEVO – SERVICE PRICING (PACKAGES VARIANT)
    ========================================= */
