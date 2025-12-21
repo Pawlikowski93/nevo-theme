@@ -2938,6 +2938,28 @@
 }
 
 /* =========================================
+   NEVO – STRATEGIA PROCESS VARIANT
+   ========================================= */
+
+.nevo-service-process--strategia {
+  background: var(--wp--preset--color--white);
+}
+
+.nevo-service-process--strategia::before {
+  background:
+    radial-gradient(
+      circle at 20% 80%,
+      rgba(255, 107, 88, 0.04) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 80% 20%,
+      rgba(212, 165, 116, 0.03) 0%,
+      transparent 40%
+    );
+}
+
+/* =========================================
    NEVO – SERVICE PRICING + FAQ SECTION
    ========================================= */
 
