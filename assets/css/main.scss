@@ -3234,6 +3234,247 @@
 }
 
 /* =========================================
+   NEVO – STRATEGIA PRICING VARIANT
+   ========================================= */
+
+.nevo-service-pricing--strategia {
+  background: var(--wp--preset--color--beige);
+}
+
+.nevo-service-pricing--strategia .nevo-service-pricing__inner {
+  max-width: 1200px;
+}
+
+/* 2-column grid: Price Box + FAQ */
+.nevo-pricing-faq-grid {
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 48px;
+  align-items: start;
+}
+
+/* Price Box */
+.nevo-service-pricing__box {
+  background: linear-gradient(135deg, #1c2e40 0%, #243647 100%);
+  border-radius: 20px;
+  padding: 40px 36px;
+  color: var(--wp--preset--color--white);
+  box-shadow: 0 20px 60px rgba(28, 46, 64, 0.3);
+  position: sticky;
+  top: 120px;
+}
+
+.nevo-service-pricing--strategia .nevo-service-pricing__label {
+  display: inline-block;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 8px;
+}
+
+.nevo-service-pricing--strategia .nevo-service-pricing__amount {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: clamp(2.5rem, 4vw, 3rem);
+  color: var(--wp--preset--color--white);
+  margin: 0 0 8px;
+  line-height: 1.1;
+}
+
+.nevo-service-pricing__amount-note {
+  font-size: 0.5em;
+  font-weight: 500;
+  opacity: 0.7;
+  vertical-align: middle;
+}
+
+.nevo-service-pricing--strategia .nevo-service-pricing__note {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.6);
+  margin: 0 0 24px;
+}
+
+.nevo-service-pricing__divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.15);
+  margin: 24px 0;
+}
+
+.nevo-service-pricing__included-title,
+.nevo-service-pricing__optional-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 0.9rem;
+  font-weight: 600;
+  color: var(--wp--preset--color--coral);
+  margin: 0 0 16px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.nevo-service-pricing--strategia .nevo-service-pricing__included-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+}
+
+.nevo-service-pricing--strategia .nevo-service-pricing__included-list li {
+  display: flex;
+  align-items: flex-start;
+  gap: 12px;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.9);
+  margin-bottom: 12px;
+  line-height: 1.5;
+}
+
+.nevo-service-pricing--strategia .nevo-service-pricing__included-list li:last-child {
+  margin-bottom: 0;
+}
+
+.nevo-service-pricing--strategia .nevo-service-pricing__included-list svg {
+  color: var(--wp--preset--color--coral);
+  flex-shrink: 0;
+  margin-top: 2px;
+}
+
+.nevo-service-pricing__optional-list {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 28px;
+}
+
+.nevo-service-pricing__optional-list li {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+  margin-bottom: 8px;
+}
+
+.nevo-service-pricing__optional-list li strong {
+  color: var(--wp--preset--color--coral);
+  font-weight: 600;
+}
+
+.nevo-service-pricing__cta-button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  width: 100%;
+  padding: 16px 32px;
+  background: var(--wp--preset--color--coral);
+  color: var(--wp--preset--color--white);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1.05rem;
+  border-radius: 999px;
+  text-decoration: none;
+  box-shadow: 0 8px 24px rgba(255, 107, 88, 0.4);
+  transition: all 0.25s ease;
+}
+
+.nevo-service-pricing__cta-button:hover {
+  background: var(--wp--preset--color--coral-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(255, 107, 88, 0.5);
+}
+
+.nevo-service-pricing__cta-button svg {
+  transition: transform 0.2s ease;
+}
+
+.nevo-service-pricing__cta-button:hover svg {
+  transform: translateX(4px);
+}
+
+/* FAQ Column */
+.nevo-service-pricing__faq-column {
+  padding-top: 8px;
+}
+
+.nevo-service-pricing--strategia .nevo-service-pricing__faq-title {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.75rem, 3vw, 2.2rem);
+  color: var(--wp--preset--color--primary);
+  margin: 0 0 32px;
+}
+
+.nevo-service-pricing__faq-list {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.nevo-service-pricing--strategia .nevo-service-pricing__faq-item {
+  background: var(--wp--preset--color--white);
+  border-radius: 14px;
+  padding: 24px 28px;
+  border-left: 4px solid var(--wp--preset--color--coral);
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.04);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.nevo-service-pricing--strategia .nevo-service-pricing__faq-item:hover {
+  transform: translateX(6px);
+  box-shadow: 0 8px 24px rgba(0, 0, 0, 0.08);
+}
+
+.nevo-service-pricing--strategia .nevo-service-pricing__faq-question {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.05rem;
+  font-weight: 600;
+  color: var(--wp--preset--color--primary);
+  margin: 0 0 10px;
+}
+
+.nevo-service-pricing--strategia .nevo-service-pricing__faq-answer {
+  font-size: 0.92rem;
+  line-height: 1.7;
+  color: var(--wp--preset--color--gray-600);
+  margin: 0;
+}
+
+/* RESPONSYWNOŚĆ */
+
+@media (max-width: 1024px) {
+  .nevo-pricing-faq-grid {
+    grid-template-columns: 1fr;
+    gap: 48px;
+  }
+
+  .nevo-service-pricing__box {
+    position: static;
+    max-width: 500px;
+    margin: 0 auto;
+  }
+}
+
+@media (max-width: 768px) {
+  .nevo-service-pricing--strategia {
+    padding: 72px 16px 80px;
+  }
+
+  .nevo-service-pricing__box {
+    padding: 32px 28px;
+  }
+
+  .nevo-service-pricing--strategia .nevo-service-pricing__amount {
+    font-size: 2.4rem;
+  }
+
+  .nevo-service-pricing--strategia .nevo-service-pricing__faq-title {
+    font-size: 1.75rem;
+    margin-bottom: 24px;
+  }
+
+  .nevo-service-pricing--strategia .nevo-service-pricing__faq-item {
+    padding: 20px 22px;
+  }
+}
+
+/* =========================================
    NEVO – SERVICE FINAL CTA SECTION
    ========================================= */
 
