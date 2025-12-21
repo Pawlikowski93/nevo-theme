@@ -16,6 +16,15 @@ document.addEventListener('DOMContentLoaded', () => {
   const body = document.body;
 
   if (menuToggle && mobileMenu) {
+    const closeButton = document.querySelector('[data-mobile-close]');
+
+    // Function to close mobile menu
+    const closeMobileMenu = () => {
+      mobileMenu.classList.remove('is-open');
+      menuToggle.setAttribute('aria-expanded', 'false');
+      body.style.overflow = '';
+    };
+
     // Toggle menu on button click
     menuToggle.addEventListener('click', () => {
       const isOpen = mobileMenu.classList.toggle('is-open');
@@ -28,23 +37,22 @@ document.addEventListener('DOMContentLoaded', () => {
       }
     });
 
+    // Close menu on X button click
+    if (closeButton) {
+      closeButton.addEventListener('click', closeMobileMenu);
+    }
+
     // Close on Escape key
     document.addEventListener('keydown', (e) => {
       if (e.key === 'Escape' && mobileMenu.classList.contains('is-open')) {
-        mobileMenu.classList.remove('is-open');
-        menuToggle.setAttribute('aria-expanded', 'false');
-        body.style.overflow = '';
+        closeMobileMenu();
       }
     });
 
     // Close when clicking on links
     const mobileLinks = mobileMenu.querySelectorAll('a');
     mobileLinks.forEach(link => {
-      link.addEventListener('click', () => {
-        mobileMenu.classList.remove('is-open');
-        menuToggle.setAttribute('aria-expanded', 'false');
-        body.style.overflow = '';
-      });
+      link.addEventListener('click', closeMobileMenu);
     });
 
     // Submenu toggles
