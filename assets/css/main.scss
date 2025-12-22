@@ -4154,6 +4154,99 @@
 }
 
 /* =========================================
+   NEVO – SERVICE FAQ SECTION
+   ========================================= */
+
+.nevo-service-faq {
+  background: var(--wp--preset--color--white);
+  padding: 100px 20px 120px;
+  position: relative;
+}
+
+.nevo-service-faq__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.nevo-service-faq__header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.nevo-service-faq__heading {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--wp--preset--color--primary);
+  margin: 0;
+}
+
+/* FAQ Grid */
+.nevo-faq-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+}
+
+.nevo-faq-item {
+  background: var(--wp--preset--color--white);
+  border: 1px solid rgba(28, 46, 64, 0.1);
+  border-radius: 12px;
+  padding: 28px 32px;
+  transition: box-shadow 0.25s ease, border-color 0.25s ease;
+}
+
+.nevo-faq-item:hover {
+  border-color: var(--wp--preset--color--coral);
+  box-shadow: 0 8px 32px rgba(255, 107, 88, 0.1);
+}
+
+.nevo-faq-item__question {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--wp--preset--color--primary);
+  margin: 0 0 12px;
+  line-height: 1.4;
+}
+
+.nevo-faq-item__answer {
+  font-size: 0.95rem;
+  line-height: 1.7;
+  color: var(--wp--preset--color--gray-600);
+  margin: 0;
+}
+
+/* Performance variant */
+.nevo-service-faq--performance {
+  background: var(--wp--preset--color--white);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nevo-service-faq {
+    padding: 72px 16px 80px;
+  }
+
+  .nevo-service-faq__heading {
+    font-size: 1.75rem;
+  }
+
+  .nevo-faq-grid {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .nevo-faq-item {
+    padding: 24px;
+  }
+
+  .nevo-faq-item__question {
+    font-size: 1rem;
+  }
+}
+
+/* =========================================
    NEVO – SERVICE FINAL CTA SECTION
    ========================================= */
 
