@@ -2945,6 +2945,11 @@
   background: var(--wp--preset--color--white);
 }
 
+/* Gap between header and timeline */
+.nevo-service-process--strategia .nevo-service-process__header {
+  margin-bottom: 64px;
+}
+
 .nevo-service-process--strategia::before {
   background:
     radial-gradient(
@@ -3528,7 +3533,8 @@
 
 /* Subheading */
 
-.nevo-service-final-cta__subheading {
+.nevo-service-final-cta__subheading,
+.nevo-service-final-cta__subhead {
   color: var(--wp--preset--color--cream);
   font-size: 1.05rem;
   line-height: 1.6;
@@ -3536,6 +3542,7 @@
   max-width: 680px;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
 }
 
 /* Content wrapper (2 kolumny: form | phone) */
@@ -3719,7 +3726,8 @@
 
 /* Phone title */
 
-.nevo-service-final-cta__phone-title {
+.nevo-service-final-cta__phone-title,
+.nevo-service-final-cta__phone-heading {
   font-family: 'Montserrat', sans-serif;
   font-size: 1.3rem;
   font-weight: 600;
@@ -3786,7 +3794,8 @@
     margin-bottom: 12px;
   }
 
-  .nevo-service-final-cta__subheading {
+  .nevo-service-final-cta__subheading,
+  .nevo-service-final-cta__subhead {
     font-size: 1rem;
     margin-bottom: 36px;
   }
