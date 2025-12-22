@@ -597,6 +597,14 @@
   color: #4a5b6a;
 }
 
+.nevo-problem-card__highlight {
+  margin: 0.75rem 0 0;
+  font-size: 0.875rem;
+  font-weight: 600;
+  color: var(--wp--preset--color--coral);
+  line-height: 1.4;
+}
+
 .nevo-problem-card {
   background: var(--wp--preset--color--white);
   border-radius: 18px;
