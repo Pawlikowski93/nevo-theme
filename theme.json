@@ -3,7 +3,7 @@
   "version": 2,
   "customTemplates": [
     {
-      "name": "page-strategia-marketingowa",
+      "name": "page-strategia",
       "title": "Strategia Marketingowa",
       "postTypes": ["page"]
     },
