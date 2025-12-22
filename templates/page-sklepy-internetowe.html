@@ -99,57 +99,58 @@
             <h2 class="wp-block-heading has-text-align-center nevo-service-problem__heading has-4-xl-font-size">Brzmi znajomo?</h2>
             <!-- /wp:heading -->
 
-            <!-- Cards Grid -->
+            <!-- Carousel -->
             <!-- wp:html -->
-            <div class="nevo-problem-cards nevo-problem-cards--sklepy">
+            <div class="nevo-carousel nevo-problems__carousel" data-nevo-carousel>
+              <button class="nevo-carousel__btn nevo-carousel__btn--prev" type="button" aria-label="Poprzedni problem"></button>
 
-                <!-- KARTA 1 -->
-                <div class="nevo-service-problem__card">
-                    <span class="nevo-service-problem__icon">❌</span>
-                    <h3 class="nevo-service-problem__card-title">Sklep ładuje się wieczność – klienci uciekają</h3>
-                    <p class="nevo-service-problem__card-text">Mobile PageSpeed &lt;50, desktop 8 sekund do załadowania. 72% użytkowników zamyka stronę zanim się załaduje. Google rankuje Cię nisko bo prędkość to ranking factor.</p>
-                    <p class="nevo-service-problem__highlight">→ Tracisz 15-25% potencjalnych klientów zanim zobaczą ofertę.</p>
+              <div class="nevo-carousel__viewport" data-nevo-carousel-viewport>
+                <div class="nevo-carousel__track" data-nevo-carousel-track>
+
+                  <article class="nevo-carousel__slide nevo-problem-card">
+                    <span class="nevo-problem-card__icon nevo-problem-card__icon--error">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6M9 9l6 6"/></svg>
+                    </span>
+                    <h3 class="nevo-problem-card__title">Sklep ładuje się wieczność – klienci uciekają</h3>
+                    <p class="nevo-problem-card__text">Mobile PageSpeed &lt;50, desktop 8 sekund do załadowania. 72% użytkowników zamyka stronę zanim się załaduje. Google rankuje Cię nisko bo prędkość to ranking factor.</p>
+                    <p class="nevo-problem-card__highlight">→ Tracisz 15-25% potencjalnych klientów zanim zobaczą ofertę.</p>
+                  </article>
+
+                  <article class="nevo-carousel__slide nevo-problem-card">
+                    <span class="nevo-problem-card__icon nevo-problem-card__icon--error">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6M9 9l6 6"/></svg>
+                    </span>
+                    <h3 class="nevo-problem-card__title">Checkout skomplikowany – abandoned cart 80%+</h3>
+                    <p class="nevo-problem-card__text">5 kroków do zamówienia, formularz z 20 polami, brak gościa, brak zapisanych adresów. Klienci rezygnują w połowie procesu.</p>
+                    <p class="nevo-problem-card__highlight">→ Conversion Rate &lt;1% podczas gdy branża ma 2-3%. Zostawiasz pieniądze na stole.</p>
+                  </article>
+
+                  <article class="nevo-carousel__slide nevo-problem-card">
+                    <span class="nevo-problem-card__icon nevo-problem-card__icon--error">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6M9 9l6 6"/></svg>
+                    </span>
+                    <h3 class="nevo-problem-card__title">Brak integracji – wszystko ręcznie</h3>
+                    <p class="nevo-problem-card__text">Zamówienia przepisujesz ręcznie do programu sprzedażowego. Stany magazynowe aktualizujesz w polach produktu. Faktury robisz osobno. Kurierzy przez formularz na ich stronie.</p>
+                    <p class="nevo-problem-card__highlight">→ 2-3h dziennie marnujesz na rzeczy które mogą być zautomatyzowane.</p>
+                  </article>
+
                 </div>
+              </div>
 
-                <!-- KARTA 2 -->
-                <div class="nevo-service-problem__card">
-                    <span class="nevo-service-problem__icon">❌</span>
-                    <h3 class="nevo-service-problem__card-title">Checkout skomplikowany – abandoned cart 80%+</h3>
-                    <p class="nevo-service-problem__card-text">5 kroków do zamówienia, formularz z 20 polami, brak gościa, brak zapisanych adresów. Klienci rezygnują w połowie procesu.</p>
-                    <p class="nevo-service-problem__highlight">→ Conversion Rate &lt;1% podczas gdy branża ma 2-3%. Zostawiasz pieniądze na stole.</p>
-                </div>
-
-                <!-- KARTA 3 -->
-                <div class="nevo-service-problem__card">
-                    <span class="nevo-service-problem__icon">❌</span>
-                    <h3 class="nevo-service-problem__card-title">Brak integracji – wszystko ręcznie</h3>
-                    <p class="nevo-service-problem__card-text">Zamówienia przepisujesz ręcznie do programu sprzedażowego. Stany magazynowe aktualizujesz w polach produktu. Faktury robisz osobno. Kurierzy przez formularz na ich stronie.</p>
-                    <p class="nevo-service-problem__highlight">→ 2-3h dziennie marnujesz na rzeczy które mogą być zautomatyzowane.</p>
-                </div>
-
+              <button class="nevo-carousel__btn nevo-carousel__btn--next" type="button" aria-label="Następny problem"></button>
             </div>
             <!-- /wp:html -->
 
-            <!-- Footer -->
-            <!-- wp:group {"className":"nevo-service-problem__footer","style":{"spacing":{"margin":{"top":"var:preset|spacing|xl"}}},"layout":{"type":"constrained","contentSize":"600px"}} -->
-            <div class="wp-block-group nevo-service-problem__footer" style="margin-top:var(--wp--preset--spacing--xl)">
-
-                <!-- wp:paragraph {"align":"center","className":"nevo-service-problem__footer-text","fontSize":"lg"} -->
-                <p class="has-text-align-center nevo-service-problem__footer-text has-lg-font-size">Masz przynajmniej jeden z tych problemów?</p>
-                <!-- /wp:paragraph -->
-
-                <!-- wp:buttons {"layout":{"type":"flex","justifyContent":"center"}} -->
-                <div class="wp-block-buttons">
-
-                    <!-- wp:button {"backgroundColor":"coral","textColor":"white","className":"nevo-service-problem__cta","style":{"typography":{"fontWeight":"600"},"border":{"radius":"8px"}}} -->
-                    <div class="wp-block-button nevo-service-problem__cta"><a class="wp-block-button__link has-white-color has-coral-background-color has-text-color has-background wp-element-button" href="#kontakt-form" style="border-radius:8px;font-weight:600">Umów konsultację – zrobimy audyt techniczny</a></div>
-                    <!-- /wp:button -->
-
-                </div>
-                <!-- /wp:buttons -->
-
+            <!-- Footer CTA -->
+            <!-- wp:html -->
+            <div class="nevo-service-problem__footer">
+                <p class="nevo-service-problem__footer-text">Masz przynajmniej jeden z tych problemów?</p>
+                <a href="#kontakt-form" class="nevo-service-problem__footer-cta">
+                    Umów konsultację – zrobimy audyt techniczny
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
             </div>
-            <!-- /wp:group -->
+            <!-- /wp:html -->
 
         </div>
         <!-- /wp:group -->
