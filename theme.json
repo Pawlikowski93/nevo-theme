@@ -13,6 +13,11 @@
       "postTypes": ["page"]
     },
     {
+      "name": "page-sklepy-internetowe",
+      "title": "Sklepy Internetowe (WooCommerce)",
+      "postTypes": ["page"]
+    },
+    {
       "name": "page-analityka-growth",
       "title": "Analityka & Growth",
       "postTypes": ["page"]
