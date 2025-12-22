@@ -12422,27 +12422,27 @@ a.nevo-contact-info__value:hover {
   color: var(--wp--preset--color--coral);
 }
 
-/* FAQ Answer */
-.nevo-faq-answer {
+/* FAQ Answer - Kontakt page specific */
+.nevo-faq-kontakt .nevo-faq-answer {
   overflow: hidden;
   max-height: 0;
   opacity: 0;
   transition: all 0.3s ease;
 }
 
-.nevo-faq-answer:not([hidden]) {
+.nevo-faq-kontakt .nevo-faq-answer:not([hidden]) {
   max-height: 500px;
   opacity: 1;
   padding-bottom: 20px;
 }
 
 @media (min-width: 768px) {
-  .nevo-faq-answer:not([hidden]) {
+  .nevo-faq-kontakt .nevo-faq-answer:not([hidden]) {
     padding-bottom: 24px;
   }
 }
 
-.nevo-faq-answer p {
+.nevo-faq-kontakt .nevo-faq-answer p {
   font-size: 0.9375rem;
   color: var(--wp--preset--color--gray-700);
   line-height: 1.7;
@@ -12451,7 +12451,7 @@ a.nevo-contact-info__value:hover {
 }
 
 @media (min-width: 768px) {
-  .nevo-faq-answer p {
+  .nevo-faq-kontakt .nevo-faq-answer p {
     font-size: 1rem;
   }
 }
