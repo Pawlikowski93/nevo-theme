@@ -5559,6 +5559,363 @@
     font-size: 0.85rem;
   }
 }
+
+/* =========================================
+   NEVO – SKLEPY INTERNETOWE (full variant)
+   Matching Strategia styling patterns
+   ========================================= */
+
+/* =================== HERO SKLEPY =================== */
+
+.nevo-service-hero--sklepy {
+  position: relative;
+  padding: 120px 20px 100px;
+  background: linear-gradient(
+    160deg,
+    var(--wp--preset--color--primary) 0%,
+    #1a2e3f 50%,
+    #0f1a28 100%
+  );
+  color: var(--wp--preset--color--white);
+  text-align: center;
+  overflow: hidden;
+}
+
+/* Decorative glow */
+.nevo-service-hero--sklepy::before {
+  content: "";
+  position: absolute;
+  top: -20%;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 1000px;
+  height: 1000px;
+  border-radius: 50%;
+  background:
+    radial-gradient(
+      circle at 30% 30%,
+      rgba(255, 107, 88, 0.1) 0%,
+      transparent 50%
+    ),
+    radial-gradient(
+      circle at 70% 60%,
+      rgba(212, 165, 116, 0.08) 0%,
+      transparent 40%
+    );
+  pointer-events: none;
+  z-index: 0;
+}
+
+/* Bottom accent line */
+.nevo-service-hero--sklepy::after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  height: 4px;
+  background: linear-gradient(
+    90deg,
+    transparent 0%,
+    var(--wp--preset--color--coral) 50%,
+    transparent 100%
+  );
+  opacity: 0.6;
+}
+
+.nevo-service-hero--sklepy .nevo-service-hero__content {
+  position: relative;
+  z-index: 1;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.nevo-service-hero--sklepy .nevo-service-hero__badge {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  align-items: center;
+  gap: 12px;
+  margin-bottom: 28px;
+}
+
+.nevo-service-hero--sklepy .nevo-badge-item {
+  color: var(--wp--preset--color--coral);
+  font-weight: 500;
+}
+
+.nevo-service-hero--sklepy .nevo-badge-separator {
+  color: rgba(255, 255, 255, 0.3);
+}
+
+.nevo-service-hero--sklepy .nevo-service-hero__headline {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: clamp(2rem, 4vw, 3.2rem);
+  line-height: 1.2;
+  color: var(--wp--preset--color--white);
+  margin: 0 0 24px;
+}
+
+.nevo-service-hero--sklepy .nevo-service-hero__subheadline {
+  font-size: clamp(1.05rem, 1.5vw, 1.25rem);
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.85);
+  font-weight: 400;
+  margin: 0 0 36px;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nevo-service-hero--sklepy .nevo-service-hero__cta .wp-block-button__link {
+  background: var(--wp--preset--color--coral);
+  color: var(--wp--preset--color--white);
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 600;
+  font-size: 1.1rem;
+  padding: 18px 40px;
+  border-radius: 999px;
+  box-shadow: 0 8px 24px rgba(255, 107, 88, 0.35);
+  transition: all 0.25s ease;
+}
+
+.nevo-service-hero--sklepy .nevo-service-hero__cta .wp-block-button__link:hover {
+  background: #ff8573;
+  transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(255, 107, 88, 0.45);
+}
+
+.nevo-service-hero--sklepy .nevo-service-hero__benefits {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px 32px;
+  margin-top: 32px;
+}
+
+.nevo-service-hero--sklepy .nevo-benefit-item {
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.75);
+}
+
+.nevo-service-hero--sklepy .nevo-benefit-item--highlight {
+  color: var(--wp--preset--color--coral);
+  font-weight: 500;
+}
+
+/* =================== PROBLEM SKLEPY =================== */
+
+.nevo-service-problem--sklepy {
+  padding: 100px 20px;
+  background: var(--wp--preset--color--beige);
+}
+
+.nevo-service-problem--sklepy .nevo-service-problem__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nevo-service-problem--sklepy .nevo-service-problem__heading {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  color: var(--wp--preset--color--primary);
+  text-align: center;
+  margin: 0 0 48px;
+}
+
+/* =================== SOLUTION SKLEPY =================== */
+
+.nevo-service-solution--sklepy {
+  padding: 100px 20px;
+  background: var(--wp--preset--color--white);
+  position: relative;
+}
+
+.nevo-service-solution--sklepy::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  width: 40%;
+  height: 100%;
+  background: linear-gradient(90deg, transparent 0%, rgba(255, 107, 88, 0.03) 100%);
+  pointer-events: none;
+}
+
+.nevo-service-solution--sklepy .nevo-service-solution__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.nevo-service-solution--sklepy .nevo-service-solution__heading {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  color: var(--wp--preset--color--primary);
+  text-align: center;
+  margin: 0 0 48px;
+}
+
+/* =================== PROCESS SKLEPY =================== */
+
+.nevo-service-process--sklepy {
+  padding: 100px 20px;
+  background: var(--wp--preset--color--beige);
+}
+
+.nevo-service-process--sklepy .nevo-service-process__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+.nevo-service-process--sklepy .nevo-service-process__heading {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  color: var(--wp--preset--color--primary);
+  text-align: center;
+  margin: 0 0 16px;
+}
+
+.nevo-service-process--sklepy .nevo-service-process__lead {
+  font-size: 1.1rem;
+  color: var(--wp--preset--color--gray-600);
+  text-align: center;
+  margin: 0 0 48px;
+}
+
+/* =================== PRICING SKLEPY =================== */
+
+.nevo-service-pricing--sklepy {
+  padding: 100px 20px 120px;
+  background: var(--wp--preset--color--white);
+  position: relative;
+  overflow: hidden;
+}
+
+.nevo-service-pricing--sklepy::before {
+  content: "";
+  position: absolute;
+  top: -10%;
+  right: -8%;
+  width: 600px;
+  height: 600px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 107, 88, 0.06) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.nevo-service-pricing--sklepy .nevo-service-pricing__inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  position: relative;
+  z-index: 1;
+}
+
+.nevo-service-pricing--sklepy .nevo-service-pricing__heading {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  color: var(--wp--preset--color--primary);
+  text-align: center;
+  margin: 0 0 16px;
+}
+
+.nevo-service-pricing--sklepy .nevo-service-pricing__lead {
+  font-size: 1.1rem;
+  color: var(--wp--preset--color--gray-600);
+  text-align: center;
+  margin: 0 0 56px;
+}
+
+/* =================== CASE STUDY SKLEPY =================== */
+
+.nevo-service-casestudy--sklepy {
+  padding: 100px 20px;
+  background: linear-gradient(
+    160deg,
+    var(--wp--preset--color--primary) 0%,
+    #1a2e3f 100%
+  );
+}
+
+.nevo-service-casestudy--sklepy .nevo-service-casestudy__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.nevo-service-casestudy--sklepy .nevo-service-casestudy__heading {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  color: var(--wp--preset--color--white);
+  text-align: center;
+  margin: 0 0 48px;
+}
+
+/* =================== FAQ SKLEPY =================== */
+
+.nevo-service-faq--sklepy {
+  padding: 100px 20px;
+  background: var(--wp--preset--color--white);
+}
+
+.nevo-service-faq--sklepy .nevo-service-faq__inner {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.nevo-service-faq--sklepy .nevo-service-faq__heading {
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 700;
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
+  color: var(--wp--preset--color--primary);
+  text-align: center;
+  margin: 0 0 48px;
+}
+
+/* =================== SKLEPY RESPONSIVE =================== */
+
+@media (max-width: 768px) {
+  .nevo-service-hero--sklepy {
+    padding: 80px 16px 64px;
+  }
+
+  .nevo-service-hero--sklepy .nevo-service-hero__headline {
+    font-size: clamp(1.75rem, 6vw, 2.2rem);
+  }
+
+  .nevo-service-hero--sklepy .nevo-service-hero__benefits {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
+  }
+
+  .nevo-service-hero--sklepy::before {
+    width: 600px;
+    height: 600px;
+    opacity: 0.6;
+  }
+
+  .nevo-service-problem--sklepy,
+  .nevo-service-solution--sklepy,
+  .nevo-service-process--sklepy,
+  .nevo-service-pricing--sklepy,
+  .nevo-service-casestudy--sklepy,
+  .nevo-service-faq--sklepy {
+    padding: 64px 16px;
+  }
+}
+
 /* =========================================
    NEVO – PERFORMANCE HERO (variant)
    ========================================= */
