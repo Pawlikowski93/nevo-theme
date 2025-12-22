@@ -3462,6 +3462,307 @@
 }
 
 /* =========================================
+   NEVO – SERVICE PRICING SKLEPY VARIANT
+   3-tier pricing cards with featured PRO
+   ========================================= */
+
+.nevo-service-pricing--sklepy {
+  background: var(--wp--preset--color--beige);
+}
+
+.nevo-service-pricing__header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.nevo-service-pricing__heading {
+  font-family: var(--wp--preset--font-family--heading);
+  font-weight: 700;
+  color: var(--wp--preset--color--primary);
+  margin: 0 0 12px;
+}
+
+.nevo-service-pricing__subhead {
+  color: #4a5b6a;
+  margin: 0;
+}
+
+/* Pricing Tiers Grid */
+.nevo-pricing-tiers--sklepy {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+  align-items: stretch;
+  margin-top: 48px;
+}
+
+/* Pricing Card */
+.nevo-pricing-card {
+  background: var(--wp--preset--color--white);
+  border-radius: 16px;
+  padding: 32px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(28, 46, 64, 0.08);
+  display: flex;
+  flex-direction: column;
+  position: relative;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.nevo-pricing-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Featured Card (PRO) */
+.nevo-pricing-card--featured {
+  border: 2px solid var(--wp--preset--color--coral);
+  transform: scale(1.05);
+  box-shadow: 0 8px 40px rgba(255, 107, 88, 0.15);
+  z-index: 2;
+}
+
+.nevo-pricing-card--featured:hover {
+  transform: scale(1.05) translateY(-4px);
+  box-shadow: 0 16px 48px rgba(255, 107, 88, 0.2);
+}
+
+/* Badge */
+.nevo-pricing-card__badge {
+  position: absolute;
+  top: -12px;
+  left: 50%;
+  transform: translateX(-50%);
+  background: var(--wp--preset--color--coral);
+  color: var(--wp--preset--color--white);
+  font-size: 0.75rem;
+  font-weight: 600;
+  padding: 6px 16px;
+  border-radius: 20px;
+  white-space: nowrap;
+}
+
+/* Card Header */
+.nevo-pricing-card__header {
+  text-align: center;
+  padding-bottom: 20px;
+  border-bottom: 1px solid rgba(28, 46, 64, 0.08);
+  margin-bottom: 20px;
+}
+
+.nevo-pricing-card__name {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 1.1rem;
+  font-weight: 700;
+  color: var(--wp--preset--color--primary);
+  margin: 0 0 12px;
+  letter-spacing: 0.05em;
+}
+
+.nevo-pricing-card__price {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 2rem;
+  font-weight: 700;
+  color: var(--wp--preset--color--primary);
+  line-height: 1.2;
+}
+
+.nevo-pricing-card__price span {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #6b7c8a;
+}
+
+.nevo-pricing-card__from {
+  font-size: 0.9rem !important;
+  font-weight: 400 !important;
+  color: #6b7c8a !important;
+}
+
+.nevo-pricing-card__billing {
+  font-size: 0.85rem;
+  color: #6b7c8a;
+  margin: 4px 0 0;
+}
+
+/* For description */
+.nevo-pricing-card__for {
+  font-size: 0.9rem;
+  color: #4a5b6a;
+  text-align: center;
+  margin: 0 0 20px;
+  padding-bottom: 16px;
+  border-bottom: 1px solid rgba(28, 46, 64, 0.06);
+}
+
+/* Features List */
+.nevo-pricing-card__features {
+  list-style: none;
+  padding: 0;
+  margin: 0 0 24px;
+  flex-grow: 1;
+}
+
+.nevo-pricing-card__features li {
+  position: relative;
+  padding-left: 24px;
+  font-size: 0.9rem;
+  line-height: 1.5;
+  color: #4a5b6a;
+  margin-bottom: 10px;
+}
+
+.nevo-pricing-card__features li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--wp--preset--color--coral);
+  font-weight: 600;
+}
+
+.nevo-pricing-card__features li strong {
+  color: var(--wp--preset--color--primary);
+}
+
+/* Card Footer */
+.nevo-pricing-card__footer {
+  text-align: center;
+  margin-top: auto;
+  padding-top: 20px;
+  border-top: 1px solid rgba(28, 46, 64, 0.08);
+}
+
+.nevo-pricing-card__time {
+  font-size: 0.85rem;
+  color: #6b7c8a;
+  margin: 0 0 16px;
+}
+
+/* CTA Buttons */
+.nevo-pricing-card__cta {
+  display: inline-block;
+  width: 100%;
+  padding: 14px 24px;
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 0.95rem;
+  font-weight: 600;
+  text-align: center;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: all 0.25s ease;
+}
+
+.nevo-pricing-card__cta--outline {
+  background: transparent;
+  color: var(--wp--preset--color--primary);
+  border: 2px solid var(--wp--preset--color--primary);
+}
+
+.nevo-pricing-card__cta--outline:hover {
+  background: var(--wp--preset--color--primary);
+  color: var(--wp--preset--color--white);
+}
+
+.nevo-pricing-card__cta--filled {
+  background: var(--wp--preset--color--coral);
+  color: var(--wp--preset--color--white);
+  border: 2px solid var(--wp--preset--color--coral);
+  box-shadow: 0 4px 16px rgba(255, 107, 88, 0.3);
+}
+
+.nevo-pricing-card__cta--filled:hover {
+  background: #e55a49;
+  border-color: #e55a49;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 107, 88, 0.4);
+}
+
+/* Maintenance Box */
+.nevo-pricing-maintenance {
+  background: var(--wp--preset--color--white);
+  border-radius: 12px;
+  padding: 32px;
+  margin-top: 48px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.04);
+  border: 1px solid rgba(28, 46, 64, 0.08);
+}
+
+.nevo-pricing-maintenance__title {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--wp--preset--color--primary);
+  margin: 0 0 20px;
+  text-align: center;
+}
+
+.nevo-pricing-maintenance__title span {
+  font-weight: 400;
+  color: #6b7c8a;
+}
+
+.nevo-pricing-maintenance__options {
+  display: flex;
+  justify-content: center;
+  gap: 48px;
+  flex-wrap: wrap;
+}
+
+.nevo-pricing-maintenance__option {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.nevo-pricing-maintenance__price {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 1.25rem;
+  font-weight: 700;
+  color: var(--wp--preset--color--coral);
+  margin-bottom: 4px;
+}
+
+.nevo-pricing-maintenance__desc {
+  font-size: 0.9rem;
+  color: #4a5b6a;
+}
+
+/* Responsive - Pricing */
+@media (max-width: 1024px) {
+  .nevo-pricing-tiers--sklepy {
+    grid-template-columns: 1fr;
+    max-width: 450px;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  .nevo-pricing-card--featured {
+    transform: none;
+    order: -1; /* PRO first on mobile */
+  }
+
+  .nevo-pricing-card--featured:hover {
+    transform: translateY(-4px);
+  }
+}
+
+@media (max-width: 768px) {
+  .nevo-pricing-card {
+    padding: 24px;
+  }
+
+  .nevo-pricing-card__price {
+    font-size: 1.75rem;
+  }
+
+  .nevo-pricing-maintenance__options {
+    flex-direction: column;
+    gap: 24px;
+  }
+}
+
+/* =========================================
    NEVO – SERVICE CASE STUDY SECTION
    ========================================= */
 
