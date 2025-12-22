@@ -477,50 +477,6 @@
             </div>
             <!-- /wp:html -->
 
-            <!-- Schema.org FAQPage -->
-            <!-- wp:html -->
-            <script type="application/ld+json">
-            {
-                "@context": "https://schema.org",
-                "@type": "FAQPage",
-                "mainEntity": [
-                    {
-                        "@type": "Question",
-                        "name": "Ile trwa stworzenie strategii marketingowej?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "7–10 dni roboczych od konsultacji do prezentacji. Brief (dzień 1) → analiza (dni 2-7) → prezentacja strategii (dzień 8-10)."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "Co jeśli nie będę zadowolony ze strategii?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "1 runda korekt wliczona w cenę. Jeśli po korektach nadal będziesz niezadowolony → zwrot 50% (w ciągu 7 dni od prezentacji)."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "Czy wdrażacie strategię marketingową?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "Możemy wdrożyć (kampanie, tech, kreacje) jako osobna usługa. Albo dostajesz plan i wdrażasz sam/własnym zespołem. Wybór należy do Ciebie."
-                        }
-                    },
-                    {
-                        "@type": "Question",
-                        "name": "Dla kogo jest usługa strategii marketingowej?",
-                        "acceptedAnswer": {
-                            "@type": "Answer",
-                            "text": "E-commerce, MŚP, start-upy, które chcą skalować świadomie, nie metodą prób i błędów. Jeśli masz już sprzedaż i wiesz że marketing to inwestycja, nie koszt – strategia da Ci plan zanim wydasz budżet na kampanie."
-                        }
-                    }
-                ]
-            }
-            </script>
-            <!-- /wp:html -->
-
         </div>
         <!-- /wp:group -->
 
@@ -629,10 +585,82 @@
     <!-- /wp:group -->
 
     <!-- ========================================
-         SEKCJA 7: TRUST ELEMENTS (opcjonalnie)
-         Logotypy klientow, certyfikaty
-         Klasy: .nevo-social, .nevo-trust
+         SEKCJA 7: STRUCTURED DATA (JSON-LD)
+         Schema.org dla SEO
          ======================================== -->
+    <!-- wp:html -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Strategia Marketingowa",
+        "description": "Strategia marketingowa dopasowana do modelu biznesu. Roadmapa działań na 30/60/90 dni z jasnymi KPI.",
+        "provider": {
+            "@type": "Organization",
+            "name": "NEVO Marketing",
+            "url": "https://nevomarketing.pl"
+        },
+        "areaServed": {
+            "@type": "Country",
+            "name": "Poland"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "4500",
+            "priceCurrency": "PLN",
+            "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "4500",
+                "priceCurrency": "PLN",
+                "unitText": "jednorazowo"
+            }
+        }
+    }
+    </script>
+    <!-- /wp:html -->
+
+    <!-- wp:html -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Ile trwa stworzenie strategii marketingowej?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "7–10 dni roboczych od konsultacji do prezentacji. Brief (dzień 1) → analiza (dni 2-7) → prezentacja strategii (dzień 8-10)."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Co jeśli nie będę zadowolony ze strategii?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "1 runda korekt wliczona w cenę. Jeśli po korektach nadal będziesz niezadowolony → zwrot 50% (w ciągu 7 dni od prezentacji)."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Czy wdrażacie strategię marketingową?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Możemy wdrożyć (kampanie, tech, kreacje) jako osobna usługa. Albo dostajesz plan i wdrażasz sam/własnym zespołem. Wybór należy do Ciebie."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Dla kogo jest usługa strategii marketingowej?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "E-commerce, MŚP, start-upy, które chcą skalować świadomie, nie metodą prób i błędów. Jeśli masz już sprzedaż (nawet niewielką) i wiesz że marketing to inwestycja, nie koszt – strategia da Ci plan zanim wydasz budżet na kampanie."
+                }
+            }
+        ]
+    }
+    </script>
+    <!-- /wp:html -->
 
 </main>
 <!-- /wp:group -->
