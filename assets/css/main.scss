@@ -15620,8 +15620,8 @@ a.nevo-contact-info__value:hover {
   line-height: 1.4;
 }
 
-/* Testimonial */
-.nevo-cs-testimonial {
+/* Testimonial w sekcji results (ciemne tło) */
+.nevo-cs-results .nevo-cs-testimonial {
   position: relative;
   max-width: 700px;
   margin: 0 auto 48px;
@@ -15630,7 +15630,7 @@ a.nevo-contact-info__value:hover {
   text-align: center;
 }
 
-.nevo-cs-testimonial__quote-mark {
+.nevo-cs-results .nevo-cs-testimonial__quote-mark {
   display: block;
   font-family: Georgia, serif;
   font-size: 5rem;
@@ -15641,7 +15641,7 @@ a.nevo-contact-info__value:hover {
   opacity: 0.6;
 }
 
-.nevo-cs-testimonial__text {
+.nevo-cs-results .nevo-cs-testimonial__text {
   font-size: clamp(1.125rem, 2.5vw, 1.375rem);
   font-style: italic;
   color: var(--wp--preset--color--white);
@@ -15649,7 +15649,7 @@ a.nevo-contact-info__value:hover {
   margin: 0 0 20px;
 }
 
-.nevo-cs-testimonial__author {
+.nevo-cs-results .nevo-cs-testimonial__author {
   display: block;
   font-family: var(--wp--preset--font-family--heading);
   font-size: 0.875rem;
