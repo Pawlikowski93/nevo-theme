@@ -3891,6 +3891,269 @@
 }
 
 /* =========================================
+   NEVO – PERFORMANCE PRICING VARIANT
+   ========================================= */
+
+.nevo-service-pricing--performance {
+  background: var(--wp--preset--color--beige);
+}
+
+.nevo-service-pricing--performance .nevo-service-pricing__header {
+  text-align: center;
+  margin-bottom: 48px;
+}
+
+.nevo-service-pricing--performance .nevo-service-pricing__heading {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--wp--preset--color--primary);
+  margin: 0;
+}
+
+/* Pricing Grid */
+.nevo-pricing-grid {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 24px;
+  margin-bottom: 48px;
+}
+
+.nevo-pricing-card {
+  background: var(--wp--preset--color--white);
+  border-radius: 16px;
+  padding: 32px 40px;
+  text-align: center;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
+  min-width: 260px;
+}
+
+.nevo-pricing-card--primary {
+  box-shadow: 0 12px 40px rgba(255, 107, 88, 0.15);
+  border: 2px solid var(--wp--preset--color--coral);
+}
+
+.nevo-pricing-card__label {
+  display: inline-block;
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  color: var(--wp--preset--color--coral);
+  margin-bottom: 4px;
+}
+
+.nevo-pricing-card__type {
+  font-size: 0.85rem;
+  color: var(--wp--preset--color--gray-500);
+  margin: 0 0 16px;
+}
+
+.nevo-pricing-card__price {
+  display: flex;
+  align-items: baseline;
+  justify-content: center;
+  gap: 6px;
+  flex-wrap: wrap;
+}
+
+.nevo-pricing-card__prefix {
+  font-size: 1rem;
+  color: var(--wp--preset--color--gray-500);
+}
+
+.nevo-pricing-card__amount {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: var(--wp--preset--color--primary);
+  line-height: 1;
+}
+
+.nevo-pricing-card__suffix {
+  font-size: 0.9rem;
+  color: var(--wp--preset--color--gray-500);
+}
+
+.nevo-pricing-card__note {
+  font-size: 0.8rem;
+  color: var(--wp--preset--color--gray-500);
+  margin: 8px 0 0;
+}
+
+.nevo-pricing-connector {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 48px;
+  height: 48px;
+  background: var(--wp--preset--color--coral);
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.nevo-pricing-connector span {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--wp--preset--color--white);
+  line-height: 1;
+}
+
+/* What's included */
+.nevo-pricing-includes {
+  background: var(--wp--preset--color--white);
+  border-radius: 12px;
+  padding: 32px;
+  margin-bottom: 24px;
+}
+
+.nevo-pricing-includes__title {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--wp--preset--color--primary);
+  margin: 0 0 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.nevo-pricing-includes__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px 32px;
+}
+
+.nevo-pricing-includes__list li {
+  position: relative;
+  padding-left: 24px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--wp--preset--color--gray-700);
+}
+
+.nevo-pricing-includes__list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--wp--preset--color--coral);
+  font-weight: 600;
+}
+
+/* Minimum requirements */
+.nevo-pricing-minimum {
+  background: rgba(255, 107, 88, 0.08);
+  border: 1px solid rgba(255, 107, 88, 0.25);
+  border-radius: 12px;
+  padding: 24px 32px;
+  margin-bottom: 40px;
+}
+
+.nevo-pricing-minimum__title {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--wp--preset--color--coral);
+  margin: 0 0 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.nevo-pricing-minimum__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nevo-pricing-minimum__list li {
+  font-size: 0.9rem;
+  color: var(--wp--preset--color--gray-700);
+  margin-bottom: 6px;
+}
+
+.nevo-pricing-minimum__list li:last-child {
+  margin-bottom: 0;
+}
+
+.nevo-pricing-minimum__list strong {
+  color: var(--wp--preset--color--primary);
+}
+
+/* CTA */
+.nevo-pricing-cta {
+  text-align: center;
+}
+
+.nevo-pricing-cta__button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  padding: 16px 40px;
+  background: var(--wp--preset--color--coral);
+  color: var(--wp--preset--color--white);
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 1rem;
+  font-weight: 600;
+  text-decoration: none;
+  border-radius: 8px;
+  transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.nevo-pricing-cta__button:hover {
+  background: #e55a4a;
+  transform: translateY(-2px);
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .nevo-service-pricing--performance {
+    padding: 72px 16px 80px;
+  }
+
+  .nevo-service-pricing--performance .nevo-service-pricing__heading {
+    font-size: 1.75rem;
+  }
+
+  .nevo-pricing-grid {
+    flex-direction: column;
+    gap: 16px;
+  }
+
+  .nevo-pricing-card {
+    width: 100%;
+    max-width: 320px;
+    min-width: auto;
+    padding: 28px 24px;
+  }
+
+  .nevo-pricing-card__amount {
+    font-size: 2rem;
+  }
+
+  .nevo-pricing-connector {
+    transform: rotate(90deg);
+  }
+
+  .nevo-pricing-includes {
+    padding: 24px;
+  }
+
+  .nevo-pricing-includes__list {
+    grid-template-columns: 1fr;
+  }
+
+  .nevo-pricing-minimum {
+    padding: 20px 24px;
+  }
+}
+
+/* =========================================
    NEVO – SERVICE FINAL CTA SECTION
    ========================================= */
 
