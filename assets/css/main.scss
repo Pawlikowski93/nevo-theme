@@ -16076,6 +16076,8 @@ a.nevo-contact-info__value:hover {
   background: var(--wp--preset--color--beige);
   border-radius: 12px;
   text-align: center;
+  overflow: hidden;
+  max-width: 100%;
 }
 
 @media (min-width: 768px) {
@@ -16104,6 +16106,8 @@ a.nevo-contact-info__value:hover {
 .nevo-author-box__info {
   flex: 1;
   min-width: 0;
+  max-width: 100%;
+  overflow: hidden;
 }
 
 .nevo-author-box__name {
@@ -16127,6 +16131,8 @@ a.nevo-contact-info__value:hover {
   font-size: 0.9375rem;
   line-height: 1.6;
   color: var(--wp--preset--color--gray-600);
+  word-wrap: break-word;
+  overflow-wrap: break-word;
 }
 
 .nevo-author-box__social {
