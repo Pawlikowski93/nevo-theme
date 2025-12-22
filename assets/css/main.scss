@@ -3113,6 +3113,269 @@
 }
 
 /* =========================================
+   NEVO – SERVICE CASE STUDY SECTION
+   ========================================= */
+
+.nevo-service-casestudy {
+  background: linear-gradient(135deg, #1c2e40 0%, #0f1a28 100%);
+  padding: 100px 20px 120px;
+  position: relative;
+  overflow: hidden;
+}
+
+.nevo-service-casestudy__inner {
+  position: relative;
+  z-index: 1;
+}
+
+.nevo-service-casestudy__header {
+  text-align: center;
+  margin-bottom: 56px;
+}
+
+.nevo-service-casestudy__heading {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 2.5rem;
+  font-weight: 700;
+  color: var(--wp--preset--color--white);
+  margin: 0 0 16px;
+  line-height: 1.2;
+}
+
+.nevo-service-casestudy__subhead {
+  font-size: 1.15rem;
+  color: var(--wp--preset--color--cream);
+  opacity: 0.85;
+  margin: 0;
+}
+
+/* Comparison Grid */
+.nevo-cs-comparison {
+  display: grid;
+  grid-template-columns: 1fr auto 1fr;
+  gap: 24px;
+  align-items: center;
+  margin-bottom: 48px;
+}
+
+.nevo-cs-comparison__card {
+  background: rgba(255, 255, 255, 0.06);
+  border-radius: 16px;
+  padding: 32px;
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.nevo-cs-comparison__card--before {
+  border-color: rgba(255, 107, 88, 0.3);
+}
+
+.nevo-cs-comparison__card--after {
+  border-color: rgba(76, 175, 80, 0.4);
+  background: rgba(76, 175, 80, 0.08);
+}
+
+.nevo-cs-comparison__card-title {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 0.85rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+  margin: 0 0 4px;
+}
+
+.nevo-cs-comparison__card--before .nevo-cs-comparison__card-title {
+  color: rgba(255, 107, 88, 0.8);
+}
+
+.nevo-cs-comparison__card--after .nevo-cs-comparison__card-title {
+  color: #4caf50;
+}
+
+.nevo-cs-comparison__card-subtitle {
+  font-size: 0.85rem;
+  color: rgba(255, 255, 255, 0.5);
+  margin: 0 0 24px;
+}
+
+.nevo-cs-comparison__table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.nevo-cs-comparison__table tr {
+  border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.nevo-cs-comparison__table tr:last-child {
+  border-bottom: none;
+}
+
+.nevo-cs-comparison__table td {
+  padding: 12px 0;
+  vertical-align: middle;
+}
+
+.nevo-cs-comparison__metric {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.nevo-cs-comparison__value {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--wp--preset--color--white);
+  text-align: right;
+}
+
+.nevo-cs-comparison__value--highlight {
+  color: #4caf50;
+  font-size: 1.25rem;
+}
+
+.nevo-cs-comparison__change {
+  font-size: 0.8rem;
+  font-weight: 600;
+  text-align: right;
+  padding-left: 12px;
+  white-space: nowrap;
+}
+
+.nevo-cs-comparison__change--positive {
+  color: #4caf50;
+}
+
+.nevo-cs-comparison__change--negative {
+  color: #ff6b58;
+}
+
+.nevo-cs-comparison__change--scale {
+  color: var(--wp--preset--color--coral);
+  font-style: italic;
+}
+
+.nevo-cs-comparison__arrow {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--wp--preset--color--coral);
+}
+
+/* Co zrobiliśmy */
+.nevo-cs-actions {
+  background: rgba(255, 255, 255, 0.04);
+  border-radius: 12px;
+  padding: 32px;
+  margin-bottom: 32px;
+}
+
+.nevo-cs-actions__title {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 1rem;
+  font-weight: 600;
+  color: var(--wp--preset--color--cream);
+  margin: 0 0 20px;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+}
+
+.nevo-cs-actions__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 12px 32px;
+}
+
+.nevo-cs-actions__list li {
+  position: relative;
+  padding-left: 24px;
+  font-size: 0.95rem;
+  color: rgba(255, 255, 255, 0.8);
+  line-height: 1.5;
+}
+
+.nevo-cs-actions__list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--wp--preset--color--coral);
+  font-weight: 600;
+}
+
+/* Result highlight */
+.nevo-cs-result {
+  background: linear-gradient(135deg, rgba(255, 107, 88, 0.15) 0%, rgba(255, 107, 88, 0.08) 100%);
+  border: 2px solid var(--wp--preset--color--coral);
+  border-radius: 16px;
+  padding: 32px 40px;
+  text-align: center;
+}
+
+.nevo-cs-result__main {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: var(--wp--preset--color--white);
+  margin: 0 0 8px;
+}
+
+.nevo-cs-result__sub {
+  font-size: 1rem;
+  color: var(--wp--preset--color--coral);
+  margin: 0;
+}
+
+/* Responsive */
+@media (max-width: 900px) {
+  .nevo-cs-comparison {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+
+  .nevo-cs-comparison__arrow {
+    transform: rotate(90deg);
+    padding: 8px 0;
+  }
+
+  .nevo-cs-actions__list {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 768px) {
+  .nevo-service-casestudy {
+    padding: 72px 16px 80px;
+  }
+
+  .nevo-service-casestudy__heading {
+    font-size: 1.75rem;
+  }
+
+  .nevo-service-casestudy__subhead {
+    font-size: 1rem;
+  }
+
+  .nevo-cs-comparison__card {
+    padding: 24px;
+  }
+
+  .nevo-cs-actions {
+    padding: 24px;
+  }
+
+  .nevo-cs-result {
+    padding: 24px;
+  }
+
+  .nevo-cs-result__main {
+    font-size: 1.25rem;
+  }
+}
+
+/* =========================================
    NEVO – SERVICE PRICING + FAQ SECTION
    ========================================= */
 
