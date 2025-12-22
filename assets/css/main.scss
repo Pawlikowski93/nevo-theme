@@ -4546,16 +4546,42 @@
 
 .nevo-service-pricing--performance {
   background: var(--wp--preset--color--beige);
+  padding: 100px 20px 120px;
+  position: relative;
+  overflow: hidden;
+}
+
+/* Subtle decorative glow */
+.nevo-service-pricing--performance::before {
+  content: "";
+  position: absolute;
+  top: -10%;
+  right: -5%;
+  width: 500px;
+  height: 500px;
+  border-radius: 50%;
+  background: radial-gradient(
+    circle,
+    rgba(255, 107, 88, 0.06) 0%,
+    transparent 70%
+  );
+  pointer-events: none;
+  z-index: 0;
+}
+
+.nevo-service-pricing--performance .nevo-service-pricing__inner {
+  position: relative;
+  z-index: 1;
 }
 
 .nevo-service-pricing--performance .nevo-service-pricing__header {
   text-align: center;
-  margin-bottom: 48px;
+  margin-bottom: 56px;
 }
 
 .nevo-service-pricing--performance .nevo-service-pricing__heading {
   font-family: var(--wp--preset--font-family--heading);
-  font-size: 2.25rem;
+  font-size: clamp(1.8rem, 3.5vw, 2.5rem);
   font-weight: 700;
   color: var(--wp--preset--color--primary);
   margin: 0;
@@ -4564,24 +4590,37 @@
 /* Pricing Grid */
 .nevo-pricing-grid {
   display: flex;
-  align-items: center;
+  align-items: stretch;
   justify-content: center;
-  gap: 24px;
-  margin-bottom: 48px;
+  gap: 32px;
+  margin-bottom: 56px;
 }
 
 .nevo-pricing-card {
   background: var(--wp--preset--color--white);
   border-radius: 16px;
-  padding: 32px 40px;
+  padding: 40px 48px;
   text-align: center;
-  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.06);
-  min-width: 260px;
+  box-shadow: 0 8px 32px rgba(0, 0, 0, 0.08);
+  min-width: 280px;
+  border: 1px solid rgba(28, 46, 64, 0.06);
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.nevo-pricing-card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 16px 48px rgba(0, 0, 0, 0.12);
 }
 
 .nevo-pricing-card--primary {
-  box-shadow: 0 12px 40px rgba(255, 107, 88, 0.15);
+  box-shadow: 0 12px 40px rgba(255, 107, 88, 0.18);
   border: 2px solid var(--wp--preset--color--coral);
+  transform: scale(1.02);
+}
+
+.nevo-pricing-card--primary:hover {
+  transform: scale(1.02) translateY(-4px);
+  box-shadow: 0 16px 48px rgba(255, 107, 88, 0.25);
 }
 
 .nevo-pricing-card__label {
@@ -4737,6 +4776,7 @@
 /* CTA */
 .nevo-pricing-cta {
   text-align: center;
+  margin-top: 48px;
 }
 
 .nevo-pricing-cta__button {
@@ -4744,20 +4784,22 @@
   align-items: center;
   justify-content: center;
   gap: 10px;
-  padding: 16px 40px;
+  padding: 18px 48px;
   background: var(--wp--preset--color--coral);
   color: var(--wp--preset--color--white);
   font-family: var(--wp--preset--font-family--heading);
-  font-size: 1rem;
+  font-size: 1.1rem;
   font-weight: 600;
   text-decoration: none;
-  border-radius: 8px;
-  transition: background 0.2s ease, transform 0.2s ease;
+  border-radius: 999px;
+  box-shadow: 0 8px 24px rgba(255, 107, 88, 0.35);
+  transition: all 0.25s ease;
 }
 
 .nevo-pricing-cta__button:hover {
-  background: #e55a4a;
+  background: #ff8573;
   transform: translateY(-2px);
+  box-shadow: 0 12px 32px rgba(255, 107, 88, 0.45);
 }
 
 /* Responsive */
