@@ -2701,6 +2701,144 @@
   }
 }
 
+/* =========================================
+   NEVO – SERVICE SOLUTION SKLEPY VARIANT
+   2x2 grid, time badges, WooCommerce highlight
+   ========================================= */
+
+.nevo-service-solution--sklepy {
+  background: var(--wp--preset--color--beige);
+}
+
+.nevo-service-solution--sklepy::before {
+  display: none;
+}
+
+/* Cards grid 2x2 for sklepy */
+.nevo-solution-grid--sklepy {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  margin-top: 48px;
+  margin-bottom: 48px;
+}
+
+.nevo-service-solution--sklepy .nevo-service-solution__card {
+  background: var(--wp--preset--color--white);
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.06);
+  border-left: none;
+  transition: transform 0.25s ease, box-shadow 0.25s ease;
+}
+
+.nevo-service-solution--sklepy .nevo-service-solution__card:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 40px rgba(0, 0, 0, 0.1);
+}
+
+/* Card icon */
+.nevo-service-solution__card-icon {
+  color: var(--wp--preset--color--coral);
+  margin-bottom: 16px;
+  display: block;
+}
+
+.nevo-service-solution__card-icon svg {
+  display: block;
+}
+
+/* Card title */
+.nevo-service-solution__card-title {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--wp--preset--color--primary);
+  margin: 0 0 16px;
+}
+
+/* Card list */
+.nevo-service-solution__card-list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nevo-service-solution__card-list li {
+  position: relative;
+  padding-left: 20px;
+  font-size: 0.95rem;
+  line-height: 1.6;
+  color: #4a5b6a;
+  margin-bottom: 8px;
+}
+
+.nevo-service-solution__card-list li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--wp--preset--color--coral);
+  font-weight: bold;
+}
+
+.nevo-service-solution__card-list li:last-child {
+  margin-bottom: 0;
+}
+
+/* WooCommerce highlight box */
+.nevo-service-solution__highlight--woocommerce {
+  background: var(--wp--preset--color--primary);
+  border-radius: 12px;
+  padding: 32px 40px;
+  text-align: center;
+}
+
+.nevo-service-solution__highlight-title {
+  margin: 0 0 16px;
+  font-size: 1.15rem;
+  font-weight: 600;
+  color: var(--wp--preset--color--white);
+}
+
+.nevo-service-solution__highlight-benefits {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 16px 32px;
+}
+
+.nevo-service-solution__highlight-benefits span {
+  color: var(--wp--preset--color--cream);
+  font-size: 0.95rem;
+}
+
+/* Responsive - sklepy variant */
+@media (max-width: 1024px) {
+  .nevo-solution-grid--sklepy {
+    gap: 24px;
+  }
+}
+
+@media (max-width: 768px) {
+  .nevo-solution-grid--sklepy {
+    grid-template-columns: 1fr;
+    gap: 20px;
+  }
+
+  .nevo-service-solution--sklepy .nevo-service-solution__card {
+    padding: 24px;
+  }
+
+  .nevo-service-solution__highlight--woocommerce {
+    padding: 24px;
+  }
+
+  .nevo-service-solution__highlight-benefits {
+    flex-direction: column;
+    gap: 8px;
+  }
+}
+
 /* RESPONSYWNOŚĆ */
 
 @media (max-width: 768px) {
