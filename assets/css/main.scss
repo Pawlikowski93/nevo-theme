@@ -3260,6 +3260,208 @@
 }
 
 /* =========================================
+   NEVO – SKLEPY PROCESS VARIANT
+   Horizontal timeline with connector line
+   ========================================= */
+
+.nevo-service-process--sklepy {
+  background: var(--wp--preset--color--white);
+}
+
+.nevo-service-process--sklepy::before {
+  display: none;
+}
+
+.nevo-service-process--sklepy .nevo-service-process__header {
+  margin-bottom: 64px;
+}
+
+/* Timeline container */
+.nevo-process-timeline--sklepy {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+  position: relative;
+}
+
+/* Connector line */
+.nevo-process-timeline--sklepy::before {
+  content: "";
+  position: absolute;
+  top: 28px;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  background: linear-gradient(90deg,
+    var(--wp--preset--color--coral) 0%,
+    rgba(255, 107, 88, 0.3) 100%
+  );
+  z-index: 0;
+}
+
+/* Step card for sklepy */
+.nevo-service-process--sklepy .nevo-service-process__step {
+  background: var(--wp--preset--color--white);
+  border-radius: 12px;
+  padding: 24px;
+  padding-top: 48px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+  border: 1px solid rgba(28, 46, 64, 0.08);
+  text-align: left;
+  position: relative;
+  z-index: 1;
+}
+
+.nevo-service-process--sklepy .nevo-service-process__step:hover {
+  transform: translateY(-4px);
+  box-shadow: 0 12px 32px rgba(0, 0, 0, 0.1);
+}
+
+/* Step number */
+.nevo-service-process--sklepy .nevo-service-process__step-number {
+  position: absolute;
+  top: -20px;
+  left: 24px;
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, #ff6b58, #ff8573);
+  color: var(--wp--preset--color--white);
+  font-family: var(--wp--preset--font-family--heading);
+  font-weight: 700;
+  font-size: 1.1rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 4px 12px rgba(255, 107, 88, 0.4);
+  border: 3px solid var(--wp--preset--color--white);
+}
+
+/* Time badge */
+.nevo-service-process--sklepy .nevo-service-process__step-time {
+  display: inline-block;
+  padding: 4px 10px;
+  border-radius: 20px;
+  background: rgba(255, 107, 88, 0.1);
+  color: var(--wp--preset--color--coral);
+  font-size: 0.75rem;
+  font-weight: 600;
+  margin-bottom: 12px;
+}
+
+/* Step title */
+.nevo-service-process--sklepy .nevo-service-process__step-title {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--wp--preset--color--primary);
+  margin: 0 0 12px;
+}
+
+/* Step description */
+.nevo-service-process__step-desc {
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #4a5b6a;
+  margin: 0 0 16px;
+}
+
+/* Step output */
+.nevo-service-process__step-output {
+  font-size: 0.85rem;
+  font-weight: 600;
+  color: var(--wp--preset--color--coral);
+  margin: 0;
+  padding-top: 12px;
+  border-top: 1px solid rgba(28, 46, 64, 0.08);
+}
+
+/* Footer */
+.nevo-service-process__footer {
+  text-align: center;
+  margin-top: 64px;
+}
+
+.nevo-service-process__footer-text {
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--wp--preset--color--primary);
+  margin: 0 0 20px;
+}
+
+.nevo-service-process__footer-cta {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 14px 28px;
+  background: var(--wp--preset--color--coral);
+  color: var(--wp--preset--color--white);
+  font-family: var(--wp--preset--font-family--heading);
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 8px;
+  text-decoration: none;
+  box-shadow: 0 6px 20px rgba(255, 107, 88, 0.3);
+  transition: all 0.25s ease;
+}
+
+.nevo-service-process__footer-cta:hover {
+  background: #e55a49;
+  transform: translateY(-2px);
+  box-shadow: 0 10px 28px rgba(255, 107, 88, 0.4);
+}
+
+.nevo-service-process__footer-cta svg {
+  transition: transform 0.2s ease;
+}
+
+.nevo-service-process__footer-cta:hover svg {
+  transform: translateX(4px);
+}
+
+.nevo-service-process__footer-note {
+  font-size: 0.875rem;
+  color: #6b7c8a;
+  margin: 16px 0 0;
+}
+
+/* Responsive - sklepy process */
+@media (max-width: 1024px) {
+  .nevo-process-timeline--sklepy {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .nevo-process-timeline--sklepy::before {
+    display: none;
+  }
+}
+
+@media (max-width: 768px) {
+  .nevo-process-timeline--sklepy {
+    grid-template-columns: 1fr;
+    gap: 32px;
+  }
+
+  .nevo-service-process--sklepy .nevo-service-process__step {
+    padding: 20px;
+    padding-top: 40px;
+  }
+
+  .nevo-service-process--sklepy .nevo-service-process__step-number {
+    width: 36px;
+    height: 36px;
+    font-size: 1rem;
+    top: -18px;
+    left: 20px;
+  }
+
+  .nevo-service-process__footer-text {
+    font-size: 1.1rem;
+  }
+}
+
+/* =========================================
    NEVO – SERVICE CASE STUDY SECTION
    ========================================= */
 
