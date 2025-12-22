@@ -161,8 +161,12 @@ document.addEventListener('DOMContentLoaded', () => {
         items.forEach(otherItem => {
           otherItem.classList.remove('is-open');
           const otherQuestion = otherItem.querySelector('.nevo-faq-question');
+          const otherAnswer = otherItem.querySelector('.nevo-faq-answer');
           if (otherQuestion) {
             otherQuestion.setAttribute('aria-expanded', 'false');
+          }
+          if (otherAnswer) {
+            otherAnswer.setAttribute('hidden', '');
           }
         });
 
@@ -170,6 +174,7 @@ document.addEventListener('DOMContentLoaded', () => {
         if (!isCurrentlyOpen) {
           item.classList.add('is-open');
           question.setAttribute('aria-expanded', 'true');
+          answer.removeAttribute('hidden');
         }
       });
 

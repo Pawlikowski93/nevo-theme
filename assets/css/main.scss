@@ -12634,14 +12634,16 @@ a.nevo-contact-info__value:hover {
   transition: all 0.3s ease;
 }
 
-.nevo-faq-kontakt .nevo-faq-answer:not([hidden]) {
+.nevo-faq-kontakt .nevo-faq-answer:not([hidden]),
+.nevo-faq-kontakt .nevo-faq-item.is-open .nevo-faq-answer {
   max-height: 500px;
   opacity: 1;
   padding-bottom: 20px;
 }
 
 @media (min-width: 768px) {
-  .nevo-faq-kontakt .nevo-faq-answer:not([hidden]) {
+  .nevo-faq-kontakt .nevo-faq-answer:not([hidden]),
+  .nevo-faq-kontakt .nevo-faq-item.is-open .nevo-faq-answer {
     padding-bottom: 24px;
   }
 }
