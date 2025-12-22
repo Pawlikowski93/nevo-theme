@@ -5115,6 +5115,96 @@
 }
 
 /* =========================================
+   NEVO – SERVICE FAQ SKLEPY VARIANT
+   2x2 grid with detailed answers
+   ========================================= */
+
+.nevo-service-faq--sklepy {
+  background: var(--wp--preset--color--white);
+}
+
+.nevo-service-faq--sklepy .nevo-service-faq__heading {
+  margin-bottom: 48px;
+}
+
+/* FAQ Grid 2x2 */
+.nevo-faq-grid--sklepy {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 24px;
+  margin-top: 48px;
+}
+
+.nevo-faq-grid--sklepy .nevo-faq-item {
+  background: var(--wp--preset--color--beige);
+  border-radius: 12px;
+  padding: 28px;
+  border: 1px solid rgba(28, 46, 64, 0.06);
+}
+
+.nevo-faq-grid--sklepy .nevo-faq-item__question {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 1.1rem;
+  font-weight: 600;
+  color: var(--wp--preset--color--primary);
+  margin: 0 0 16px;
+  line-height: 1.4;
+}
+
+.nevo-faq-grid--sklepy .nevo-faq-item__answer {
+  font-size: 0.9rem;
+  line-height: 1.65;
+  color: #4a5b6a;
+}
+
+.nevo-faq-grid--sklepy .nevo-faq-item__answer p {
+  margin: 0 0 12px;
+}
+
+.nevo-faq-grid--sklepy .nevo-faq-item__answer p:last-child {
+  margin-bottom: 0;
+}
+
+.nevo-faq-grid--sklepy .nevo-faq-item__answer strong {
+  color: var(--wp--preset--color--primary);
+}
+
+.nevo-faq-grid--sklepy .nevo-faq-item__answer ul {
+  margin: 12px 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nevo-faq-grid--sklepy .nevo-faq-item__answer ul li {
+  position: relative;
+  padding-left: 18px;
+  margin-bottom: 6px;
+}
+
+.nevo-faq-grid--sklepy .nevo-faq-item__answer ul li::before {
+  content: "•";
+  position: absolute;
+  left: 0;
+  color: var(--wp--preset--color--coral);
+  font-weight: bold;
+}
+
+/* Responsive - FAQ Sklepy */
+@media (max-width: 768px) {
+  .nevo-faq-grid--sklepy {
+    grid-template-columns: 1fr;
+  }
+
+  .nevo-faq-grid--sklepy .nevo-faq-item {
+    padding: 24px;
+  }
+
+  .nevo-faq-grid--sklepy .nevo-faq-item__question {
+    font-size: 1rem;
+  }
+}
+
+/* =========================================
    NEVO – SERVICE FINAL CTA SECTION
    ========================================= */
 
