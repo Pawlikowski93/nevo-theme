@@ -1,6 +1,58 @@
 {
   "$schema": "https://schemas.wp.org/trunk/theme.json",
   "version": 2,
+  "customTemplates": [
+    {
+      "name": "page-strategia-marketingowa",
+      "title": "Strategia Marketingowa",
+      "postTypes": ["page"]
+    },
+    {
+      "name": "page-analityka-growth",
+      "title": "Analityka & Growth",
+      "postTypes": ["page"]
+    },
+    {
+      "name": "page-marketing-automation",
+      "title": "Marketing Automation",
+      "postTypes": ["page"]
+    },
+    {
+      "name": "page-landing",
+      "title": "Landing Page",
+      "postTypes": ["page"]
+    },
+    {
+      "name": "page-kontakt",
+      "title": "Kontakt",
+      "postTypes": ["page"]
+    },
+    {
+      "name": "page-case-study",
+      "title": "Case Study",
+      "postTypes": ["page"]
+    },
+    {
+      "name": "page-case-study-legenda-lasu",
+      "title": "Case Study: Legenda Lasu",
+      "postTypes": ["page"]
+    },
+    {
+      "name": "page-cs-legenda-lasu-etap1",
+      "title": "CS Legenda Lasu - Etap 1",
+      "postTypes": ["page"]
+    },
+    {
+      "name": "page-cs-legenda-lasu-etap2",
+      "title": "CS Legenda Lasu - Etap 2",
+      "postTypes": ["page"]
+    },
+    {
+      "name": "page-case-study-strama-eko",
+      "title": "Case Study: Strama Eko",
+      "postTypes": ["page"]
+    }
+  ],
   "settings": {
     "appearanceTools": true,
     "useRootPaddingAwareAlignments": true,
