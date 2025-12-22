@@ -2583,6 +2583,115 @@
   color: var(--wp--preset--color--coral);
 }
 
+/* =========================================
+   NEVO – PERFORMANCE SOLUTION VARIANT
+   ========================================= */
+
+.nevo-service-solution--performance {
+  background: var(--wp--preset--color--beige);
+}
+
+.nevo-service-solution--performance .nevo-service-solution__grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 32px;
+  margin-top: 48px;
+}
+
+.nevo-service-solution--performance .nevo-service-solution__card {
+  background: var(--wp--preset--color--white);
+  border-radius: 12px;
+  padding: 32px;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.06);
+}
+
+.nevo-service-solution--performance .nevo-service-solution__icon {
+  color: var(--wp--preset--color--primary);
+  margin-bottom: 16px;
+}
+
+.nevo-service-solution--performance .nevo-service-solution__title {
+  font-family: var(--wp--preset--font-family--heading);
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: var(--wp--preset--color--primary);
+  margin: 0 0 8px;
+}
+
+.nevo-service-solution--performance .nevo-service-solution__time {
+  display: inline-block;
+  font-size: 0.8rem;
+  font-weight: 600;
+  color: var(--wp--preset--color--gray-500);
+  background: var(--wp--preset--color--gray-100);
+  padding: 4px 12px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+
+.nevo-service-solution--performance .nevo-service-solution__list {
+  margin: 0;
+  padding: 0;
+  list-style: none;
+}
+
+.nevo-service-solution--performance .nevo-service-solution__list li {
+  position: relative;
+  padding-left: 20px;
+  margin-bottom: 8px;
+  font-size: 0.95rem;
+  line-height: 1.5;
+  color: var(--wp--preset--color--gray-700);
+}
+
+.nevo-service-solution--performance .nevo-service-solution__list li::before {
+  content: "✓";
+  position: absolute;
+  left: 0;
+  color: var(--wp--preset--color--coral);
+  font-weight: 600;
+}
+
+.nevo-service-solution--performance .nevo-service-solution__list li:last-child {
+  margin-bottom: 0;
+}
+
+/* Warning Highlight Box */
+.nevo-service-solution__highlight--warning {
+  background: linear-gradient(135deg, #FF6B58 0%, #ff8a7a 100%);
+  border-radius: 12px;
+  padding: 24px 32px;
+  text-align: center;
+  margin-top: 48px;
+  box-shadow: 0 8px 24px rgba(255, 107, 88, 0.25);
+}
+
+.nevo-service-solution__highlight--warning .nevo-service-solution__highlight-text {
+  margin: 0;
+  font-size: 1.05rem;
+  color: var(--wp--preset--color--white);
+}
+
+.nevo-service-solution__highlight--warning .nevo-service-solution__highlight-text strong {
+  color: var(--wp--preset--color--white);
+  font-weight: 700;
+}
+
+@media (max-width: 768px) {
+  .nevo-service-solution--performance .nevo-service-solution__grid {
+    grid-template-columns: 1fr;
+    gap: 24px;
+  }
+
+  .nevo-service-solution--performance .nevo-service-solution__card {
+    padding: 24px;
+  }
+
+  .nevo-service-solution__highlight--warning {
+    padding: 20px 24px;
+  }
+}
+
 /* RESPONSYWNOŚĆ */
 
 @media (max-width: 768px) {
