@@ -4549,6 +4549,16 @@
   margin: 0;
 }
 
+.nevo-service-final-cta__note--highlight {
+  color: var(--wp--preset--color--coral);
+  font-weight: 600;
+}
+
+/* Performance variant */
+.nevo-service-final-cta--performance {
+  background: linear-gradient(135deg, #1c2e40 0%, #0f1a28 100%);
+}
+
 /* =================== RESPONSYWNOŚĆ =================== */
 
 @media (max-width: 768px) {
