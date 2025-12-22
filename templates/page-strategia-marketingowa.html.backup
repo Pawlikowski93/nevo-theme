@@ -1,0 +1,668 @@
+<!-- wp:template-part {"slug":"header","tagName":"header"} /-->
+
+<!-- wp:group {"tagName":"main","align":"full","className":"nevo-service-page nevo-service-page--strategia","layout":{"type":"default"}} -->
+<main class="wp-block-group alignfull nevo-service-page nevo-service-page--strategia">
+
+    <!-- ========================================
+         SEKCJA 1: HERO
+         Główny headline, subheadline, CTA, trust badges
+         Klasy: .nevo-service-hero, .nevo-service-hero--strategia
+         ======================================== -->
+    <!-- wp:group {"align":"full","className":"nevo-service-hero nevo-service-hero--strategia","layout":{"type":"default"}} -->
+    <section class="wp-block-group alignfull nevo-service-hero nevo-service-hero--strategia">
+
+        <!-- wp:group {"className":"nevo-service-hero__inner","layout":{"type":"constrained","contentSize":"800px"}} -->
+        <div class="wp-block-group nevo-service-hero__inner">
+
+            <!-- Badge -->
+            <!-- wp:html -->
+            <div class="nevo-service-hero__badge">
+                <span>Strategia marketingowa</span>
+            </div>
+            <!-- /wp:html -->
+
+            <!-- Headline -->
+            <!-- wp:heading {"level":1,"className":"nevo-service-hero__headline"} -->
+            <h1 class="wp-block-heading nevo-service-hero__headline">Twój marketing to chaos kampanii bez długoterminowego planu?</h1>
+            <!-- /wp:heading -->
+
+            <!-- Subheadline -->
+            <!-- wp:paragraph {"className":"nevo-service-hero__subhead"} -->
+            <p class="nevo-service-hero__subhead">Strategia marketingowa dopasowana do modelu biznesu.<br>Roadmapa działań na 30/60/90 dni. Jasne KPI.</p>
+            <!-- /wp:paragraph -->
+
+            <!-- CTA Button -->
+            <!-- wp:buttons {"className":"nevo-service-hero__cta-wrap","layout":{"type":"flex","justifyContent":"center"}} -->
+            <div class="wp-block-buttons nevo-service-hero__cta-wrap">
+                <!-- wp:button {"className":"nevo-service-hero__cta"} -->
+                <div class="wp-block-button nevo-service-hero__cta">
+                    <a class="wp-block-button__link wp-element-button" href="#kontakt-form">Umów konsultację 30 min</a>
+                </div>
+                <!-- /wp:button -->
+            </div>
+            <!-- /wp:buttons -->
+
+            <!-- Benefits -->
+            <!-- wp:html -->
+            <ul class="nevo-service-hero__benefits">
+                <li>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    Odpowiedź w ciągu 24 godzin
+                </li>
+                <li>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    Bez zobowiązań
+                </li>
+                <li>
+                    <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    Video call lub telefon
+                </li>
+            </ul>
+            <!-- /wp:html -->
+
+        </div>
+        <!-- /wp:group -->
+
+    </section>
+    <!-- /wp:group -->
+
+    <!-- ========================================
+         SEKCJA 2: PROBLEM (Pain Points)
+         Problemy klientów bez strategii
+         Klasy: .nevo-service-problem
+         ======================================== -->
+    <!-- wp:group {"align":"full","className":"nevo-service-problem nevo-service-problem--strategia","layout":{"type":"default"}} -->
+    <section class="wp-block-group alignfull nevo-service-problem nevo-service-problem--strategia">
+
+        <!-- wp:group {"className":"nevo-service-problem__inner","layout":{"type":"constrained","contentSize":"1400px"}} -->
+        <div class="wp-block-group nevo-service-problem__inner">
+
+            <!-- Header -->
+            <!-- wp:group {"className":"nevo-service-problem__header","layout":{"type":"constrained","contentSize":"700px"}} -->
+            <div class="wp-block-group nevo-service-problem__header">
+
+                <!-- wp:heading {"level":2,"className":"nevo-service-problem__title"} -->
+                <h2 class="wp-block-heading nevo-service-problem__title">Brzmi znajomo?</h2>
+                <!-- /wp:heading -->
+
+            </div>
+            <!-- /wp:group -->
+
+            <!-- Cards Carousel -->
+            <!-- wp:html -->
+            <div class="nevo-carousel nevo-problems__carousel" data-nevo-carousel>
+              <button class="nevo-carousel__btn nevo-carousel__btn--prev" type="button" aria-label="Poprzedni problem"></button>
+
+              <div class="nevo-carousel__viewport" data-nevo-carousel-viewport>
+                <div class="nevo-carousel__track" data-nevo-carousel-track>
+
+                  <article class="nevo-carousel__slide nevo-problem-card">
+                    <span class="nevo-problem-card__icon nevo-problem-card__icon--error">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6M9 9l6 6"/></svg>
+                    </span>
+                    <h3 class="nevo-problem-card__title">Działasz ad-hoc, reagując na konkurencję</h3>
+                    <p class="nevo-problem-card__text">Konkurent obniżył cenę → Ty obniżasz. Pojawił się nowy kanał → Ty testujesz bez planu. Brak długoterminowej strategii = ciągłe gaszenie pożarów zamiast budowania przewagi.</p>
+                  </article>
+
+                  <article class="nevo-carousel__slide nevo-problem-card">
+                    <span class="nevo-problem-card__icon nevo-problem-card__icon--error">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6M9 9l6 6"/></svg>
+                    </span>
+                    <h3 class="nevo-problem-card__title">Budżet rozproszony bez priorytetów</h3>
+                    <p class="nevo-problem-card__text">10 kanałów, żaden nie działa porządnie. Google Ads, Meta, TikTok, influencerzy, SEO – wszystko po trochu. Efekt? Ani jeden kanał nie ma wystarczającego budżetu żeby zadziałać.</p>
+                  </article>
+
+                  <article class="nevo-carousel__slide nevo-problem-card">
+                    <span class="nevo-problem-card__icon nevo-problem-card__icon--error">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6M9 9l6 6"/></svg>
+                    </span>
+                    <h3 class="nevo-problem-card__title">Kampanie generują koszty, nie zyski</h3>
+                    <p class="nevo-problem-card__text">ROAS 2,1 przy marży 40% = strata na każdej sprzedaży. Ale „przecież reklamy działają, bo są kliknięcia". Brak jasnego modelu finansowego = nie wiesz czy zarabiasz czy tracisz.</p>
+                  </article>
+
+                  <article class="nevo-carousel__slide nevo-problem-card">
+                    <span class="nevo-problem-card__icon nevo-problem-card__icon--error">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6M9 9l6 6"/></svg>
+                    </span>
+                    <h3 class="nevo-problem-card__title">Nie wiesz które działania faktycznie działają</h3>
+                    <p class="nevo-problem-card__text">Google Analytics pokazuje liczby, ale nie insights. Czy to Google Ads czy Meta przynosi lepszych klientów? Czy SEO ma sens przy Twoim modelu? Zgadywanie zamiast danych.</p>
+                  </article>
+
+                  <article class="nevo-carousel__slide nevo-problem-card">
+                    <span class="nevo-problem-card__icon nevo-problem-card__icon--error">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6M9 9l6 6"/></svg>
+                    </span>
+                    <h3 class="nevo-problem-card__title">Brak jasnych KPI i progów decyzji</h3>
+                    <p class="nevo-problem-card__text">„Robimy marketing bo trzeba" – ale nie ma KPI, nie ma metryk sukcesu, nie ma progu przy którym mówisz stop. Zespół wykonuje zadania bez świadomości czy przybliżają do celu.</p>
+                  </article>
+
+                  <article class="nevo-carousel__slide nevo-problem-card">
+                    <span class="nevo-problem-card__icon nevo-problem-card__icon--error">
+                      <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><path d="M15 9l-6 6M9 9l6 6"/></svg>
+                    </span>
+                    <h3 class="nevo-problem-card__title">Agencje/zespół wykonują bez spójnego kierunku</h3>
+                    <p class="nevo-problem-card__text">Agencja robi kampanie Google, freelancer SEO, grafik kreacje, Ty zarządzasz social media. Każdy robi swoje, nikt nie widzi całości. Zero synergii, dużo chaosu.</p>
+                  </article>
+
+                </div>
+              </div>
+
+              <button class="nevo-carousel__btn nevo-carousel__btn--next" type="button" aria-label="Następny problem"></button>
+            </div>
+            <!-- /wp:html -->
+
+            <!-- Footer CTA -->
+            <!-- wp:html -->
+            <div class="nevo-service-problem__footer">
+                <p class="nevo-service-problem__footer-text">Masz przynajmniej 2 z tych problemów?</p>
+                <a href="#kontakt-form" class="nevo-service-problem__footer-cta">
+                    Umów konsultację – porozmawiajmy
+                    <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                </a>
+            </div>
+            <!-- /wp:html -->
+
+        </div>
+        <!-- /wp:group -->
+
+    </section>
+    <!-- /wp:group -->
+
+    <!-- ========================================
+         SEKCJA 3: ROZWIAZANIE (Co dostajesz)
+         Deliverables strategii marketingowej
+         Klasy: .nevo-service-solution
+         ======================================== -->
+    <!-- wp:group {"align":"full","className":"nevo-service-solution nevo-service-solution--strategia","layout":{"type":"default"}} -->
+    <section class="wp-block-group alignfull nevo-service-solution nevo-service-solution--strategia">
+
+        <!-- wp:group {"className":"nevo-service-solution__inner","layout":{"type":"constrained","contentSize":"1200px"}} -->
+        <div class="wp-block-group nevo-service-solution__inner">
+
+            <!-- Header -->
+            <!-- wp:group {"className":"nevo-service-solution__header","layout":{"type":"constrained","contentSize":"700px"}} -->
+            <div class="wp-block-group nevo-service-solution__header">
+
+                <!-- wp:heading {"level":2,"className":"nevo-service-solution__heading"} -->
+                <h2 class="wp-block-heading nevo-service-solution__heading">Co dostajesz</h2>
+                <!-- /wp:heading -->
+
+                <!-- wp:paragraph {"className":"nevo-service-solution__lead"} -->
+                <p class="nevo-service-solution__lead">Nie PDF z 40-punktową checklistą „do zrobienia przez Twój IT".<br>Konkretny plan działania, KPI i narzędzia do monitorowania efektów.</p>
+                <!-- /wp:paragraph -->
+
+            </div>
+            <!-- /wp:group -->
+
+            <!-- Solutions Grid -->
+            <!-- wp:html -->
+            <div class="nevo-service-solution__grid">
+
+                <!-- Karta 1: Diagnoza -->
+                <article class="nevo-service-solution__card">
+                    <div class="nevo-service-solution__icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="11" cy="11" r="8"/>
+                            <path d="M21 21l-4.35-4.35"/>
+                            <path d="M11 8v6M8 11h6"/>
+                        </svg>
+                    </div>
+                    <h3 class="nevo-service-solution__title">Diagnoza modelu biznesu</h3>
+                    <span class="nevo-service-solution__time">5–7 dni</span>
+                    <ul class="nevo-service-solution__list">
+                        <li>Customer journey: jak klienci przechodzą z awareness → purchase</li>
+                        <li>Analiza konkurencji: co robią dobrze, gdzie są luki</li>
+                        <li>Wąskie gardła: dlaczego ludzie nie kupują (Ruch? Cena? Zaufanie?)</li>
+                    </ul>
+                </article>
+
+                <!-- Karta 2: Roadmapa -->
+                <article class="nevo-service-solution__card">
+                    <div class="nevo-service-solution__icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M3 6h18M3 12h18M3 18h18"/>
+                            <circle cx="7" cy="6" r="2" fill="currentColor"/>
+                            <circle cx="12" cy="12" r="2" fill="currentColor"/>
+                            <circle cx="17" cy="18" r="2" fill="currentColor"/>
+                        </svg>
+                    </div>
+                    <h3 class="nevo-service-solution__title">Roadmapa działań</h3>
+                    <span class="nevo-service-solution__time">Dokument PDF</span>
+                    <ul class="nevo-service-solution__list">
+                        <li>Priorytety dopasowane do budżetu (framework RICE)</li>
+                        <li>Plan: co robimy w 30/60/90 dni</li>
+                        <li>Quick wins: zmiany możliwe od ręki (efekt &lt;30 dni)</li>
+                    </ul>
+                </article>
+
+                <!-- Karta 3: Framework KPI -->
+                <article class="nevo-service-solution__card">
+                    <div class="nevo-service-solution__icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <path d="M3 3v18h18"/>
+                            <path d="M7 16l4-4 4 4 5-6"/>
+                            <circle cx="20" cy="6" r="2"/>
+                        </svg>
+                    </div>
+                    <h3 class="nevo-service-solution__title">Framework KPI</h3>
+                    <span class="nevo-service-solution__time">Google Looker Studio</span>
+                    <ul class="nevo-service-solution__list">
+                        <li>3–5 metryk biznesowych: ROAS, CAC, LTV, CR</li>
+                        <li>Dashboard do monitorowania (dane na żywo)</li>
+                        <li>Progi decyzji: kiedy skalować, kiedy stop</li>
+                    </ul>
+                </article>
+
+                <!-- Karta 4: Alokacja budżetu -->
+                <article class="nevo-service-solution__card">
+                    <div class="nevo-service-solution__icon">
+                        <svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5">
+                            <circle cx="12" cy="12" r="10"/>
+                            <path d="M12 2a10 10 0 0 1 10 10"/>
+                            <path d="M12 2a10 10 0 0 0-8 4"/>
+                            <path d="M12 12V2"/>
+                            <path d="M12 12l7 5"/>
+                            <path d="M12 12l-8 3"/>
+                        </svg>
+                    </div>
+                    <h3 class="nevo-service-solution__title">Alokacja budżetu</h3>
+                    <span class="nevo-service-solution__time">Rekomendacje</span>
+                    <ul class="nevo-service-solution__list">
+                        <li>Kanały: Google Ads / Meta / SEO / E-mail – co i dlaczego</li>
+                        <li>Podział budżetu: ile % na każdy kanał</li>
+                        <li>Prognozy ROI: realistyczne scenariusze (best/worst case)</li>
+                    </ul>
+                </article>
+
+            </div>
+            <!-- /wp:html -->
+
+            <!-- Highlight Box -->
+            <!-- wp:html -->
+            <div class="nevo-service-solution__highlight">
+                <p class="nevo-service-solution__highlight-text">
+                    <strong>Czas realizacji:</strong> 7–10 dni roboczych od konsultacji do prezentacji strategii
+                </p>
+            </div>
+            <!-- /wp:html -->
+
+        </div>
+        <!-- /wp:group -->
+
+    </section>
+    <!-- /wp:group -->
+
+    <!-- ========================================
+         SEKCJA 4: PROCES (Jak wyglada wspolpraca)
+         Timeline / kroki wdrozenia
+         Klasy: .nevo-service-process
+         ======================================== -->
+    <!-- wp:group {"align":"full","className":"nevo-service-process nevo-service-process--strategia","layout":{"type":"default"}} -->
+    <section class="wp-block-group alignfull nevo-service-process nevo-service-process--strategia">
+
+        <!-- wp:group {"className":"nevo-service-process__inner","layout":{"type":"constrained","contentSize":"1200px"}} -->
+        <div class="wp-block-group nevo-service-process__inner">
+
+            <!-- Header -->
+            <!-- wp:group {"className":"nevo-service-process__header","layout":{"type":"constrained","contentSize":"700px"}} -->
+            <div class="wp-block-group nevo-service-process__header">
+
+                <!-- wp:heading {"level":2,"className":"nevo-service-process__heading"} -->
+                <h2 class="wp-block-heading nevo-service-process__heading">Jak wygląda proces</h2>
+                <!-- /wp:heading -->
+
+                <!-- wp:paragraph {"className":"nevo-service-process__lead"} -->
+                <p class="nevo-service-process__lead">Nie 3 tygodnie na ofertę. Nie 2 miesiące „onboardingu".<br>Od pierwszej rozmowy do gotowej strategii: 7–10 dni.</p>
+                <!-- /wp:paragraph -->
+
+            </div>
+            <!-- /wp:group -->
+
+            <!-- Timeline -->
+            <!-- wp:html -->
+            <div class="nevo-service-process__timeline">
+
+                <!-- Krok 1: Brief -->
+                <article class="nevo-service-process__step">
+                    <div class="nevo-service-process__step-header">
+                        <span class="nevo-service-process__step-number">1</span>
+                        <span class="nevo-service-process__step-time">30–45 min</span>
+                    </div>
+                    <h3 class="nevo-service-process__step-title">Brief</h3>
+                    <p class="nevo-service-process__step-text">Pytamy o marże, średni koszyk, źródła ruchu. Gdzie widać największy przeciek?</p>
+                    <p class="nevo-service-process__step-output"><strong>→</strong> Top 3 hipotezy wzrostu</p>
+                </article>
+
+                <!-- Krok 2: Analiza -->
+                <article class="nevo-service-process__step">
+                    <div class="nevo-service-process__step-header">
+                        <span class="nevo-service-process__step-number">2</span>
+                        <span class="nevo-service-process__step-time">5–7 dni</span>
+                    </div>
+                    <h3 class="nevo-service-process__step-title">Analiza</h3>
+                    <p class="nevo-service-process__step-text">Diagnoza modelu, customer journey, konkurencja. Priorytetyzujemy wg potencjału (RICE).</p>
+                    <p class="nevo-service-process__step-output"><strong>→</strong> Strategia PDF + Roadmapa + KPI</p>
+                </article>
+
+                <!-- Krok 3: Prezentacja -->
+                <article class="nevo-service-process__step">
+                    <div class="nevo-service-process__step-header">
+                        <span class="nevo-service-process__step-number">3</span>
+                        <span class="nevo-service-process__step-time">2h</span>
+                    </div>
+                    <h3 class="nevo-service-process__step-title">Prezentacja</h3>
+                    <p class="nevo-service-process__step-text">Pokazujemy: roadmapa, KPI, budżety, prognozy. Pytania, korekty, następne kroki.</p>
+                    <p class="nevo-service-process__step-output"><strong>→</strong> Finalna strategia + rekomendacje</p>
+                </article>
+
+                <!-- Krok 4: Support -->
+                <article class="nevo-service-process__step">
+                    <div class="nevo-service-process__step-header">
+                        <span class="nevo-service-process__step-number">4</span>
+                        <span class="nevo-service-process__step-time">30 dni</span>
+                    </div>
+                    <h3 class="nevo-service-process__step-title">Support</h3>
+                    <p class="nevo-service-process__step-text">Odpowiadamy na pytania przy wdrożeniu. Korekta strategii jeśli potrzeba.</p>
+                    <p class="nevo-service-process__step-output"><strong>→</strong> Slack/e-mail + 1 korekta</p>
+                </article>
+
+            </div>
+            <!-- /wp:html -->
+
+            <!-- Footer CTA -->
+            <!-- wp:html -->
+            <div class="nevo-service-process__cta">
+                <p class="nevo-service-process__cta-text">Brzmi jak plan, który faktycznie możesz sprawdzić?</p>
+                <a href="#kontakt-form" class="nevo-service-process__cta-button cta-primary">
+                    Umów konsultację 30 min
+                </a>
+                <p class="nevo-service-process__cta-note">Odpowiedź w 24h • Bez zobowiązań</p>
+            </div>
+            <!-- /wp:html -->
+
+        </div>
+        <!-- /wp:group -->
+
+    </section>
+    <!-- /wp:group -->
+
+    <!-- ========================================
+         SEKCJA 5: CENNIK + FAQ
+         Pakiety cenowe i pytania
+         Klasy: .nevo-service-pricing, .nevo-service-pricing__faq
+         ======================================== -->
+    <!-- wp:group {"align":"full","className":"nevo-service-pricing nevo-service-pricing--strategia","layout":{"type":"default"}} -->
+    <section class="wp-block-group alignfull nevo-service-pricing nevo-service-pricing--strategia">
+
+        <!-- wp:group {"className":"nevo-service-pricing__inner","layout":{"type":"constrained","contentSize":"1200px"}} -->
+        <div class="wp-block-group nevo-service-pricing__inner">
+
+            <!-- 2-column layout: Price Box + FAQ -->
+            <!-- wp:html -->
+            <div class="nevo-pricing-faq-grid">
+
+                <!-- PRICE BOX -->
+                <div class="nevo-service-pricing__box">
+                    <span class="nevo-service-pricing__label">Inwestycja</span>
+                    <div class="nevo-service-pricing__amount">4 500 zł <span class="nevo-service-pricing__amount-note">netto</span></div>
+                    <p class="nevo-service-pricing__note">Jednorazowo, bez ukrytych kosztów</p>
+
+                    <div class="nevo-service-pricing__divider"></div>
+
+                    <h4 class="nevo-service-pricing__included-title">Co wliczone:</h4>
+                    <ul class="nevo-service-pricing__included-list">
+                        <li>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Diagnoza modelu biznesu (5–7 dni)
+                        </li>
+                        <li>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Roadmapa działań 30/60/90 dni (PDF)
+                        </li>
+                        <li>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Framework KPI + dashboard (Google Looker Studio)
+                        </li>
+                        <li>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            Prezentacja strategii (2h video call lub osobiście)
+                        </li>
+                        <li>
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                            30 dni support (pytania przy wdrożeniu)
+                        </li>
+                    </ul>
+
+                    <div class="nevo-service-pricing__divider"></div>
+
+                    <h4 class="nevo-service-pricing__optional-title">Opcjonalnie:</h4>
+                    <ul class="nevo-service-pricing__optional-list">
+                        <li>Wdrożenie kampanii: <strong>od 2 500 zł</strong> setup</li>
+                        <li>Abonament prowadzenia: <strong>od 3 500 zł</strong>/mies.</li>
+                    </ul>
+
+                    <a href="#kontakt-form" class="nevo-service-pricing__cta-button">
+                        Umów konsultację
+                        <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                    </a>
+                </div>
+
+                <!-- FAQ -->
+                <div class="nevo-service-pricing__faq-column">
+                    <h2 class="nevo-service-pricing__faq-title">Najczęstsze pytania</h2>
+
+                    <div class="nevo-service-pricing__faq-list">
+                        <article class="nevo-service-pricing__faq-item">
+                            <h3 class="nevo-service-pricing__faq-question">Ile trwa stworzenie strategii?</h3>
+                            <p class="nevo-service-pricing__faq-answer">7–10 dni roboczych od konsultacji do prezentacji. Brief (dzień 1) → analiza (dni 2-7) → prezentacja strategii (dzień 8-10).</p>
+                        </article>
+
+                        <article class="nevo-service-pricing__faq-item">
+                            <h3 class="nevo-service-pricing__faq-question">Co jeśli nie będę zadowolony?</h3>
+                            <p class="nevo-service-pricing__faq-answer">1 runda korekt wliczona w cenę. Jeśli po korektach nadal będziesz niezadowolony → zwrot 50% (w ciągu 7 dni od prezentacji).</p>
+                        </article>
+
+                        <article class="nevo-service-pricing__faq-item">
+                            <h3 class="nevo-service-pricing__faq-question">Czy wdrażacie strategię?</h3>
+                            <p class="nevo-service-pricing__faq-answer">Możemy wdrożyć (kampanie, tech, kreacje) jako osobna usługa. Albo dostajesz plan i wdrażasz sam/własnym zespołem. Wybór należy do Ciebie.</p>
+                        </article>
+
+                        <article class="nevo-service-pricing__faq-item">
+                            <h3 class="nevo-service-pricing__faq-question">Dla kogo jest ta usługa?</h3>
+                            <p class="nevo-service-pricing__faq-answer">E-commerce, MŚP, start-upy, które chcą skalować świadomie, nie metodą prób i błędów. Jeśli masz już sprzedaż (nawet niewielką) i wiesz że marketing to inwestycja, nie koszt – strategia da Ci plan zanim wydasz budżet na kampanie.</p>
+                        </article>
+                    </div>
+                </div>
+
+            </div>
+            <!-- /wp:html -->
+
+        </div>
+        <!-- /wp:group -->
+
+    </section>
+    <!-- /wp:group -->
+
+    <!-- ========================================
+         SEKCJA 6: FORMULARZ KONTAKTOWY (CTA)
+         Final CTA z formularzem
+         Klasy: .nevo-service-final-cta
+         ======================================== -->
+    <!-- wp:group {"align":"full","className":"nevo-service-final-cta nevo-service-final-cta--strategia","layout":{"type":"default"}} -->
+    <section id="kontakt-form" class="wp-block-group alignfull nevo-service-final-cta nevo-service-final-cta--strategia">
+
+        <!-- wp:group {"className":"nevo-service-final-cta__inner","layout":{"type":"constrained","contentSize":"1100px"}} -->
+        <div class="wp-block-group nevo-service-final-cta__inner">
+
+            <!-- Header -->
+            <!-- wp:group {"className":"nevo-service-final-cta__header","layout":{"type":"constrained","contentSize":"700px"}} -->
+            <div class="wp-block-group nevo-service-final-cta__header">
+
+                <!-- wp:heading {"level":2,"className":"nevo-service-final-cta__heading"} -->
+                <h2 class="wp-block-heading nevo-service-final-cta__heading">Gotowy na strategię która faktycznie działa?</h2>
+                <!-- /wp:heading -->
+
+                <!-- wp:paragraph {"className":"nevo-service-final-cta__subhead"} -->
+                <p class="nevo-service-final-cta__subhead">Umów bezpłatną konsultację 30 min. Porozmawiamy o Twoim biznesie<br>i wskażemy 3 kluczowe obszary do poprawy.</p>
+                <!-- /wp:paragraph -->
+
+            </div>
+            <!-- /wp:group -->
+
+            <!-- Content: Form + Phone -->
+            <!-- wp:html -->
+            <div class="nevo-service-final-cta__content">
+
+                <!-- FORM COLUMN -->
+                <div class="nevo-service-final-cta__form-column">
+                    <form class="nevo-service-final-cta__form" action="#" method="post">
+                        <div class="nevo-cf7-fields">
+                            <div class="nevo-cf7-field">
+                                <label for="cta-name">Imię i nazwisko <span class="required">*</span></label>
+                                <input type="text" id="cta-name" name="name" placeholder="Jan Kowalski" required>
+                            </div>
+
+                            <div class="nevo-cf7-field">
+                                <label for="cta-email">E-mail <span class="required">*</span></label>
+                                <input type="email" id="cta-email" name="email" placeholder="jan@firma.pl" required>
+                            </div>
+
+                            <div class="nevo-cf7-field">
+                                <label for="cta-message">Krótko opisz czego potrzebujesz <span class="optional">(opcjonalnie)</span></label>
+                                <textarea id="cta-message" name="message" rows="4" placeholder="Np: Sklep internetowy z odzieżą, budżet 15k/mies, chcę poprawić ROAS"></textarea>
+                            </div>
+                        </div>
+
+                        <button type="submit" class="nevo-cf7-submit">
+                            Wyślij zapytanie
+                            <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M5 12h14M12 5l7 7-7 7"/></svg>
+                        </button>
+                    </form>
+                </div>
+
+                <!-- PHONE COLUMN -->
+                <div class="nevo-service-final-cta__phone-column">
+                    <span class="nevo-service-final-cta__or">lub</span>
+
+                    <h3 class="nevo-service-final-cta__phone-heading">Wolisz porozmawiać?</h3>
+                    <p class="nevo-service-final-cta__phone-text">Zadzwoń bezpośrednio:</p>
+
+                    <div class="nevo-service-final-cta__phone-number">
+                        <a href="tel:+48518279323">
+                            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M22 16.92v3a2 2 0 0 1-2.18 2 19.79 19.79 0 0 1-8.63-3.07 19.5 19.5 0 0 1-6-6 19.79 19.79 0 0 1-3.07-8.67A2 2 0 0 1 4.11 2h3a2 2 0 0 1 2 1.72 12.84 12.84 0 0 0 .7 2.81 2 2 0 0 1-.45 2.11L8.09 9.91a16 16 0 0 0 6 6l1.27-1.27a2 2 0 0 1 2.11-.45 12.84 12.84 0 0 0 2.81.7A2 2 0 0 1 22 16.92z"/></svg>
+                            +48 518 279 323
+                        </a>
+                    </div>
+
+                    <p class="nevo-service-final-cta__phone-hours">Pn–Pt: 9:00–17:00</p>
+                </div>
+
+            </div>
+            <!-- /wp:html -->
+
+            <!-- Footer Note -->
+            <!-- wp:html -->
+            <div class="nevo-service-final-cta__note">
+                <span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    Odpowiedź w ciągu 24 godzin
+                </span>
+                <span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    Bez zobowiązań
+                </span>
+                <span>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5"><polyline points="20 6 9 17 4 12"/></svg>
+                    Dane są bezpieczne
+                </span>
+            </div>
+            <!-- /wp:html -->
+
+        </div>
+        <!-- /wp:group -->
+
+    </section>
+    <!-- /wp:group -->
+
+    <!-- ========================================
+         SEKCJA 7: STRUCTURED DATA (JSON-LD)
+         Schema.org dla SEO
+         ======================================== -->
+    <!-- wp:html -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Strategia Marketingowa",
+        "description": "Strategia marketingowa dopasowana do modelu biznesu. Roadmapa działań na 30/60/90 dni z jasnymi KPI.",
+        "provider": {
+            "@type": "Organization",
+            "name": "NEVO Marketing",
+            "url": "https://nevomarketing.pl"
+        },
+        "areaServed": {
+            "@type": "Country",
+            "name": "Poland"
+        },
+        "offers": {
+            "@type": "Offer",
+            "price": "4500",
+            "priceCurrency": "PLN",
+            "priceSpecification": {
+                "@type": "UnitPriceSpecification",
+                "price": "4500",
+                "priceCurrency": "PLN",
+                "unitText": "jednorazowo"
+            }
+        }
+    }
+    </script>
+    <!-- /wp:html -->
+
+    <!-- wp:html -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "FAQPage",
+        "mainEntity": [
+            {
+                "@type": "Question",
+                "name": "Ile trwa stworzenie strategii marketingowej?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "7–10 dni roboczych od konsultacji do prezentacji. Brief (dzień 1) → analiza (dni 2-7) → prezentacja strategii (dzień 8-10)."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Co jeśli nie będę zadowolony ze strategii?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "1 runda korekt wliczona w cenę. Jeśli po korektach nadal będziesz niezadowolony → zwrot 50% (w ciągu 7 dni od prezentacji)."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Czy wdrażacie strategię marketingową?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Możemy wdrożyć (kampanie, tech, kreacje) jako osobna usługa. Albo dostajesz plan i wdrażasz sam/własnym zespołem. Wybór należy do Ciebie."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "Dla kogo jest usługa strategii marketingowej?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "E-commerce, MŚP, start-upy, które chcą skalować świadomie, nie metodą prób i błędów. Jeśli masz już sprzedaż (nawet niewielką) i wiesz że marketing to inwestycja, nie koszt – strategia da Ci plan zanim wydasz budżet na kampanie."
+                }
+            }
+        ]
+    }
+    </script>
+    <!-- /wp:html -->
+
+</main>
+<!-- /wp:group -->
+
+<!-- wp:template-part {"slug":"footer","tagName":"footer"} /-->
