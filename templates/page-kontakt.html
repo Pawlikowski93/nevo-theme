@@ -69,58 +69,8 @@
                     <div class="nevo-kontakt-hero__form-card" id="kontakt-form">
                         <h3 class="nevo-kontakt-hero__form-title">Wypełnij formularz</h3>
 
-                        <!-- Placeholder dla Contact Form 7 -->
-                        <form class="nevo-kontakt-form" action="#" method="post">
-                            <div class="nevo-form-row">
-                                <label for="kontakt-imie" class="nevo-form-label">Imię i nazwisko *</label>
-                                <input type="text" id="kontakt-imie" name="imie" class="nevo-form-input" placeholder="Jan Kowalski" required>
-                            </div>
-
-                            <div class="nevo-form-row">
-                                <label for="kontakt-email" class="nevo-form-label">E-mail *</label>
-                                <input type="email" id="kontakt-email" name="email" class="nevo-form-input" placeholder="jan@firma.pl" required>
-                            </div>
-
-                            <div class="nevo-form-row">
-                                <label for="kontakt-telefon" class="nevo-form-label">Telefon</label>
-                                <input type="tel" id="kontakt-telefon" name="telefon" class="nevo-form-input" placeholder="+48 123 456 789">
-                            </div>
-
-                            <div class="nevo-form-row">
-                                <label for="kontakt-temat" class="nevo-form-label">Czego dotyczy zapytanie? *</label>
-                                <select id="kontakt-temat" name="temat" class="nevo-form-select" required>
-                                    <option value="">Wybierz temat...</option>
-                                    <option value="strategia">Strategia Marketingowa</option>
-                                    <option value="performance">Performance Marketing</option>
-                                    <option value="ecommerce">E-commerce Development</option>
-                                    <option value="analityka">Analityka & Growth</option>
-                                    <option value="automation">Marketing Automation</option>
-                                    <option value="inne">Inne</option>
-                                </select>
-                            </div>
-
-                            <div class="nevo-form-row">
-                                <label for="kontakt-wiadomosc" class="nevo-form-label">Wiadomość *</label>
-                                <textarea id="kontakt-wiadomosc" name="wiadomosc" class="nevo-form-textarea" rows="4" placeholder="Opisz krótko swoje potrzeby lub wyzwania..." required></textarea>
-                            </div>
-
-                            <div class="nevo-form-row nevo-form-row--checkbox">
-                                <label class="nevo-form-checkbox-label">
-                                    <input type="checkbox" name="rodo" class="nevo-form-checkbox" required>
-                                    <span class="nevo-form-checkbox-text">Wyrażam zgodę na przetwarzanie moich danych osobowych w celu odpowiedzi na zapytanie. <a href="/polityka-prywatnosci/" target="_blank">Polityka prywatności</a></span>
-                                </label>
-                            </div>
-
-                            <div class="nevo-form-row nevo-form-row--submit">
-                                <button type="submit" class="nevo-form-submit">
-                                    Wyślij wiadomość
-                                    <svg class="submit-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                                        <line x1="5" y1="12" x2="19" y2="12"></line>
-                                        <polyline points="12 5 19 12 12 19"></polyline>
-                                    </svg>
-                                </button>
-                            </div>
-                        </form>
+                        <!-- CF7 Shortcode: Kontakt Główny -->
+                        [contact-form-7 id="FORM_ID_KONTAKT" title="Kontakt - Główny"]
                     </div>
                     <!-- /wp:html -->
 
