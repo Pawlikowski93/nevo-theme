@@ -8,6 +8,11 @@
       "postTypes": ["page"]
     },
     {
+      "name": "page-performance-marketing",
+      "title": "Performance Marketing",
+      "postTypes": ["page"]
+    },
+    {
       "name": "page-analityka-growth",
       "title": "Analityka & Growth",
       "postTypes": ["page"]
