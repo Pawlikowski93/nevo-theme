@@ -10,31 +10,6 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
- * Enqueue Font Awesome Kit
- */
-function nevo_enqueue_font_awesome() {
-    wp_enqueue_script(
-        'font-awesome-kit',
-        'https://kit.fontawesome.com/8910124cbf.js',
-        array(),
-        null,
-        false // Load in head
-    );
-}
-add_action( 'wp_enqueue_scripts', 'nevo_enqueue_font_awesome' );
-
-/**
- * Add crossorigin attribute to Font Awesome script
- */
-function nevo_font_awesome_crossorigin( $tag, $handle ) {
-    if ( 'font-awesome-kit' === $handle ) {
-        return str_replace( ' src', ' crossorigin="anonymous" src', $tag );
-    }
-    return $tag;
-}
-add_filter( 'script_loader_tag', 'nevo_font_awesome_crossorigin', 10, 2 );
-
-/**
  * Enqueue theme styles and scripts
  */
 function nevo_enqueue_assets() {
