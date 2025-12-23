@@ -208,26 +208,47 @@ add_action( 'wp_head', 'nevo_inline_critical_css', 1 );
 
 /**
  * Defer non-critical CSS loading on front page
+ * Uses preload + onload pattern for async CSS loading
  */
-function nevo_defer_stylesheets( $html, $handle ) {
-    if ( is_admin() || ! is_front_page() ) {
+function nevo_defer_stylesheets( $html, $handle, $href, $media ) {
+    // Skip in admin
+    if ( is_admin() ) {
+        return $html;
+    }
+
+    // Only defer on front page (critical CSS is inlined there)
+    if ( ! is_front_page() ) {
         return $html;
     }
 
     // Stylesheets to defer (load async)
-    $defer_handles = array( 'nevo-main' );
+    $defer_handles = array(
+        'nevo-main',
+        'nevo-hero-style',
+        'nevo-tiles-style',
+        'nevo-cta-style',
+    );
 
     if ( in_array( $handle, $defer_handles, true ) ) {
-        // Change rel="stylesheet" to rel="preload" with onload
-        $html = str_replace(
-            "rel='stylesheet'",
-            "rel='preload' as='style' onload=\"this.onload=null;this.rel='stylesheet'\"",
-            $html
+        // Build preload tag with onload handler
+        $preload_tag = sprintf(
+            '<link rel="preload" id="%s-css" href="%s" as="style" media="%s" onload="this.onload=null;this.rel=\'stylesheet\'">' . "\n",
+            esc_attr( $handle ),
+            esc_url( $href ),
+            esc_attr( $media ? $media : 'all' )
         );
-        // Add noscript fallback
-        $html .= '<noscript>' . str_replace( "rel='preload' as='style' onload=\"this.onload=null;this.rel='stylesheet'\"", "rel='stylesheet'", $html ) . '</noscript>';
+
+        // Noscript fallback for browsers without JS
+        $noscript_tag = sprintf(
+            '<noscript><link rel="stylesheet" id="%s-css-fallback" href="%s" media="%s"></noscript>' . "\n",
+            esc_attr( $handle ),
+            esc_url( $href ),
+            esc_attr( $media ? $media : 'all' )
+        );
+
+        return $preload_tag . $noscript_tag;
     }
 
     return $html;
 }
-add_filter( 'style_loader_tag', 'nevo_defer_stylesheets', 10, 2 );
+add_filter( 'style_loader_tag', 'nevo_defer_stylesheets', 10, 4 );
