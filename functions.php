@@ -185,3 +185,49 @@ function nevo_remove_archive_title_prefix( $title ) {
     return $title;
 }
 add_filter( 'get_the_archive_title', 'nevo_remove_archive_title_prefix' );
+
+/**
+ * Inline Critical CSS for above-the-fold content
+ * Only loads on front page to eliminate render-blocking CSS
+ */
+function nevo_inline_critical_css() {
+    if ( ! is_front_page() ) {
+        return;
+    }
+
+    $critical_css_path = NEVO_DIR . '/assets/css/critical.css';
+
+    if ( file_exists( $critical_css_path ) ) {
+        $critical_css = file_get_contents( $critical_css_path );
+        if ( $critical_css ) {
+            echo '<style id="nevo-critical-css">' . $critical_css . '</style>' . "\n";
+        }
+    }
+}
+add_action( 'wp_head', 'nevo_inline_critical_css', 1 );
+
+/**
+ * Defer non-critical CSS loading on front page
+ */
+function nevo_defer_stylesheets( $html, $handle ) {
+    if ( is_admin() || ! is_front_page() ) {
+        return $html;
+    }
+
+    // Stylesheets to defer (load async)
+    $defer_handles = array( 'nevo-main' );
+
+    if ( in_array( $handle, $defer_handles, true ) ) {
+        // Change rel="stylesheet" to rel="preload" with onload
+        $html = str_replace(
+            "rel='stylesheet'",
+            "rel='preload' as='style' onload=\"this.onload=null;this.rel='stylesheet'\"",
+            $html
+        );
+        // Add noscript fallback
+        $html .= '<noscript>' . str_replace( "rel='preload' as='style' onload=\"this.onload=null;this.rel='stylesheet'\"", "rel='stylesheet'", $html ) . '</noscript>';
+    }
+
+    return $html;
+}
+add_filter( 'style_loader_tag', 'nevo_defer_stylesheets', 10, 2 );
