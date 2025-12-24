@@ -5,6 +5,21 @@
   margin: 3rem 0;
 }
 
+.nevo-cta--primary {
+  background-color: #1c2e40;
+  color: white;
+}
+
+.nevo-cta--beige {
+  background-color: #f5f1ed;
+  color: #1c2e40;
+}
+
+.nevo-cta--accent {
+  background-color: #d4a574;
+  color: #1c2e40;
+}
+
 .nevo-cta__heading {
   font-family: 'Montserrat', sans-serif;
   font-size: clamp(2rem, 4vw, 3rem);
@@ -29,6 +44,10 @@
   border-radius: 0.5rem;
   text-decoration: none;
   transition: all 0.2s ease;
+}
+
+.nevo-cta--primary .nevo-cta__button {
+  background-color: #d4a574;
 }
 
 .nevo-cta__button:hover {
