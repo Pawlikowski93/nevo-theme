@@ -34,6 +34,8 @@ const purgecssConfig = {
       /^page-/,
       /^admin-bar/,
       /^logged-in/,
+      // NEVO theme custom classes (used in WP editor content)
+      /^nevo-/,
       // Contact Form 7 (dynamic form states)
       /^wpcf7/,
       // FontAwesome
@@ -57,6 +59,7 @@ const purgecssConfig = {
       /wp-block/,
       /entry-content/,
       /wpcf7/,
+      /nevo-/,
     ],
     greedy: [
       // WordPress dynamic color/size classes
