@@ -21,11 +21,32 @@ themeJson.settings.typography.fontSizes.forEach((size) => {
 
 module.exports = {
   content: [
-    './**/*.php',
+    './*.php',
     './templates/**/*.html',
     './parts/**/*.html',
-    './blocks/**/*.{js,jsx}',
+    './patterns/**/*.html',
+    './patterns/**/*.php',
+    './blocks/**/*.{js,jsx,php}',
     './assets/js/**/*.js',
+    './inc/**/*.php',
+  ],
+  // Safelist WordPress and NEVO classes that might be dynamically generated
+  safelist: [
+    // WordPress core patterns
+    { pattern: /^wp-/ },
+    { pattern: /^is-/ },
+    { pattern: /^has-/ },
+    { pattern: /^align/ },
+    // NEVO custom classes
+    { pattern: /^nevo-/ },
+    // Contact Form 7
+    { pattern: /^wpcf7/ },
+    // Accessibility
+    'screen-reader-text',
+    'admin-bar',
+    // Dynamic color classes
+    { pattern: /^has-(.*)-color$/ },
+    { pattern: /^has-(.*)-background-color$/ },
   ],
   theme: {
     extend: {

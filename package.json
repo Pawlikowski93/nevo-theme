@@ -17,6 +17,7 @@
   "author": "Andrzej Pawlikowski",
   "license": "Proprietary",
   "devDependencies": {
+    "@fullhuman/postcss-purgecss": "^7.0.2",
     "@vitejs/plugin-vue": "^6.0.1",
     "@wordpress/scripts": "^31.0.0",
     "autoprefixer": "^10.4.22",
