@@ -14,6 +14,9 @@ define( 'NEVO_URI', get_template_directory_uri() );
 // Ładujemy enqueue (CSS/JS, fonty itd.)
 require_once NEVO_DIR . '/inc/enqueue.php';
 
+// SEO (meta descriptions, canonical, Open Graph)
+require_once NEVO_DIR . '/inc/seo.php';
+
 /**
  * Setup motywu
  */
