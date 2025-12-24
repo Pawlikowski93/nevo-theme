@@ -227,6 +227,7 @@ function nevo_defer_stylesheets( $html, $handle, $href, $media ) {
         'nevo-hero-style',
         'nevo-tiles-style',
         'nevo-cta-style',
+        'fontawesome',
     );
 
     if ( in_array( $handle, $defer_handles, true ) ) {

@@ -10,6 +10,19 @@ if ( ! defined( 'ABSPATH' ) ) {
 }
 
 /**
+ * Enqueue Font Awesome CSS (not JS Kit - faster!)
+ */
+function nevo_enqueue_font_awesome() {
+    wp_enqueue_style(
+        'fontawesome',
+        'https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css',
+        array(),
+        '6.5.1'
+    );
+}
+add_action( 'wp_enqueue_scripts', 'nevo_enqueue_font_awesome' );
+
+/**
  * Enqueue theme styles and scripts
  */
 function nevo_enqueue_assets() {
