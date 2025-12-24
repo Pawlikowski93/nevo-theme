@@ -54,9 +54,25 @@ function nevo_theme_setup() {
 add_action( 'after_setup_theme', 'nevo_theme_setup' );
 
 /**
- * Enqueue Google Fonts (tylko tutaj, NIE w inc/enqueue.php)
+ * Optimized Google Fonts loading
+ * - Preconnect for faster DNS/TLS
+ * - Preload + async loading pattern
+ * - Noscript fallback
  */
-function nevo_enqueue_google_fonts() {
+function nevo_optimized_google_fonts() {
+    $fonts_url = 'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Roboto:wght@400;500;700&display=swap';
+    ?>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="preload" as="style" href="<?php echo esc_url( $fonts_url ); ?>">
+    <link rel="stylesheet" href="<?php echo esc_url( $fonts_url ); ?>" media="print" onload="this.media='all'">
+    <noscript><link rel="stylesheet" href="<?php echo esc_url( $fonts_url ); ?>"></noscript>
+    <?php
+}
+add_action( 'wp_head', 'nevo_optimized_google_fonts', 1 );
+
+// Admin still uses synchronous loading (not critical for performance)
+function nevo_admin_google_fonts() {
     wp_enqueue_style(
         'nevo-google-fonts',
         'https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Roboto:wght@400;500;700&display=swap',
@@ -64,8 +80,7 @@ function nevo_enqueue_google_fonts() {
         null
     );
 }
-add_action( 'wp_enqueue_scripts', 'nevo_enqueue_google_fonts' );
-add_action( 'admin_enqueue_scripts', 'nevo_enqueue_google_fonts' );
+add_action( 'admin_enqueue_scripts', 'nevo_admin_google_fonts' );
 
 /**
  * Rejestracja custom bloków (Hero, Tiles, CTA)
