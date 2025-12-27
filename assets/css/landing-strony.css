@@ -1,0 +1,877 @@
+/* ==========================================================================
+   LANDING PAGE: STRONA JAKO NARZĘDZIE
+   ========================================================================== */
+
+/* --------------------------------------------------------------------------
+   CSS CUSTOM PROPERTIES
+   -------------------------------------------------------------------------- */
+:root {
+  --landing-primary: #1c2e40;
+  --landing-primary-light: #2a4458;
+  --landing-accent: #FF6B58;
+  --landing-accent-hover: #ff8577;
+  --landing-beige: #f5f1ed;
+  --landing-beige-dark: #e5dcc5;
+  --landing-gold: #b8956a;
+  --landing-white: #ffffff;
+  --landing-gray-100: #f3f4f6;
+  --landing-gray-200: #e5e7eb;
+  --landing-gray-300: #d1d5db;
+  --landing-gray-400: #9ca3af;
+  --landing-gray-500: #6b7280;
+  --landing-gray-600: #4b5563;
+  --landing-success: #22c55e;
+  --landing-error: #ef4444;
+
+  --landing-font-heading: 'Montserrat', sans-serif;
+  --landing-font-body: 'Inter', sans-serif;
+
+  --landing-shadow-sm: 0 1px 2px 0 rgb(0 0 0 / 0.05);
+  --landing-shadow-md: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+  --landing-shadow-lg: 0 10px 15px -3px rgb(0 0 0 / 0.1), 0 4px 6px -4px rgb(0 0 0 / 0.1);
+  --landing-shadow-xl: 0 20px 25px -5px rgb(0 0 0 / 0.1), 0 8px 10px -6px rgb(0 0 0 / 0.1);
+
+  --landing-radius-sm: 8px;
+  --landing-radius-md: 12px;
+  --landing-radius-lg: 16px;
+  --landing-radius-xl: 20px;
+  --landing-radius-full: 999px;
+
+  --landing-transition: 0.25s ease;
+  --landing-transition-fast: 0.15s ease;
+}
+
+/* --------------------------------------------------------------------------
+   KEYFRAME ANIMATIONS
+   -------------------------------------------------------------------------- */
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInScale {
+  from {
+    opacity: 0;
+    transform: scale(0.95);
+  }
+  to {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; }
+  to { opacity: 1; }
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+    box-shadow: 0 0 0 0 rgba(255, 107, 88, 0.4);
+  }
+  50% {
+    transform: scale(1.02);
+    box-shadow: 0 0 0 10px rgba(255, 107, 88, 0);
+  }
+}
+
+@keyframes slideInLeft {
+  from {
+    opacity: 0;
+    transform: translateX(-30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+@keyframes slideInRight {
+  from {
+    opacity: 0;
+    transform: translateX(30px);
+  }
+  to {
+    opacity: 1;
+    transform: translateX(0);
+  }
+}
+
+/* --------------------------------------------------------------------------
+   ANIMATION UTILITY CLASSES
+   -------------------------------------------------------------------------- */
+.animate-fade-in-up {
+  opacity: 0;
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.animate-fade-in-scale {
+  opacity: 0;
+  animation: fadeInScale 0.5s ease forwards;
+}
+
+.animate-pulse-cta {
+  animation: pulse 2s infinite;
+}
+
+.is-visible .animate-on-scroll {
+  animation: fadeInUp 0.6s ease forwards;
+}
+
+.animate-delay-1 { animation-delay: 0.1s; }
+.animate-delay-2 { animation-delay: 0.2s; }
+.animate-delay-3 { animation-delay: 0.3s; }
+.animate-delay-4 { animation-delay: 0.4s; }
+.animate-delay-5 { animation-delay: 0.5s; }
+
+/* --------------------------------------------------------------------------
+   HERO SECTION
+   -------------------------------------------------------------------------- */
+.nevo-landing-hero {
+  position: relative;
+  min-height: 90vh;
+  background: linear-gradient(135deg, var(--landing-primary) 0%, var(--landing-primary-light) 100%);
+  overflow: hidden;
+}
+
+.nevo-landing-hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image:
+    radial-gradient(circle at 20% 80%, rgba(255, 107, 88, 0.08) 0%, transparent 50%),
+    radial-gradient(circle at 80% 20%, rgba(184, 149, 106, 0.06) 0%, transparent 40%);
+  pointer-events: none;
+  z-index: 0;
+}
+
+.nevo-landing-hero > * {
+  position: relative;
+  z-index: 1;
+}
+
+.nevo-trust-bar {
+  font-size: 13px;
+  letter-spacing: 0.05em;
+  color: var(--landing-gold);
+  background: rgba(42, 68, 88, 0.6);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+}
+
+.nevo-trust-bar i {
+  color: var(--landing-gold);
+  margin-right: 8px;
+}
+
+.nevo-hero-comparison {
+  animation: fadeInScale 0.8s ease 0.4s backwards;
+}
+
+/* --------------------------------------------------------------------------
+   COMPARISON TABLE / SECTION
+   -------------------------------------------------------------------------- */
+.nevo-landing-problem {
+  position: relative;
+}
+
+.nevo-comparison-table-placeholder {
+  box-shadow: var(--landing-shadow-lg);
+}
+
+.nevo-comparison-table-placeholder .wp-block-column:first-child {
+  position: relative;
+}
+
+.nevo-comparison-table-placeholder .wp-block-column:first-child::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 1px;
+  background: var(--landing-gray-200);
+}
+
+.nevo-comparison-table-placeholder ul {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nevo-comparison-table-placeholder ul li {
+  position: relative;
+  padding: 12px 0;
+  padding-left: 28px;
+  border-bottom: 1px solid var(--landing-gray-100);
+}
+
+.nevo-comparison-table-placeholder ul li:last-child {
+  border-bottom: none;
+}
+
+.nevo-comparison-table-placeholder ul li::before {
+  position: absolute;
+  left: 0;
+  top: 12px;
+  font-size: 14px;
+}
+
+.nevo-comparison-table-placeholder .wp-block-column:first-child ul li::before {
+  content: "✗";
+  color: var(--landing-error);
+}
+
+.nevo-comparison-table-placeholder .wp-block-column:last-child ul li::before {
+  content: "✓";
+  color: var(--landing-success);
+}
+
+/* --------------------------------------------------------------------------
+   PLACEHOLDERS (Calculator, Audit, Chat, Booking)
+   -------------------------------------------------------------------------- */
+.nevo-calculator-placeholder,
+.nevo-audit-placeholder,
+.nevo-chat-placeholder,
+.nevo-booking-placeholder {
+  min-height: 300px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border: 2px dashed var(--landing-gray-400);
+  background: var(--landing-gray-100);
+  border-radius: var(--landing-radius-lg);
+  transition: all var(--landing-transition);
+}
+
+.nevo-calculator-placeholder:hover,
+.nevo-audit-placeholder:hover,
+.nevo-chat-placeholder:hover,
+.nevo-booking-placeholder:hover {
+  border-color: var(--landing-accent);
+  background: var(--landing-white);
+}
+
+.nevo-calculator-placeholder i,
+.nevo-audit-placeholder i,
+.nevo-chat-placeholder i,
+.nevo-booking-placeholder i {
+  font-size: 48px;
+  margin-bottom: 20px;
+  opacity: 0.7;
+}
+
+/* --------------------------------------------------------------------------
+   FEATURE CARDS
+   -------------------------------------------------------------------------- */
+.nevo-landing-features .wp-block-columns {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 24px;
+}
+
+.nevo-landing-features .wp-block-column {
+  width: 100% !important;
+  flex-basis: 100% !important;
+}
+
+.landing-feature-card,
+.nevo-landing-features .wp-block-column > .wp-block-group {
+  background: var(--landing-white);
+  border-radius: var(--landing-radius-md);
+  padding: 30px 28px;
+  box-shadow: var(--landing-shadow-md);
+  border: 1px solid transparent;
+  border-bottom: 3px solid transparent;
+  transition: all var(--landing-transition);
+}
+
+.landing-feature-card:hover,
+.nevo-landing-features .wp-block-column > .wp-block-group:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--landing-shadow-xl);
+  border-bottom-color: var(--landing-accent);
+}
+
+.landing-feature-card__icon {
+  width: 64px;
+  height: 64px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--landing-beige);
+  border-radius: var(--landing-radius-md);
+  margin-bottom: 20px;
+  font-size: 28px;
+}
+
+/* --------------------------------------------------------------------------
+   CASE STUDY CARDS
+   -------------------------------------------------------------------------- */
+.nevo-landing-cases .wp-block-columns {
+  gap: 30px;
+}
+
+.landing-case-card,
+.nevo-landing-cases .wp-block-column > .wp-block-group {
+  position: relative;
+  background: var(--landing-beige);
+  border-radius: var(--landing-radius-lg);
+  padding: 32px 28px;
+  transition: all var(--landing-transition);
+  overflow: hidden;
+}
+
+.landing-case-card:hover,
+.nevo-landing-cases .wp-block-column > .wp-block-group:hover {
+  transform: translateY(-2px);
+  box-shadow: var(--landing-shadow-lg);
+}
+
+.landing-case-card__badge {
+  position: absolute;
+  top: 16px;
+  right: 16px;
+  font-size: 12px;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 4px 12px;
+  background: var(--landing-white);
+  border-radius: var(--landing-radius-full);
+  color: var(--landing-gray-500);
+}
+
+.landing-case-card__metric {
+  font-family: var(--landing-font-heading);
+  font-size: 42px;
+  font-weight: 700;
+  color: var(--landing-accent);
+  line-height: 1;
+  margin-bottom: 8px;
+}
+
+.landing-case-card__label {
+  font-size: 16px;
+  color: var(--landing-primary);
+  font-weight: 500;
+  margin-bottom: 12px;
+}
+
+.landing-case-card__description {
+  font-size: 14px;
+  color: var(--landing-gray-500);
+}
+
+/* --------------------------------------------------------------------------
+   PROCESS TIMELINE
+   -------------------------------------------------------------------------- */
+.nevo-landing-process .wp-block-columns {
+  position: relative;
+}
+
+.nevo-landing-process .wp-block-columns::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 10%;
+  right: 10%;
+  height: 2px;
+  background: linear-gradient(
+    to right,
+    var(--landing-beige-dark),
+    var(--landing-accent) 30%,
+    var(--landing-accent) 70%,
+    var(--landing-beige-dark)
+  );
+  z-index: 0;
+}
+
+.landing-timeline {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 40px 0;
+}
+
+.landing-timeline::before {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 0;
+  right: 0;
+  height: 3px;
+  background: var(--landing-gray-200);
+  transform: translateY(-50%);
+  z-index: 0;
+}
+
+.landing-timeline__step {
+  position: relative;
+  z-index: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  flex: 1;
+}
+
+.landing-timeline__number {
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background: var(--landing-white);
+  border: 3px solid var(--landing-gray-200);
+  border-radius: 50%;
+  font-family: var(--landing-font-heading);
+  font-weight: 700;
+  font-size: 18px;
+  color: var(--landing-gray-400);
+  margin-bottom: 16px;
+  transition: all var(--landing-transition);
+}
+
+.landing-timeline__step.is-active .landing-timeline__number,
+.landing-timeline__step:hover .landing-timeline__number {
+  background: var(--landing-accent);
+  border-color: var(--landing-accent);
+  color: var(--landing-white);
+  transform: scale(1.1);
+}
+
+.landing-timeline__title {
+  font-family: var(--landing-font-heading);
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--landing-primary);
+  margin-bottom: 4px;
+}
+
+.landing-timeline__time {
+  font-size: 13px;
+  color: var(--landing-gray-500);
+}
+
+/* Process cards styling */
+.nevo-landing-process .wp-block-column > .wp-block-group {
+  position: relative;
+  z-index: 1;
+  background: var(--landing-white);
+  border-radius: var(--landing-radius-lg);
+  box-shadow: var(--landing-shadow-md);
+  transition: all var(--landing-transition);
+}
+
+.nevo-landing-process .wp-block-column > .wp-block-group:hover {
+  transform: translateY(-4px);
+  box-shadow: var(--landing-shadow-xl);
+}
+
+/* --------------------------------------------------------------------------
+   BOOKING / CONTACT SECTION
+   -------------------------------------------------------------------------- */
+.nevo-landing-contact .wp-block-columns {
+  align-items: stretch;
+}
+
+.landing-booking {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 50px;
+  align-items: start;
+}
+
+.nevo-contact-form {
+  width: 100%;
+}
+
+.nevo-contact-form input,
+.nevo-contact-form textarea {
+  width: 100%;
+  padding: 12px 16px;
+  border: 1px solid var(--landing-beige-dark);
+  border-radius: var(--landing-radius-sm);
+  font-family: var(--landing-font-body);
+  font-size: 16px;
+  transition: all var(--landing-transition-fast);
+}
+
+.nevo-contact-form input:focus,
+.nevo-contact-form textarea:focus {
+  outline: none;
+  border-color: var(--landing-accent);
+  box-shadow: 0 0 0 3px rgba(255, 107, 88, 0.1);
+}
+
+.nevo-contact-form button[type="submit"] {
+  background: var(--landing-accent);
+  color: var(--landing-white);
+  border: none;
+  padding: 16px 32px;
+  border-radius: var(--landing-radius-full);
+  font-family: var(--landing-font-heading);
+  font-weight: 600;
+  font-size: 16px;
+  cursor: pointer;
+  transition: all var(--landing-transition);
+}
+
+.nevo-contact-form button[type="submit"]:hover {
+  background: var(--landing-accent-hover);
+  transform: translateY(-2px);
+  box-shadow: var(--landing-shadow-lg);
+}
+
+/* --------------------------------------------------------------------------
+   FAQ / DETAILS ACCORDION
+   -------------------------------------------------------------------------- */
+.nevo-landing-process .wp-block-details {
+  background: var(--landing-white);
+  border-radius: var(--landing-radius-md);
+  padding: 0;
+  margin-bottom: 12px;
+  border: 1px solid var(--landing-beige-dark);
+  overflow: hidden;
+  transition: all var(--landing-transition);
+}
+
+.nevo-landing-process .wp-block-details:hover {
+  border-color: var(--landing-gold);
+}
+
+.nevo-landing-process .wp-block-details[open] {
+  background: var(--landing-beige);
+  border-color: var(--landing-gold);
+}
+
+.nevo-landing-process .wp-block-details summary {
+  padding: 18px 24px;
+  font-family: var(--landing-font-heading);
+  font-weight: 600;
+  font-size: 16px;
+  color: var(--landing-primary);
+  cursor: pointer;
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.nevo-landing-process .wp-block-details summary::-webkit-details-marker {
+  display: none;
+}
+
+.nevo-landing-process .wp-block-details summary::after {
+  content: "+";
+  font-size: 20px;
+  font-weight: 400;
+  color: var(--landing-gold);
+  transition: transform var(--landing-transition);
+}
+
+.nevo-landing-process .wp-block-details[open] summary::after {
+  content: "−";
+}
+
+.nevo-landing-process .wp-block-details > p {
+  padding: 0 24px 18px;
+  margin: 0;
+  font-size: 15px;
+  line-height: 1.6;
+}
+
+/* --------------------------------------------------------------------------
+   AI CHAT SECTION
+   -------------------------------------------------------------------------- */
+.nevo-landing-chat {
+  position: relative;
+}
+
+.nevo-landing-chat::before {
+  content: "";
+  position: absolute;
+  top: -50px;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 100px;
+  height: 100px;
+  background: var(--landing-accent);
+  border-radius: 50%;
+  opacity: 0.1;
+  filter: blur(50px);
+}
+
+/* --------------------------------------------------------------------------
+   TRUST SIGNALS
+   -------------------------------------------------------------------------- */
+.nevo-landing-contact .wp-block-group[style*="margin-top:40px"] {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 24px;
+}
+
+.nevo-landing-contact .wp-block-group[style*="margin-top:40px"] p {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+  font-size: 14px;
+  color: var(--landing-gray-500);
+}
+
+.nevo-landing-contact .wp-block-group[style*="margin-top:40px"] i {
+  color: var(--landing-success);
+}
+
+/* --------------------------------------------------------------------------
+   PERSONALIZATION CLASSES
+   -------------------------------------------------------------------------- */
+.personalized-headline,
+.personalized-cta,
+.personalized-trust-bar {
+  transition: all 0.3s ease;
+}
+
+.personalized-headline.is-updating,
+.personalized-cta.is-updating,
+.personalized-trust-bar.is-updating {
+  opacity: 0.5;
+}
+
+.geo-local .local-content { display: block; }
+.geo-local .remote-content { display: none; }
+.geo-remote .local-content { display: none; }
+.geo-remote .remote-content { display: block; }
+
+.time-day .day-content { display: block; }
+.time-day .night-content { display: none; }
+.time-night .day-content { display: none; }
+.time-night .night-content { display: block; }
+
+.returning-user .first-visit-content { display: none; }
+.returning-user .returning-content { display: block; }
+.first-visit .first-visit-content { display: block; }
+.first-visit .returning-content { display: none; }
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE: TABLET (max-width: 1024px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 1024px) {
+  .nevo-landing-hero {
+    min-height: auto;
+    padding-top: 80px !important;
+    padding-bottom: 80px !important;
+  }
+
+  .nevo-landing-features .wp-block-columns {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .nevo-landing-process .wp-block-columns::before {
+    display: none;
+  }
+
+  .nevo-landing-process .wp-block-columns {
+    flex-direction: column;
+    gap: 20px;
+  }
+
+  .nevo-landing-process .wp-block-column {
+    width: 100% !important;
+    flex-basis: 100% !important;
+  }
+
+  .landing-timeline {
+    flex-direction: column;
+    gap: 30px;
+  }
+
+  .landing-timeline::before {
+    top: 0;
+    bottom: 0;
+    left: 24px;
+    right: auto;
+    width: 3px;
+    height: auto;
+    transform: none;
+  }
+
+  .landing-timeline__step {
+    flex-direction: row;
+    text-align: left;
+    gap: 20px;
+  }
+
+  .landing-timeline__number {
+    margin-bottom: 0;
+    flex-shrink: 0;
+  }
+
+  .landing-booking {
+    grid-template-columns: 1fr;
+  }
+
+  .nevo-hero-comparison {
+    flex-direction: column !important;
+    gap: 20px;
+  }
+
+  .nevo-hero-comparison > .wp-block-group {
+    width: 100% !important;
+    flex-basis: 100% !important;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   RESPONSIVE: MOBILE (max-width: 640px)
+   -------------------------------------------------------------------------- */
+@media (max-width: 640px) {
+  :root {
+    --landing-radius-lg: 12px;
+    --landing-radius-xl: 16px;
+  }
+
+  .nevo-landing-hero {
+    padding-top: 60px !important;
+    padding-bottom: 60px !important;
+  }
+
+  .nevo-landing-hero h1 {
+    font-size: 28px !important;
+    line-height: 1.2 !important;
+  }
+
+  .nevo-trust-bar {
+    font-size: 11px;
+    padding: 8px 12px !important;
+  }
+
+  .nevo-landing-features .wp-block-columns {
+    grid-template-columns: 1fr;
+  }
+
+  .nevo-comparison-table-placeholder .wp-block-columns {
+    flex-direction: column;
+  }
+
+  .nevo-comparison-table-placeholder .wp-block-column:first-child::after {
+    display: none;
+  }
+
+  .nevo-comparison-table-placeholder .wp-block-column:first-child {
+    padding-bottom: 24px;
+    margin-bottom: 24px;
+    border-bottom: 1px solid var(--landing-gray-200);
+  }
+
+  .nevo-calculator-placeholder,
+  .nevo-audit-placeholder,
+  .nevo-chat-placeholder,
+  .nevo-booking-placeholder {
+    min-height: 200px;
+    padding: 30px 20px;
+  }
+
+  .landing-case-card__metric {
+    font-size: 36px;
+  }
+
+  .nevo-landing-contact .wp-block-columns {
+    flex-direction: column;
+  }
+
+  .nevo-landing-contact .wp-block-column {
+    width: 100% !important;
+    flex-basis: 100% !important;
+  }
+
+  .wp-block-buttons {
+    flex-direction: column;
+    width: 100%;
+  }
+
+  .wp-block-button {
+    width: 100%;
+  }
+
+  .wp-block-button__link {
+    width: 100%;
+    text-align: center;
+  }
+
+  .nevo-landing-process .wp-block-details summary {
+    padding: 14px 18px;
+    font-size: 15px;
+  }
+
+  .nevo-landing-process .wp-block-details > p {
+    padding: 0 18px 14px;
+    font-size: 14px;
+  }
+}
+
+/* --------------------------------------------------------------------------
+   SCROLL BEHAVIOR & INTERSECTION OBSERVER
+   -------------------------------------------------------------------------- */
+html {
+  scroll-behavior: smooth;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+
+  .animate-fade-in-up,
+  .animate-fade-in-scale,
+  .animate-pulse-cta {
+    animation: none;
+    opacity: 1;
+    transform: none;
+  }
+}
+
+/* Section visibility for scroll tracking */
+[data-section] {
+  scroll-margin-top: 80px;
+}
+
+/* --------------------------------------------------------------------------
+   PRINT STYLES
+   -------------------------------------------------------------------------- */
+@media print {
+  .nevo-landing-hero,
+  .nevo-landing-chat {
+    background: var(--landing-gray-100) !important;
+    color: var(--landing-primary) !important;
+  }
+
+  .nevo-landing-hero * {
+    color: var(--landing-primary) !important;
+  }
+
+  .nevo-calculator-placeholder,
+  .nevo-audit-placeholder,
+  .nevo-chat-placeholder,
+  .nevo-booking-placeholder {
+    border-style: solid;
+  }
+
+  .animate-fade-in-up,
+  .animate-fade-in-scale {
+    opacity: 1;
+    transform: none;
+  }
+}

@@ -83,3 +83,18 @@ function nevo_defer_scripts( $tag, $handle ) {
     return $tag;
 }
 add_filter( 'script_loader_tag', 'nevo_defer_scripts', 10, 2 );
+
+/**
+ * Enqueue landing page styles
+ */
+function nevo_enqueue_landing_styles() {
+    if ( is_page_template( 'templates/landing-strony.html' ) || is_page( 'landing-strony' ) ) {
+        wp_enqueue_style(
+            'nevo-landing',
+            NEVO_URI . '/assets/css/landing-strony.css',
+            array( 'nevo-main' ),
+            NEVO_VERSION
+        );
+    }
+}
+add_action( 'wp_enqueue_scripts', 'nevo_enqueue_landing_styles' );
