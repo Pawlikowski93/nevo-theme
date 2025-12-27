@@ -1,0 +1,27 @@
+.nevo-comparison {
+	border: 1px dashed #ccc;
+	padding: 4px;
+	border-radius: 20px;
+}
+
+.nevo-comparison:hover {
+	border-color: #FF6B58;
+}
+
+.nevo-comparison .nevo-comparison__title [data-rich-text-placeholder] {
+	opacity: 0.5;
+}
+
+.nevo-comparison .nevo-comparison__text [data-rich-text-placeholder] {
+	opacity: 0.4;
+	font-style: italic;
+}
+
+.nevo-comparison .nevo-comparison__item {
+	cursor: text;
+}
+
+.nevo-comparison .nevo-comparison__column--right::before {
+	pointer-events: none;
+}
+

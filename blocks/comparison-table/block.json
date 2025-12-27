@@ -1,0 +1,41 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "nevo/comparison-table",
+	"version": "1.0.0",
+	"title": "NEVO Porównanie",
+	"category": "nevo-blocks",
+	"icon": "columns",
+	"description": "Tabela porównawcza strona-wizytówka vs strona-narzędzie",
+	"keywords": ["porównanie", "tabela", "comparison", "wizytówka", "narzędzie"],
+	"textdomain": "nevo",
+	"supports": {
+		"align": ["wide", "full"],
+		"html": false,
+		"anchor": true
+	},
+	"attributes": {
+		"leftTitle": {
+			"type": "string",
+			"default": "Strona-wizytówka"
+		},
+		"rightTitle": {
+			"type": "string",
+			"default": "Strona-narzędzie"
+		},
+		"items": {
+			"type": "array",
+			"default": [
+				{ "left": "„Zadzwoń do nas"", "right": "Rezerwacja online 24/7" },
+				{ "left": "Brak analityki", "right": "Wiesz kto, skąd, kiedy" },
+				{ "left": "Statyczna wizytówka", "right": "Dynamiczne narzędzie sprzedaży" },
+				{ "left": "Jednorazowy koszt, zero ROI", "right": "Zwraca się w 3-6 miesięcy" },
+				{ "left": "Ręczne odpowiadanie na pytania", "right": "FAQ + chatbot automatyczny" },
+				{ "left": "Brak integracji", "right": "Połączenie z CRM, kalendarzem, płatnościami" }
+			]
+		}
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./editor.css",
+	"style": "file:./style.css"
+}
