@@ -85,9 +85,9 @@ function nevo_defer_scripts( $tag, $handle ) {
 add_filter( 'script_loader_tag', 'nevo_defer_scripts', 10, 2 );
 
 /**
- * Enqueue landing page styles
+ * Enqueue landing page styles and scripts
  */
-function nevo_enqueue_landing_styles() {
+function nevo_enqueue_landing_assets() {
     if ( is_page_template( 'templates/landing-strony.html' ) || is_page( 'landing-strony' ) ) {
         wp_enqueue_style(
             'nevo-landing',
@@ -95,6 +95,18 @@ function nevo_enqueue_landing_styles() {
             array( 'nevo-main' ),
             NEVO_VERSION
         );
+
+        wp_enqueue_script(
+            'nevo-landing',
+            NEVO_URI . '/assets/js/landing-strony.js',
+            array(),
+            NEVO_VERSION,
+            true
+        );
+
+        if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
+            wp_add_inline_script( 'nevo-landing', 'document.body.classList.add("wp-debug");', 'before' );
+        }
     }
 }
-add_action( 'wp_enqueue_scripts', 'nevo_enqueue_landing_styles' );
+add_action( 'wp_enqueue_scripts', 'nevo_enqueue_landing_assets' );
