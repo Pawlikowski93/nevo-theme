@@ -9,6 +9,8 @@ module.exports = {
     'blocks/cta/index': path.resolve(process.cwd(), 'blocks/cta/index.js'),
     'blocks/comparison-table/index': path.resolve(process.cwd(), 'blocks/comparison-table/index.js'),
     'blocks/process-timeline/index': path.resolve(process.cwd(), 'blocks/process-timeline/index.js'),
+    'blocks/time-calculator/index': path.resolve(process.cwd(), 'blocks/time-calculator/index.js'),
+    'blocks/time-calculator/view': path.resolve(process.cwd(), 'blocks/time-calculator/view.js'),
   },
   output: {
     filename: '[name].js',

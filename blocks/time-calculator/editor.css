@@ -1,0 +1,57 @@
+.nevo-calculator__editor-preview {
+	padding: 20px;
+}
+
+.nevo-calculator__preview-box {
+	margin: 24px 0;
+	padding: 32px;
+	background: linear-gradient(135deg, #f5f1ed 0%, #e5dcc5 100%);
+	border-radius: 16px;
+	text-align: center;
+	border: 2px dashed #1c2e40;
+}
+
+.nevo-calculator__preview-icon {
+	margin-bottom: 16px;
+	color: #1c2e40;
+}
+
+.nevo-calculator__preview-text {
+	font-size: 16px;
+	font-weight: 500;
+	color: #1c2e40;
+	margin: 0 0 16px;
+}
+
+.nevo-calculator__preview-fields {
+	display: flex;
+	justify-content: center;
+	gap: 24px;
+	font-size: 13px;
+	color: #6b7280;
+	margin-bottom: 12px;
+}
+
+.nevo-calculator__preview-rate {
+	font-size: 14px;
+	font-weight: 600;
+	color: #FF6B58;
+	margin: 0;
+}
+
+.nevo-calculator__preview-cta {
+	margin-top: 24px;
+	text-align: center;
+}
+
+.nevo-calculator__cta-button {
+	display: inline-block;
+	padding: 14px 28px;
+	background: #FF6B58;
+	color: #ffffff;
+	font-family: 'Montserrat', sans-serif;
+	font-weight: 600;
+	font-size: 15px;
+	border-radius: 999px;
+	cursor: default;
+}

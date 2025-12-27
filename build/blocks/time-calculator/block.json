@@ -1,0 +1,43 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "nevo/time-calculator",
+	"version": "1.0.0",
+	"title": "NEVO Kalkulator Czasu",
+	"category": "nevo-blocks",
+	"icon": "calculator",
+	"description": "Interaktywny kalkulator oszczędności czasu",
+	"keywords": ["kalkulator", "calculator", "czas", "time", "oszczędności", "ROI"],
+	"textdomain": "nevo",
+	"supports": {
+		"align": ["wide"],
+		"html": false,
+		"anchor": true
+	},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"default": "Ile czasu tracisz na ręczną obsługę?"
+		},
+		"description": {
+			"type": "string",
+			"default": "Policz ile godzin miesięcznie marnujesz na powtarzalne zadania, które można zautomatyzować."
+		},
+		"hourlyRate": {
+			"type": "number",
+			"default": 100
+		},
+		"ctaText": {
+			"type": "string",
+			"default": "Pokaż mi jak to zautomatyzować"
+		},
+		"ctaUrl": {
+			"type": "string",
+			"default": "#kontakt"
+		}
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./index.css",
+	"style": "file:./style-index.css",
+	"viewScript": "file:./view.js"
+}
