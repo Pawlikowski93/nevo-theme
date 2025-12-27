@@ -1,0 +1,7 @@
+.nevo-audit__title:focus,
+.nevo-audit__description:focus {
+	outline: 2px solid #FF6B58;
+	outline-offset: 2px;
+	border-radius: 4px;
+}
+

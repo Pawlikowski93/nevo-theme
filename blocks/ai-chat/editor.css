@@ -1,0 +1,6 @@
+.nevo-chat__title:focus,
+.nevo-chat__bubble span:focus {
+	outline: 2px solid #FF6B58;
+	outline-offset: 2px;
+	border-radius: 4px;
+}

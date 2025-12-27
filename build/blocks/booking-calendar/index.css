@@ -1,0 +1,10 @@
+.nevo-booking__title:focus {
+	outline: 2px solid #FF6B58;
+	outline-offset: 2px;
+	border-radius: 4px;
+}
+
+.nevo-booking__container {
+	min-height: 300px;
+}
+

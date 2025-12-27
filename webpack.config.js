@@ -11,6 +11,9 @@ module.exports = {
     'blocks/process-timeline/index': path.resolve(process.cwd(), 'blocks/process-timeline/index.js'),
     'blocks/time-calculator/index': path.resolve(process.cwd(), 'blocks/time-calculator/index.js'),
     'blocks/time-calculator/view': path.resolve(process.cwd(), 'blocks/time-calculator/view.js'),
+    'blocks/audit-widget/index': path.resolve(process.cwd(), 'blocks/audit-widget/index.js'),
+    'blocks/ai-chat/index': path.resolve(process.cwd(), 'blocks/ai-chat/index.js'),
+    'blocks/booking-calendar/index': path.resolve(process.cwd(), 'blocks/booking-calendar/index.js'),
   },
   output: {
     filename: '[name].js',

@@ -1,0 +1,34 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "nevo/audit-widget",
+	"version": "1.0.0",
+	"title": "NEVO Live Audit",
+	"category": "nevo-blocks",
+	"icon": "search",
+	"description": "Widget do audytu strony - wkrótce dostępny",
+	"keywords": ["audit", "audyt", "analiza", "seo", "sprawdź"],
+	"textdomain": "nevo",
+	"supports": {
+		"align": ["wide"],
+		"html": false,
+		"anchor": true
+	},
+	"attributes": {
+		"title": {
+			"type": "string",
+			"default": "Sprawdź swoją stronę"
+		},
+		"description": {
+			"type": "string",
+			"default": "Wpisz adres swojej strony i otrzymaj bezpłatny raport z rekomendacjami."
+		},
+		"badgeText": {
+			"type": "string",
+			"default": "Wkrótce dostępne"
+		}
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./editor.css",
+	"style": "file:./style.css"
+}

@@ -89,7 +89,7 @@ add_action( 'admin_enqueue_scripts', 'nevo_admin_google_fonts' );
  * Rejestracja custom bloków (Hero, Tiles, CTA)
  */
 function nevo_register_blocks() {
-    $blocks = array( 'hero', 'tiles', 'cta', 'comparison-table', 'process-timeline', 'time-calculator' );
+    $blocks = array( 'hero', 'tiles', 'cta', 'comparison-table', 'process-timeline', 'time-calculator', 'audit-widget', 'ai-chat', 'booking-calendar' );
 
     foreach ( $blocks as $block ) {
         $block_path = NEVO_DIR . '/build/blocks/' . $block;
