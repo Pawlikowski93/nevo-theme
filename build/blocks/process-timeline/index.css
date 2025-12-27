@@ -1,0 +1,36 @@
+.nevo-timeline {
+	border: 1px dashed #ccc;
+	padding: 16px;
+	border-radius: 20px;
+}
+
+.nevo-timeline:hover {
+	border-color: #FF6B58;
+}
+
+.nevo-timeline__title [data-rich-text-placeholder],
+.nevo-timeline__description [data-rich-text-placeholder] {
+	opacity: 0.5;
+}
+
+.nevo-timeline__remove {
+	position: absolute;
+	top: 8px;
+	right: 8px;
+	font-size: 11px !important;
+	opacity: 0;
+	transition: opacity 0.2s ease;
+}
+
+.nevo-timeline__card:hover .nevo-timeline__remove {
+	opacity: 1;
+}
+
+.nevo-timeline__step {
+	cursor: default;
+}
+
+.nevo-timeline__card {
+	cursor: text;
+}
+

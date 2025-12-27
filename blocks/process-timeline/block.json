@@ -1,0 +1,35 @@
+{
+	"$schema": "https://schemas.wp.org/trunk/block.json",
+	"apiVersion": 3,
+	"name": "nevo/process-timeline",
+	"version": "1.0.0",
+	"title": "NEVO Proces",
+	"category": "nevo-blocks",
+	"icon": "editor-ol",
+	"description": "Timeline procesu współpracy z krokami",
+	"keywords": ["proces", "timeline", "kroki", "steps", "etapy"],
+	"textdomain": "nevo",
+	"supports": {
+		"align": ["wide"],
+		"html": false,
+		"anchor": true
+	},
+	"attributes": {
+		"steps": {
+			"type": "array",
+			"default": [
+				{ "number": 1, "title": "Rozmowa", "description": "Poznajemy Twój biznes, cele i budżet", "duration": "30 min" },
+				{ "number": 2, "title": "Propozycja", "description": "Strategia + wireframe + wycena wariantowa", "duration": "3-5 dni" },
+				{ "number": 3, "title": "Realizacja", "description": "Iteracyjna praca z Twoim feedbackiem", "duration": "2-6 tyg." },
+				{ "number": 4, "title": "Odpalenie", "description": "Szkolenie, wsparcie 30 dni, optymalizacja", "duration": "ongoing" }
+			]
+		},
+		"orientation": {
+			"type": "string",
+			"default": "horizontal"
+		}
+	},
+	"editorScript": "file:./index.js",
+	"editorStyle": "file:./editor.css",
+	"style": "file:./style.css"
+}
