@@ -85,28 +85,60 @@ function nevo_defer_scripts( $tag, $handle ) {
 add_filter( 'script_loader_tag', 'nevo_defer_scripts', 10, 2 );
 
 /**
- * Enqueue landing page styles and scripts
+ * Enqueue landing page styles
  */
-function nevo_enqueue_landing_assets() {
-    if ( is_page_template( 'templates/landing-strony.html' ) || is_page( 'landing-strony' ) ) {
+function nevo_enqueue_landing_styles() {
+    if ( is_page_template( 'templates/landing-strony.html' ) || is_page( 'strony-internetowe' ) || is_page( 'landing-strony' ) ) {
         wp_enqueue_style(
-            'nevo-landing',
+            'nevo-landing-strony',
             NEVO_URI . '/assets/css/landing-strony.css',
             array( 'nevo-main' ),
             NEVO_VERSION
         );
+    }
+}
+add_action( 'wp_enqueue_scripts', 'nevo_enqueue_landing_styles' );
+
+/**
+ * Enqueue landing page scripts
+ */
+function nevo_enqueue_landing_scripts() {
+    if ( is_page_template( 'templates/landing-strony.html' ) || is_page( 'strony-internetowe' ) || is_page( 'landing-strony' ) ) {
 
         wp_enqueue_script(
-            'nevo-landing',
+            'nevo-landing-personalization',
             NEVO_URI . '/assets/js/landing-strony.js',
             array(),
             NEVO_VERSION,
             true
         );
 
+        wp_enqueue_script(
+            'nevo-time-calculator',
+            NEVO_URI . '/build/blocks/time-calculator/view.js',
+            array( 'wp-element' ),
+            NEVO_VERSION,
+            true
+        );
+
+        wp_localize_script( 'nevo-landing-personalization', 'nevoLanding', array(
+            'ajaxUrl' => admin_url( 'admin-ajax.php' ),
+            'nonce'   => wp_create_nonce( 'nevo_landing_nonce' ),
+            'isDebug' => defined( 'WP_DEBUG' ) && WP_DEBUG,
+        ) );
+
         if ( defined( 'WP_DEBUG' ) && WP_DEBUG ) {
-            wp_add_inline_script( 'nevo-landing', 'document.body.classList.add("wp-debug");', 'before' );
+            wp_add_inline_script( 'nevo-landing-personalization', 'document.body.classList.add("wp-debug");', 'before' );
         }
     }
 }
-add_action( 'wp_enqueue_scripts', 'nevo_enqueue_landing_assets' );
+add_action( 'wp_enqueue_scripts', 'nevo_enqueue_landing_scripts' );
+
+/**
+ * Register custom page templates
+ */
+function nevo_register_templates( $templates ) {
+    $templates['templates/landing-strony.html'] = 'Landing - Strony internetowe';
+    return $templates;
+}
+add_filter( 'theme_page_templates', 'nevo_register_templates' );
