@@ -15,9 +15,12 @@
    ============================================== */
 
 .nevo-trust-bar,
-.personalized-trust-bar {
+.personalized-trust-bar,
+.nevo-landing-hero .nevo-trust-bar,
+.nevo-landing-hero .personalized-trust-bar {
   padding: 8px 20px !important;
   margin-bottom: 0 !important;
+  width: fit-content !important;
   max-width: fit-content !important;
   margin-left: auto !important;
   margin-right: auto !important;
