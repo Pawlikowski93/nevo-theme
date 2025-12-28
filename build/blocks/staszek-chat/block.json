@@ -1,0 +1,37 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "nevo/staszek-chat",
+  "version": "1.0.0",
+  "title": "NEVO Staszek Chat",
+  "category": "nevo-blocks",
+  "icon": "format-chat",
+  "description": "AI Asystent sprzedaży NEVO - Staszek",
+  "supports": {
+    "html": false,
+    "multiple": false
+  },
+  "attributes": {
+    "apiEndpoint": {
+      "type": "string",
+      "default": "https://n8n.nevomarketing.pl/webhook/staszek-chat"
+    },
+    "bookingUrl": {
+      "type": "string",
+      "default": "#kontakt"
+    },
+    "welcomeMessage": {
+      "type": "string",
+      "default": "Cześć! Jestem Staszek z NEVO. W czym mogę pomóc?"
+    },
+    "position": {
+      "type": "string",
+      "default": "bottom-right"
+    }
+  },
+  "textdomain": "nevo",
+  "editorScript": "file:./index.js",
+  "viewScript": "file:./view.js",
+  "style": "file:./style-index.css",
+  "editorStyle": "file:./index.css"
+}

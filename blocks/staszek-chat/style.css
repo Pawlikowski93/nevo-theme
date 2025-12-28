@@ -1,0 +1,435 @@
+/* ==============================================
+   STASZEK CHAT - NEVO AI ASSISTANT
+   ============================================== */
+
+:root {
+  --staszek-primary: #1c2e40;
+  --staszek-accent: #FF6B58;
+  --staszek-white: #ffffff;
+  --staszek-gray-100: #f3f4f6;
+  --staszek-gray-200: #e5e7eb;
+  --staszek-gray-500: #6b7280;
+  --staszek-gray-700: #374151;
+  --staszek-shadow: 0 10px 40px rgba(28, 46, 64, 0.2);
+}
+
+/* Hidden container - just for initialization */
+.nevo-staszek-chat {
+  display: none;
+}
+
+/* ==============================================
+   BUBBLE BUTTON (closed state)
+   ============================================== */
+
+.staszek-bubble {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1.25rem 0.75rem 0.75rem;
+  background: var(--staszek-primary);
+  color: var(--staszek-white);
+  border: none;
+  border-radius: 3rem;
+  box-shadow: var(--staszek-shadow);
+  cursor: pointer;
+  transition: transform 0.2s, box-shadow 0.2s;
+  z-index: 9998;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.staszek-bubble--left {
+  right: auto;
+  left: 1.5rem;
+}
+
+.staszek-bubble:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 14px 50px rgba(28, 46, 64, 0.25);
+}
+
+.staszek-bubble__avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  background: var(--staszek-accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.staszek-bubble__text {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  line-height: 1.3;
+}
+
+.staszek-bubble__name {
+  font-weight: 600;
+  font-size: 0.9375rem;
+}
+
+.staszek-bubble__status {
+  font-size: 0.75rem;
+  opacity: 0.8;
+}
+
+/* ==============================================
+   CHAT WINDOW
+   ============================================== */
+
+.staszek-chat {
+  position: fixed;
+  right: 1.5rem;
+  bottom: 1.5rem;
+  width: 380px;
+  max-width: calc(100vw - 2rem);
+  height: 560px;
+  max-height: calc(100vh - 6rem);
+  background: var(--staszek-white);
+  border-radius: 1rem;
+  box-shadow: var(--staszek-shadow);
+  display: flex;
+  flex-direction: column;
+  overflow: hidden;
+  z-index: 9999;
+  animation: staszek-slideUp 0.3s ease-out;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+}
+
+.staszek-chat--left {
+  right: auto;
+  left: 1.5rem;
+}
+
+@keyframes staszek-slideUp {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ==============================================
+   HEADER
+   ============================================== */
+
+.staszek-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem;
+  background: var(--staszek-primary);
+  color: var(--staszek-white);
+}
+
+.staszek-header__info {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.staszek-header__avatar {
+  width: 2.5rem;
+  height: 2.5rem;
+  background: var(--staszek-accent);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 700;
+  font-size: 1rem;
+}
+
+.staszek-header__name {
+  font-weight: 600;
+  font-size: 1rem;
+}
+
+.staszek-header__status {
+  display: flex;
+  align-items: center;
+  gap: 0.375rem;
+  font-size: 0.75rem;
+  opacity: 0.9;
+}
+
+.staszek-header__dot {
+  width: 0.5rem;
+  height: 0.5rem;
+  background: #22c55e;
+  border-radius: 50%;
+}
+
+.staszek-header__close {
+  width: 2rem;
+  height: 2rem;
+  background: rgba(255,255,255,0.1);
+  border: none;
+  border-radius: 0.5rem;
+  color: var(--staszek-white);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: background 0.2s;
+}
+
+.staszek-header__close:hover {
+  background: rgba(255,255,255,0.2);
+}
+
+.staszek-header__close svg {
+  width: 1.25rem;
+  height: 1.25rem;
+}
+
+/* ==============================================
+   MESSAGES
+   ============================================== */
+
+.staszek-messages {
+  flex: 1;
+  overflow-y: auto;
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  background: var(--staszek-gray-100);
+}
+
+.staszek-message {
+  display: flex;
+  gap: 0.5rem;
+  max-width: 85%;
+}
+
+.staszek-message--user {
+  align-self: flex-end;
+  flex-direction: row-reverse;
+}
+
+.staszek-message--assistant {
+  align-self: flex-start;
+}
+
+.staszek-message__avatar {
+  width: 1.75rem;
+  height: 1.75rem;
+  background: var(--staszek-primary);
+  color: var(--staszek-white);
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 600;
+  font-size: 0.75rem;
+  flex-shrink: 0;
+}
+
+.staszek-message__bubble {
+  padding: 0.75rem 1rem;
+  border-radius: 1rem;
+  font-size: 0.9375rem;
+  line-height: 1.5;
+}
+
+.staszek-message--assistant .staszek-message__bubble {
+  background: var(--staszek-white);
+  color: var(--staszek-gray-700);
+  border-bottom-left-radius: 0.25rem;
+}
+
+.staszek-message--user .staszek-message__bubble {
+  background: var(--staszek-primary);
+  color: var(--staszek-white);
+  border-bottom-right-radius: 0.25rem;
+}
+
+/* Typing indicator */
+.staszek-message__bubble--typing {
+  display: flex;
+  gap: 0.25rem;
+  padding: 1rem;
+}
+
+.staszek-message__bubble--typing span {
+  width: 0.5rem;
+  height: 0.5rem;
+  background: var(--staszek-gray-500);
+  border-radius: 50%;
+  animation: staszek-typing 1.4s infinite;
+}
+
+.staszek-message__bubble--typing span:nth-child(2) {
+  animation-delay: 0.2s;
+}
+
+.staszek-message__bubble--typing span:nth-child(3) {
+  animation-delay: 0.4s;
+}
+
+@keyframes staszek-typing {
+  0%, 60%, 100% {
+    transform: translateY(0);
+    opacity: 0.4;
+  }
+  30% {
+    transform: translateY(-4px);
+    opacity: 1;
+  }
+}
+
+/* ==============================================
+   QUICK REPLIES
+   ============================================== */
+
+.staszek-quick {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: var(--staszek-white);
+  border-top: 1px solid var(--staszek-gray-200);
+}
+
+.staszek-quick__btn {
+  padding: 0.5rem 0.875rem;
+  background: var(--staszek-gray-100);
+  border: 1px solid var(--staszek-gray-200);
+  border-radius: 1rem;
+  font-size: 0.8125rem;
+  color: var(--staszek-gray-700);
+  cursor: pointer;
+  transition: all 0.2s;
+  font-family: inherit;
+}
+
+.staszek-quick__btn:hover {
+  background: var(--staszek-primary);
+  border-color: var(--staszek-primary);
+  color: var(--staszek-white);
+}
+
+/* ==============================================
+   INPUT
+   ============================================== */
+
+.staszek-input {
+  display: flex;
+  gap: 0.5rem;
+  padding: 0.75rem 1rem;
+  background: var(--staszek-white);
+  border-top: 1px solid var(--staszek-gray-200);
+}
+
+.staszek-input__field {
+  flex: 1;
+  padding: 0.625rem 1rem;
+  border: 1px solid var(--staszek-gray-200);
+  border-radius: 1.5rem;
+  font-size: 0.9375rem;
+  outline: none;
+  transition: border-color 0.2s;
+  font-family: inherit;
+}
+
+.staszek-input__field:focus {
+  border-color: var(--staszek-primary);
+}
+
+.staszek-input__field::placeholder {
+  color: var(--staszek-gray-500);
+}
+
+.staszek-input__send {
+  width: 2.5rem;
+  height: 2.5rem;
+  background: var(--staszek-accent);
+  border: none;
+  border-radius: 50%;
+  color: var(--staszek-white);
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.2s;
+}
+
+.staszek-input__send:hover:not(:disabled) {
+  background: #e55a48;
+  transform: scale(1.05);
+}
+
+.staszek-input__send:disabled {
+  background: var(--staszek-gray-200);
+  cursor: not-allowed;
+}
+
+.staszek-input__send svg {
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+/* ==============================================
+   FOOTER
+   ============================================== */
+
+.staszek-footer {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  padding: 0.625rem 1rem;
+  background: var(--staszek-gray-100);
+  font-size: 0.75rem;
+  color: var(--staszek-gray-500);
+}
+
+.staszek-footer__link {
+  color: var(--staszek-accent);
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.staszek-footer__link:hover {
+  text-decoration: underline;
+}
+
+/* ==============================================
+   MOBILE
+   ============================================== */
+
+@media (max-width: 480px) {
+  .staszek-chat {
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    max-width: 100%;
+    height: 100%;
+    max-height: 100%;
+    border-radius: 0;
+  }
+
+  .staszek-chat--left {
+    left: 0;
+  }
+
+  .staszek-bubble {
+    right: 1rem;
+    bottom: 1rem;
+  }
+
+  .staszek-bubble--left {
+    left: 1rem;
+  }
+}
