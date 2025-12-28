@@ -1,0 +1,301 @@
+/* ==============================================
+   NEVO TRANSFORMATION SECTION
+   Animowany box: Wizytówka vs Narzędzie
+   ============================================== */
+
+.nevo-transformation {
+  padding: 4rem 1rem;
+  background: linear-gradient(135deg, #1c2e40 0%, #2a4458 100%);
+}
+
+@media (min-width: 768px) {
+  .nevo-transformation {
+    padding: 6rem 1rem;
+  }
+}
+
+/* Section Header */
+.nevo-transformation .section-header {
+  text-align: center;
+  margin-bottom: 3rem;
+  max-width: 700px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.nevo-transformation .section-title {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 1.75rem;
+  font-weight: 700;
+  color: #ffffff;
+  margin: 0 0 0.75rem;
+  line-height: 1.2;
+}
+
+@media (min-width: 768px) {
+  .nevo-transformation .section-title {
+    font-size: 2.25rem;
+  }
+}
+
+.nevo-transformation .section-subtitle {
+  color: #e5dcc5;
+  font-size: 1.125rem;
+  margin: 0;
+  opacity: 0.9;
+}
+
+/* Card Container */
+.transformation-container {
+  max-width: 32rem;
+  margin: 0 auto;
+  cursor: pointer;
+}
+
+/* Main Card */
+.transformation-card {
+  position: relative;
+  border-radius: 1rem;
+  padding: 2rem;
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.transformation-card.is-transformed {
+  background: #ffffff;
+  border-color: transparent;
+  transform: scale(1.02);
+  box-shadow: 0 25px 50px -12px rgba(255, 107, 88, 0.25);
+}
+
+/* Top Progress Bar */
+.transformation-bar {
+  position: absolute;
+  top: 0;
+  left: 0;
+  height: 4px;
+  width: 33%;
+  border-radius: 1rem 0 0 0;
+  background: rgba(239, 68, 68, 0.5);
+  transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.transformation-card.is-transformed .transformation-bar {
+  width: 100%;
+  background: #FF6B58;
+  border-radius: 1rem 1rem 0 0;
+}
+
+/* Badge */
+.transformation-badge {
+  display: inline-block;
+  padding: 0.375rem 1rem;
+  font-size: 0.75rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.05em;
+  border-radius: 9999px;
+  background: rgba(239, 68, 68, 0.2);
+  color: #fca5a5;
+  transition: all 0.5s ease;
+}
+
+.transformation-badge.is-transformed {
+  background: rgba(255, 107, 88, 0.15);
+  color: #FF6B58;
+}
+
+/* Quote */
+.transformation-quote {
+  font-size: 1.125rem;
+  font-weight: 500;
+  font-style: italic;
+  color: rgba(255, 255, 255, 0.7);
+  margin: 1.5rem 0 2rem;
+  text-align: center;
+  transition: all 0.5s ease;
+}
+
+.transformation-quote.is-transformed {
+  color: #1c2e40;
+}
+
+/* Metrics Grid */
+.transformation-metrics {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 1.5rem;
+}
+
+.transformation-metric {
+  text-align: center;
+}
+
+.metric-value {
+  font-family: 'Montserrat', sans-serif;
+  font-size: 2.25rem;
+  font-weight: 700;
+  color: #f87171;
+  margin-bottom: 0.25rem;
+  transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+@media (min-width: 768px) {
+  .metric-value {
+    font-size: 2.5rem;
+  }
+}
+
+.metric-value.is-transformed {
+  color: #1c2e40;
+}
+
+.metric-value.is-positive {
+  color: #16a34a;
+}
+
+.metric-label {
+  font-size: 0.8125rem;
+  color: rgba(255, 255, 255, 0.5);
+  transition: all 0.5s ease;
+}
+
+.transformation-card.is-transformed .metric-label {
+  color: #6b7280;
+}
+
+/* Summary */
+.transformation-summary {
+  margin-top: 1.5rem;
+  padding-top: 1.25rem;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+  text-align: center;
+  font-weight: 600;
+  font-size: 1rem;
+  color: rgba(255, 255, 255, 0.5);
+  transition: all 0.5s ease;
+}
+
+.transformation-summary.is-transformed {
+  border-color: #f3f4f6;
+  color: #1c2e40;
+}
+
+/* Indicator Arrow */
+.transformation-indicator {
+  position: absolute;
+  bottom: -1rem;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 2rem;
+  height: 2rem;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.15);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: all 0.5s ease;
+}
+
+.transformation-indicator.is-transformed {
+  background: #FF6B58;
+  transform: translateX(-50%) rotate(180deg);
+}
+
+.transformation-indicator svg {
+  width: 1rem;
+  height: 1rem;
+  color: rgba(255, 255, 255, 0.6);
+  transition: all 0.5s ease;
+}
+
+.transformation-indicator.is-transformed svg {
+  color: #ffffff;
+}
+
+/* Hint Text */
+.transformation-hint {
+  text-align: center;
+  color: rgba(255, 255, 255, 0.4);
+  font-size: 0.875rem;
+  margin-top: 2rem;
+}
+
+/* Toggle Buttons */
+.transformation-toggles {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.transformation-toggle {
+  padding: 0.5rem 1.25rem;
+  border-radius: 0.5rem;
+  font-size: 0.875rem;
+  font-weight: 500;
+  background: transparent;
+  color: rgba(255, 255, 255, 0.5);
+  border: none;
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.transformation-toggle:hover {
+  color: rgba(255, 255, 255, 0.8);
+}
+
+.transformation-toggle.is-active[data-state="wizytowka"] {
+  background: rgba(255, 255, 255, 0.15);
+  color: #ffffff;
+}
+
+.transformation-toggle.is-active[data-state="narzedzie"] {
+  background: #FF6B58;
+  color: #ffffff;
+}
+
+/* CTA */
+.transformation-cta {
+  text-align: center;
+  margin-top: 3rem;
+}
+
+.transformation-cta p {
+  color: rgba(255, 255, 255, 0.7);
+  margin: 0 0 1rem;
+  font-size: 1rem;
+}
+
+.transformation-cta .btn-transformation {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.75rem;
+  background: #FF6B58;
+  color: #ffffff;
+  font-weight: 600;
+  font-size: 1rem;
+  border-radius: 999px;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 14px rgba(255, 107, 88, 0.35);
+}
+
+.transformation-cta .btn-transformation:hover {
+  background: #e55a48;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 107, 88, 0.45);
+}
+
+.transformation-cta .btn-transformation svg {
+  width: 1.125rem;
+  height: 1.125rem;
+}
+
+/* Badge Wrapper */
+.transformation-badge-wrapper {
+  text-align: center;
+  margin-bottom: 1.5rem;
+}

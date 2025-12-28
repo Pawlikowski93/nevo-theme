@@ -121,6 +121,22 @@ function nevo_enqueue_landing_scripts() {
             true
         );
 
+        // Transformation section
+        wp_enqueue_style(
+            'nevo-transformation',
+            NEVO_URI . '/assets/css/transformation-section.css',
+            array(),
+            NEVO_VERSION
+        );
+
+        wp_enqueue_script(
+            'nevo-transformation',
+            NEVO_URI . '/assets/js/transformation-section.js',
+            array(),
+            NEVO_VERSION,
+            true
+        );
+
         wp_localize_script( 'nevo-landing-personalization', 'nevoLanding', array(
             'ajaxUrl' => admin_url( 'admin-ajax.php' ),
             'nonce'   => wp_create_nonce( 'nevo_landing_nonce' ),
