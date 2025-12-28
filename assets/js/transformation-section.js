@@ -5,7 +5,7 @@
 (function() {
   'use strict';
 
-  const section = document.querySelector('.nevo-transformation');
+  const section = document.querySelector('.nevo-transformation-wrapper') || document.querySelector('.nevo-transformation');
   if (!section) return;
 
   const card = section.querySelector('.transformation-card');
