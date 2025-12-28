@@ -17,7 +17,11 @@
 .nevo-trust-bar,
 .personalized-trust-bar {
   padding: 8px 20px !important;
-  margin-bottom: 24px !important;
+  margin-bottom: 0 !important;
+  max-width: -moz-fit-content !important;
+  max-width: fit-content !important;
+  margin-right: auto !important;
+  margin-left: auto !important;
   background: rgba(255, 255, 255, 0.08) !important;
   border: 1px solid rgba(255, 255, 255, 0.12) !important;
   border-radius: 999px;
@@ -36,6 +40,12 @@
 .personalized-trust-bar .fa-shield-check {
   margin-left: 6px;
   color: #b8956a;
+}
+
+/* Hero content container - remove top spacing */
+.nevo-landing-hero > .wp-block-group {
+  margin-top: 0 !important;
+  padding-top: 0 !important;
 }
 
 /* ==============================================
@@ -103,6 +113,11 @@
 .nevo-landing-hero .wp-block-buttons .wp-block-button:nth-child(2) .wp-block-button__link:hover {
   background-color: rgba(255, 255, 255, 0.1) !important;
   border-color: #ffffff !important;
+}
+
+/* Center buttons container */
+.nevo-landing-hero .wp-block-buttons {
+  justify-content: center !important;
 }
 
 /* Trust Badge */
