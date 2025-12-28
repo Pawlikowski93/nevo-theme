@@ -15,6 +15,8 @@ module.exports = {
     'blocks/ai-chat/index': path.resolve(process.cwd(), 'blocks/ai-chat/index.js'),
     'blocks/booking-calendar/index': path.resolve(process.cwd(), 'blocks/booking-calendar/index.js'),
     'blocks/booking-calendar/view': path.resolve(process.cwd(), 'blocks/booking-calendar/view.js'),
+    'blocks/live-audit/index': path.resolve(process.cwd(), 'blocks/live-audit/index.js'),
+    'blocks/live-audit/view': path.resolve(process.cwd(), 'blocks/live-audit/view.js'),
   },
   output: {
     filename: '[name].js',

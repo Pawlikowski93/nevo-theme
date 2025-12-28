@@ -1,0 +1,41 @@
+{
+  "$schema": "https://schemas.wp.org/trunk/block.json",
+  "apiVersion": 3,
+  "name": "nevo/live-audit",
+  "version": "1.0.0",
+  "title": "NEVO Live Audit",
+  "category": "nevo-blocks",
+  "icon": "search",
+  "description": "Interaktywny audyt strony internetowej",
+  "supports": {
+    "html": false,
+    "align": ["wide", "full"],
+    "spacing": {
+      "margin": true,
+      "padding": true
+    }
+  },
+  "attributes": {
+    "title": {
+      "type": "string",
+      "default": "Sprawdź swoją stronę za darmo"
+    },
+    "subtitle": {
+      "type": "string",
+      "default": "Wpisz adres strony i w 15 sekund dowiedz się, co można poprawić"
+    },
+    "ctaUrl": {
+      "type": "string",
+      "default": "#kontakt"
+    },
+    "apiBase": {
+      "type": "string",
+      "default": "https://n8n.nevomarketing.pl/webhook"
+    }
+  },
+  "textdomain": "nevo",
+  "editorScript": "file:./index.js",
+  "viewScript": "file:./view.js",
+  "style": "file:./style.css",
+  "editorStyle": "file:./editor.css"
+}
