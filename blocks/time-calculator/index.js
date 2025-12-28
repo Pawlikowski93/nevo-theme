@@ -1,5 +1,5 @@
 import { registerBlockType } from '@wordpress/blocks';
-import { useBlockProps, RichText, InspectorControls } from '@wordpress/block-editor';
+import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
 import { PanelBody, TextControl, RangeControl } from '@wordpress/components';
 import { __ } from '@wordpress/i18n';
 import './style.css';
@@ -7,15 +7,27 @@ import './editor.css';
 
 registerBlockType('nevo/time-calculator', {
 	edit: ({ attributes, setAttributes }) => {
-		const { title, description, hourlyRate, ctaText, ctaUrl } = attributes;
-		const blockProps = useBlockProps({ className: 'nevo-calculator' });
+		const { title, subtitle, ctaText, ctaUrl, hourlyRate } = attributes;
+		const blockProps = useBlockProps({
+			className: 'nevo-time-calculator-editor'
+		});
 
 		return (
 			<>
 				<InspectorControls>
-					<PanelBody title={__('Ustawienia kalkulatora', 'nevo')}>
+					<PanelBody title={__('Ustawienia kalkulatora', 'nevo')} initialOpen={true}>
+						<TextControl
+							label={__('Tytuł', 'nevo')}
+							value={title}
+							onChange={(value) => setAttributes({ title: value })}
+						/>
+						<TextControl
+							label={__('Podtytuł', 'nevo')}
+							value={subtitle}
+							onChange={(value) => setAttributes({ subtitle: value })}
+						/>
 						<RangeControl
-							label={__('Stawka godzinowa (PLN)', 'nevo')}
+							label={__('Domyślna stawka godzinowa (PLN)', 'nevo')}
 							value={hourlyRate}
 							onChange={(value) => setAttributes({ hourlyRate: value })}
 							min={50}
@@ -36,49 +48,39 @@ registerBlockType('nevo/time-calculator', {
 				</InspectorControls>
 
 				<div {...blockProps}>
-					<div className="nevo-calculator__editor-preview">
-						<RichText
-							tagName="h3"
-							className="nevo-calculator__title"
-							value={title}
-							onChange={(value) => setAttributes({ title: value })}
-							placeholder={__('Tytuł kalkulatora', 'nevo')}
-						/>
-						<RichText
-							tagName="p"
-							className="nevo-calculator__description"
-							value={description}
-							onChange={(value) => setAttributes({ description: value })}
-							placeholder={__('Opis kalkulatora...', 'nevo')}
-						/>
-
-						<div className="nevo-calculator__preview-box">
-							<div className="nevo-calculator__preview-icon">
-								<svg width="48" height="48" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
-									<rect x="4" y="2" width="16" height="20" rx="2" />
-									<line x1="8" y1="6" x2="16" y2="6" />
-									<line x1="8" y1="10" x2="10" y2="10" />
-									<line x1="14" y1="10" x2="16" y2="10" />
-									<line x1="8" y1="14" x2="10" y2="14" />
-									<line x1="14" y1="14" x2="16" y2="14" />
-									<line x1="8" y1="18" x2="10" y2="18" />
-									<line x1="14" y1="18" x2="16" y2="18" />
-								</svg>
+					<div className="nevo-calc-preview">
+						<div className="nevo-calc-preview__header">
+							<svg className="nevo-calc-preview__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+								<circle cx="12" cy="12" r="10"></circle>
+								<polyline points="12 6 12 12 16 14"></polyline>
+							</svg>
+							<div>
+								<h3 className="nevo-calc-preview__title">{title}</h3>
+								<p className="nevo-calc-preview__subtitle">{subtitle}</p>
 							</div>
-							<p className="nevo-calculator__preview-text">
-								{__('Interaktywny kalkulator będzie widoczny na stronie', 'nevo')}
-							</p>
-							<div className="nevo-calculator__preview-fields">
-								<span>Slidery: Telefony, Maile, Wpisy</span>
-								<span>Wynik: Godziny/msc, Wartość PLN</span>
-							</div>
-							<p className="nevo-calculator__preview-rate">
-								{__('Stawka:', 'nevo')} {hourlyRate} PLN/h
-							</p>
 						</div>
-
-						<div className="nevo-calculator__preview-cta">
-							<span className="nevo-calculator__cta-button">{ctaText}</span>
+						<div className="nevo-calc-preview__placeholder">
+							<div className="nevo-calc-preview__sliders">
+								<div className="nevo-calc-preview__slider-row">
+									<span>📞 Telefony: 5/tyg.</span>
+									<div className="nevo-calc-preview__slider-bar"></div>
+								</div>
+								<div className="nevo-calc-preview__slider-row">
+									<span>📧 Maile: 10/tyg.</span>
+									<div className="nevo-calc-preview__slider-bar"></div>
+								</div>
+								<div className="nevo-calc-preview__slider-row">
+									<span>💰 Stawka: {hourlyRate} zł/h</span>
+									<div className="nevo-calc-preview__slider-bar"></div>
+								</div>
+							</div>
+							<div className="nevo-calc-preview__result">
+								<span className="nevo-calc-preview__result-number">12</span>
+								<span className="nevo-calc-preview__result-label">godzin miesięcznie</span>
+							</div>
+							<p className="nevo-calc-preview__info">
+								{__('Interaktywny kalkulator wyświetli się na frontendzie', 'nevo')}
+							</p>
 						</div>
 					</div>
 				</div>
@@ -87,22 +89,23 @@ registerBlockType('nevo/time-calculator', {
 	},
 
 	save: ({ attributes }) => {
-		const { title, description, hourlyRate, ctaText, ctaUrl } = attributes;
-		const blockProps = useBlockProps.save({ className: 'nevo-calculator' });
+		const { title, subtitle, ctaText, ctaUrl, hourlyRate } = attributes;
+		const blockProps = useBlockProps.save({
+			className: 'nevo-time-calculator'
+		});
 
 		return (
 			<div
 				{...blockProps}
-				data-hourly-rate={hourlyRate}
+				data-title={title}
+				data-subtitle={subtitle}
 				data-cta-text={ctaText}
 				data-cta-url={ctaUrl}
+				data-hourly-rate={hourlyRate}
 			>
-				<RichText.Content tagName="h3" className="nevo-calculator__title" value={title} />
-				<RichText.Content tagName="p" className="nevo-calculator__description" value={description} />
-				<div className="nevo-calculator__app" data-calculator="true">
-					<noscript>
-						<p>{__('Włącz JavaScript aby użyć kalkulatora', 'nevo')}</p>
-					</noscript>
+				<div className="nevo-time-calculator__loading">
+					<div className="nevo-time-calculator__spinner"></div>
+					<p>{__('Ładowanie kalkulatora...', 'nevo')}</p>
 				</div>
 			</div>
 		);

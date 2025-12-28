@@ -5,39 +5,42 @@
 	"version": "1.0.0",
 	"title": "NEVO Kalkulator Czasu",
 	"category": "nevo-blocks",
-	"icon": "calculator",
+	"icon": "clock",
 	"description": "Interaktywny kalkulator oszczędności czasu",
-	"keywords": ["kalkulator", "calculator", "czas", "time", "oszczędności", "ROI"],
-	"textdomain": "nevo",
+	"keywords": ["kalkulator", "calculator", "czas", "time", "oszczędności"],
 	"supports": {
-		"align": ["wide"],
 		"html": false,
-		"anchor": true
+		"align": ["wide", "full"],
+		"spacing": {
+			"margin": true,
+			"padding": true
+		}
 	},
 	"attributes": {
 		"title": {
 			"type": "string",
-			"default": "Ile czasu tracisz na ręczną obsługę?"
+			"default": "Ile czasu tracisz na powtarzalne zadania?"
 		},
-		"description": {
+		"subtitle": {
 			"type": "string",
-			"default": "Policz ile godzin miesięcznie marnujesz na powtarzalne zadania, które można zautomatyzować."
-		},
-		"hourlyRate": {
-			"type": "number",
-			"default": 100
+			"default": "Przesuń suwaki i zobacz, ile godzin możesz odzyskać"
 		},
 		"ctaText": {
 			"type": "string",
-			"default": "Pokaż mi jak to zautomatyzować"
+			"default": "Odzyskaj swój czas"
 		},
 		"ctaUrl": {
 			"type": "string",
 			"default": "#kontakt"
+		},
+		"hourlyRate": {
+			"type": "number",
+			"default": 100
 		}
 	},
+	"textdomain": "nevo",
 	"editorScript": "file:./index.js",
-	"editorStyle": "file:./editor.css",
+	"viewScript": "file:./view.js",
 	"style": "file:./style.css",
-	"viewScript": "file:./view.js"
+	"editorStyle": "file:./editor.css"
 }
