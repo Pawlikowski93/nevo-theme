@@ -10,6 +10,101 @@
   min-height: 600px;
 }
 
+/* ==============================================
+   LANDING PAGE HERO - Trust Bar
+   ============================================== */
+
+.nevo-trust-bar,
+.personalized-trust-bar {
+  padding: 8px 20px !important;
+  margin-bottom: 24px !important;
+  background: rgba(255, 255, 255, 0.08) !important;
+  border: 1px solid rgba(255, 255, 255, 0.12) !important;
+  border-radius: 999px;
+}
+
+.nevo-trust-bar p,
+.personalized-trust-bar p {
+  font-size: 13px !important;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: #b8956a !important;
+  margin: 0;
+}
+
+.nevo-trust-bar .fa-shield-check,
+.personalized-trust-bar .fa-shield-check {
+  margin-right: 6px;
+  color: #b8956a;
+}
+
+/* ==============================================
+   LANDING PAGE HERO - Headlines Hierarchy
+   ============================================== */
+
+/* Main Headline - LARGEST */
+.nevo-landing-hero .personalized-headline,
+.nevo-landing-hero h1.wp-block-heading {
+  font-size: clamp(2.5rem, 6vw, 4rem) !important;
+  font-weight: 700 !important;
+  line-height: 1.1 !important;
+  color: #ffffff !important;
+  margin-bottom: 20px !important;
+}
+
+/* Subheadline - Smaller, lighter */
+.nevo-landing-hero .personalized-headline + .wp-block-group p,
+.nevo-landing-hero h1 + p,
+.nevo-landing-hero .wp-block-group > p.has-cream-color {
+  font-size: clamp(1.125rem, 2.5vw, 1.375rem) !important;
+  font-weight: 400 !important;
+  line-height: 1.6 !important;
+  color: #e5dcc5 !important;
+  opacity: 0.9;
+  margin-bottom: 32px !important;
+}
+
+/* ==============================================
+   LANDING PAGE HERO - CTA Buttons
+   ============================================== */
+
+/* Primary CTA - Coral background */
+.nevo-landing-hero .wp-block-button.personalized-cta .wp-block-button__link,
+.nevo-landing-hero .wp-block-buttons .wp-block-button:first-child .wp-block-button__link {
+  background-color: #FF6B58 !important;
+  color: #1c2e40 !important;
+  font-weight: 600;
+  padding: 16px 32px;
+  border-radius: 999px;
+  border: none;
+  box-shadow: 0 4px 14px rgba(255, 107, 88, 0.35);
+  transition: all 0.2s ease;
+}
+
+.nevo-landing-hero .wp-block-button.personalized-cta .wp-block-button__link:hover,
+.nevo-landing-hero .wp-block-buttons .wp-block-button:first-child .wp-block-button__link:hover {
+  background-color: #FF8573 !important;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 107, 88, 0.45);
+}
+
+/* Secondary CTA - Outline style */
+.nevo-landing-hero .wp-block-buttons .wp-block-button:nth-child(2) .wp-block-button__link {
+  background-color: transparent !important;
+  color: #ffffff !important;
+  font-weight: 600;
+  padding: 16px 32px;
+  border-radius: 999px;
+  border: 2px solid rgba(255, 255, 255, 0.6) !important;
+  box-shadow: none;
+  transition: all 0.2s ease;
+}
+
+.nevo-landing-hero .wp-block-buttons .wp-block-button:nth-child(2) .wp-block-button__link:hover {
+  background-color: rgba(255, 255, 255, 0.1) !important;
+  border-color: #ffffff !important;
+}
+
 /* Trust Badge */
 .trust-badge {
   color: #b8956a;
