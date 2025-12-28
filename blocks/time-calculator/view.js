@@ -1,5 +1,75 @@
 import { createRoot } from '@wordpress/element';
 
+// SliderInput jako osobny komponent - nie re-renderuje się przy każdej zmianie rodzica
+const SliderInput = ({ label, value, onChange, onAnimationTrigger, min, max, step = 1, unit, icon }) => {
+	const handleNumberChange = (e) => {
+		let newValue = parseInt(e.target.value) || min;
+		if (step > 1) {
+			newValue = Math.round(newValue / step) * step;
+		}
+		newValue = Math.max(min, Math.min(max, newValue));
+		onChange(newValue);
+	};
+
+	const handleNumberBlur = () => {
+		onAnimationTrigger();
+	};
+
+	const handleKeyDown = (e) => {
+		if (e.key === 'ArrowUp' || e.key === 'ArrowDown') {
+			e.preventDefault();
+			const delta = e.key === 'ArrowUp' ? step : -step;
+			const newValue = Math.max(min, Math.min(max, value + delta));
+			onChange(newValue);
+		}
+	};
+
+	const percentage = ((value - min) / (max - min)) * 100;
+
+	return (
+		<div className="nevo-calc__slider-group">
+			<div className="nevo-calc__slider-header">
+				<label className="nevo-calc__slider-label">
+					<span className="nevo-calc__slider-icon">{icon}</span>
+					{label}
+				</label>
+				<div className="nevo-calc__slider-value">
+					<input
+						type="number"
+						className="nevo-calc__number-input"
+						value={value}
+						onChange={handleNumberChange}
+						onBlur={handleNumberBlur}
+						onKeyDown={handleKeyDown}
+						min={min}
+						max={max}
+						step={step}
+					/>
+					<span className="nevo-calc__slider-unit">{unit}</span>
+				</div>
+			</div>
+			<input
+				type="range"
+				min={min}
+				max={max}
+				step={step}
+				value={value}
+				onChange={(e) => onChange(parseInt(e.target.value))}
+				onMouseUp={onAnimationTrigger}
+				onTouchEnd={onAnimationTrigger}
+				className="nevo-calc__slider"
+				style={{
+					background: `linear-gradient(to right, var(--nevo-accent) 0%, var(--nevo-accent) ${percentage}%, var(--nevo-gray-light) ${percentage}%, var(--nevo-gray-light) 100%)`
+				}}
+			/>
+			<div className="nevo-calc__slider-range">
+				<span>{min}</span>
+				<span>{max}</span>
+			</div>
+		</div>
+	);
+};
+
 const TimeCalculator = ({ title, subtitle, ctaText, ctaUrl, hourlyRate: defaultHourlyRate }) => {
 	const [phoneCalls, setPhoneCalls] = React.useState(5);
 	const [callDuration, setCallDuration] = React.useState(8);
@@ -27,97 +97,10 @@ const TimeCalculator = ({ title, subtitle, ctaText, ctaUrl, hourlyRate: defaultH
 		};
 	}, [phoneCalls, callDuration, manualEmails, emailDuration, hourlyRate]);
 
-	// Animacja tylko przy puszczeniu suwaka
-	const triggerAnimation = () => {
+	const triggerAnimation = React.useCallback(() => {
 		setIsAnimating(true);
 		setTimeout(() => setIsAnimating(false), 300);
-	};
-
-	const SliderInput = ({ label, value, onChange, min, max, step = 1, unit, icon }) => {
-		// Bezpośrednia zmiana wartości bez animacji przy przeciąganiu
-		const handleSliderInput = (e) => {
-			const newValue = parseInt(e.target.value);
-			onChange(newValue);
-		};
-
-		// Animacja tylko przy puszczeniu
-		const handleSliderEnd = () => {
-			triggerAnimation();
-		};
-
-		// Obsługa inputa numerycznego
-		const handleNumberInput = (e) => {
-			let newValue = parseInt(e.target.value) || min;
-			// Zaokrąglij do najbliższego kroku
-			if (step > 1) {
-				newValue = Math.round(newValue / step) * step;
-			}
-			// Ogranicz do zakresu
-			newValue = Math.max(min, Math.min(max, newValue));
-			onChange(newValue);
-			triggerAnimation();
-		};
-
-		// Obsługa klawiszy strzałek
-		const handleKeyDown = (e) => {
-			let newValue = value;
-			if (e.key === 'ArrowUp') {
-				e.preventDefault();
-				newValue = Math.min(max, value + step);
-			} else if (e.key === 'ArrowDown') {
-				e.preventDefault();
-				newValue = Math.max(min, value - step);
-			}
-			if (newValue !== value) {
-				onChange(newValue);
-				triggerAnimation();
-			}
-		};
-
-		const percentage = ((value - min) / (max - min)) * 100;
-
-		return (
-			<div className="nevo-calc__slider-group">
-				<div className="nevo-calc__slider-header">
-					<label className="nevo-calc__slider-label">
-						<span className="nevo-calc__slider-icon">{icon}</span>
-						{label}
-					</label>
-					<div className="nevo-calc__slider-value">
-						<input
-							type="number"
-							className="nevo-calc__number-input"
-							value={value}
-							onChange={handleNumberInput}
-							onKeyDown={handleKeyDown}
-							min={min}
-							max={max}
-							step={step}
-						/>
-						<span className="nevo-calc__slider-unit">{unit}</span>
-					</div>
-				</div>
-				<input
-					type="range"
-					min={min}
-					max={max}
-					step={step}
-					value={value}
-					onInput={handleSliderInput}
-					onMouseUp={handleSliderEnd}
-					onTouchEnd={handleSliderEnd}
-					className="nevo-calc__slider"
-					style={{
-						background: `linear-gradient(to right, var(--nevo-accent) 0%, var(--nevo-accent) ${percentage}%, var(--nevo-gray-light) ${percentage}%, var(--nevo-gray-light) 100%)`
-					}}
-				/>
-				<div className="nevo-calc__slider-range">
-					<span>{min}</span>
-					<span>{max}</span>
-				</div>
-			</div>
-		);
-	};
+	}, []);
 
 	return (
 		<div className="nevo-calc">
@@ -141,6 +124,7 @@ const TimeCalculator = ({ title, subtitle, ctaText, ctaUrl, hourlyRate: defaultH
 						label="Ile telefonów z pytaniami odbierasz?"
 						value={phoneCalls}
 						onChange={setPhoneCalls}
+						onAnimationTrigger={triggerAnimation}
 						min={0}
 						max={20}
 						unit="/tyg."
@@ -151,6 +135,7 @@ const TimeCalculator = ({ title, subtitle, ctaText, ctaUrl, hourlyRate: defaultH
 						label="Średni czas jednej rozmowy"
 						value={callDuration}
 						onChange={setCallDuration}
+						onAnimationTrigger={triggerAnimation}
 						min={2}
 						max={20}
 						unit="min"
@@ -161,6 +146,7 @@ const TimeCalculator = ({ title, subtitle, ctaText, ctaUrl, hourlyRate: defaultH
 						label="Ile maili z ofertą piszesz ręcznie?"
 						value={manualEmails}
 						onChange={setManualEmails}
+						onAnimationTrigger={triggerAnimation}
 						min={0}
 						max={30}
 						unit="/tyg."
@@ -171,6 +157,7 @@ const TimeCalculator = ({ title, subtitle, ctaText, ctaUrl, hourlyRate: defaultH
 						label="Czas na napisanie jednego maila"
 						value={emailDuration}
 						onChange={setEmailDuration}
+						onAnimationTrigger={triggerAnimation}
 						min={2}
 						max={15}
 						unit="min"
@@ -181,6 +168,7 @@ const TimeCalculator = ({ title, subtitle, ctaText, ctaUrl, hourlyRate: defaultH
 						label="Twoja stawka godzinowa"
 						value={hourlyRate}
 						onChange={setHourlyRate}
+						onAnimationTrigger={triggerAnimation}
 						min={50}
 						max={500}
 						step={10}
