@@ -14,6 +14,7 @@ module.exports = {
     'blocks/audit-widget/index': path.resolve(process.cwd(), 'blocks/audit-widget/index.js'),
     'blocks/ai-chat/index': path.resolve(process.cwd(), 'blocks/ai-chat/index.js'),
     'blocks/booking-calendar/index': path.resolve(process.cwd(), 'blocks/booking-calendar/index.js'),
+    'blocks/booking-calendar/view': path.resolve(process.cwd(), 'blocks/booking-calendar/view.js'),
   },
   output: {
     filename: '[name].js',

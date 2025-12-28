@@ -3,32 +3,36 @@
 	"apiVersion": 3,
 	"name": "nevo/booking-calendar",
 	"version": "1.0.0",
-	"title": "NEVO Kalendarz Rezerwacji",
+	"title": "NEVO Booking Calendar",
 	"category": "nevo-blocks",
 	"icon": "calendar-alt",
-	"description": "Embed kalendarza Cal.com do rezerwacji spotkań",
-	"keywords": ["kalendarz", "calendar", "rezerwacja", "booking", "cal.com", "spotkanie"],
-	"textdomain": "nevo",
+	"description": "Kalendarz rezerwacji konsultacji NEVO",
+	"keywords": ["kalendarz", "calendar", "rezerwacja", "booking", "konsultacja"],
 	"supports": {
-		"align": ["wide"],
 		"html": false,
-		"anchor": true
+		"align": ["wide", "full"],
+		"spacing": {
+			"margin": true,
+			"padding": true
+		}
 	},
 	"attributes": {
 		"title": {
 			"type": "string",
-			"default": "Zarezerwuj rozmowę"
+			"default": "Umów bezpłatną konsultację"
 		},
-		"calendarUrl": {
+		"subtitle": {
 			"type": "string",
-			"default": ""
+			"default": "30 minut rozmowy o Twoim biznesie. Bez zobowiązań."
 		},
-		"embedType": {
+		"apiBase": {
 			"type": "string",
-			"default": "inline"
+			"default": "https://n8n.nevomarketing.pl/webhook"
 		}
 	},
+	"textdomain": "nevo",
 	"editorScript": "file:./index.js",
-	"editorStyle": "file:./index.css",
-	"style": "file:./style-index.css"
+	"viewScript": "file:./view.js",
+	"style": "file:./style-index.css",
+	"editorStyle": "file:./index.css"
 }

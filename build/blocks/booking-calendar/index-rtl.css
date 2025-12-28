@@ -1,10 +1,87 @@
-.nevo-booking__title:focus {
-	outline: 2px solid #FF6B58;
-	outline-offset: 2px;
-	border-radius: 4px;
+.nevo-booking-calendar-editor {
+	padding: 1rem;
 }
 
-.nevo-booking__container {
-	min-height: 300px;
+.nevo-booking-preview {
+	background: #ffffff;
+	border-radius: 1rem;
+	box-shadow: 0 4px 20px rgba(28, 46, 64, 0.1);
+	overflow: hidden;
+}
+
+.nevo-booking-preview__header {
+	display: flex;
+	align-items: center;
+	gap: 1rem;
+	padding: 1.5rem;
+	background: linear-gradient(-135deg, #1c2e40 0%, #2a4458 100%);
+	color: #ffffff;
+}
+
+.nevo-booking-preview__icon {
+	width: 2.5rem;
+	height: 2.5rem;
+	padding: 0.5rem;
+	background: rgba(255, 255, 255, 0.1);
+	border-radius: 0.5rem;
+	flex-shrink: 0;
+}
+
+.nevo-booking-preview__title {
+	font-family: 'Montserrat', sans-serif;
+	font-size: 1.125rem;
+	font-weight: 600;
+	margin: 0 0 0.25rem;
+	color: #ffffff;
+}
+
+.nevo-booking-preview__subtitle {
+	font-size: 0.875rem;
+	margin: 0;
+	opacity: 0.8;
+}
+
+.nevo-booking-preview__placeholder {
+	padding: 1.5rem;
+}
+
+.nevo-booking-preview__dates {
+	display: flex;
+	gap: 0.5rem;
+	margin-bottom: 1rem;
+}
+
+.nevo-booking-preview__date {
+	flex: 1;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	padding: 0.75rem 0.5rem;
+	background: #f5f1ed;
+	border-radius: 0.5rem;
+	border: 2px dashed #e5dcc5;
+}
+
+.nevo-booking-preview__day {
+	font-size: 0.625rem;
+	text-transform: uppercase;
+	color: #6b7280;
+	letter-spacing: 0.05em;
+}
+
+.nevo-booking-preview__num {
+	font-size: 1.25rem;
+	font-weight: 700;
+	color: #1c2e40;
+}
+
+.nevo-booking-preview__info {
+	text-align: center;
+	font-size: 0.875rem;
+	color: #6b7280;
+	margin: 0;
+	padding: 1rem;
+	background: #f9fafb;
+	border-radius: 0.5rem;
 }
 

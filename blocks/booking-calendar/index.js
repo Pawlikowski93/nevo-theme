@@ -1,80 +1,67 @@
 import { registerBlockType } from '@wordpress/blocks';
-import { useBlockProps, RichText, InspectorControls } from '@wordpress/block-editor';
-import { PanelBody, TextControl, SelectControl } from '@wordpress/components';
+import { useBlockProps, InspectorControls } from '@wordpress/block-editor';
+import { PanelBody, TextControl } from '@wordpress/components';
 import { __ } from '@wordpress/i18n';
 import './style.css';
 import './editor.css';
 
 registerBlockType('nevo/booking-calendar', {
 	edit: ({ attributes, setAttributes }) => {
-		const { title, calendarUrl, embedType } = attributes;
-		const blockProps = useBlockProps({ className: 'nevo-booking' });
+		const { title, subtitle, apiBase } = attributes;
+		const blockProps = useBlockProps({
+			className: 'nevo-booking-calendar-editor'
+		});
 
 		return (
 			<>
 				<InspectorControls>
-					<PanelBody title={__('Ustawienia Cal.com', 'nevo')}>
+					<PanelBody title={__('Ustawienia kalendarza', 'nevo')} initialOpen={true}>
 						<TextControl
-							label={__('URL Cal.com', 'nevo')}
-							value={calendarUrl}
-							onChange={(value) => setAttributes({ calendarUrl: value })}
-							placeholder="https://cal.com/twoj-profil"
-							help={__('Wklej pełny URL do swojego kalendarza Cal.com', 'nevo')}
+							label={__('Tytuł', 'nevo')}
+							value={title}
+							onChange={(value) => setAttributes({ title: value })}
 						/>
-						<SelectControl
-							label={__('Typ embedu', 'nevo')}
-							value={embedType}
-							options={[
-								{ label: 'Inline (w stronie)', value: 'inline' },
-								{ label: 'Popup (przycisk)', value: 'popup' },
-							]}
-							onChange={(value) => setAttributes({ embedType: value })}
+						<TextControl
+							label={__('Podtytuł', 'nevo')}
+							value={subtitle}
+							onChange={(value) => setAttributes({ subtitle: value })}
+						/>
+						<TextControl
+							label={__('API Base URL', 'nevo')}
+							value={apiBase}
+							onChange={(value) => setAttributes({ apiBase: value })}
+							help={__('URL do n8n webhooków', 'nevo')}
 						/>
 					</PanelBody>
 				</InspectorControls>
 
 				<div {...blockProps}>
-					<RichText
-						tagName="h3"
-						className="nevo-booking__title"
-						value={title}
-						onChange={(value) => setAttributes({ title: value })}
-						placeholder={__('Tytuł...', 'nevo')}
-					/>
-					<div className="nevo-booking__container">
-						<div className="nevo-booking__icon">
-							<svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-								<rect x="3" y="4" width="18" height="18" rx="2" />
-								<path d="M16 2v4" />
-								<path d="M8 2v4" />
-								<path d="M3 10h18" />
-								<path d="M8 14h.01" />
-								<path d="M12 14h.01" />
-								<path d="M16 14h.01" />
-								<path d="M8 18h.01" />
-								<path d="M12 18h.01" />
+					<div className="nevo-booking-preview">
+						<div className="nevo-booking-preview__header">
+							<svg className="nevo-booking-preview__icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2">
+								<rect x="3" y="4" width="18" height="18" rx="2" ry="2"></rect>
+								<line x1="16" y1="2" x2="16" y2="6"></line>
+								<line x1="8" y1="2" x2="8" y2="6"></line>
+								<line x1="3" y1="10" x2="21" y2="10"></line>
 							</svg>
+							<div>
+								<h3 className="nevo-booking-preview__title">{title}</h3>
+								<p className="nevo-booking-preview__subtitle">{subtitle}</p>
+							</div>
 						</div>
-						{calendarUrl ? (
-							<>
-								<p className="nevo-booking__status nevo-booking__status--configured">
-									Kalendarz skonfigurowany
-								</p>
-								<p className="nevo-booking__url">{calendarUrl}</p>
-								<span className="nevo-booking__embed-type">
-									Typ: {embedType === 'inline' ? 'Inline' : 'Popup'}
-								</span>
-							</>
-						) : (
-							<>
-								<p className="nevo-booking__status">
-									Wpisz URL Cal.com w panelu bocznym
-								</p>
-								<p className="nevo-booking__hint">
-									Kalendarz pojawi się tutaj po skonfigurowaniu
-								</p>
-							</>
-						)}
+						<div className="nevo-booking-preview__placeholder">
+							<div className="nevo-booking-preview__dates">
+								{['Pon', 'Wt', 'Śr', 'Czw', 'Pt'].map((day, i) => (
+									<div key={day} className="nevo-booking-preview__date">
+										<span className="nevo-booking-preview__day">{day}</span>
+										<span className="nevo-booking-preview__num">{i + 6}</span>
+									</div>
+								))}
+							</div>
+							<p className="nevo-booking-preview__info">
+								{__('Kalendarz rezerwacji wyświetli się na frontendzie', 'nevo')}
+							</p>
+						</div>
 					</div>
 				</div>
 			</>
@@ -82,47 +69,21 @@ registerBlockType('nevo/booking-calendar', {
 	},
 
 	save: ({ attributes }) => {
-		const { title, calendarUrl, embedType } = attributes;
-		const blockProps = useBlockProps.save({ className: 'nevo-booking' });
+		const { title, subtitle, apiBase } = attributes;
+		const blockProps = useBlockProps.save({
+			className: 'nevo-booking-calendar'
+		});
 
 		return (
-			<div {...blockProps} data-calendar-url={calendarUrl} data-embed-type={embedType}>
-				<RichText.Content tagName="h3" className="nevo-booking__title" value={title} />
-				<div className="nevo-booking__container">
-					{calendarUrl ? (
-						embedType === 'inline' ? (
-							<iframe
-								src={calendarUrl}
-								className="nevo-booking__iframe"
-								frameBorder="0"
-								allowFullScreen
-								loading="lazy"
-							/>
-						) : (
-							<a href={calendarUrl} target="_blank" rel="noopener noreferrer" className="nevo-booking__button">
-								Zarezerwuj termin
-							</a>
-						)
-					) : (
-						<div className="nevo-booking__placeholder">
-							<div className="nevo-booking__icon">
-								<svg width="64" height="64" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="1.5">
-									<rect x="3" y="4" width="18" height="18" rx="2" />
-									<path d="M16 2v4" />
-									<path d="M8 2v4" />
-									<path d="M3 10h18" />
-									<path d="M8 14h.01" />
-									<path d="M12 14h.01" />
-									<path d="M16 14h.01" />
-									<path d="M8 18h.01" />
-									<path d="M12 18h.01" />
-								</svg>
-							</div>
-							<p className="nevo-booking__status">
-								Kalendarz wkrótce dostępny
-							</p>
-						</div>
-					)}
+			<div
+				{...blockProps}
+				data-title={title}
+				data-subtitle={subtitle}
+				data-api-base={apiBase}
+			>
+				<div className="nevo-booking-calendar__loading">
+					<div className="nevo-booking-calendar__spinner"></div>
+					<p>{__('Ładowanie kalendarza...', 'nevo')}</p>
 				</div>
 			</div>
 		);
