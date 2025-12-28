@@ -15,7 +15,7 @@
 
 /* Hidden container - just for initialization */
 .nevo-staszek-chat {
-  display: none;
+  /* Container is empty, React renders fixed positioned elements */
 }
 
 /* ==============================================
