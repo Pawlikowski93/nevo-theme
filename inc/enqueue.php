@@ -153,6 +153,15 @@ function nevo_enqueue_landing_scripts() {
             true
         );
 
+        // Accordion (FAQ)
+        wp_enqueue_script(
+            'nevo-accordion',
+            NEVO_URI . '/assets/js/accordion.js',
+            array(),
+            NEVO_VERSION,
+            true
+        );
+
         wp_localize_script( 'nevo-landing-personalization', 'nevoLanding', array(
             'ajaxUrl' => admin_url( 'admin-ajax.php' ),
             'nonce'   => wp_create_nonce( 'nevo_landing_nonce' ),
