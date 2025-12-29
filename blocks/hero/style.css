@@ -17,7 +17,9 @@
 .nevo-trust-bar,
 .personalized-trust-bar,
 .nevo-landing-hero .nevo-trust-bar,
-.nevo-landing-hero .personalized-trust-bar {
+.nevo-landing-hero .personalized-trust-bar,
+.is-layout-constrained > .nevo-trust-bar,
+.is-layout-constrained > .personalized-trust-bar {
   padding: 8px 20px !important;
   margin-bottom: 0 !important;
   width: fit-content !important;
