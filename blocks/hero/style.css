@@ -16,10 +16,14 @@
 
 .nevo-trust-bar,
 .personalized-trust-bar,
+.nevo-trust-bar.is-layout-constrained,
+.personalized-trust-bar.is-layout-constrained,
 .nevo-landing-hero .nevo-trust-bar,
 .nevo-landing-hero .personalized-trust-bar,
 .is-layout-constrained > .nevo-trust-bar,
-.is-layout-constrained > .personalized-trust-bar {
+.is-layout-constrained > .personalized-trust-bar,
+.is-layout-constrained > :where(.nevo-trust-bar),
+.is-layout-constrained > :where(.personalized-trust-bar) {
   padding: 8px 20px !important;
   margin-bottom: 0 !important;
   width: fit-content !important;
@@ -29,6 +33,13 @@
   background: rgba(255, 255, 255, 0.08) !important;
   border: 1px solid rgba(255, 255, 255, 0.12) !important;
   border-radius: 999px;
+}
+
+/* Override WordPress is-layout-constrained on trust bar itself */
+.nevo-trust-bar.wp-block-group-is-layout-constrained,
+.personalized-trust-bar.wp-block-group-is-layout-constrained {
+  max-width: fit-content !important;
+  width: fit-content !important;
 }
 
 .nevo-trust-bar p,
