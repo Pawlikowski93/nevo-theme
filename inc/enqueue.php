@@ -137,6 +137,22 @@ function nevo_enqueue_landing_scripts() {
             true
         );
 
+        // Lightbox
+        wp_enqueue_style(
+            'nevo-lightbox',
+            NEVO_URI . '/assets/css/lightbox.css',
+            array(),
+            NEVO_VERSION
+        );
+
+        wp_enqueue_script(
+            'nevo-lightbox',
+            NEVO_URI . '/assets/js/lightbox.js',
+            array(),
+            NEVO_VERSION,
+            true
+        );
+
         wp_localize_script( 'nevo-landing-personalization', 'nevoLanding', array(
             'ajaxUrl' => admin_url( 'admin-ajax.php' ),
             'nonce'   => wp_create_nonce( 'nevo_landing_nonce' ),
