@@ -1,7 +1,3 @@
-/* ==============================================
-   NEVO LIGHTBOX
-   ============================================== */
-
 .nevo-lightbox-overlay {
   position: fixed;
   inset: 0;
@@ -58,7 +54,6 @@
   background: rgba(255, 255, 255, 0.2);
 }
 
-/* Styl dla zdjęć z lightboxem */
 .nevo-lightbox img,
 img.nevo-lightbox {
   cursor: zoom-in;

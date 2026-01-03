@@ -1,10 +1,3 @@
-/* ==========================================================================
-   LANDING PAGE: STRONA JAKO NARZĘDZIE
-   ========================================================================== */
-
-/* --------------------------------------------------------------------------
-   CSS CUSTOM PROPERTIES
-   -------------------------------------------------------------------------- */
 :root {
   --landing-primary: #1c2e40;
   --landing-primary-light: #2a4458;
@@ -41,9 +34,6 @@
   --landing-transition-fast: 0.15s ease;
 }
 
-/* --------------------------------------------------------------------------
-   KEYFRAME ANIMATIONS
-   -------------------------------------------------------------------------- */
 @keyframes fadeInUp {
   from {
     opacity: 0;
@@ -104,9 +94,6 @@
   }
 }
 
-/* --------------------------------------------------------------------------
-   ANIMATION UTILITY CLASSES
-   -------------------------------------------------------------------------- */
 .animate-fade-in-up {
   opacity: 0;
   animation: fadeInUp 0.6s ease forwards;
@@ -131,9 +118,6 @@
 .animate-delay-4 { animation-delay: 0.4s; }
 .animate-delay-5 { animation-delay: 0.5s; }
 
-/* --------------------------------------------------------------------------
-   HERO SECTION
-   -------------------------------------------------------------------------- */
 .nevo-landing-hero {
   position: relative;
   min-height: 90vh;
@@ -178,9 +162,6 @@
   animation: fadeInScale 0.8s ease 0.4s backwards;
 }
 
-/* --------------------------------------------------------------------------
-   COMPARISON TABLE / SECTION
-   -------------------------------------------------------------------------- */
 .nevo-landing-problem {
   position: relative;
 }
@@ -237,9 +218,6 @@
   color: var(--landing-success);
 }
 
-/* --------------------------------------------------------------------------
-   PLACEHOLDERS (Calculator, Audit, Chat, Booking)
-   -------------------------------------------------------------------------- */
 .nevo-calculator-placeholder,
 .nevo-audit-placeholder,
 .nevo-chat-placeholder,
@@ -272,9 +250,6 @@
   opacity: 0.7;
 }
 
-/* --------------------------------------------------------------------------
-   FEATURE CARDS
-   -------------------------------------------------------------------------- */
 .nevo-landing-features .wp-block-columns {
   display: grid;
   grid-template-columns: repeat(3, 1fr);
@@ -316,9 +291,6 @@
   font-size: 28px;
 }
 
-/* --------------------------------------------------------------------------
-   CASE STUDY CARDS
-   -------------------------------------------------------------------------- */
 .nevo-landing-cases .wp-block-columns {
   gap: 30px;
 }
@@ -373,9 +345,6 @@
   color: var(--landing-gray-500);
 }
 
-/* --------------------------------------------------------------------------
-   PROCESS TIMELINE
-   -------------------------------------------------------------------------- */
 .nevo-landing-process .wp-block-columns {
   position: relative;
 }
@@ -464,7 +433,6 @@
   color: var(--landing-gray-500);
 }
 
-/* Process cards styling */
 .nevo-landing-process .wp-block-column > .wp-block-group {
   position: relative;
   z-index: 1;
@@ -479,9 +447,6 @@
   box-shadow: var(--landing-shadow-xl);
 }
 
-/* --------------------------------------------------------------------------
-   BOOKING / CONTACT SECTION
-   -------------------------------------------------------------------------- */
 .nevo-landing-contact .wp-block-columns {
   align-items: stretch;
 }
@@ -534,9 +499,6 @@
   box-shadow: var(--landing-shadow-lg);
 }
 
-/* --------------------------------------------------------------------------
-   FAQ / DETAILS ACCORDION
-   -------------------------------------------------------------------------- */
 .nevo-landing-process .wp-block-details {
   background: var(--landing-white);
   border-radius: var(--landing-radius-md);
@@ -592,9 +554,6 @@
   line-height: 1.6;
 }
 
-/* --------------------------------------------------------------------------
-   AI CHAT SECTION
-   -------------------------------------------------------------------------- */
 .nevo-landing-chat {
   position: relative;
 }
@@ -613,9 +572,6 @@
   filter: blur(50px);
 }
 
-/* --------------------------------------------------------------------------
-   TRUST SIGNALS
-   -------------------------------------------------------------------------- */
 .nevo-landing-contact .wp-block-group[style*="margin-top:40px"] {
   display: flex;
   flex-wrap: wrap;
@@ -635,9 +591,6 @@
   color: var(--landing-success);
 }
 
-/* --------------------------------------------------------------------------
-   PERSONALIZATION CLASSES
-   -------------------------------------------------------------------------- */
 .personalized-headline,
 .personalized-cta,
 .personalized-trust-bar {
@@ -665,9 +618,6 @@
 .first-visit .first-visit-content { display: block; }
 .first-visit .returning-content { display: none; }
 
-/* --------------------------------------------------------------------------
-   RESPONSIVE: TABLET (max-width: 1024px)
-   -------------------------------------------------------------------------- */
 @media (max-width: 1024px) {
   .nevo-landing-hero {
     min-height: auto;
@@ -734,9 +684,6 @@
   }
 }
 
-/* --------------------------------------------------------------------------
-   RESPONSIVE: MOBILE (max-width: 768px) - Global Padding Fix
-   -------------------------------------------------------------------------- */
 @media (max-width: 768px) {
   .has-global-padding {
     padding-left: 10px !important;
@@ -744,9 +691,6 @@
   }
 }
 
-/* --------------------------------------------------------------------------
-   RESPONSIVE: MOBILE (max-width: 640px)
-   -------------------------------------------------------------------------- */
 @media (max-width: 640px) {
   :root {
     --landing-radius-lg: 12px;
@@ -832,9 +776,6 @@
   }
 }
 
-/* --------------------------------------------------------------------------
-   SCROLL BEHAVIOR & INTERSECTION OBSERVER
-   -------------------------------------------------------------------------- */
 html {
   scroll-behavior: smooth;
 }
@@ -853,14 +794,10 @@ html {
   }
 }
 
-/* Section visibility for scroll tracking */
 [data-section] {
   scroll-margin-top: 80px;
 }
 
-/* --------------------------------------------------------------------------
-   PRINT STYLES
-   -------------------------------------------------------------------------- */
 @media print {
   .nevo-landing-hero,
   .nevo-landing-chat {
